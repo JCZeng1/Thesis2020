@@ -1,0 +1,36 @@
+name: Deploy draft
+
+on:
+  push:
+    branches:
+    - main
+    tags:
+    - v*
+  workflow_dispatch:
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Compile LaTeX document
+      uses: xu-cheng/texlive-action/full@v1
+      with:
+        run: |
+          apk add make
+          make document
+    - name: Setup draft for deployment
+      run: |
+        mkdir -p _build/
+        cp README.md _build/
+        cp thesis-zeng.pdf _build/thesis-zeng-draft.pdf
+    - name: Deploy draft to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: _build
+        enable_jekyll: true # for README render
+        force_orphan: true
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
