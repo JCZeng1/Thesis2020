@@ -1,0 +1,66 @@
+% The original source files were:
+% uiucthesis2009.dtx  (with options: `example')
+\def\fileversion{v2.25a} \def\filedate{2009/10/10}
+% Package and Class "uiucthesis2009" for use with LaTeX2e.
+\documentclass[edeposit,fullpage]{latex/uiucthesis2009}
+
+\input{latex/packages.tex}
+\input{latex/user_packages.tex}
+
+% \linenumbers % uncomment if want draft printing
+
+\begin{document}
+
+\title{Thesis Title}
+\author{Thesis Author}
+\department{Physics}
+\schools{Previous Degrees}
+\phdthesis
+\advisor{Thesis Advisor}
+\degreeyear{Current Year}
+\committee{Committee Chair, Chair\\
+           Theis Advisor, Director of Research\\
+           Third Member of Committee\\
+           Fourth Member of Committee}
+\maketitle
+
+\frontmatter
+
+\input{src/abstract.tex}
+\input{src/dedication.tex}
+\input{src/acknowledgments.tex}
+
+% The thesis format requires the Table of Contents to come
+% before any other major sections, all of these sections after
+% the Table of Contents must be listed therein (i.e., use \chapter,
+% not \chapter*).  Common sections to have between the Table of
+% Contents and the main text are:
+%
+% List of Tables
+% List of Figures
+% List Symbols and/or Abbreviations
+% etc.
+
+
+\tableofcontents
+\listoftables
+\listoffigures
+\input{src/symbols.tex}
+
+\mainmatter
+
+\input{src/preface.tex}
+
+\input{src/introduction.tex}
+
+\appendix
+\input{src/appendix_A.tex}
+
+\backmatter
+
+\bibliographystyle{bib/JHEP}
+%\bibliographystyle{plain}
+\bibliography{bib/refs,bib/ATLAS_papers}
+
+\end{document}
+\endinput
