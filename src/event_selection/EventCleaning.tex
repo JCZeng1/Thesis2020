@@ -1,0 +1,35 @@
+\subsection{Event Cleaning}
+\label{subsec:event_cleaning}
+
+%\textcolor{red}{check the recomandations are update wrt what we have in the fw}
+
+Following the \href{https://twiki.cern.ch/twiki/bin/viewauth/Atlas/DataPreparationCheckListForPhysicsAnalysis}{recommendations of the DataPrep group}, the following event-level requirements are made.
+
+We use the official GRL: \\
+{\footnotesize
+\texttt{GoodRunsLists/data15\_13TeV/20170619/physics\_25ns\_21.0.19.xml} \\
+\texttt{GoodRunsLists/data16\_13TeV/20180129/physics\_25ns\_21.0.19.xml} \\
+\texttt{GoodRunsLists/data17\_13TeV/20180619/physics\_25ns\_Triggerno17e33prim.xml}. \\
+\texttt{GoodRunsLists/data18\_13TeV/20181111/physics\_25ns\_Triggerno17e33prim.xml}. \\
+}
+
+The following event-level vetos are made to reject bad / corrupt events:
+ \begin{itemize}
+  \item LAr noise burst and data corruption (\begin{verbatim}xAOD::EventInfo::LAr\end{verbatim}),
+  \item Tile corrupted events (\begin{verbatim}xAOD::EventInfo::Tile\end{verbatim}),
+  \item events affected by the SCT recovery procedure for single event upsets (\begin{verbatim}xAOD::EventInfo::SCT\end{verbatim}),
+  \item incomplete events (\begin{verbatim}xAOD::EventInfo::Core\end{verbatim}).
+ \end{itemize}
+ 
+\textcolor{red}{we need to perform the debug stream check with latest derivation}
+ Debug-stream events have  been checked. We observed XXX events in YYY CRs and XXX events are observed in ZZZ channels.
+ Checks have been done for duplicate events. We observed X duplicated events in Y CRs and X events are observed in Z channels.
+ %Since the observed debug-stream and duplicated events are found only in CRs and not in SRs, we simply ignore them in our analysis.
+\textcolor{red}{actions done after the test for treating those events}
+
+Events are required to have a primary vertex with at least two associated tracks. The primary vertex is selected as the one with the largest $\Sigma p_T^2$, where the sum is over all tracks with transverse momentum $p_T >$ 0.5 GeV that are associated with the vertex.
+ 
+Jet cleaning is applied to remove events with jets built from noisy calorimeter cells or non-collision backgrounds,
+using the Loose bad jet event flag based on the \mbox{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/HowToCleanJets2017}{recommendation}}.
+%In addition to that, the ``bad batman'' veto is applied to data15 and 16, in order to suppress the events with calorimeter saturation problem (See details in Appendix~\ref{sec:batman}).
+

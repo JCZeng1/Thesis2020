@@ -1,0 +1,76 @@
+\subsection{Trigger requirements}
+\label{subsec:trigger_requirements}
+The data were collected by the lowest unprescaled single-lepton or \met\ triggers summarized in Table~\ref{tab:triggers} according to the number of leptons in each channel.
+
+We rely on the trigger setup other analyses with semi-leptonic final states use given the very similar final states;
+
+in particular, we rely on studies made 
+in the VV semi-leptonic search \cite{Bachas:2646593}
+and in the SM $V\left(H\to bb\right)$ analysis \cite{HIGG-2018-04, ATL-COM-PHYS-2018-517}. 
+
+%and optimisation performed 
+%in the previous round of the analysis and especially on the recent VV resonant search. 
+%Indeed, more studies were done with latest period data \cite{Bachas:2646593}.
+
+%Since muon term is not considered in the \met calculation in the trigger algorithm, the \met trigger is fully efficient to events containing very high-\pt muon. Therefore, the \met\ trigger is used not only in 0-lepton ($\nu\nu qq$) but also in $\mu\nu qq$ channel if $W$-boson \pt reconstructed by muon and \met, \ptmunu, is greater than 150\,\GeV, to compensate a poor efficiency (about 70\,\% at the plateau) of the single-muon trigger due to the detector coverage.
+%In $\mu\mu qq$ channel, on the other hand, the single-muon trigger shows the high efficiency of greater than 90\,\% because there are two muon candidates in the event ($\epsilon = 1 - \left( 1 - 0.7 \right)^2 \sim 0.9$). 
+
+%In all sub-channels, we found trigger efficiencies to signal events are greater than 90\,\% in the target mass range of greater than 500\,\GeV.
+%At the lowest target mass region ($m=300\,\GeV$), the trigger efficiencies are about 70\,\% in $\mu\nu qq$, 85\,\% in $e\nu qq$, and greater than 90\,\% in $\ell\ell qq$ channel, respectively.
+
+%Due to the \met trigger efficiency reaches to the plateau at $\met=250\,\GeV$, 0-lepton channel does not cover the region of $m<500\,\GeV$.
+
+Possible data/MC differences on the lepton trigger efficiency are taken into account by applying scale factors implemented in \texttt{AsgElectronEfficiencyCorrectionTool} and \texttt{MuonEfficiencyScaleFactors} packages to the simulated events.
+
+%For the modelling of the \met trigger efficiency, we rely on what has done in VV semi-leptonic search \cite{Bachas:2646593}; 
+%in particular, it relys on a measurement made in the SM $V\left(H\to bb\right)$ analysis \cite{HIGG-2018-04, ATL-COM-PHYS-2018-517}. 
+
+%The latest results is found \href{https://indico.cern.ch/event/808675/contributions/3429367/attachments/1842666/3021872/20190130_METtrigger_2018-2.pdf}{here}.
+%As an example, the efficiency of HLT\_xe110\_pufit\_xe70\_L1XE50 using data18 is shown in Fig~\ref{fig:met_trig_eff}.
+%From the 36~\ifb\ \lvqq\ analysis~\cite{EXOT-2016-28}, the impact of \met trigger efficiency scale factor effect was negligible and thus is not considered for this round.
+%The trigger efficiency obtained from data and $W \to \mu\nu$ simulated sample are used to estimate the scale factor.
+%A difference between $W \to \mu\nu$ and $\ttbar$ samples are considered as a systematic uncertainty.
+
+%\textbf{[Note]} \mbox{} \\
+%The trigger navigation information for HLT\_e300\_etcut is corrupted in our DxAODs and we cannot apply the efficiency SF for it, but its efficiency is about 100\% at the highest-\et region and egamma trigger group agreed that we do not need to apply it.
+
+
+\begin{landscape}
+\begin{table}[p]
+  \caption{The list of triggers used in the analysis.} \label{tab:triggers}
+\begin{center} 
+\small
+\begin{tabular}{|l|c|c|c|}
+\hline
+\multirow{2}{*}{Data-taking period} & \multirow{2}{*}{$e\nu qq$ and $eeqq$ channels} & $\mu\nu qq$ ($\pt(\mu\nu)<150\,\GeV$) & $\mu\nu qq$ ($\pt(\mu\nu) > 150\,\GeV$)  \\
+&& and $\mu\mu qq$ channels& and $\nu\nu qq$ channels\\
+\hline
+\hline
+\multirow{3}{*}{\centering {2015}} & HLT\_e24\_lhmedium\_L1EM20 OR & HLT\_mu20\_iloose\_L1MU15 OR & \multirow{3}{*}{ HLT\_xe70 } \\
+ & HLT\_e60\_lhmedium OR & HLT\_mu50 & \\
+ & HLT\_e120\_lhloose & & \\
+\hline
+\multirow{2}{*}{\centering {2016a (run $< 302919$)}} & HLT\_e26\_lhtight\_nod0\_ivarloose OR & HLT\_mu26\_ivarmedium OR  & \multirow{3}{*}{ HLT\_xe90\_mht\_L1XE50 } \\
+ & HLT\_e60\_lhmedium\_nod0 OR & HLT\_mu50 &  \\ 
+\multirow{2}{*}{($L<1.0\times10^{34}\,{\textrm cm}^{-2}\,{\textrm s}^{-1}$)} & HLT\_e140\_lhloose\_nod0 & & \\
+ & HLT\_e300\_etcut & & \\
+\hline
+{\centering {2016b (run $\geq 302919$)}} & \multirow{2}{*}{same as above} & \multirow{2}{*}{same as above}  &  \multirow{2}{*}{HLT\_xe110\_mht\_L1XE50} \\
+($L<1.7\times10^{34}\,{\textrm cm}^{-2}\,{\textrm s}^{-1}$) & & &\\
+\hline
+{\centering {2017}} & same as above & same as above  &  HLT\_xe110\_pufit\_L1XE55 \\
+\hline
+{\centering {2018}} & same as above & same as above  &  HLT\_xe110\_pufit\_xe70\_L1XE50  \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{landscape}
+
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.7\hsize]{figures/Event_selection/Eff_xe110_pufit_xe70_L1XE50.png}
+%\caption{Efficiency of HLT\_xe110\_pufit\_xe70\_L1XE50 to data18 (blue) and $W\to\munu$ MC (red) as a function of \ptmunu. Loose selection cuts to select $W$+jets events are applied.}
+%\label{fig:met_trig_eff}
+%\end{figure}

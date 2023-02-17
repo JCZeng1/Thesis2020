@@ -1,0 +1,63 @@
+%%% EventSelection %%%
+
+This section describes the event selection, which has been optimized in order to maximize the expected significance of the signal over background.
+
+A set of preselection cuts are applied first, including basic quality cuts (event cleaning) and  trigger requirements.
+Some preselection cuts applied in the \texttt{CxAODMaker} are also summarized.
+
+For the main event selection, first the selection of the $W/Z$ boson decaying leptonically is performed. 
+The candidate boson is selected targeting $Z\to \ell\ell$, $W\to \ell\nu$ and $Z\to \nu\nu$, respectively.
+
+Then in each lepton channel, the hadronic part of the final state is considered 
+in order to enhance the VBS associated objects and to select the second boson decaying hadronically. 
+A usual tagging jets procedure is performed for the VBS-jet candidates selection 
+while a hadronically decaying $V$ candidate is identified, 
+either reconstructed as a large-$R$ jet (merged regime), or two small-$R$ jets (resolved regime).
+
+In each channel, some topological cuts are applied to suppress the background. 
+Cuts are designed to define some analysis SRs, with enhanced sensitivity to the target signal,
+and some analysis CRs, with enhanced SM background processes to constraint them in the fit. 
+In particular, for events falling in the merged regime the boson tagger is used to define the SRs 
+and reverted cut for defining CRs for the \Vjets background; for events in the resolved regime,
+a signal di-jets system is built and the invariant mass of it is used to define a mass window (SR) 
+or sidebands (CRs for \Vjets). Only in the \olep channel, dedicated TopCR are defined r
+equiring additional b-jets in the event.
+
+%The current selection is mainly reproducing what has been optmised in the previous round, 
+%except for some dedicated optimisations:
+
+First a summary of all the selections will be provided to give an full overview of it to the reader,
+then, the detailed selections will be explained throughout this section. 
+
+During this pass of the analysis, 
+we focused on the optimization of the signal jets selection in both resolved and merged regime 
+during the R\&D phase of the analysis and introduced new criteria with respect to the early run-2 version of this analysis:
+
+\begin{itemize}
+  \item moving signal jets selection ($V \rightarrow qq$ decay products) from close-V algorithm to leading $p_T$ criteria; some studies are showed in appendix \ref{app:res_opt};
+  \item moving to latest boson tagger configuration (3-variables instead of the previous 2-variables), details and references to the new tagger are put in section \ref{subsec:large-Rjet};
+  \item moving to an inclusive merged CR instead of HighPurity/LowPurity (defined in Section \ref{subsubsec:merged_jets_selection}) CRs in order to take into account recommendation for boson tagger SFs, details are discussed in appendix \ref{app:merged_cr}.
+\end{itemize}
+
+The SM EW VV+jj MC samples have been used to check the sensitivity to our target signal process.
+
+% move here after Oldrich comment
+\input{source/event_selection/SummarySelections}
+%
+\input{source/event_selection/EventCleaning}
+%
+\input{source/event_selection/TriggerSelection}
+%
+\input{source/event_selection/EventPreSel}
+%
+\input{source/event_selection/LeptonsSelection}
+%
+\input{source/event_selection/VBSSelection}
+%
+\input{source/event_selection/SRSelection}
+%
+\input{source/event_selection/TopVetoSelection}
+%
+\input{source/event_selection/CRSelection}
+%
+\input{source/event_selection/CutFlows}
