@@ -1,0 +1,112 @@
+<!DOCTYPE Channel SYSTEM 'HistFactorySchema.dtd'>
+
+<Channel Name="Region_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L0_incJet1" HistoPath="">
+
+<Data InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L0_incJet1.root" HistoName="data" HistoPath="" />
+
+<StatErrorConfig RelErrorThreshold="0.01" ConstraintType="Poisson" />
+
+<Sample Name="stop" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L0_incJet1.root" HistoName="stop" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryQCD_stop" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysTheoryQCD_stop__1down/" HistoPathHigh="/SysTheoryQCD_stop__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetMu" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_Pileup_OffsetMu__1down/" HistoPathHigh="/SysJET_Pileup_OffsetMu__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<OverallSys Name="SysMET_JetTrk_Scale" High="1.01201" Low="0.986538"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.02618" Low="0.974988"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.014" Low="0.984969"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.02494" Low="0.978724"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.969543" Low="1.03434"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.03735" Low="0.965823"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.02591" Low="0.977646"/>
+<OverallSys Name="NormStop" High="1.3" Low="0.7"/>
+<OverallSys Name="ATLAS_LUMI_2015_2018" High="1.017" Low="0.983"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+<Sample Name="EW6vvqq" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L0_incJet1.root" HistoName="EW6vvqq" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryQCD_VBS" HistoNameLow="EW6vvqq" HistoNameHigh="EW6vvqq" HistoPathLow="/SysTheoryQCD_VBS__1down/" HistoPathHigh="/SysTheoryQCD_VBS__1up/"/>
+<OverallSys Name="SysTheoryQCD_VBS" High="1.05872" Low="0.946222"/>
+<OverallSys Name="SysTheoryPDF_NNPDF_VBS" High="1.01599" Low="0.984012"/>
+<OverallSys Name="SysMET_JetTrk_Scale" High="1.01036" Low="0.988094"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.01923" Low="0.980787"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.01735" Low="0.984996"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.02813" Low="0.973521"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.0185" Low="0.983117"/>
+<OverallSys Name="ATLAS_LUMI_2015_2018" High="1.017" Low="0.983"/>
+<NormFactor Name="mu_SemileptonicVBS" Val="1" Low="-10" High="10" Const="True" />
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<StatError Activate="False"/>
+</Sample>
+
+<Sample Name="Z" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L0_incJet1.root" HistoName="Z" NormalizeByTheory="False" >
+<HistoSys Name="SysMODEL_V_MGPy8" HistoNameLow="ZSym" HistoNameHigh="Z_SysMODEL_V_MGPy8" HistoPathLow="/SysMODEL_V_MGPy8__1down/" HistoPathHigh="/SysMODEL_V_MGPy8__1up/"/>
+<HistoSys Name="SysMJJREWEIGHT_100per_L0_J2" HistoNameLow="Z_SysMJJREWEIGHT_100per__1down" HistoNameHigh="Z_SysMJJREWEIGHT_100per__1up" HistoPathLow="/SysMJJREWEIGHT_100per_L0_J2__1down/" HistoPathHigh="/SysMJJREWEIGHT_100per_L0_J2__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetMu" HistoNameLow="Z_SysJET_Pileup_OffsetMu__1down" HistoNameHigh="Z_SysJET_Pileup_OffsetMu__1up" HistoPathLow="/SysJET_Pileup_OffsetMu__1down/" HistoPathHigh="/SysJET_Pileup_OffsetMu__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="Z_SysJET_EtaIntercalibration_Modelling__1down" HistoNameHigh="Z_SysJET_EtaIntercalibration_Modelling__1up" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<OverallSys Name="SysPRW_DATASF" High="1.01273" Low="0.98895"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.04576" Low="0.957443"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.0245" Low="0.977669"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.04132" Low="0.96581"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.940731" Low="1.06405"/>
+<OverallSys Name="SysJET_Flavor_Composition" High="1.01093" Low="0.98956"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.05149" Low="0.953057"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.03109" Low="0.970142"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<NormFactor Name="ATLAS_norm_Vjets0LepResolved" Val="1" Low="0" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+<Sample Name="Diboson" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L0_incJet1.root" HistoName="Diboson" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryPDF_NNPDF_VV" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysTheoryPDF_NNPDF_VV__1down/" HistoPathHigh="/SysTheoryPDF_NNPDF_VV__1up/"/>
+<HistoSys Name="SysMODEL_VV_PwPy" HistoNameLow="DibosonSym" HistoNameHigh="Diboson" HistoPathLow="/SysMODEL_VV_PwPy__1down/" HistoPathHigh="/SysMODEL_VV_PwPy__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetMu" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysJET_Pileup_OffsetMu__1down/" HistoPathHigh="/SysJET_Pileup_OffsetMu__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.02443" Low="0.971798"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.01181" Low="0.986632"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.02268" Low="0.979715"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.967098" Low="1.02746"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.03331" Low="0.967216"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.02026" Low="0.976114"/>
+<OverallSys Name="Normdiboson0Lep" High="1.4" Low="0.6"/>
+<OverallSys Name="ATLAS_LUMI_2015_2018" High="1.017" Low="0.983"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+<Sample Name="ttbar" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L0_incJet1.root" HistoName="ttbar" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryISR_ttbar" HistoNameLow="ttbar_SysTheoryISR_ttbar__1down" HistoNameHigh="ttbar_SysTheoryISR_ttbar__1up" HistoPathLow="/SysTheoryISR_ttbar__1down/" HistoPathHigh="/SysTheoryISR_ttbar__1up/"/>
+<HistoSys Name="SysMODEL_ttbar_PwHwg7" HistoNameLow="ttbarSym" HistoNameHigh="ttbar_SysMODEL_ttbar_PwHwg7" HistoPathLow="/SysMODEL_ttbar_PwHwg7__1down/" HistoPathHigh="/SysMODEL_ttbar_PwHwg7__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetMu" HistoNameLow="ttbar_SysJET_Pileup_OffsetMu__1down" HistoNameHigh="ttbar_SysJET_Pileup_OffsetMu__1up" HistoPathLow="/SysJET_Pileup_OffsetMu__1down/" HistoPathHigh="/SysJET_Pileup_OffsetMu__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="ttbar_SysJET_EtaIntercalibration_Modelling__1down" HistoNameHigh="ttbar_SysJET_EtaIntercalibration_Modelling__1up" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<OverallSys Name="SysMET_JetTrk_Scale" High="1.01219" Low="0.9866"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.02365" Low="0.975856"/>
+<OverallSys Name="SysJET_Pileup_PtTerm" High="1.01269" Low="0.988591"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.01378" Low="0.987918"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.02104" Low="0.981439"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.963" Low="1.04055"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.03639" Low="0.966427"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.02704" Low="0.97393"/>
+<OverallSys Name="Normttbar0Lep" High="1.3" Low="0.7"/>
+<OverallSys Name="ATLAS_LUMI_2015_2018" High="1.017" Low="0.983"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+<Sample Name="W" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L0_incJet1.root" HistoName="W" NormalizeByTheory="False" >
+<HistoSys Name="SysMODEL_V_MGPy8" HistoNameLow="WSym" HistoNameHigh="W_SysMODEL_V_MGPy8" HistoPathLow="/SysMODEL_V_MGPy8__1down/" HistoPathHigh="/SysMODEL_V_MGPy8__1up/"/>
+<HistoSys Name="SysMJJREWEIGHT_100per_L0_J2" HistoNameLow="W_SysMJJREWEIGHT_100per__1down" HistoNameHigh="W_SysMJJREWEIGHT_100per__1up" HistoPathLow="/SysMJJREWEIGHT_100per_L0_J2__1down/" HistoPathHigh="/SysMJJREWEIGHT_100per_L0_J2__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetMu" HistoNameLow="W_SysJET_Pileup_OffsetMu__1down" HistoNameHigh="W_SysJET_Pileup_OffsetMu__1up" HistoPathLow="/SysJET_Pileup_OffsetMu__1down/" HistoPathHigh="/SysJET_Pileup_OffsetMu__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="W_SysJET_EtaIntercalibration_Modelling__1down" HistoNameHigh="W_SysJET_EtaIntercalibration_Modelling__1up" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<OverallSys Name="SysPRW_DATASF" High="1.01351" Low="0.985958"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.04253" Low="0.960434"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.0236" Low="0.979235"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.03966" Low="0.96839"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.938099" Low="1.06391"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.05095" Low="0.954395"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.03141" Low="0.970099"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<NormFactor Name="ATLAS_norm_Vjets0LepResolved" Val="1" Low="0" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+</Channel>

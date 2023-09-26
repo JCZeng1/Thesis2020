@@ -1,0 +1,122 @@
+ FCN=15.2655 FROM MIGRAD    STATUS=CONVERGED      35 CALLS          36 TOTAL
+                     EDM=2.43016e-23    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           1.04862e+00   1.26455e-01   1.16705e-04   1.14157e-10
+   2  p1          -2.75411e-04   1.11137e-04   1.02568e-07   1.29892e-07
+ FCN=34.4058 FROM MIGRAD    STATUS=CONVERGED      35 CALLS          36 TOTAL
+                     EDM=4.63127e-22    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           9.96180e-01   5.90958e-02   8.52820e-05   4.16584e-10
+   2  p1          -2.18009e-04   4.83950e-05   6.98395e-08   1.01739e-06
+ FCN=14.2849 FROM MIGRAD    STATUS=CONVERGED      35 CALLS          36 TOTAL
+                     EDM=3.97525e-22    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           1.05888e+00   3.18590e-02   2.89419e-05   1.84130e-09
+   2  p1          -9.59567e-05   2.95938e-05   9.38260e-08   1.60926e-06
+ FCN=38.7285 FROM MIGRAD    STATUS=CONVERGED      35 CALLS          36 TOTAL
+                     EDM=6.65125e-22    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           9.91809e-01   2.11581e-02   3.08893e-05  -3.45043e-09
+   2  p1          -1.76570e-04   2.17221e-05   1.23580e-07  -3.48549e-06
+ FCN=30.0139 FROM MIGRAD    STATUS=CONVERGED      35 CALLS          36 TOTAL
+                     EDM=2.42599e-23    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           9.83519e-01   1.77811e-02   2.28110e-05  -7.78729e-10
+   2  p1          -1.16543e-04   1.77740e-05   1.54307e-07  -5.50867e-07
+ FCN=7.81022 FROM MIGRAD    STATUS=CONVERGED      35 CALLS          36 TOTAL
+                     EDM=5.23073e-23    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           1.05423e+00   3.84765e-02   2.71494e-05   4.90718e-10
+   2  p1          -1.37788e-04   2.93567e-05   7.05737e-08   4.09016e-07
+ FCN=23.0309 FROM MIGRAD    STATUS=CONVERGED      37 CALLS          38 TOTAL
+                     EDM=4.51967e-23    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           1.05582e+00   1.14759e-02   1.34696e-05   6.59396e-10
+   2  p1          -9.98382e-05   9.99915e-06   2.51041e-07  -2.15531e-07
+output: plots/thesis/Condor0LepMc16d-r33
+input nominal: input/thesis/cutflow5jNoRewe/Condor0LepMc16d-r33/merged.root
+[]
+WARNING: No histograms found for Wjets_madgraph_alt 0ptag1pfat0pjet_0ptv_SRVBS_HP MTagJets
+WARNING: No histograms found for Zjets_madgraph_alt 0ptag1pfat0pjet_0ptv_SRVBS_HP MTagJets
+WARNING: No histograms found for diboson_powpy_alt 0ptag1pfat0pjet_0ptv_SRVBS_HP MTagJets
+WARNING: No histograms found for ttbar_PowhegHerwig_alt 0ptag1pfat0pjet_0ptv_SRVBS_HP MTagJets
+fit in SRVBS_HP
+slope:		 -0.0002754112251081897
+slope_up:	 -0.00016427453338941348
+slope_down:	 -0.00038654791682696596
+constant:	 1.0486183962712945
+constant_up:	 1.1750736612204755
+constant_down:	 0.9221631313221134
+WARNING: No histograms found for Wjets_madgraph_alt 0ptag1pfat0pjet_0ptv_SRVBS_LP MTagJets
+WARNING: No histograms found for Zjets_madgraph_alt 0ptag1pfat0pjet_0ptv_SRVBS_LP MTagJets
+WARNING: No histograms found for diboson_powpy_alt 0ptag1pfat0pjet_0ptv_SRVBS_LP MTagJets
+WARNING: No histograms found for ttbar_PowhegHerwig_alt 0ptag1pfat0pjet_0ptv_SRVBS_LP MTagJets
+fit in SRVBS_LP
+slope:		 -0.00021800925064022593
+slope_up:	 -0.00016961422567201678
+slope_down:	 -0.0002664042756084351
+constant:	 0.9961801077039583
+constant_up:	 1.0552759440540993
+constant_down:	 0.9370842713538172
+WARNING: No histograms found for Wjets_madgraph_alt 0ptag2pjet_0ptv_SRVBS_Fid MTagJets
+WARNING: No histograms found for Zjets_madgraph_alt 0ptag2pjet_0ptv_SRVBS_Fid MTagJets
+WARNING: No histograms found for diboson_powpy_alt 0ptag2pjet_0ptv_SRVBS_Fid MTagJets
+WARNING: No histograms found for ttbar_PowhegHerwig_alt 0ptag2pjet_0ptv_SRVBS_Fid MTagJets
+fit in SRVBS_Fid
+slope:		 -9.595671617582612e-05
+slope_up:	 -6.636293399385056e-05
+slope_down:	 -0.00012555049835780168
+constant:	 1.058881405370598
+constant_up:	 1.0907404355425372
+constant_down:	 1.0270223751986587
+WARNING: No histograms found for Wjets_madgraph_alt 0ptag2pjet_0ptv_SRVBS_NonFid MTagJets
+WARNING: No histograms found for Zjets_madgraph_alt 0ptag2pjet_0ptv_SRVBS_NonFid MTagJets
+WARNING: No histograms found for diboson_powpy_alt 0ptag2pjet_0ptv_SRVBS_NonFid MTagJets
+WARNING: No histograms found for ttbar_PowhegHerwig_alt 0ptag2pjet_0ptv_SRVBS_NonFid MTagJets
+fit in SRVBS_NonFid
+slope:		 -0.0001765699212466991
+slope_up:	 -0.00015484779791555915
+slope_down:	 -0.00019829204457783906
+constant:	 0.9918094908509498
+constant_up:	 1.012967551633486
+constant_down:	 0.9706514300684138
+WARNING: No histograms found for Wjets_madgraph_alt 0ptag2pjet_0ptv_SRVBS_Fid_or_0ptag2pjet_0ptv_SRVBS_NonFid MTagJets
+WARNING: No histograms found for Zjets_madgraph_alt 0ptag2pjet_0ptv_SRVBS_Fid_or_0ptag2pjet_0ptv_SRVBS_NonFid MTagJets
+WARNING: No histograms found for diboson_powpy_alt 0ptag2pjet_0ptv_SRVBS_Fid_or_0ptag2pjet_0ptv_SRVBS_NonFid MTagJets
+WARNING: No histograms found for ttbar_PowhegHerwig_alt 0ptag2pjet_0ptv_SRVBS_Fid_or_0ptag2pjet_0ptv_SRVBS_NonFid MTagJets
+fit in SRVBS_Fid_or_SRVBS_NonFid
+slope:		 -0.00011654324135945969
+slope_up:	 -9.876928863262975e-05
+slope_down:	 -0.00013431719408628964
+constant:	 0.9835187972814716
+constant_up:	 1.0012999448363562
+constant_down:	 0.965737649726587
+WARNING: No histograms found for Wjets_madgraph_alt 0ptag1pfat0pjet_0ptv_CRVjet_Mer MTagJets
+WARNING: No histograms found for Zjets_madgraph_alt 0ptag1pfat0pjet_0ptv_CRVjet_Mer MTagJets
+WARNING: No histograms found for diboson_powpy_alt 0ptag1pfat0pjet_0ptv_CRVjet_Mer MTagJets
+WARNING: No histograms found for ttbar_PowhegHerwig_alt 0ptag1pfat0pjet_0ptv_CRVjet_Mer MTagJets
+fit in CRVjet_Mer
+slope:		 -0.00013778827323970128
+slope_up:	 -0.0001084315300108196
+slope_down:	 -0.00016714501646858295
+constant:	 1.054230418271192
+constant_up:	 1.0927069535539247
+constant_down:	 1.0157538829884591
+WARNING: No histograms found for Wjets_madgraph_alt 0ptag2pjet_0ptv_CRVjet_Fid MTagJets
+WARNING: No histograms found for Zjets_madgraph_alt 0ptag2pjet_0ptv_CRVjet_Fid MTagJets
+WARNING: No histograms found for diboson_powpy_alt 0ptag2pjet_0ptv_CRVjet_Fid MTagJets
+WARNING: No histograms found for ttbar_PowhegHerwig_alt 0ptag2pjet_0ptv_CRVjet_Fid MTagJets
+fit in CRVjet_Fid
+slope:		 -9.983820632538466e-05
+slope_up:	 -8.98390612859024e-05
+slope_down:	 -0.00010983735136486693
+constant:	 1.0558157672636002
+constant_up:	 1.0672916239365358
+constant_down:	 1.0443399105906646

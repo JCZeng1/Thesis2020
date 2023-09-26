@@ -1,0 +1,78 @@
+void fitSlope_merged_CR()
+{
+//=========Macro generated from canvas: c1_n5/
+//=========  (Fri Nov 12 19:45:37 2021) by ROOT version 6.24/06
+   TCanvas *c1_n5 = new TCanvas("c1_n5", "",0,0,600,500);
+   gStyle->SetOptStat(0);
+   c1_n5->SetHighLightColor(2);
+   c1_n5->Range(0,0,1,1);
+   c1_n5->SetFillColor(0);
+   c1_n5->SetBorderMode(0);
+   c1_n5->SetBorderSize(2);
+   c1_n5->SetFrameBorderMode(0);
+  
+// ------------>Primitives in pad: 
+   TPad *pad = new TPad("", "",0,0,1,1);
+   pad->Draw();
+   pad->cd();
+   pad->Range(-0.3855421,-0.00036,4.433735,4e-05);
+   pad->SetFillColor(0);
+   pad->SetBorderMode(0);
+   pad->SetBorderSize(2);
+   pad->SetLeftMargin(0.08);
+   pad->SetFrameBorderMode(0);
+   pad->SetFrameBorderMode(0);
+   
+   TH1D *__29 = new TH1D("__29","Slope Summary - Merged CR",4,0,4);
+   __29->SetBinContent(1,-0.000238);
+   __29->SetBinContent(2,-0.000245);
+   __29->SetBinContent(3,-0.000218);
+   __29->SetBinContent(4,-0.000251);
+   __29->SetBinError(1,2.5e-05);
+   __29->SetBinError(2,2.6e-05);
+   __29->SetBinError(3,2e-05);
+   __29->SetBinError(4,2.5e-05);
+   __29->SetMinimum(-0.00016);
+   __29->SetMaximum(-0.0003);
+   __29->SetEntries(4);
+   __29->SetStats(0);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#0000ff");
+   __29->SetLineColor(ci);
+
+   ci = TColor::GetColor("#0000ff");
+   __29->SetMarkerColor(ci);
+   __29->SetMarkerStyle(20);
+   __29->GetXaxis()->SetBinLabel(1,"combined");
+   __29->GetXaxis()->SetBinLabel(2,"mc16a");
+   __29->GetXaxis()->SetBinLabel(3,"mc16d");
+   __29->GetXaxis()->SetBinLabel(4,"mc16e");
+   __29->GetXaxis()->SetLabelFont(42);
+   __29->GetXaxis()->SetLabelSize(0.06);
+   __29->GetXaxis()->SetTickLength(0);
+   __29->GetXaxis()->SetTitleOffset(1);
+   __29->GetXaxis()->SetTitleFont(42);
+   __29->GetYaxis()->SetLabelFont(42);
+   __29->GetYaxis()->SetTitleOffset(0.8);
+   __29->GetYaxis()->SetTitleFont(42);
+   __29->GetZaxis()->SetLabelFont(42);
+   __29->GetZaxis()->SetTitleOffset(1);
+   __29->GetZaxis()->SetTitleFont(42);
+   __29->Draw("P0");
+   
+   TPaveText *pt = new TPaveText(0.2139933,0.9339831,0.7860067,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   TText *pt_LaTex = pt->AddText("Slope Summary - Merged CR");
+   pt->Draw();
+   pad->Modified();
+   c1_n5->cd();
+   c1_n5->Modified();
+   c1_n5->cd();
+   c1_n5->SetSelected(c1_n5);
+}

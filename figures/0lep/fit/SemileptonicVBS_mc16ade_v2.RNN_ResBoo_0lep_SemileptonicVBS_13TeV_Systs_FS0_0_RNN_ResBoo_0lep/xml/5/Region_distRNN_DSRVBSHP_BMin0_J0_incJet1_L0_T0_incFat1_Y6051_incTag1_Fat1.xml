@@ -1,0 +1,231 @@
+<!DOCTYPE Channel SYSTEM 'HistFactorySchema.dtd'>
+
+<Channel Name="Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1" HistoPath="">
+
+<Data InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="data" HistoPath="" />
+
+<StatErrorConfig RelErrorThreshold="0.01" ConstraintType="Poisson" />
+
+<Sample Name="stop" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="stop" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryQCD_stop" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysTheoryQCD_stop__1down/" HistoPathHigh="/SysTheoryQCD_stop__1up/"/>
+<HistoSys Name="SysTheoryPDF_NNPDF_stop" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysTheoryPDF_NNPDF_stop__1down/" HistoPathHigh="/SysTheoryPDF_NNPDF_stop__1up/"/>
+<HistoSys Name="SysTheoryISR_stop" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysTheoryISR_stop__1down/" HistoPathHigh="/SysTheoryISR_stop__1up/"/>
+<HistoSys Name="SysQG_trackeff" HistoNameLow="stopSym" HistoNameHigh="stop" HistoPathLow="/SysQG_trackeff__1down/" HistoPathHigh="/SysQG_trackeff__1up/"/>
+<HistoSys Name="SysQG_exp" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysQG_exp__1down/" HistoPathHigh="/SysQG_exp__1up/"/>
+<HistoSys Name="SysJET_Pileup_RhoTopology" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_Pileup_RhoTopology__1down/" HistoPathHigh="/SysJET_Pileup_RhoTopology__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetNPV" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_Pileup_OffsetNPV__1down/" HistoPathHigh="/SysJET_Pileup_OffsetNPV__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetMu" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_Pileup_OffsetMu__1down/" HistoPathHigh="/SysJET_Pileup_OffsetMu__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_9" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_JERMC_EffectiveNP_9__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_9__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_8" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_JERMC_EffectiveNP_8__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_8__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_7" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_JERMC_EffectiveNP_7__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_7__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_6" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_JERMC_EffectiveNP_6__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_6__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_5" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_JERMC_EffectiveNP_5__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_5__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_4" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_JERMC_EffectiveNP_4__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_4__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_3" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_JERMC_EffectiveNP_3__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_3__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_2" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_JERMC_EffectiveNP_2__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_2__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_11" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_JERMC_EffectiveNP_11__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_11__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_10" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_JERMC_EffectiveNP_10__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_10__1up/"/>
+<HistoSys Name="SysJET_Flavor_Response" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_Flavor_Response__1down/" HistoPathHigh="/SysJET_Flavor_Response__1up/"/>
+<HistoSys Name="SysJET_Flavor_Composition" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_Flavor_Composition__1down/" HistoPathHigh="/SysJET_Flavor_Composition__1up/"/>
+<HistoSys Name="SysJET_EffectiveNP_Modelling1" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_EffectiveNP_Modelling1__1down/" HistoPathHigh="/SysJET_EffectiveNP_Modelling1__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_JetTagSF_MatrixElement" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysFATJET_BJT_JET_JetTagSF_MatrixElement__1down/" HistoPathHigh="/SysFATJET_BJT_JET_JetTagSF_MatrixElement__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1down/" HistoPathHigh="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1up/"/>
+<OverallSys Name="SysMET_JetTrk_Scale" High="1.01255" Low="0.984552"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.02962" Low="0.967569"/>
+<OverallSys Name="SysJET_Pileup_PtTerm" High="1.01096" Low="0.988657"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.01402" Low="0.978324"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.01977" Low="0.963976"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.969701" Low="1.02128"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.04885" Low="0.955073"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.0227" Low="0.970717"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff50_SigSF_Statistics" High="1.01863" Low="0.981367"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_MatrixElement" High="1.06094" Low="0.939063"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" High="1.13655" Low="0.863447"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Gammajet_Modelling" High="1.01425" Low="0.985746"/>
+<OverallSys Name="NormStop" High="1.3" Low="0.7"/>
+<OverallSys Name="ATLAS_LUMI_2015_2018" High="1.017" Low="0.983"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+<Sample Name="EW6vvqq" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="EW6vvqq" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryQCD_VBS" HistoNameLow="EW6vvqq" HistoNameHigh="EW6vvqq" HistoPathLow="/SysTheoryQCD_VBS__1down/" HistoPathHigh="/SysTheoryQCD_VBS__1up/"/>
+<HistoSys Name="SysQG_trackeff" HistoNameLow="EW6vvqqSym" HistoNameHigh="EW6vvqq" HistoPathLow="/SysQG_trackeff__1down/" HistoPathHigh="/SysQG_trackeff__1up/"/>
+<HistoSys Name="SysQG_fake" HistoNameLow="EW6vvqqSym" HistoNameHigh="EW6vvqq" HistoPathLow="/SysQG_fake__1down/" HistoPathHigh="/SysQG_fake__1up/"/>
+<HistoSys Name="SysQG_exp" HistoNameLow="EW6vvqq" HistoNameHigh="EW6vvqq" HistoPathLow="/SysQG_exp__1down/" HistoPathHigh="/SysQG_exp__1up/"/>
+<HistoSys Name="SysPRW_DATASF" HistoNameLow="EW6vvqq" HistoNameHigh="EW6vvqq" HistoPathLow="/SysPRW_DATASF__1down/" HistoPathHigh="/SysPRW_DATASF__1up/"/>
+<HistoSys Name="SysJET_Pileup_RhoTopology" HistoNameLow="EW6vvqq" HistoNameHigh="EW6vvqq" HistoPathLow="/SysJET_Pileup_RhoTopology__1down/" HistoPathHigh="/SysJET_Pileup_RhoTopology__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_2" HistoNameLow="EW6vvqq" HistoNameHigh="EW6vvqq" HistoPathLow="/SysJET_JERMC_EffectiveNP_2__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_2__1up/"/>
+<HistoSys Name="SysJET_Flavor_Response" HistoNameLow="EW6vvqq" HistoNameHigh="EW6vvqq" HistoPathLow="/SysJET_Flavor_Response__1down/" HistoPathHigh="/SysJET_Flavor_Response__1up/"/>
+<HistoSys Name="SysJET_EffectiveNP_Modelling1" HistoNameLow="EW6vvqq" HistoNameHigh="EW6vvqq" HistoPathLow="/SysJET_EffectiveNP_Modelling1__1down/" HistoPathHigh="/SysJET_EffectiveNP_Modelling1__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" HistoNameLow="EW6vvqq" HistoNameHigh="EW6vvqq" HistoPathLow="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1down/" HistoPathHigh="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1up/"/>
+<OverallSys Name="SysTheoryQCD_VBS" High="1.08627" Low="0.925687"/>
+<OverallSys Name="SysTheoryPDF_NNPDF_VBS" High="1.0232" Low="0.976802"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.02089" Low="0.982576"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff50_SigSF_Statistics" High="1.01516" Low="0.984841"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_MatrixElement" High="1.04404" Low="0.955956"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" High="1.09643" Low="0.90357"/>
+<OverallSys Name="ATLAS_LUMI_2015_2018" High="1.017" Low="0.983"/>
+<NormFactor Name="mu_SemileptonicVBS" Val="1" Low="-10" High="10" Const="True" />
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<StatError Activate="False"/>
+</Sample>
+
+<Sample Name="Z" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="Z" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryQCD_Z" HistoNameLow="Z_SysTheoryQCD_Z__1down" HistoNameHigh="Z_SysTheoryQCD_Z__1up" HistoPathLow="/SysTheoryQCD_Z__1down/" HistoPathHigh="/SysTheoryQCD_Z__1up/"/>
+<HistoSys Name="SysTheoryPDF_NNPDF_Z" HistoNameLow="Z_SysTheoryPDF_NNPDF_Z__1down" HistoNameHigh="Z_SysTheoryPDF_NNPDF_Z__1up" HistoPathLow="/SysTheoryPDF_NNPDF_Z__1down/" HistoPathHigh="/SysTheoryPDF_NNPDF_Z__1up/"/>
+<HistoSys Name="SysQG_trackeff" HistoNameLow="ZSym" HistoNameHigh="Z_SysQG_trackeff__1up" HistoPathLow="/SysQG_trackeff__1down/" HistoPathHigh="/SysQG_trackeff__1up/"/>
+<HistoSys Name="SysQG_fake" HistoNameLow="ZSym" HistoNameHigh="Z_SysQG_fake__1up" HistoPathLow="/SysQG_fake__1down/" HistoPathHigh="/SysQG_fake__1up/"/>
+<HistoSys Name="SysQG_exp" HistoNameLow="Z_SysQG_exp__1down" HistoNameHigh="Z_SysQG_exp__1up" HistoPathLow="/SysQG_exp__1down/" HistoPathHigh="/SysQG_exp__1up/"/>
+<HistoSys Name="SysPRW_DATASF" HistoNameLow="Z_SysPRW_DATASF__1down" HistoNameHigh="Z_SysPRW_DATASF__1up" HistoPathLow="/SysPRW_DATASF__1down/" HistoPathHigh="/SysPRW_DATASF__1up/"/>
+<HistoSys Name="SysMODEL_V_MGPy8" HistoNameLow="ZSym" HistoNameHigh="Z_SysMODEL_V_MGPy8" HistoPathLow="/SysMODEL_V_MGPy8__1down/" HistoPathHigh="/SysMODEL_V_MGPy8__1up/"/>
+<HistoSys Name="SysMJJREWEIGHT_100per_L0_Fat1" HistoNameLow="Z_SysMJJREWEIGHT_100per__1down" HistoNameHigh="Z_SysMJJREWEIGHT_100per__1up" HistoPathLow="/SysMJJREWEIGHT_100per_L0_Fat1__1down/" HistoPathHigh="/SysMJJREWEIGHT_100per_L0_Fat1__1up/"/>
+<HistoSys Name="SysJET_Pileup_RhoTopology" HistoNameLow="Z_SysJET_Pileup_RhoTopology__1down" HistoNameHigh="Z_SysJET_Pileup_RhoTopology__1up" HistoPathLow="/SysJET_Pileup_RhoTopology__1down/" HistoPathHigh="/SysJET_Pileup_RhoTopology__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetNPV" HistoNameLow="Z_SysJET_Pileup_OffsetNPV__1down" HistoNameHigh="Z_SysJET_Pileup_OffsetNPV__1up" HistoPathLow="/SysJET_Pileup_OffsetNPV__1down/" HistoPathHigh="/SysJET_Pileup_OffsetNPV__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetMu" HistoNameLow="Z_SysJET_Pileup_OffsetMu__1down" HistoNameHigh="Z_SysJET_Pileup_OffsetMu__1up" HistoPathLow="/SysJET_Pileup_OffsetMu__1down/" HistoPathHigh="/SysJET_Pileup_OffsetMu__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_9" HistoNameLow="Z_SysJET_JERMC_EffectiveNP_9__1down" HistoNameHigh="Z_SysJET_JERMC_EffectiveNP_9__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_9__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_9__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_6" HistoNameLow="Z_SysJET_JERMC_EffectiveNP_6__1down" HistoNameHigh="Z_SysJET_JERMC_EffectiveNP_6__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_6__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_6__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_3" HistoNameLow="Z_SysJET_JERMC_EffectiveNP_3__1down" HistoNameHigh="Z_SysJET_JERMC_EffectiveNP_3__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_3__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_3__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_2" HistoNameLow="Z_SysJET_JERMC_EffectiveNP_2__1down" HistoNameHigh="Z_SysJET_JERMC_EffectiveNP_2__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_2__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_2__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_11" HistoNameLow="Z_SysJET_JERMC_EffectiveNP_11__1down" HistoNameHigh="Z_SysJET_JERMC_EffectiveNP_11__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_11__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_11__1up/"/>
+<HistoSys Name="SysJET_Flavor_Response" HistoNameLow="Z_SysJET_Flavor_Response__1down" HistoNameHigh="Z_SysJET_Flavor_Response__1up" HistoPathLow="/SysJET_Flavor_Response__1down/" HistoPathHigh="/SysJET_Flavor_Response__1up/"/>
+<HistoSys Name="SysJET_Flavor_Composition" HistoNameLow="Z_SysJET_Flavor_Composition__1down" HistoNameHigh="Z_SysJET_Flavor_Composition__1up" HistoPathLow="/SysJET_Flavor_Composition__1down/" HistoPathHigh="/SysJET_Flavor_Composition__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="Z_SysJET_EtaIntercalibration_Modelling__1down" HistoNameHigh="Z_SysJET_EtaIntercalibration_Modelling__1up" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<HistoSys Name="SysJET_EffectiveNP_Modelling1" HistoNameLow="Z_SysJET_EffectiveNP_Modelling1__1down" HistoNameHigh="Z_SysJET_EffectiveNP_Modelling1__1up" HistoPathLow="/SysJET_EffectiveNP_Modelling1__1down/" HistoPathHigh="/SysJET_EffectiveNP_Modelling1__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_JetTagSF_Dijet_Modelling" HistoNameLow="Z_SysFATJET_BJT_JET_JetTagSF_Dijet_Modelling__1down" HistoNameHigh="Z_SysFATJET_BJT_JET_JetTagSF_Dijet_Modelling__1up" HistoPathLow="/SysFATJET_BJT_JET_JetTagSF_Dijet_Modelling__1down/" HistoPathHigh="/SysFATJET_BJT_JET_JetTagSF_Dijet_Modelling__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1" HistoNameLow="Z_SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1__1down" HistoNameHigh="Z_SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1__1up" HistoPathLow="/SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1__1down/" HistoPathHigh="/SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1__1up/"/>
+<OverallSys Name="SysQG_trackeff" High="1.01434" Low="0.985656"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.0478" Low="0.964141"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.03161" Low="0.978079"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.04914" Low="0.966853"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.972606" Low="1.04682"/>
+<OverallSys Name="SysJET_Flavor_Composition" High="1.02179" Low="0.987183"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.06649" Low="0.957448"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.02945" Low="0.978513"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Gammajet_Modelling" High="1.09763" Low="0.902366"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<NormFactor Name="ATLAS_norm_Vjets0LepMerged" Val="1" Low="0" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+<Sample Name="Diboson" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="Diboson" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryQCD_VV" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysTheoryQCD_VV__1down/" HistoPathHigh="/SysTheoryQCD_VV__1up/"/>
+<HistoSys Name="SysTheoryPDF_NNPDF_VV" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysTheoryPDF_NNPDF_VV__1down/" HistoPathHigh="/SysTheoryPDF_NNPDF_VV__1up/"/>
+<HistoSys Name="SysQG_trackeff" HistoNameLow="DibosonSym" HistoNameHigh="Diboson" HistoPathLow="/SysQG_trackeff__1down/" HistoPathHigh="/SysQG_trackeff__1up/"/>
+<HistoSys Name="SysQG_me" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysQG_me__1down/" HistoPathHigh="/SysQG_me__1up/"/>
+<HistoSys Name="SysQG_exp" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysQG_exp__1down/" HistoPathHigh="/SysQG_exp__1up/"/>
+<HistoSys Name="SysMODEL_VV_PwPy" HistoNameLow="DibosonSym" HistoNameHigh="Diboson" HistoPathLow="/SysMODEL_VV_PwPy__1down/" HistoPathHigh="/SysMODEL_VV_PwPy__1up/"/>
+<HistoSys Name="SysJET_Pileup_RhoTopology" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysJET_Pileup_RhoTopology__1down/" HistoPathHigh="/SysJET_Pileup_RhoTopology__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_9" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysJET_JERMC_EffectiveNP_9__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_9__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_8" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysJET_JERMC_EffectiveNP_8__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_8__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_6" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysJET_JERMC_EffectiveNP_6__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_6__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_5" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysJET_JERMC_EffectiveNP_5__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_5__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_4" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysJET_JERMC_EffectiveNP_4__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_4__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_3" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysJET_JERMC_EffectiveNP_3__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_3__1up/"/>
+<HistoSys Name="SysJET_Flavor_Response" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysJET_Flavor_Response__1down/" HistoPathHigh="/SysJET_Flavor_Response__1up/"/>
+<HistoSys Name="SysJET_Flavor_Composition" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysJET_Flavor_Composition__1down/" HistoPathHigh="/SysJET_Flavor_Composition__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1down/" HistoPathHigh="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1up/"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.03415" Low="0.976591"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.01869" Low="0.988202"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.04422" Low="0.971617"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.97552" Low="1.02175"/>
+<OverallSys Name="SysJET_Flavor_Composition" High="1.01713" Low="0.989924"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.04543" Low="0.957495"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.02379" Low="0.984485"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff50_SigSF_Statistics" High="1.0175" Low="0.982498"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_MatrixElement" High="1.05541" Low="0.944593"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" High="1.12329" Low="0.87671"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Gammajet_Modelling" High="1.02059" Low="0.979405"/>
+<OverallSys Name="Normdiboson0Lep" High="1.4" Low="0.6"/>
+<OverallSys Name="ATLAS_LUMI_2015_2018" High="1.017" Low="0.983"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+<Sample Name="ttbar" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="ttbar" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryFSR_Top" HistoNameLow="ttbar_SysTheoryFSR_Top__1down" HistoNameHigh="ttbar_SysTheoryFSR_Top__1up" HistoPathLow="/SysTheoryFSR_Top__1down/" HistoPathHigh="/SysTheoryFSR_Top__1up/"/>
+<HistoSys Name="SysQG_trackeff" HistoNameLow="ttbarSym" HistoNameHigh="ttbar_SysQG_trackeff__1up" HistoPathLow="/SysQG_trackeff__1down/" HistoPathHigh="/SysQG_trackeff__1up/"/>
+<HistoSys Name="SysQG_pdf" HistoNameLow="ttbar_SysQG_pdf__1down" HistoNameHigh="ttbar_SysQG_pdf__1up" HistoPathLow="/SysQG_pdf__1down/" HistoPathHigh="/SysQG_pdf__1up/"/>
+<HistoSys Name="SysQG_me" HistoNameLow="ttbar_SysQG_me__1down" HistoNameHigh="ttbar_SysQG_me__1up" HistoPathLow="/SysQG_me__1down/" HistoPathHigh="/SysQG_me__1up/"/>
+<HistoSys Name="SysQG_exp" HistoNameLow="ttbar_SysQG_exp__1down" HistoNameHigh="ttbar_SysQG_exp__1up" HistoPathLow="/SysQG_exp__1down/" HistoPathHigh="/SysQG_exp__1up/"/>
+<HistoSys Name="SysMODEL_ttbar_PwHwg7" HistoNameLow="ttbarSym" HistoNameHigh="ttbar_SysMODEL_ttbar_PwHwg7" HistoPathLow="/SysMODEL_ttbar_PwHwg7__1down/" HistoPathHigh="/SysMODEL_ttbar_PwHwg7__1up/"/>
+<HistoSys Name="SysJET_Pileup_RhoTopology" HistoNameLow="ttbar_SysJET_Pileup_RhoTopology__1down" HistoNameHigh="ttbar_SysJET_Pileup_RhoTopology__1up" HistoPathLow="/SysJET_Pileup_RhoTopology__1down/" HistoPathHigh="/SysJET_Pileup_RhoTopology__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetMu" HistoNameLow="ttbar_SysJET_Pileup_OffsetMu__1down" HistoNameHigh="ttbar_SysJET_Pileup_OffsetMu__1up" HistoPathLow="/SysJET_Pileup_OffsetMu__1down/" HistoPathHigh="/SysJET_Pileup_OffsetMu__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_9" HistoNameLow="ttbar_SysJET_JERMC_EffectiveNP_9__1down" HistoNameHigh="ttbar_SysJET_JERMC_EffectiveNP_9__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_9__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_9__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_7" HistoNameLow="ttbar_SysJET_JERMC_EffectiveNP_7__1down" HistoNameHigh="ttbar_SysJET_JERMC_EffectiveNP_7__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_7__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_7__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_6" HistoNameLow="ttbar_SysJET_JERMC_EffectiveNP_6__1down" HistoNameHigh="ttbar_SysJET_JERMC_EffectiveNP_6__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_6__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_6__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_5" HistoNameLow="ttbar_SysJET_JERMC_EffectiveNP_5__1down" HistoNameHigh="ttbar_SysJET_JERMC_EffectiveNP_5__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_5__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_5__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_4" HistoNameLow="ttbar_SysJET_JERMC_EffectiveNP_4__1down" HistoNameHigh="ttbar_SysJET_JERMC_EffectiveNP_4__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_4__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_4__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_3" HistoNameLow="ttbar_SysJET_JERMC_EffectiveNP_3__1down" HistoNameHigh="ttbar_SysJET_JERMC_EffectiveNP_3__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_3__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_3__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_2" HistoNameLow="ttbar_SysJET_JERMC_EffectiveNP_2__1down" HistoNameHigh="ttbar_SysJET_JERMC_EffectiveNP_2__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_2__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_2__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_11" HistoNameLow="ttbar_SysJET_JERMC_EffectiveNP_11__1down" HistoNameHigh="ttbar_SysJET_JERMC_EffectiveNP_11__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_11__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_11__1up/"/>
+<HistoSys Name="SysJET_Flavor_Response" HistoNameLow="ttbar_SysJET_Flavor_Response__1down" HistoNameHigh="ttbar_SysJET_Flavor_Response__1up" HistoPathLow="/SysJET_Flavor_Response__1down/" HistoPathHigh="/SysJET_Flavor_Response__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="ttbar_SysJET_EtaIntercalibration_Modelling__1down" HistoNameHigh="ttbar_SysJET_EtaIntercalibration_Modelling__1up" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<HistoSys Name="SysJET_EffectiveNP_Modelling1" HistoNameLow="ttbar_SysJET_EffectiveNP_Modelling1__1down" HistoNameHigh="ttbar_SysJET_EffectiveNP_Modelling1__1up" HistoPathLow="/SysJET_EffectiveNP_Modelling1__1down/" HistoPathHigh="/SysJET_EffectiveNP_Modelling1__1up/"/>
+<HistoSys Name="SysJET_EffectiveNP_Mixed1" HistoNameLow="ttbar_SysJET_EffectiveNP_Mixed1__1down" HistoNameHigh="ttbar_SysJET_EffectiveNP_Mixed1__1up" HistoPathLow="/SysJET_EffectiveNP_Mixed1__1down/" HistoPathHigh="/SysJET_EffectiveNP_Mixed1__1up/"/>
+<HistoSys Name="SysFATJET_CR_JET_LargeR_TopologyUncertainty_top" HistoNameLow="ttbar_SysFATJET_CR_JET_LargeR_TopologyUncertainty_top__1down" HistoNameHigh="ttbar_SysFATJET_CR_JET_LargeR_TopologyUncertainty_top__1up" HistoPathLow="/SysFATJET_CR_JET_LargeR_TopologyUncertainty_top__1down/" HistoPathHigh="/SysFATJET_CR_JET_LargeR_TopologyUncertainty_top__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" HistoNameLow="ttbar_SysFATJET_BJT_JET_JetTagSF_Hadronisation__1down" HistoNameHigh="ttbar_SysFATJET_BJT_JET_JetTagSF_Hadronisation__1up" HistoPathLow="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1down/" HistoPathHigh="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1up/"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.03397" Low="0.97166"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.01697" Low="0.987379"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.03109" Low="0.975844"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.966432" Low="1.03745"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.05008" Low="0.955388"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.02662" Low="0.976672"/>
+<OverallSys Name="SysFATJET_CR_JET_LargeR_TopologyUncertainty_top" High="1.01727" Low="0.98286"/>
+<OverallSys Name="SysFATJET_CR_JET_EffectiveNP_R10_Modelling2" High="0.989624" Low="1.01016"/>
+<OverallSys Name="SysFATJET_CR_JET_EffectiveNP_R10_Modelling1" High="1.01083" Low="0.988524"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff50_SigSF_Statistics" High="1.01777" Low="0.982232"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Radiation" High="1.0108" Low="0.989196"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_MatrixElement" High="1.0713" Low="0.9287"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" High="1.16449" Low="0.835514"/>
+<OverallSys Name="Normttbar0Lep" High="1.3" Low="0.7"/>
+<OverallSys Name="ATLAS_LUMI_2015_2018" High="1.017" Low="0.983"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+<Sample Name="W" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="W" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryQCD_W" HistoNameLow="W_SysTheoryQCD_W__1down" HistoNameHigh="W_SysTheoryQCD_W__1up" HistoPathLow="/SysTheoryQCD_W__1down/" HistoPathHigh="/SysTheoryQCD_W__1up/"/>
+<HistoSys Name="SysTheoryPDF_NNPDF_W" HistoNameLow="W_SysTheoryPDF_NNPDF_W__1down" HistoNameHigh="W_SysTheoryPDF_NNPDF_W__1up" HistoPathLow="/SysTheoryPDF_NNPDF_W__1down/" HistoPathHigh="/SysTheoryPDF_NNPDF_W__1up/"/>
+<HistoSys Name="SysQG_trackeff" HistoNameLow="WSym" HistoNameHigh="W_SysQG_trackeff__1up" HistoPathLow="/SysQG_trackeff__1down/" HistoPathHigh="/SysQG_trackeff__1up/"/>
+<HistoSys Name="SysQG_pdf" HistoNameLow="W_SysQG_pdf__1down" HistoNameHigh="W_SysQG_pdf__1up" HistoPathLow="/SysQG_pdf__1down/" HistoPathHigh="/SysQG_pdf__1up/"/>
+<HistoSys Name="SysQG_fake" HistoNameLow="WSym" HistoNameHigh="W_SysQG_fake__1up" HistoPathLow="/SysQG_fake__1down/" HistoPathHigh="/SysQG_fake__1up/"/>
+<HistoSys Name="SysQG_exp" HistoNameLow="W_SysQG_exp__1down" HistoNameHigh="W_SysQG_exp__1up" HistoPathLow="/SysQG_exp__1down/" HistoPathHigh="/SysQG_exp__1up/"/>
+<HistoSys Name="SysPRW_DATASF" HistoNameLow="W_SysPRW_DATASF__1down" HistoNameHigh="W_SysPRW_DATASF__1up" HistoPathLow="/SysPRW_DATASF__1down/" HistoPathHigh="/SysPRW_DATASF__1up/"/>
+<HistoSys Name="SysMODEL_V_MGPy8" HistoNameLow="WSym" HistoNameHigh="W_SysMODEL_V_MGPy8" HistoPathLow="/SysMODEL_V_MGPy8__1down/" HistoPathHigh="/SysMODEL_V_MGPy8__1up/"/>
+<HistoSys Name="SysMJJREWEIGHT_100per_L0_Fat1" HistoNameLow="W_SysMJJREWEIGHT_100per__1down" HistoNameHigh="W_SysMJJREWEIGHT_100per__1up" HistoPathLow="/SysMJJREWEIGHT_100per_L0_Fat1__1down/" HistoPathHigh="/SysMJJREWEIGHT_100per_L0_Fat1__1up/"/>
+<HistoSys Name="SysJET_Pileup_RhoTopology" HistoNameLow="W_SysJET_Pileup_RhoTopology__1down" HistoNameHigh="W_SysJET_Pileup_RhoTopology__1up" HistoPathLow="/SysJET_Pileup_RhoTopology__1down/" HistoPathHigh="/SysJET_Pileup_RhoTopology__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetNPV" HistoNameLow="W_SysJET_Pileup_OffsetNPV__1down" HistoNameHigh="W_SysJET_Pileup_OffsetNPV__1up" HistoPathLow="/SysJET_Pileup_OffsetNPV__1down/" HistoPathHigh="/SysJET_Pileup_OffsetNPV__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetMu" HistoNameLow="W_SysJET_Pileup_OffsetMu__1down" HistoNameHigh="W_SysJET_Pileup_OffsetMu__1up" HistoPathLow="/SysJET_Pileup_OffsetMu__1down/" HistoPathHigh="/SysJET_Pileup_OffsetMu__1up/"/>
+<HistoSys Name="SysJET_JvtEfficiency" HistoNameLow="W_SysJET_JvtEfficiency__1down" HistoNameHigh="W_SysJET_JvtEfficiency__1up" HistoPathLow="/SysJET_JvtEfficiency__1down/" HistoPathHigh="/SysJET_JvtEfficiency__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_8" HistoNameLow="W_SysJET_JERMC_EffectiveNP_8__1down" HistoNameHigh="W_SysJET_JERMC_EffectiveNP_8__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_8__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_8__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_6" HistoNameLow="W_SysJET_JERMC_EffectiveNP_6__1down" HistoNameHigh="W_SysJET_JERMC_EffectiveNP_6__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_6__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_6__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_5" HistoNameLow="W_SysJET_JERMC_EffectiveNP_5__1down" HistoNameHigh="W_SysJET_JERMC_EffectiveNP_5__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_5__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_5__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_4" HistoNameLow="W_SysJET_JERMC_EffectiveNP_4__1down" HistoNameHigh="W_SysJET_JERMC_EffectiveNP_4__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_4__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_4__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_3" HistoNameLow="W_SysJET_JERMC_EffectiveNP_3__1down" HistoNameHigh="W_SysJET_JERMC_EffectiveNP_3__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_3__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_3__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_2" HistoNameLow="W_SysJET_JERMC_EffectiveNP_2__1down" HistoNameHigh="W_SysJET_JERMC_EffectiveNP_2__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_2__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_2__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_11" HistoNameLow="W_SysJET_JERMC_EffectiveNP_11__1down" HistoNameHigh="W_SysJET_JERMC_EffectiveNP_11__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_11__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_11__1up/"/>
+<HistoSys Name="SysJET_JERMC_EffectiveNP_10" HistoNameLow="W_SysJET_JERMC_EffectiveNP_10__1down" HistoNameHigh="W_SysJET_JERMC_EffectiveNP_10__1up" HistoPathLow="/SysJET_JERMC_EffectiveNP_10__1down/" HistoPathHigh="/SysJET_JERMC_EffectiveNP_10__1up/"/>
+<HistoSys Name="SysJET_Flavor_Response" HistoNameLow="W_SysJET_Flavor_Response__1down" HistoNameHigh="W_SysJET_Flavor_Response__1up" HistoPathLow="/SysJET_Flavor_Response__1down/" HistoPathHigh="/SysJET_Flavor_Response__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="W_SysJET_EtaIntercalibration_Modelling__1down" HistoNameHigh="W_SysJET_EtaIntercalibration_Modelling__1up" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<HistoSys Name="SysJET_EffectiveNP_Modelling1" HistoNameLow="W_SysJET_EffectiveNP_Modelling1__1down" HistoNameHigh="W_SysJET_EffectiveNP_Modelling1__1up" HistoPathLow="/SysJET_EffectiveNP_Modelling1__1down/" HistoPathHigh="/SysJET_EffectiveNP_Modelling1__1up/"/>
+<HistoSys Name="SysJET_EffectiveNP_Mixed1" HistoNameLow="W_SysJET_EffectiveNP_Mixed1__1down" HistoNameHigh="W_SysJET_EffectiveNP_Mixed1__1up" HistoPathLow="/SysJET_EffectiveNP_Mixed1__1down/" HistoPathHigh="/SysJET_EffectiveNP_Mixed1__1up/"/>
+<HistoSys Name="SysFT_EFF_extrapolation_from_charm" HistoNameLow="WSym" HistoNameHigh="W_SysFT_EFF_extrapolation_from_charm_AntiKt4EMPFlowJets_BTagging201903__1up" HistoPathLow="/SysFT_EFF_extrapolation_from_charm__1down/" HistoPathHigh="/SysFT_EFF_extrapolation_from_charm__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_JetTagSF_Dijet_Modelling" HistoNameLow="W_SysFATJET_BJT_JET_JetTagSF_Dijet_Modelling__1down" HistoNameHigh="W_SysFATJET_BJT_JET_JetTagSF_Dijet_Modelling__1up" HistoPathLow="/SysFATJET_BJT_JET_JetTagSF_Dijet_Modelling__1down/" HistoPathHigh="/SysFATJET_BJT_JET_JetTagSF_Dijet_Modelling__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1" HistoNameLow="W_SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1__1down" HistoNameHigh="W_SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1__1up" HistoPathLow="/SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1__1down/" HistoPathHigh="/SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1__1up/"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.04043" Low="0.960814"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.0202" Low="0.977924"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.03601" Low="0.96942"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.963385" Low="1.04109"/>
+<OverallSys Name="SysJET_Flavor_Composition" High="1.01107" Low="0.980702"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.05285" Low="0.945444"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.02597" Low="0.971176"/>
+<OverallSys Name="SysFATJET_CR_JET_EffectiveNP_R10_Modelling1" High="1.01369" Low="0.989051"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Gammajet_Modelling" High="1.09706" Low="0.902935"/>
+<OverallSys Name="SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1" High="1.01476" Low="0.988216"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<NormFactor Name="ATLAS_norm_Vjets0LepMerged" Val="1" Low="0" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+</Channel>

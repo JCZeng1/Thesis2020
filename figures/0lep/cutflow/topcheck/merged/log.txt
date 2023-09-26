@@ -1,0 +1,3 @@
+output: plots/thesis/merged
+input nominal: input/thesis/cutflow5jTopCheck/merged/merged.root
+[]

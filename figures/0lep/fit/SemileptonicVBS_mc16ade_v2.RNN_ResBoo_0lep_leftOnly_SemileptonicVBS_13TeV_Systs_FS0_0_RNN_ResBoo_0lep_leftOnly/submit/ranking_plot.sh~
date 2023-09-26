@@ -1,0 +1,6 @@
+#!/bin/bash
+export X509_USER_PROXY=None
+unset DISPLAY
+cd /afs/cern.ch/work/m/mdacunha/VBSanalysisFit/WSMaker_VBSVV
+source ./setup.sh &> /dev/null
+python /afs/cern.ch/work/m/mdacunha/VBSanalysisFit/WSMaker_VBSVV/WSMakerCore/scripts/makeNPrankPlots.py SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_leftOnly_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep_leftOnly 2.3 5 > output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_leftOnly_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep_leftOnly/logs/ranking_plot.log 2>&1

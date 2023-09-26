@@ -1,0 +1,178 @@
+<!DOCTYPE Channel SYSTEM 'HistFactorySchema.dtd'>
+
+<Channel Name="Region_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1" HistoPath="">
+
+<Data InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="data" HistoPath="" />
+
+<StatErrorConfig RelErrorThreshold="0.01" ConstraintType="Poisson" />
+
+<Sample Name="stop" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="stop" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryQCD_stop" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysTheoryQCD_stop__1down/" HistoPathHigh="/SysTheoryQCD_stop__1up/"/>
+<HistoSys Name="SysTheoryPDF_NNPDF_stop" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysTheoryPDF_NNPDF_stop__1down/" HistoPathHigh="/SysTheoryPDF_NNPDF_stop__1up/"/>
+<HistoSys Name="SysTheoryISR_stop" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysTheoryISR_stop__1down/" HistoPathHigh="/SysTheoryISR_stop__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetMu" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_Pileup_OffsetMu__1down/" HistoPathHigh="/SysJET_Pileup_OffsetMu__1up/"/>
+<HistoSys Name="SysJET_Flavor_Response" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_Flavor_Response__1down/" HistoPathHigh="/SysJET_Flavor_Response__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" HistoNameLow="stop" HistoNameHigh="stop" HistoPathLow="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1down/" HistoPathHigh="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1up/"/>
+<OverallSys Name="SysPRW_DATASF" High="1.01965" Low="0.984216"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.02749" Low="0.971384"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.0189" Low="0.985158"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.03583" Low="0.975426"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.980267" Low="1.0161"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.0401" Low="0.960422"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.02253" Low="0.978511"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Modelling" High="1.02223" Low="0.977168"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Baseline" High="1.02289" Low="0.977746"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_TagEffUnc_GlobalOther" High="1.05144" Low="0.973701"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_SigSF_Statistics" High="0.978687" Low="1.02131"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Radiation" High="0.98289" Low="1.01711"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_MatrixElement" High="0.964645" Low="1.03536"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" High="0.971161" Low="1.02884"/>
+<OverallSys Name="SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1" High="1.01335" Low="0.98751"/>
+<OverallSys Name="NormStop" High="1.3" Low="0.7"/>
+<OverallSys Name="ATLAS_LUMI_2015_2018" High="1.017" Low="0.983"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+<Sample Name="EW6vvqq" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="EW6vvqq" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryQCD_VBS" HistoNameLow="EW6vvqq" HistoNameHigh="EW6vvqq" HistoPathLow="/SysTheoryQCD_VBS__1down/" HistoPathHigh="/SysTheoryQCD_VBS__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="EW6vvqq" HistoNameHigh="EW6vvqq" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" HistoNameLow="EW6vvqq" HistoNameHigh="EW6vvqq" HistoPathLow="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1down/" HistoPathHigh="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1up/"/>
+<OverallSys Name="SysTheoryQCD_VBS" High="1.05987" Low="0.945401"/>
+<OverallSys Name="SysTheoryPDF_NNPDF_VBS" High="1.02584" Low="0.974162"/>
+<OverallSys Name="SysPRW_DATASF" High="1.01372" Low="0.987746"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.0166" Low="0.976954"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.0118" Low="0.985685"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.02577" Low="0.97708"/>
+<OverallSys Name="SysJET_Flavor_Composition" High="1.01172" Low="0.989275"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.03461" Low="0.968106"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.01235" Low="0.984396"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Modelling" High="1.02435" Low="0.974877"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Baseline" High="1.02073" Low="0.976439"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_TagEffUnc_GlobalSignal" High="1.04088" Low="0.97925"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_TagEffUnc_GlobalOther" High="1.05149" Low="0.973685"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_SigSF_Statistics" High="0.970965" Low="1.02904"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_SigSF_Propagated_AllOthers" High="0.989493" Low="1.01051"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_SigSF_BinVariation" High="1.01252" Low="0.98748"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Radiation" High="0.976602" Low="1.0234"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_MatrixElement" High="0.952038" Low="1.04796"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" High="0.961398" Low="1.0386"/>
+<OverallSys Name="SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1" High="1.01283" Low="0.988489"/>
+<OverallSys Name="ATLAS_LUMI_2015_2018" High="1.017" Low="0.983"/>
+<NormFactor Name="mu_SemileptonicVBS" Val="1" Low="-10" High="10" Const="True" />
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<StatError Activate="False"/>
+</Sample>
+
+<Sample Name="Z" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="Z" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryPDF_NNPDF_Z" HistoNameLow="Z_SysTheoryPDF_NNPDF_Z__1down" HistoNameHigh="Z_SysTheoryPDF_NNPDF_Z__1up" HistoPathLow="/SysTheoryPDF_NNPDF_Z__1down/" HistoPathHigh="/SysTheoryPDF_NNPDF_Z__1up/"/>
+<HistoSys Name="SysMODEL_V_MGPy8" HistoNameLow="ZSym" HistoNameHigh="Z_SysMODEL_V_MGPy8" HistoPathLow="/SysMODEL_V_MGPy8__1down/" HistoPathHigh="/SysMODEL_V_MGPy8__1up/"/>
+<HistoSys Name="SysMJJREWEIGHT_100per_L0_Fat1" HistoNameLow="Z_SysMJJREWEIGHT_100per__1down" HistoNameHigh="Z_SysMJJREWEIGHT_100per__1up" HistoPathLow="/SysMJJREWEIGHT_100per_L0_Fat1__1down/" HistoPathHigh="/SysMJJREWEIGHT_100per_L0_Fat1__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetMu" HistoNameLow="Z_SysJET_Pileup_OffsetMu__1down" HistoNameHigh="Z_SysJET_Pileup_OffsetMu__1up" HistoPathLow="/SysJET_Pileup_OffsetMu__1down/" HistoPathHigh="/SysJET_Pileup_OffsetMu__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="Z_SysJET_EtaIntercalibration_Modelling__1down" HistoNameHigh="Z_SysJET_EtaIntercalibration_Modelling__1up" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<OverallSys Name="SysPRW_DATASF" High="1.0176" Low="0.984953"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.02784" Low="0.97625"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.01726" Low="0.984873"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.03787" Low="0.973119"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.979873" Low="1.02201"/>
+<OverallSys Name="SysJET_Flavor_Composition" High="1.01611" Low="0.987163"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.04588" Low="0.964033"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.01878" Low="0.984674"/>
+<OverallSys Name="SysFATJET_CR_JET_EffectiveNP_R10_Modelling1" High="1.0124" Low="0.987541"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Tracking2" High="1.01048" Low="0.989356"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Modelling" High="1.03921" Low="0.961187"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Baseline" High="1.03821" Low="0.960514"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_TagEffUnc_GlobalBackground" High="0.973693" Low="1.01189"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Gammajet_Modelling" High="0.989709" Low="1.01029"/>
+<OverallSys Name="SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1" High="1.01201" Low="0.987927"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<NormFactor Name="ATLAS_norm_Vjets0LepMerged" Val="1" Low="0" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+<Sample Name="Diboson" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="Diboson" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryPDF_NNPDF_VV" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysTheoryPDF_NNPDF_VV__1down/" HistoPathHigh="/SysTheoryPDF_NNPDF_VV__1up/"/>
+<HistoSys Name="SysMODEL_VV_PwPy" HistoNameLow="DibosonSym" HistoNameHigh="Diboson" HistoPathLow="/SysMODEL_VV_PwPy__1down/" HistoPathHigh="/SysMODEL_VV_PwPy__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" HistoNameLow="Diboson" HistoNameHigh="Diboson" HistoPathLow="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1down/" HistoPathHigh="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1up/"/>
+<OverallSys Name="SysPRW_DATASF" High="1.01228" Low="0.98423"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.01955" Low="0.982212"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.02207" Low="0.979921"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.98724" Low="1.01129"/>
+<OverallSys Name="SysJET_Flavor_Composition" High="1.01485" Low="0.98901"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.03223" Low="0.970075"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.01335" Low="0.986018"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Modelling" High="1.03743" Low="0.970378"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Baseline" High="1.03357" Low="0.970708"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_TagEffUnc_GlobalSignal" High="1.01998" Low="0.98994"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_TagEffUnc_GlobalOther" High="1.02186" Low="0.988822"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_SigSF_Statistics" High="0.98741" Low="1.01259"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Radiation" High="0.989392" Low="1.01061"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_MatrixElement" High="0.976108" Low="1.02389"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" High="0.977853" Low="1.02215"/>
+<OverallSys Name="SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1" High="1.01172" Low="0.98903"/>
+<OverallSys Name="Normdiboson0Lep" High="1.4" Low="0.6"/>
+<OverallSys Name="ATLAS_LUMI_2015_2018" High="1.017" Low="0.983"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+<Sample Name="ttbar" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="ttbar" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryISR_ttbar" HistoNameLow="ttbar_SysTheoryISR_ttbar__1down" HistoNameHigh="ttbar_SysTheoryISR_ttbar__1up" HistoPathLow="/SysTheoryISR_ttbar__1down/" HistoPathHigh="/SysTheoryISR_ttbar__1up/"/>
+<HistoSys Name="SysTheoryFSR_Top" HistoNameLow="ttbar_SysTheoryFSR_Top__1down" HistoNameHigh="ttbar_SysTheoryFSR_Top__1up" HistoPathLow="/SysTheoryFSR_Top__1down/" HistoPathHigh="/SysTheoryFSR_Top__1up/"/>
+<HistoSys Name="SysMODEL_ttbar_PwHwg7" HistoNameLow="ttbarSym" HistoNameHigh="ttbar_SysMODEL_ttbar_PwHwg7" HistoPathLow="/SysMODEL_ttbar_PwHwg7__1down/" HistoPathHigh="/SysMODEL_ttbar_PwHwg7__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="ttbar_SysJET_EtaIntercalibration_Modelling__1down" HistoNameHigh="ttbar_SysJET_EtaIntercalibration_Modelling__1up" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<HistoSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" HistoNameLow="ttbar_SysFATJET_BJT_JET_JetTagSF_Hadronisation__1down" HistoNameHigh="ttbar_SysFATJET_BJT_JET_JetTagSF_Hadronisation__1up" HistoPathLow="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1down/" HistoPathHigh="/SysFATJET_BJT_JET_JetTagSF_Hadronisation__1up/"/>
+<OverallSys Name="SysPRW_DATASF" High="1.01455" Low="0.988984"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.02179" Low="0.97652"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.0123" Low="0.984823"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.02565" Low="0.974237"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.977165" Low="1.02602"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.0369" Low="0.964929"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.01993" Low="0.978924"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Modelling" High="1.01541" Low="0.984362"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Baseline" High="1.01564" Low="0.982951"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_TagEffUnc_GlobalOther" High="1.08021" Low="0.95911"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_SigSF_Statistics" High="0.970251" Low="1.02975"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_SigSF_Propagated_AllOthers" High="0.988303" Low="1.0117"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_SigSF_BinVariation" High="1.01148" Low="0.988522"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Radiation" High="0.974653" Low="1.02535"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_MatrixElement" High="0.93782" Low="1.06218"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Hadronisation" High="0.936055" Low="1.06394"/>
+<OverallSys Name="SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1" High="1.0123" Low="0.987846"/>
+<OverallSys Name="Normttbar0Lep" High="1.3" Low="0.7"/>
+<OverallSys Name="ATLAS_LUMI_2015_2018" High="1.017" Low="0.983"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+<Sample Name="W" InputFile="output/SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep/normfiles//Norm_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1.root" HistoName="W" NormalizeByTheory="False" >
+<HistoSys Name="SysTheoryPDF_W" HistoNameLow="WSym" HistoNameHigh="W_SysTheoryPDF_W__1up" HistoPathLow="/SysTheoryPDF_W__1down/" HistoPathHigh="/SysTheoryPDF_W__1up/"/>
+<HistoSys Name="SysTheoryPDF_NNPDF_W" HistoNameLow="W_SysTheoryPDF_NNPDF_W__1down" HistoNameHigh="W_SysTheoryPDF_NNPDF_W__1up" HistoPathLow="/SysTheoryPDF_NNPDF_W__1down/" HistoPathHigh="/SysTheoryPDF_NNPDF_W__1up/"/>
+<HistoSys Name="SysMODEL_V_MGPy8" HistoNameLow="WSym" HistoNameHigh="W_SysMODEL_V_MGPy8" HistoPathLow="/SysMODEL_V_MGPy8__1down/" HistoPathHigh="/SysMODEL_V_MGPy8__1up/"/>
+<HistoSys Name="SysMJJREWEIGHT_100per_L0_Fat1" HistoNameLow="W_SysMJJREWEIGHT_100per__1down" HistoNameHigh="W_SysMJJREWEIGHT_100per__1up" HistoPathLow="/SysMJJREWEIGHT_100per_L0_Fat1__1down/" HistoPathHigh="/SysMJJREWEIGHT_100per_L0_Fat1__1up/"/>
+<HistoSys Name="SysJET_Pileup_OffsetMu" HistoNameLow="W_SysJET_Pileup_OffsetMu__1down" HistoNameHigh="W_SysJET_Pileup_OffsetMu__1up" HistoPathLow="/SysJET_Pileup_OffsetMu__1down/" HistoPathHigh="/SysJET_Pileup_OffsetMu__1up/"/>
+<HistoSys Name="SysJET_EtaIntercalibration_Modelling" HistoNameLow="W_SysJET_EtaIntercalibration_Modelling__1down" HistoNameHigh="W_SysJET_EtaIntercalibration_Modelling__1up" HistoPathLow="/SysJET_EtaIntercalibration_Modelling__1down/" HistoPathHigh="/SysJET_EtaIntercalibration_Modelling__1up/"/>
+<OverallSys Name="SysPRW_DATASF" High="1.0181" Low="0.983134"/>
+<OverallSys Name="SysJET_Pileup_RhoTopology" High="1.02597" Low="0.975051"/>
+<OverallSys Name="SysJET_Pileup_OffsetNPV" High="1.01539" Low="0.98578"/>
+<OverallSys Name="SysJET_Pileup_OffsetMu" High="1.03363" Low="0.975493"/>
+<OverallSys Name="SysJET_Flavor_Response" High="0.978193" Low="1.02072"/>
+<OverallSys Name="SysJET_Flavor_Composition" High="1.01271" Low="0.985556"/>
+<OverallSys Name="SysJET_EtaIntercalibration_Modelling" High="1.04032" Low="0.963652"/>
+<OverallSys Name="SysJET_EffectiveNP_Modelling1" High="1.01857" Low="0.981871"/>
+<OverallSys Name="SysFATJET_CR_JET_Flavor_Response" High="1.01038" Low="0.988864"/>
+<OverallSys Name="SysFATJET_CR_JET_EffectiveNP_R10_Modelling1" High="1.01193" Low="0.987353"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Tracking2" High="1.0106" Low="0.98926"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Modelling" High="1.03922" Low="0.962373"/>
+<OverallSys Name="SysFATJET_CR_JET_CombMass_Baseline" High="1.0379" Low="0.961266"/>
+<OverallSys Name="SysFATJET_BJT_JET_WTag_SigEff80_TagEffUnc_GlobalBackground" High="0.973344" Low="1.01197"/>
+<OverallSys Name="SysFATJET_BJT_JET_JetTagSF_Gammajet_Modelling" High="0.989537" Low="1.01046"/>
+<OverallSys Name="SysFATJET_BJT_JET_Flavor_Response" High="1.01002" Low="0.989226"/>
+<OverallSys Name="SysFATJET_BJT_JET_EffectiveNP_R10_Modelling1" High="1.01154" Low="0.987741"/>
+<NormFactor Name="ATLAS_norm_lumiProj" Val="1" Low="-10" High="10" Const="True" />
+<NormFactor Name="ATLAS_norm_Vjets0LepMerged" Val="1" Low="0" High="10" Const="True" />
+<StatError Activate="True"/>
+</Sample>
+
+</Channel>

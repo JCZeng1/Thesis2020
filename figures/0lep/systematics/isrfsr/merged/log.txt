@@ -1,0 +1,234 @@
+output: plots/thesis/merged
+input nominal: input/thesis/RNN5withEFT/merged/merged.root
+['TheoryFSR_Top__1down', 'TheoryFSR_Top__1up']
+sig
+bkg
+ ttbar_nom
+eft
+adding syst: TheoryFSR_Top__1down
+adding syst: TheoryFSR_Top__1up
+TEST0 nominal
+TEST0 TheoryFSR_Top__1down
+TEST0 FSR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryFSR_Top__1down
+TEST1 TheoryFSR_Top__1down
+TEST0.5 TheoryFSR_Top__1up
+TEST1 FSR 1up
+sig
+bkg
+ ttbar_nom
+eft
+adding syst: TheoryFSR_Top__1down
+adding syst: TheoryFSR_Top__1up
+TEST0 nominal
+TEST0 TheoryFSR_Top__1down
+TEST0 FSR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryFSR_Top__1down
+TEST1 TheoryFSR_Top__1down
+TEST0.5 TheoryFSR_Top__1up
+TEST1 FSR 1up
+sig
+bkg
+ ttbar_nom
+eft
+adding syst: TheoryFSR_Top__1down
+adding syst: TheoryFSR_Top__1up
+TEST0 nominal
+TEST0 TheoryFSR_Top__1down
+TEST0 FSR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryFSR_Top__1down
+TEST1 TheoryFSR_Top__1down
+TEST0.5 TheoryFSR_Top__1up
+TEST1 FSR 1up
+sig
+bkg
+ ttbar_nom
+eft
+adding syst: TheoryFSR_Top__1down
+adding syst: TheoryFSR_Top__1up
+TEST0 nominal
+TEST0 TheoryFSR_Top__1down
+TEST0 FSR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryFSR_Top__1down
+TEST1 TheoryFSR_Top__1down
+TEST0.5 TheoryFSR_Top__1up
+TEST1 FSR 1up
+sig
+bkg
+ ttbar_nom
+eft
+adding syst: TheoryFSR_Top__1down
+adding syst: TheoryFSR_Top__1up
+TEST0 nominal
+TEST0 TheoryFSR_Top__1down
+TEST0 FSR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryFSR_Top__1down
+TEST1 TheoryFSR_Top__1down
+TEST0.5 TheoryFSR_Top__1up
+TEST1 FSR 1up
+output: plots/thesis/merged
+input nominal: input/thesis/RNN5withEFT/merged/merged.root
+['TheoryISR_ttbar__1down', 'TheoryISR_ttbar__1up']
+sig
+bkg
+ ttbar_nom
+eft
+adding syst: TheoryISR_ttbar__1down
+adding syst: TheoryISR_ttbar__1up
+TEST0 nominal
+TEST0 TheoryISR_ttbar__1down
+TEST0 ISR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryISR_ttbar__1down
+TEST1 TheoryISR_ttbar__1down
+TEST0.5 TheoryISR_ttbar__1up
+TEST1 ISR 1up
+sig
+bkg
+ ttbar_nom
+eft
+adding syst: TheoryISR_ttbar__1down
+adding syst: TheoryISR_ttbar__1up
+TEST0 nominal
+TEST0 TheoryISR_ttbar__1down
+TEST0 ISR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryISR_ttbar__1down
+TEST1 TheoryISR_ttbar__1down
+TEST0.5 TheoryISR_ttbar__1up
+TEST1 ISR 1up
+sig
+bkg
+ ttbar_nom
+eft
+adding syst: TheoryISR_ttbar__1down
+adding syst: TheoryISR_ttbar__1up
+TEST0 nominal
+TEST0 TheoryISR_ttbar__1down
+TEST0 ISR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryISR_ttbar__1down
+TEST1 TheoryISR_ttbar__1down
+TEST0.5 TheoryISR_ttbar__1up
+TEST1 ISR 1up
+sig
+bkg
+ ttbar_nom
+eft
+adding syst: TheoryISR_ttbar__1down
+adding syst: TheoryISR_ttbar__1up
+TEST0 nominal
+TEST0 TheoryISR_ttbar__1down
+TEST0 ISR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryISR_ttbar__1down
+TEST1 TheoryISR_ttbar__1down
+TEST0.5 TheoryISR_ttbar__1up
+TEST1 ISR 1up
+sig
+bkg
+ ttbar_nom
+eft
+adding syst: TheoryISR_ttbar__1down
+adding syst: TheoryISR_ttbar__1up
+TEST0 nominal
+TEST0 TheoryISR_ttbar__1down
+TEST0 ISR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryISR_ttbar__1down
+TEST1 TheoryISR_ttbar__1down
+TEST0.5 TheoryISR_ttbar__1up
+TEST1 ISR 1up
+output: plots/thesis/merged
+input nominal: input/thesis/RNN5withEFT/merged/merged.root
+['TheoryISR_stop__1down', 'TheoryISR_stop__1up']
+sig
+bkg
+ stop
+eft
+adding syst: TheoryISR_stop__1down
+adding syst: TheoryISR_stop__1up
+TEST0 nominal
+TEST0 TheoryISR_stop__1down
+TEST0 ISR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryISR_stop__1down
+TEST1 TheoryISR_stop__1down
+TEST0.5 TheoryISR_stop__1up
+TEST1 ISR 1up
+sig
+bkg
+ stop
+eft
+adding syst: TheoryISR_stop__1down
+adding syst: TheoryISR_stop__1up
+TEST0 nominal
+TEST0 TheoryISR_stop__1down
+TEST0 ISR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryISR_stop__1down
+TEST1 TheoryISR_stop__1down
+TEST0.5 TheoryISR_stop__1up
+TEST1 ISR 1up
+sig
+bkg
+ stop
+eft
+adding syst: TheoryISR_stop__1down
+adding syst: TheoryISR_stop__1up
+TEST0 nominal
+TEST0 TheoryISR_stop__1down
+TEST0 ISR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryISR_stop__1down
+TEST1 TheoryISR_stop__1down
+TEST0.5 TheoryISR_stop__1up
+TEST1 ISR 1up
+sig
+bkg
+ stop
+eft
+adding syst: TheoryISR_stop__1down
+adding syst: TheoryISR_stop__1up
+TEST0 nominal
+TEST0 TheoryISR_stop__1down
+TEST0 ISR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryISR_stop__1down
+TEST1 TheoryISR_stop__1down
+TEST0.5 TheoryISR_stop__1up
+TEST1 ISR 1up
+sig
+bkg
+ stop
+eft
+adding syst: TheoryISR_stop__1down
+adding syst: TheoryISR_stop__1up
+TEST0 nominal
+TEST0 TheoryISR_stop__1down
+TEST0 ISR 1up
+0.5 1.5
+0.5 1.5
+TEST0.5 TheoryISR_stop__1down
+TEST1 TheoryISR_stop__1down
+TEST0.5 TheoryISR_stop__1up
+TEST1 ISR 1up

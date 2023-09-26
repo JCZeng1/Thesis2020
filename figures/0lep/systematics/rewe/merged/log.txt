@@ -1,0 +1,708 @@
+output: plots/thesis/merged
+input nominal: input/thesis/RNN5/merged/merged.root
+input alternative samples: input/thesis/RNN5/merged/syssamples.root
+['MODEL_norewe', 'MODEL_W_MGPy8', 'MJJREWEIGHT_100per__1up', 'MJJREWEIGHT_100per__1down', 'MJJREWEIGHT_Sherpa221__1up', 'MJJREWEIGHT_Sherpa221__1down']
+sig
+bkg
+ Wjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_W_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_W_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Wjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_W_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_W_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Wjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_W_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_W_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Wjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_W_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_W_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Wjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_W_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_W_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Wjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_W_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_W_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Wjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_W_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_W_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Wjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_W_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_W_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Wjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_W_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_W_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Wjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_W_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_W_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+output: plots/thesis/merged
+input nominal: input/thesis/RNN5/merged/merged.root
+input alternative samples: input/thesis/RNN5/merged/syssamples.root
+['MODEL_norewe', 'MODEL_Z_MGPy8', 'MJJREWEIGHT_100per__1up', 'MJJREWEIGHT_100per__1down', 'MJJREWEIGHT_Sherpa221__1up', 'MJJREWEIGHT_Sherpa221__1down']
+sig
+bkg
+ Zjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_Z_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_Z_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Zjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_Z_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_Z_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Zjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_Z_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_Z_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Zjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_Z_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_Z_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Zjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_Z_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_Z_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Zjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_Z_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_Z_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Zjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_Z_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_Z_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Zjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_Z_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_Z_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Zjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_Z_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_Z_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down
+sig
+bkg
+ Zjets_nom
+eft
+adding syst: MODEL_norewe
+adding syst: MODEL_Z_MGPy8
+adding syst: MJJREWEIGHT_100per__1up
+adding syst: MJJREWEIGHT_100per__1down
+adding syst: MJJREWEIGHT_Sherpa221__1up
+adding syst: MJJREWEIGHT_Sherpa221__1down
+TEST0 nominal
+TEST0 without reweighting
+TEST0 MadGraph
+TEST0 100% variation 1up
+TEST0 MJJREWEIGHT_100per__1down
+TEST0 variation from fit 1up
+TEST0 MJJREWEIGHT_Sherpa221__1down
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+0.1 1.9
+TEST0.5 MODEL_norewe
+TEST1 without reweighting
+TEST0.5 MODEL_Z_MGPy8
+TEST1 MadGraph
+TEST0.5 MJJREWEIGHT_100per__1up
+TEST1 100% variation 1up
+TEST0.5 MJJREWEIGHT_100per__1down
+TEST1 MJJREWEIGHT_100per__1down
+TEST0.5 MJJREWEIGHT_Sherpa221__1up
+TEST1 variation from fit 1up
+TEST0.5 MJJREWEIGHT_Sherpa221__1down
+TEST1 MJJREWEIGHT_Sherpa221__1down

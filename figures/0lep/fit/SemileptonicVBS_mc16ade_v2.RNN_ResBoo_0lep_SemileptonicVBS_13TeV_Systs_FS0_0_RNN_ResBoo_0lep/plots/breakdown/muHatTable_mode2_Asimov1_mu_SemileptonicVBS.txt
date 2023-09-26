@@ -1,0 +1,32 @@
+
+	Output of newGetMuHat ran at: Sat Mar 26 05:51:09 2022
+
+----------------------------------------------------------
+	Options:
+Workspace: SemileptonicVBS_mc16ade_v2.RNN_ResBoo_0lep_SemileptonicVBS_13TeV_Systs_FS0_0_RNN_ResBoo_0lep
+Asimov: 1, Mode: 2, 
+Mass: 5 GeV; poi: mu_SemileptonicVBS; wsName: combined
+ModelConfigName: ModelConfig ; dataName: obsData
+----------------------------------------------------------
+
+muhat: 1.00000
+
+nll_val_true: 368071.231324
+
+  Set of nuisance          Impact on error
+       parameters          
+----------------------------------------------------------
+  Total                    +  0.378  -  0.344  +-  0.361
+  DataStat                 +  0.187  -  0.183  +-  0.185
+  FullSyst                 +  0.328  -  0.292  +-  0.310
+Impact on error quadratically subtracted from total, except for:
+DataStat                
+----------------------------------------------------------
+
+  Set of nuisance          Fractional impact on error
+       parameters          (square of fraction of total)
+----------------------------------------------------------
+  DataStat                 +  0.24  -  0.28  +- 0.26
+  FullSyst                 +  0.76  -  0.72  +- 0.74
+----------------------------------------------------------
+
