@@ -12,13 +12,13 @@ and in the SM $V\left(H\to bb\right)$ analysis \cite{HIGG-2018-04, ATL-COM-PHYS-
 %in the previous round of the analysis and especially on the recent VV resonant search. 
 %Indeed, more studies were done with latest period data \cite{Bachas:2646593}.
 
-%Since muon term is not considered in the \met calculation in the trigger algorithm, the \met trigger is fully efficient to events containing very high-\pt muon. Therefore, the \met\ trigger is used not only in 0-lepton ($\nu\nu qq$) but also in $\mu\nu qq$ channel if $W$-boson \pt reconstructed by muon and \met, \ptmunu, is greater than 150\,\GeV, to compensate a poor efficiency (about 70\,\% at the plateau) of the single-muon trigger due to the detector coverage.
+%Since muon term is not considered in the \met calculation in the trigger algorithm, the \met trigger is fully efficient to events containing very high-\pt muon. Therefore, the \met\ trigger is used not only in 0-lepton ($\nu\nu qq$) but also in $\mu\nu qq$ channel if $W$-boson \pt reconstructed by muon and \met, \ptmunu, is greater than 150\,\si{\GeV}, to compensate a poor efficiency (about 70\,\% at the plateau) of the single-muon trigger due to the detector coverage.
 %In $\mu\mu qq$ channel, on the other hand, the single-muon trigger shows the high efficiency of greater than 90\,\% because there are two muon candidates in the event ($\epsilon = 1 - \left( 1 - 0.7 \right)^2 \sim 0.9$). 
 
-%In all sub-channels, we found trigger efficiencies to signal events are greater than 90\,\% in the target mass range of greater than 500\,\GeV.
-%At the lowest target mass region ($m=300\,\GeV$), the trigger efficiencies are about 70\,\% in $\mu\nu qq$, 85\,\% in $e\nu qq$, and greater than 90\,\% in $\ell\ell qq$ channel, respectively.
+%In all sub-channels, we found trigger efficiencies to signal events are greater than 90\,\% in the target mass range of greater than 500\,\si{\GeV}.
+%At the lowest target mass region ($m=300\,\si{\GeV}$), the trigger efficiencies are about 70\,\% in $\mu\nu qq$, 85\,\% in $e\nu qq$, and greater than 90\,\% in $\ell\ell qq$ channel, respectively.
 
-%Due to the \met trigger efficiency reaches to the plateau at $\met=250\,\GeV$, 0-lepton channel does not cover the region of $m<500\,\GeV$.
+%Due to the \met trigger efficiency reaches to the plateau at $\met=250\,\si{\GeV}$, 0-lepton channel does not cover the region of $m<500\,\si{\GeV}$.
 
 Possible data/MC differences on the lepton trigger efficiency are taken into account by applying scale factors implemented in \texttt{AsgElectronEfficiencyCorrectionTool} and \texttt{MuonEfficiencyScaleFactors} packages to the simulated events.
 
@@ -42,7 +42,9 @@ Possible data/MC differences on the lepton trigger efficiency are taken into acc
 \small
 \begin{tabular}{|l|c|c|c|}
 \hline
-\multirow{2}{*}{Data-taking period} & \multirow{2}{*}{$e\nu qq$ and $eeqq$ channels} & $\mu\nu qq$ ($\pt(\mu\nu)<150\,\GeV$) & $\mu\nu qq$ ($\pt(\mu\nu) > 150\,\GeV$)  \\
+%%%\multirow{2}{*}{Data-taking period} & \multirow{2}{*}{$e\nu qq$ and $eeqq$ channels} & $\mu\nu qq$ ($\pt(\mu\nu)<150\,\si{\GeV}$) & $\mu\nu qq$ ($\pt(\mu\nu) > 150\,\si{\GeV}$)  \\
+%%%&& and $\mu\mu qq$ channels& and $\nu\nu qq$ channels\\
+\multirow{2}{*}{Data-taking period} & \multirow{2}{*}{$e\nu qq$ and $eeqq$ channels} & $\mu\nu qq$ (\pt{$\mu\nu$}$<150\,\si{\GeV}$) & $\mu\nu qq$ (\pt{$\mu\nu$}$ > 150\,\si{\GeV}$)  \\
 && and $\mu\mu qq$ channels& and $\nu\nu qq$ channels\\
 \hline
 \hline

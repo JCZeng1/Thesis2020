@@ -194,47 +194,47 @@ FailMVhadRes & 16438.2 & 3197.57 & 4.84801 & 7670.44 & 153.058 & 526.741 & 1.029
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %     1 Lep Channel Cutflows
 \begin{figure}[ht]
-	\centering
-	\subfigure[SR High Purity Merged]{\resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSR50.tex}}}
-        \subfigure[SR Low Purity Merged]{\resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSR80.tex}}}
-	\subfigure[SR Resolved]{\resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSRRes.tex}}}
-	\subfigure[TopCR High Purity Merged]{\resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTop50.tex}}}
-	\subfigure[TopCR Low Purity Merged]{\resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTop80.tex}}}
-	\subfigure[TopCR Resolved]{\resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTopRes.tex}}}
-	\subfigure[WjetsCR Merged]{\resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRVjetsMer.tex}}}
-	\subfigure[WjetsCR Resolved]{\resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRVjetsRes.tex}}}
-	\caption{1-lepton event seletion cutflows. Event selection has no region priority, meaning that an event that passes the event selection for two regions counts for both regions in the cutflow (in the analysis merged regions have priority over resolved ones). "Preselection" cuts here mean have 1 lepton with $p_T >$ 28 GeV and passing trigger selections.}
+    \centering
+    \begin{subfigure}{\textwidth}
+        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSR50.tex}}
+        \caption{SR High Purity Merged}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSR80.tex}}
+        \caption{SR Low Purity Merged}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSRRes.tex}}
+        \caption{SR Resolved}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTop50.tex}}
+        \caption{TopCR High Purity Merged}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTop80.tex}}
+        \caption{TopCR Low Purity Merged}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTopRes.tex}}
+        \caption{TopCR Resolved}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRVjetsMer.tex}}
+        \caption{WjetsCR Merged}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRVjetsRes.tex}}
+        \caption{WjetsCR Resolved}
+    \end{subfigure}
+    \caption{1-lepton event selection cutflows. Event selection has no region priority, meaning that an event that passes the event selection for two regions counts for both regions in the cutflow (in the analysis merged regions have priority over resolved ones). "Preselection" cuts here mean having 1 lepton with $p_T >$ 28 GeV and passing trigger selections.}
     \label{fig:1lepCutFlow}
 \end{figure}
-
 
 %%%%%%%%%%%%%%%%%%
 
 
 %% 0 lepton channel cutflow 
-Cutflows for MC samples as well as observed data are shown in table \ref{tab:0lepCutFlow} for \zlep channel. Table \ref{tab:0lepCutFlowNofJVT} shows the corresponding numbers without requiring the tagging jet to pass the fJVT loose working point to be selected.
-
-\begin{figure}[ht]
-        \centering
-        \subfigure[merged SR HP]{\scalebox{.5}{\input{figures/0lep/cutflow/tables/merged/nom_cutflow_SRVBS_HP.tex}}}
-        \subfigure[merged SR LP]{\scalebox{.5}{\input{figures/0lep/cutflow/tables/merged/nom_cutflow_SRVBS_LP.tex}}}
-        \subfigure[resolved SR]{\scalebox{.5}{\input{figures/0lep/cutflow/tables/merged/nom_cutflow_SRVBS_Res.tex}}}
-        \subfigure[merged CR]{\scalebox{.5}{\input{figures/0lep/cutflow/tables/merged/nom_cutflow_CRVjet_Mer.tex}}}
-        \subfigure[resolved CR]{\scalebox{.5}{\input{figures/0lep/cutflow/tables/merged/nom_cutflow_CRVjet_Res.tex}}}
-        \caption{Cutflow table \zlep channel. Event selection in the nominal case of applying the loose fJVT working point for the tagging jet selection. The selections are applied subsequently, meaning only events failing the first (merged SR HP) selection enter the second (merged SR LP) selection etc. There is one exception to this rule: For events to enter the merged CR, the extra $m(jjj)$ cut for in the resolved SR definition is ignored. }
-    \label{tab:0lepCutFlow}
-\end{figure}
-
-\begin{figure}[ht]
-        \centering
-        \subfigure[merged SR HP]{\scalebox{.5}{\input{figures/0lep/cutflow/tablesNofJVT/merged/nom_cutflow_SRVBS_HP.tex}}}
-        \subfigure[merged SR LP]{\scalebox{.5}{\input{figures/0lep/cutflow/tablesNofJVT/merged/nom_cutflow_SRVBS_LP.tex}}}
-        \subfigure[resolved SR]{\scalebox{.5}{\input{figures/0lep/cutflow/tablesNofJVT/merged/nom_cutflow_SRVBS_Res.tex}}}
-        \subfigure[merged CR]{\scalebox{.5}{\input{figures/0lep/cutflow/tablesNofJVT/merged/nom_cutflow_CRVjet_Mer.tex}}}
-        \subfigure[resolved CR]{\scalebox{.5}{\input{figures/0lep/cutflow/tablesNofJVT/merged/nom_cutflow_CRVjet_Res.tex}}}
-        \caption{Cutflow table \zlep channel. Event selection without applying fJVT for the tagging jet selection. The nominal case with fJVT applied can be seen in table \ref{tab:0lepCutFlow}.}
-    \label{tab:0lepCutFlowNofJVT}
-\end{figure}
 
 \clearpage
 

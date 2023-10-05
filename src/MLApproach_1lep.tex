@@ -70,13 +70,21 @@ Binary cross-entropy was chosen as the loss function.
 The Adam and SGD (stochastic gradient descent) optimizers have been tested with the DNN models. The SGD optimizer is selected since its effect on a smoother distribution of the DNN scores. Fig. \ref{fig:1lepDNNoutputs} shows the DNN scores for all three signal regions. 
 
 \begin{figure}[ht]
- \begin{center}
-  \subfigure[DNN HP]{\includegraphics[width=0.3\textwidth]{figures/1lep/altML/Region_distDNN_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}}
-  \subfigure[DNN LP]{\includegraphics[width=0.3\textwidth]{figures/1lep/altML/Region_distDNN_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}}
-  \subfigure[DNN Res]{\includegraphics[width=0.3\textwidth]{figures/1lep/altML/Region_distDNN_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_Prefit.pdf}}
-  \caption{Features of the NN MVA in the merged HP signal region.}
- \label{fig:1lepDNNoutputs}
- \end{center}
+    \centering
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{figures/1lep/altML/Region_distDNN_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+        \caption{DNN HP}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{figures/1lep/altML/Region_distDNN_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+        \caption{DNN LP}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{figures/1lep/altML/Region_distDNN_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_Prefit.pdf}
+        \caption{DNN Res}
+    \end{subfigure}
+    \caption{Features of the NN MVA in the merged HP signal region.}
+    \label{fig:1lepDNNoutputs}
 \end{figure}
 
 %%\begin{figure}[ht]

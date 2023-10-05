@@ -65,7 +65,7 @@ the upper cut from the $Z$ selection.
 \subsubsection{Selection of $W/Z \to jj$ candidates (resolved category)}
 \label{subsubsec:resolved_jets_selection}
 
-For lower \pT ranges of the hadronically decaying boson two well-separated jets can be individually resolved in most cases. This regime represents the regime with the highest EW VV+jj signal efficiency, but with a bit lower sensitivity with respect to the merged regime due to a larger selected background.
+For lower \pt ranges of the hadronically decaying boson two well-separated jets can be individually resolved in most cases. This regime represents the regime with the highest EW VV+jj signal efficiency, but with a bit lower sensitivity with respect to the merged regime due to a larger selected background.
 
 In this regime, events are selected containing at least two ``signal'' jets;
 the two signal jets are selected from the collection of signal jet candidates excluding the
@@ -77,7 +77,7 @@ The two signal jets with highest-\pt\ are selected. This choice degrades the sig
 
 \textbf{Kinematic cuts}
 
-After selecting the two jets of interest, the leading jet of the two is required to have $\pt>40\,\GeV$ 
+After selecting the two jets of interest, the leading jet of the two is required to have \pt $\SI{>40}{\GeV}$
 to reject more background and maximize the sensitivity.
 %as optimised in the previous round of the analysis.
  
@@ -90,11 +90,18 @@ In the case of \zlep and \olep channels, the W peak coming from top associated p
 %%% 1-2 lep
 \begin{figure}[ht]
     \centering
-    \subfigure[\emph{\olep}]{\includegraphics[width=0.3\textwidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Resolved_MVHadRes_Lin.png}}
-    \subfigure[\emph{\tlep}]{\includegraphics[width=0.3\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_ResolvedCommon_MVHadRes_Log.png}}
-    \caption{ Mass of reconstructed leading 2 jets in the 1-lepton (left) and 2-lepton channel (right). The plot without mass window cut is shown.} 
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Resolved_MVHadRes_Lin.png}
+        \caption{\emph{\olep}}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_ResolvedCommon_MVHadRes_Log.png}
+        \caption{\emph{\tlep}}
+    \end{subfigure}
+    \caption{Mass of reconstructed leading 2 jets in the 1-lepton (left) and 2-lepton channel (right). The plot without mass window cut is shown.}
     \label{fig:1lep2lepMVHadResSR}
 \end{figure}
+
 
 %\begin{figure}[ht]
 %    \begin{center}
@@ -146,12 +153,12 @@ The reconstruction of the momentum of the neutrino in the $z$-direction, $p_z$, 
 %It compensates the poor muon momentum resolution at the very high-\pt region and  improves the $m_{ZV}$ resolution significantly as described in Ref.~\cite{ATL-COM-PHYS-2016-1494}.
 %On the other hand, we didn't find a benefit to give a constraint to dielectron system (better momentum resolution in particular at high-\pt region) so we don't apply it in the electron channel.
 
-\begin{figure}[ht]
-    \centering
-    \subfigure[merged HP]{\includegraphics[width=0.3\textwidth]{figures/0lep/cutflow/nominal/merged/plots/soverb_individual_SRVBS_HP_MFatJetLow_MFatJet_cutflow.pdf}}
-    \subfigure[merged LP]{\includegraphics[width=0.3\textwidth]{figures/0lep/cutflow/nominal/merged/plots/soverb_individual_SRVBS_LP_MFatJetLow_MFatJet_cutflow.pdf}}
-    \subfigure[resolved]{\includegraphics[width=0.3\textwidth]{figures/0lep/cutflow/nominal/merged/plots/soverb_individual_SRVBS_Res_MVHadRes_MVHadRes_cutflow.pdf}}
-    \caption{0-lepton distribution of the mass of the reconstructed $V_\text{had}$ system. The distributions are shown for the three SR selections. Entering are events passing the respective selection up to the point of the $m(V_\text{had}^\text{reco})$ (where $V_\text{had}^\text{reco}=J^{sig}$ for the merged selection and $V_\text{had}^\text{reco}=(jj)^{sig}$ for the resolved selection) cut which is shown by the vertical line.} 
-    \label{fig:0lepMVHad}
-\end{figure}
+%%%\begin{figure}[ht]
+%%%    \centering
+%%%    \subfigure[merged HP]{\includegraphics[width=0.3\textwidth]{figures/0lep/cutflow/nominal/merged/plots/soverb_individual_SRVBS_HP_MFatJetLow_MFatJet_cutflow.pdf}}
+%%%    \subfigure[merged LP]{\includegraphics[width=0.3\textwidth]{figures/0lep/cutflow/nominal/merged/plots/soverb_individual_SRVBS_LP_MFatJetLow_MFatJet_cutflow.pdf}}
+%%%    \subfigure[resolved]{\includegraphics[width=0.3\textwidth]{figures/0lep/cutflow/nominal/merged/plots/soverb_individual_SRVBS_Res_MVHadRes_MVHadRes_cutflow.pdf}}
+%%%    \caption{0-lepton distribution of the mass of the reconstructed $V_\text{had}$ system. The distributions are shown for the three SR selections. Entering are events passing the respective selection up to the point of the $m(V_\text{had}^\text{reco})$ (where $V_\text{had}^\text{reco}=J^{sig}$ for the merged selection and $V_\text{had}^\text{reco}=(jj)^{sig}$ for the resolved selection) cut which is shown by the vertical line.} 
+%%%    \label{fig:0lepMVHad}
+%%%\end{figure}
 

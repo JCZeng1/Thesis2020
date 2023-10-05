@@ -31,19 +31,13 @@ in the sidebands both in the mass window.
 
 \begin{figure}[ht]
     \centering
-    \subfigure[\emph{\zlep, resolved VCR}]{\includegraphics[width=0.3\textwidth]{figures/0lep/cutflow/nominal/merged/plots/individual_SRVBS_Res_MVHadRes_MVHadRes_cutflow.pdf}}
-    \subfigure[\emph{\olep, resolved WCR}]{\includegraphics[width=0.3\textwidth]{figures/1lep/CRPlots/C_0ptag2pjet_0ptv_CRVjet_MVHadRes_Lin.png}}
-    \subfigure[\emph{\tlep, resolved ZCR}]{\includegraphics[width=0.3\textwidth]{figures/2lep/dataMC/C_0ptag2pjet_0ptv_CRVjet_MVHadRes_Log.png}}
-    \caption{ $m_{jj}$ plot in the sidebands in \zlep channel VCR (a), in \olep WCR (b) and \tlep channel ZCR (right).
-    In particular, the \zlep plot shows the distribution without the low 50 GeV cut applied.} 
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{figures/1lep/CRPlots/C_0ptag2pjet_0ptv_CRVjet_MVHadRes_Lin.png}
+        \caption{\emph{\olep, resolved WCR}}
+    \end{subfigure}
+    % You can add other subcaptions here if needed
+    \caption{$m_{jj}$ plot in the sidebands in \zlep channel VCR (a), in \olep WCR (b) and \tlep channel ZCR (right).}
     \label{fig:1lep2lepMVHadResCR}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    \subfigure[\emph{\tlep, merged ZCR}]{\includegraphics[width=0.45\textwidth]{figures/2lep/dataMC/C_0ptag1pfat0pjet_0ptv_CRVjet_fatJetMass_Log.eps}}
-    \caption{ $m_{J}$ plot in \tlep channel ZCR. Merged control region uses the Fail-80\% tagger WP region.}
-    \label{fig:1lep2lepMVHadMerCR}
 \end{figure}
 
 %\begin{figure}[ht]
@@ -71,9 +65,16 @@ TCR inherit the HP and LP splitting as for the SRs.
 
 \begin{figure}[ht]
     \centering
-    \subfigure[After merged preselection]{\includegraphics[width=0.3\textwidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Merged_NBJets_Lin.png}}
-    \subfigure[After resolved preselection]{\includegraphics[width=0.3\textwidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Resolved_NBJets_Lin.png}}
-    \caption{ Bjets multiplicity in the 1-lepton channel, after common preselection cuts have been applied. }
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Merged_NBJets_Lin.png}
+        \caption{After merged preselection}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Resolved_NBJets_Lin.png}
+        \caption{After resolved preselection}
+    \end{subfigure}
+    \caption{Bjets multiplicity in the 1-lepton channel, after common preselection cuts have been applied.}
     \label{fig:1lepNBjetsPresel}
 \end{figure}
+
 
