@@ -1,241 +1,155 @@
-\clearpage
-\subsubsection{Signal and background cut-flows}
+%\clearpage
+%\subsubsection{Signal and background cut-flows}
 \label{subsec:cutflows}
 
 Cutflow Tables are presented for different signal regions.
 
-\zlep: Figure~\ref{tab:0lepCutFlow}.
+%\zlep: Figure~\ref{tab:0lepCutFlow}.
 \olep: Figure~\ref{fig:1lepCutFlow}.
-\tlep: 
-Tables~\ref{tab:2lep_HPSR},
-\ref{tab:2lep_LPSR},
-\ref{tab:2lep_ResolvedSR},
-\ref{tab:2lep_MergedCR}, and
-\ref{tab:2lep_ResolvedCR}.
+%\tlep: 
+%Tables~\ref{tab:2lep_HPSR},
+%\ref{tab:2lep_LPSR},
+%\ref{tab:2lep_ResolvedSR},
+%\ref{tab:2lep_MergedCR}, and
+%\ref{tab:2lep_ResolvedCR}.
 
 Tables
 \ref{tab:PrefitYield_TCRHP_Per}-
 \ref{tab:PrefitYield_TCRLP_Per}-
 \ref{tab:PrefitYield_TCRRes_Per} (TCR)-
-\ref{tab:PrefitYield_VCRMer_Per}-
 \ref{tab:PrefitYield_WCRMer_Per}-
-\ref{tab:PrefitYield_ZCRMer_Per}-
-\ref{tab:PrefitYield_VCRRes_Per}-
 \ref{tab:PrefitYield_WCRRes_Per}-
-\ref{tab:PrefitYield_ZCRRes_Per} (VCR)-
-\ref{tab:PrefitYield_0lepHPSR_Per}-
 \ref{tab:PrefitYield_1lepHPSR_Per}-
-\ref{tab:PrefitYield_2lepHPSR_Per} (HPSR)-
-\ref{tab:PrefitYield_0lepLPSR_Per}-
 \ref{tab:PrefitYield_1lepLPSR_Per}-
-\ref{tab:PrefitYield_2lepLPSR_Per} (LPSR)-
-\ref{tab:PrefitYield_0lepResSR_Per}-
 \ref{tab:PrefitYield_1lepResSR_Per}-
-\ref{tab:PrefitYield_2lepResSR_Per} (ResolvedSR)
 show the final yields, in percentages, of the different CRs and SRs; 
 the uncertainties account for statistical and systematic sources.
 
 
-%%% 2-leptons channel
-%%% HPSR 
-\begin{table}[ht!]
-\small
-\caption{Cutflow table for HPSR region in \tlep channel. PassCommon cut refers to the lepton pre-selection and SFLetpons to the requirement to have SameFlavor leptons.}
-\label{tab:2lep_HPSR}
-\begin{center}
-\resizebox{\textwidth}{!}{
+%%% 1-lepton channel
+\begin{figure}[htbp]
+  \centering
+  % Subtable for CutsSeqSR50
+  \begin{subtable}{\textwidth}
+    \centering
+    \resizebox{\textwidth}{!}{%
+      \input{src/event_selection/cutflow/cutflow_table_CutsSeqSR50.tex}
+    }
+    \caption{SR High Purity Merged}
+    \label{subtab:cutsseqsr50}
+  \end{subtable}
+  % Subtable for CutsSeqSR80
+  \begin{subtable}{\textwidth}
+    \centering
+    \resizebox{\textwidth}{!}{%
+      \input{src/event_selection/cutflow/cutflow_table_CutsSeqSR80.tex}
+    }
+    \caption{SR Low Purity Merged}
+    \label{subtab:cutsseqsr80}
+  \end{subtable}
+  % Subtable for CutsSeqSRRes
+  \begin{subtable}{\textwidth}
+    \centering
+    \resizebox{\textwidth}{!}{%
+      \input{src/event_selection/cutflow/cutflow_table_CutsSeqSRRes.tex}
+    }
+    \caption{SR Resolved}
+    \label{subtab:cutsseqsrres}
+  \end{subtable}
+  % Subtable for CutsSeqCRTop50
+  \begin{subtable}{\textwidth}
+    \centering
+    \resizebox{\textwidth}{!}{%
+      \input{src/event_selection/cutflow/cutflow_table_CutsSeqCRTop50.tex}
+    }
+    \caption{TopCR High Purity Merged}
+    \label{subtab:cutsseqcrtop50}
+  \end{subtable}
+  % Subtable for CutsSeqCRTop80
+  \begin{subtable}{\textwidth}
+    \centering
+    \resizebox{\textwidth}{!}{%
+      \input{src/event_selection/cutflow/cutflow_table_CutsSeqCRTop80.tex}
+    }
+    \caption{TopCR Low Purity Merged}
+    \label{subtab:cutsseqcrtop80}
+  \end{subtable}
+  % Subtable for CutsSeqCRTopRes
+  \begin{subtable}{\textwidth}
+    \centering
+    \resizebox{\textwidth}{!}{%
+      \input{src/event_selection/cutflow/cutflow_table_CutsSeqCRTopRes.tex}
+    }
+    \caption{TopCR Resolved}
+    \label{subtab:cutsseqcrtopres}
+  \end{subtable}
+  % Subtable for CutsSeqCRVjetsMer
+  \begin{subtable}{\textwidth}
+    \centering
+    \resizebox{\textwidth}{!}{%
+      \input{src/event_selection/cutflow/cutflow_table_CutsSeqCRVjetsMer.tex}
+    }
+    \caption{WjetsCR Merged}
+    \label{subtab:cutsseqcrvjetsmer}
+  \end{subtable}
+  % Subtable for CutsSeqCRVjetsRes
+  \begin{subtable}{\textwidth}
+    \centering
+    \resizebox{\textwidth}{!}{%
+      \input{src/event_selection/cutflow/cutflow_table_CutsSeqCRVjetsRes.tex}
+    }
+    \caption{WjetsCR Resolved}
+    \label{subtab:cutsseqcrvjetsres}
+  \end{subtable}
 
- \begin{tabular}{ r ||  r  r  r  r  r  r  r  r  r  || r r r r r |}
- \ensuremath{\sqrt{s}=13 TeV}, \ensuremath{\mathcal{L}=139 fb^{-1}}  & W & WZ & WW & Z & ZZ & stopWtDilep & stops & stopt & ttbar & S & B & S/B & \ensuremath{S/\sqrt{B}}\tabularnewline
- \hline
-All & 768630 & 118757 & 7549.85 & 2.69014e+07 & 75904.3 & 219335 & 1566.79 & 30086.3 & 3.4463e+06 & 8530.6 &3.15695e+07&0.000270216 & 1.51826\tabularnewline \hline
-passCommon & 8949.67 & 73105.4 & 138.511 & 1.59613e+07 & 48170 & 22208.8 & 61.7359 & 1002.7 & 361153 & 3577.38&1.64761e+07&0.000217125 & 0.881328\tabularnewline \hline
-TwoTagMerJets & 5430.67 & 41182 & 83.2249 & 9.38413e+06 & 24924.9 & 14016.8 & 33.1233 & 711.353 & 243694 & 2890.74&9.7142e+06&0.000297579 & 0.927483\tabularnewline \hline
-PtTagMerJet1 & 4846.86 & 39715 & 80.198 & 7.66047e+06 & 23830.9 & 13522.8 & 31.7876 & 687.684 & 240045 & 2881.49 &7.98323e+06&0.000360943 & 1.01983\tabularnewline \hline
-PtTagMerJet2 & 2692.05 & 26366.4 & 51.0517 & 3.74324e+06 & 14613 & 8652.04 & 19.427 & 455.492 & 180641 & 2527.77 &3.97673e+06&0.000635639 & 1.26758\tabularnewline \hline
-AtLeastOneFatJet & 73.9896 & 1355.28 & 2.49747 & 54043.4 & 401.963 & 194.503 & 0.683082 & 9.52178 & 4071.51 & 190.792 &60153.4&0.00317176 & 0.777912\tabularnewline \hline
-PtFatJet200 & 73.9896 & 1355.28 & 2.49747 & 54043.4 & 401.963 & 194.503 & 0.683082 & 9.52178 & 4071.51 & 190.792 &60153.4&0.00317176 & 0.777912\tabularnewline \hline
-EtaFatJet2p0 & 73.9896 & 1355.28 & 2.49747 & 54043.4 & 401.963 & 194.503 & 0.683082 & 9.52178 & 4071.51 & 190.792 &60153.4&0.00317176 & 0.777912\tabularnewline \hline
-dRL-eptonFatjet & 65.6967 & 1241.31 & 2.08247 & 50386.7 & 372.277 & 176.007 & 0.617677 & 8.85472 & 3270.23 & 177.47 &55523.8&0.0031963 & 0.753158\tabularnewline \hline
-MFatJetLow & 26.3573 & 593.162 & 1.36814 & 17874.7 & 176.377 & 57.5099 & 0.147335 & 3.37462 & 1340.61 & 120.588 &20073.6&0.00600731 & 0.851124\tabularnewline \hline
-SFLeptons & 8.29704 & 592.425 & 0.528064 & 17868.5 & 176.306 & 19.6953 & 0.0648612 & 1.36886 & 425.456 & 120.184 &19092.6&0.00629476 & 0.869786\tabularnewline \hline
-MFatJet50 & 3.97632 & 321.546 & 0.150938 & 8269.29 & 98.0685 & 9.3015 & 0.0648612 & 0.426969 & 201.394 & 77.5594 &8904.22&0.00871041 & 0.821933\tabularnewline \hline
-D2FatJet50 & 1.6553 & 164.963 & 0.150938 & 3032.68 & 52.9234 & 5.01844 & 0.0207499 & 0.246388 & 81.719 & 50.0044 & 3339.37&0.0149742 & 0.865317\tabularnewline \hline
-NTrkFatJet50 & 1.24764 & 114.689 & 0.150938 & 1527.16 & 36.5107 & 2.48592 & 0.0207499 & 0.213116 & 41.1061 & 40.9103 &1723.59&0.0237356 & 0.985409\tabularnewline \hline
-WZFatJet50 & 0.655411 & 112.269 & 0.150938 & 1469.7 & 35.6488 & 2.48592 & 0.0207499 & 0.213116 & 39.669 & 40.1491 &1660.82&0.0241743 & 0.985179\tabularnewline \hline
-MTagMerJets400 & 0.608311 & 89.745 & 0.150938 & 1247.25 & 27.2269 & 2.34095 & 0.0207499 & 0.0789171 & 33.3017 & 37.6674 &1400.73&0.0268913 & 1.00644\tabularnewline \hline
-\end{tabular}
-
-}
-\end{center}
-\end{table}
-%%
-%%% LPSR 
-\begin{table}[ht!]
-\small
-\caption{Cutflow table for LPSR region in \tlep channel}
-\label{tab:2lep_LPSR}
-\begin{center}
-\resizebox{\textwidth}{!}{
-
- \begin{tabular}{ r ||  r  r  r  r  r  r  r  r  r  || r r r r r |}
- \ensuremath{\sqrt{s}=13 TeV}, \ensuremath{\mathcal{L}=139 fb^{-1}}  & W & WZ & WW & Z & ZZ & stopWtDilep & stops & stopt & ttbar &  S & B & S/B & \ensuremath{S/\sqrt{B}}\tabularnewline
- \hline
-All & 768630 & 118757 & 7549.85 & 2.69014e+07 & 75904.3 & 219335 & 1566.79 & 30086.3 & 3.4463e+06 & 8530.6&3.15695e+07&0.000270216 & 1.51826\tabularnewline \hline
-FailMergedSR50 & 768630 & 118667 & 7549.7 & 2.69001e+07 & 75877.1 & 219333 & 1566.77 & 30086.3 & 3.44627e+06 & 8492.93&3.15681e+07&0.000269035 & 1.51159\tabularnewline \hline
-Trigger & 562963 & 108010 & 5681.35 & 2.40927e+07 & 69318 & 195862 & 1133.62 & 21873.2 & 3.02893e+06 & 7222.22 &2.80865e+07&0.000257142 & 1.36277\tabularnewline \hline
-BothLepPt & 67751.3 & 90649.8 & 1147.71 & 2.07619e+07 & 59529.4 & 156592 & 304.094 & 4763.36 & 2.38282e+06 & 4798.78 &2.35255e+07&0.000203982 & 0.989376\tabularnewline \hline
-LeadLepPt & 67452.8 & 90574.8 & 1141.41 & 2.0715e+07 & 59477 & 156269 & 301.881 & 4729.08 & 2.37606e+06 & 4792.64 &2.3471e+07&0.000204194 & 0.989256\tabularnewline \hline
-MuonEtaLt2p5 & 66379 & 89424.2 & 1118.34 & 2.04089e+07 & 58762.6 & 155201 & 291.395 & 4617.26 & 2.3588e+06 & 4734.01 &2.31435e+07&0.00020455 & 0.984044\tabularnewline \hline
-OSMuons & 65152 & 89398.7 & 1101.67 & 2.04087e+07 & 58761 & 155164 & 263.104 & 4354.02 & 2.35796e+06 & 4696.69 &2.31409e+07&0.000202961 & 0.976342\tabularnewline \hline
-Mll & 8949.06 & 73015.6 & 138.36 & 1.596e+07 & 48142.8 & 22206.4 & 61.7151 & 1002.62 & 361120 & 3539.71 &1.64747e+07&0.000214858 & 0.872086\tabularnewline \hline
-TwoTagMerJets & 5430.07 & 41092.3 & 83.0739 & 9.38288e+06 & 24897.7 & 14014.5 & 33.1025 & 711.274 & 243660 & 2853.07&9.7128e+06&0.000293744 & 0.915463\tabularnewline \hline
-PtTagMerJet1 & 4846.25 & 39625.3 & 80.047 & 7.65922e+06 & 23803.7 & 13520.5 & 31.7668 & 687.605 & 240012  & 2843.82&7.98183e+06&0.000356287 & 1.00659\tabularnewline \hline
-PtTagMerJet2 & 2691.44 & 26276.6 & 50.9008 & 3.74199e+06 & 14585.8 & 8649.7 & 19.4063 & 455.413 & 180607  & 2490.1&3.97533e+06&0.000626388 & 1.24891\tabularnewline \hline
-AtLeastOneFatJet & 73.3813 & 1265.54 & 2.34653 & 52796.2 & 374.736 & 192.162 & 0.662332 & 9.44287 & 4038.21 & 153.125&58752.7&0.00260626 & 0.63173\tabularnewline \hline
-PtFatJet200 & 73.3813 & 1265.54 & 2.34653 & 52796.2 & 374.736 & 192.162 & 0.662332 & 9.44287 & 4038.21  & 153.125&58752.7&0.00260626 & 0.63173\tabularnewline \hline
-EtaFatJet2p0 & 73.3813 & 1265.54 & 2.34653 & 52796.2 & 374.736 & 192.162 & 0.662332 & 9.44287 & 4038.21  & 153.125&58752.7&0.00260626 & 0.63173\tabularnewline \hline
-dRLeptonFatjet & 65.0884 & 1151.57 & 1.93153 & 49139.4 & 345.05 & 173.666 & 0.596927 & 8.7758 & 3236.93  & 139.803&54123&0.00258306 & 0.600932\tabularnewline \hline
-MFatJetLow & 25.749 & 503.417 & 1.2172 & 16627.4 & 149.15 & 55.1689 & 0.126585 & 3.29571 & 1307.31 & 82.921 &18672.9&0.00444072 & 0.606818\tabularnewline \hline
-SFLeptons & 7.68872 & 502.68 & 0.377126 & 16621.2 & 149.079 & 17.3543 & 0.0441112 & 1.28994 & 392.155 & 82.5162 &17691.9&0.00466406 & 0.620371\tabularnewline \hline
-MFatJet80 & 4.50972 & 305.264 & 0.0531649 & 9708.43 & 92.5334 & 9.79512 & 0.0441112 & 0.8637 & 230.263 & 53.3019 &10351.8&0.00514907 & 0.523884\tabularnewline \hline
-D2FatJet80 & 3.0742 & 220.826 & 0 & 6606.32 & 67.506 & 8.12447 & 0 & 0.652429 & 167.653 & 40.3886 &7074.16&0.00570932 & 0.480199\tabularnewline \hline
-NTrkFatJet80 & 1.80329 & 175.492 & 0 & 4548.12 & 53.5843 & 4.93659 & 0 & 0.58877 & 106.823 & 36.0306 &4891.35&0.0073662 & 0.515178\tabularnewline \hline
-WZFatJet80 & 1.80329 & 170.838 & 0 & 4389.69 & 52.4945 & 4.55232 & 0 & 0.58877 & 103.266 & 35.429 &4723.23&0.007501 & 0.515512\tabularnewline \hline
-MTagMerJets400 & 1.67793 & 123.578 & 0 & 3541.1 & 35.3674 & 3.94765 & 0 & 0.454571 & 80.232 & 30.8227 &3786.36&0.00814046 & 0.50091\tabularnewline \hline
-\end{tabular}
-
-}
-\end{center}
-\end{table}
-%
-%% Resolved SR 
-\begin{table}[ht!]
-\small
-\caption{Cutflow table for Resolved SR region in \tlep channel}
-\label{tab:2lep_ResolvedSR}
-\begin{center}
-\resizebox{\textwidth}{!}{
-
- \begin{tabular}{ r ||  r  r  r  r  r  r  r  r  r  r || r r r r r |}
- \ensuremath{\sqrt{s}=13 TeV}, \ensuremath{\mathcal{L}=139 fb^{-1}}  & W & WZ & WW & Z & ZZ & stopWtDilep & stops & stopt & ttbar & S  & B & S/B & \ensuremath{S/\sqrt{B}}\tabularnewline
- \hline
-All & 768630 & 118757 & 7549.85 & 2.69014e+07 & 75904.3 & 219335 & 1566.79 & 30086.3 & 3.4463e+06 & 8530.6 &3.15695e+07&0.000270216 & 1.51826\tabularnewline \hline
-FailMergedSR50 & 768630 & 118667 & 7549.7 & 2.69001e+07 & 75877.1 & 219333 & 1566.77 & 30086.3 & 3.44627e+06 & 8492.93&3.15681e+07&0.000269035 & 1.51159\tabularnewline \hline
-FailMergedSR80 & 768628 & 118544 & 7549.7 & 2.68966e+07 & 75841.7 & 219329 & 1566.77 & 30085.8 & 3.44619e+06 & 8462.11&3.15643e+07&0.000268091 & 1.50619\tabularnewline \hline
-Trigger & 562961 & 107887 & 5681.35 & 2.40892e+07 & 69282.7 & 195858 & 1133.62 & 21872.7 & 3.02885e+06 & 7191.4 &2.80827e+07&0.000256079 & 1.35704\tabularnewline \hline
-BothLepPt & 67749.6 & 90526.2 & 1147.71 & 2.07584e+07 & 59494 & 156588 & 304.094 & 4762.91 & 2.38274e+06 & 4767.96 &2.35217e+07&0.000202705 & 0.983101\tabularnewline \hline
-LeadLepPt & 67451.1 & 90451.2 & 1141.41 & 2.07115e+07 & 59441.7 & 156265 & 301.881 & 4728.63 & 2.37598e+06 & 4761.82 &2.34672e+07&0.000202913 & 0.982973\tabularnewline \hline
-MuonEtaLt2p5 & 66377.3 & 89300.6 & 1118.34 & 2.04053e+07 & 58727.3 & 155197 & 291.395 & 4616.81 & 2.35872e+06 & 4703.18 &2.31397e+07&0.000203252 & 0.977717\tabularnewline \hline
-OSMuons & 65150.4 & 89275.1 & 1101.67 & 2.04052e+07 & 58725.7 & 155160 & 263.104 & 4353.56 & 2.35788e+06 & 4665.87 &2.31371e+07&0.000201662 & 0.970014\tabularnewline \hline
-Mll & 8947.38 & 72892.1 & 138.36 & 1.59565e+07 & 48107.4 & 22202.5 & 61.7151 & 1002.17 & 361040 & 3508.89 &1.64709e+07&0.000213036 & 0.864591\tabularnewline \hline
-TwoTagResJets & 5428.39 & 40968.7 & 83.0739 & 9.37934e+06 & 24862.3 & 14010.5 & 33.1025 & 710.82 & 243580 & 2822.25&9.70902e+06&0.000290684 & 0.90575\tabularnewline \hline
-PtTagResJet1 & 4844.57 & 39501.7 & 80.047 & 7.65568e+06 & 23768.3 & 13516.5 & 31.7668 & 687.15 & 239932 & 2813 &7.97804e+06&0.000352593 & 0.995913\tabularnewline \hline
-PtTagResJet2 & 2689.76 & 26153.1 & 50.9008 & 3.73845e+06 & 14550.4 & 8645.75 & 19.4063 & 454.958 & 180527 & 2459.28 &3.97154e+06&0.000619224 & 1.23404\tabularnewline \hline
-TwoSigJets & 1224.28 & 15670.2 & 27.3266 & 1.35255e+06 & 7188.69 & 3383.22 & 6.95563 & 193.559 & 97769.1 & 1983.71 &1.47801e+06&0.00134215 & 1.6317\tabularnewline \hline
-PtSignalJet1 & 895.835 & 12934.8 & 23.2614 & 908980 & 5628.78 & 2675.5 & 5.30779 & 148.163 & 83593 & 1796.12 &1.01488e+06&0.00176978 & 1.7829\tabularnewline \hline
-PtSignalJet2 & 895.835 & 12934.8 & 23.2614 & 908980 & 5628.78 & 2675.5 & 5.30779 & 148.163 & 83593 & 1796.12 &1.01488e+06&0.00176978 & 1.7829\tabularnewline \hline
-MVHadResLow & 786.438 & 11881.2 & 21.6767 & 797009 & 5103.81 & 2390.64 & 4.78611 & 135.01 & 75903.6 & 1690.66&893237&0.00189273 & 1.78884\tabularnewline \hline
-SFLeptons & 238.494 & 11869.8 & 8.04294 & 796752 & 5102.21 & 738.483 & 1.51008 & 43.6911 & 23211.2 & 1673.08&837966&0.0019966 & 1.82769\tabularnewline \hline
-MVHadRes & 82.6204 & 3972.79 & 2.81781 & 251182 & 1838.78 & 204.164 & 0.436533 & 12.379 & 6566.27 & 782.652&263862&0.00296614 & 1.52363\tabularnewline \hline
-MTagResJets400 & 36.9849 & 1922.17 & 1.59711 & 139844 & 814.46 & 100.109 & 0.263526 & 9.07562 & 3048.05 & 581.914&145777&0.00399182 & 1.5241\tabularnewline \hline
-passMjjjRes & 15.7732 & 479.481 & 0.603948 & 37458.8 & 189.746 & 32.6127 & 0.0863601 & 3.17091 & 888.228 & 177.763&39068.5&0.00455005 & 0.899351\tabularnewline \hline
-\end{tabular}
-
-}
-\end{center}
-\end{table}
-
-%% Merged CR 
-\begin{table}[ht!]
-\small
-\caption{Cutflow table for Merged CR region in \tlep channel}
-\label{tab:2lep_MergedCR}
-\begin{center}
-\resizebox{\textwidth}{!}{
- \begin{tabular}{ r ||  r  r  r  r  r  r  r  r  r  r || r r r r r |}
- \ensuremath{\sqrt{s}=13 TeV}, \ensuremath{\mathcal{L}=139 fb^{-1}}  & ttbar & ZZ & WW & WZ & W & stopWtDilep & stops & stopt & Z & S & B & S/B & \ensuremath{S/\sqrt{B}}\tabularnewline
- \hline
-All & 3.4463e+06 & 75905.5 & 7549.85 & 118761 & 768630 & 219335 & 1566.79 & 30086.3 & 2.69016e+07 & 8532.15 &3.15697e+07&0.000270264 & 1.51853\tabularnewline \hline
-FailMergedSR50 & 3.44626e+06 & 75878.3 & 7549.7 & 118672 & 768630 & 219333 & 1566.77 & 30086.3 & 2.69003e+07 & 8494.48&3.15683e+07&0.000269083 & 1.51186\tabularnewline \hline
-FailMergedSR80 & 3.44618e+06 & 75842.9 & 7549.7 & 118548 & 768628 & 219329 & 1566.77 & 30085.8 & 2.68968e+07 & 8463.66&3.15645e+07&0.000268138 & 1.50646\tabularnewline \hline
-FailResolvedSR & 3.44314e+06 & 75028.5 & 7548.1 & 116626 & 768591 & 219229 & 1566.51 & 30076.7 & 2.6757e+07 & 7881.75&3.14188e+07&0.000250861 & 1.40614\tabularnewline \hline
-passMerged & 1188.84 & 99.8369 & 1.21642 & 329.927 & 22.442 & 49.5988 & 0.126065 & 2.63054 & 11199.6 & 39.5744 &12894.2&0.00306916 & 0.348511\tabularnewline \hline
-SFLeptons & 273.684 & 99.7661 & 0.376343 & 329.189 & 4.38175 & 11.7842 & 0.0435912 & 0.624779 & 11193.4 & 39.1696 &11913.2&0.0032879 & 0.358868\tabularnewline \hline
-MTagMerJets400 & 207.59 & 68.1131 & 0.376343 & 234.978 & 3.30903 & 7.99553 & 0.0435912 & 0.448283 & 8747.54 & 31.3438 &9270.39&0.00338107 & 0.325539\tabularnewline \hline
-FailWZFatJet80 & 207.59 & 68.1131 & 0.376343 & 234.978 & 3.30903 & 7.99553 & 0.0435912 & 0.448283 & 8747.54 & 31.3438 &9270.39&0.00338107 & 0.325539\tabularnewline \hline
-\end{tabular}
-}
-\end{center}
-\end{table}
-%% Resolved CRFid 
-\begin{table}[ht!]
-\small
-\caption{Cutflow table for Resolved CR region in \tlep channel}
-\label{tab:2lep_ResolvedCR}
-\begin{center}
-\resizebox{\textwidth}{!}{
- \begin{tabular}{ r ||  r  r  r  r  r  r  r  r  r  r || r r r r r |}
- \ensuremath{\sqrt{s}=13 TeV}, \ensuremath{\mathcal{L}=139 fb^{-1}}  & ttbar & ZZ & WW & WZ & W & stopWtDilep & stops & stopt & Z &  S & B & S/B & \ensuremath{S/\sqrt{B}}\tabularnewline
- \hline
-All & 3.4463e+06 & 75905.5 & 7549.85 & 118761 & 768630 & 219335 & 1566.79 & 30086.3 & 2.69016e+07 & 8532.15 &3.15697e+07&0.000270264 & 1.51853\tabularnewline \hline
-FailMergedSR50 & 3.44626e+06 & 75878.3 & 7549.7 & 118672 & 768630 & 219333 & 1566.77 & 30086.3 & 2.69003e+07 & 8494.48&3.15683e+07&0.000269083 & 1.51186\tabularnewline \hline
-FailMergedSR80 & 3.44618e+06 & 75842.9 & 7549.7 & 118548 & 768628 & 219329 & 1566.77 & 30085.8 & 2.68968e+07 & 8463.66&3.15645e+07&0.000268138 & 1.50646\tabularnewline \hline
-FailResolvedSR & 3.44314e+06 & 75028.5 & 7548.1 & 116626 & 768591 & 219229 & 1566.51 & 30076.7 & 2.6757e+07 & 7881.75&3.14188e+07&0.000250861 & 1.40614\tabularnewline \hline
-FailMergedCR & 3.44293e+06 & 74960.3 & 7547.72 & 116391 & 768588 & 219221 & 1566.46 & 30076.3 & 2.67482e+07 & 7850.4&3.14095e+07&0.000249937 & 1.40075\tabularnewline \hline
-passResolved & 72648.8 & 4223.49 & 19.7025 & 9732.45 & 746.638 & 2282.95 & 4.47847 & 125.48 & 648996 & 1080.44 &738780&0.00146247 & 1.25702\tabularnewline \hline
-SFLeptons & 19956.4 & 4221.89 & 6.06871 & 9721.07 & 198.693 & 630.797 & 1.20244 & 34.1617 & 648739 & 1062.86 &683509&0.00155501 & 1.2856\tabularnewline \hline
-FailMVhadRes & 16438.2 & 3197.57 & 4.84801 & 7670.44 & 153.058 & 526.741 & 1.02944 & 30.8583 & 537401 & 862.124 &565424&0.00152474 & 1.14652\tabularnewline \hline
-\end{tabular}
-}
-\end{center}
-\end{table}
+  \caption{Cutflows for 1-lepton event selection, where events can qualify for multiple regions without priority—except in the analysis phase, where merged regions take precedence over resolved ones. 'Preselection' refers to events with a single lepton having $p_T > 28$ GeV and meeting trigger criteria.}
+  \label{fig:1lepCutFlow}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %     1 Lep Channel Cutflows
-\begin{figure}[ht]
-    \centering
-    \begin{subfigure}{\textwidth}
-        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSR50.tex}}
-        \caption{SR High Purity Merged}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSR80.tex}}
-        \caption{SR Low Purity Merged}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSRRes.tex}}
-        \caption{SR Resolved}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTop50.tex}}
-        \caption{TopCR High Purity Merged}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTop80.tex}}
-        \caption{TopCR Low Purity Merged}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTopRes.tex}}
-        \caption{TopCR Resolved}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRVjetsMer.tex}}
-        \caption{WjetsCR Merged}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRVjetsRes.tex}}
-        \caption{WjetsCR Resolved}
-    \end{subfigure}
-    \caption{1-lepton event selection cutflows. Event selection has no region priority, meaning that an event that passes the event selection for two regions counts for both regions in the cutflow (in the analysis merged regions have priority over resolved ones). "Preselection" cuts here mean having 1 lepton with $p_T >$ 28 GeV and passing trigger selections.}
-    \label{fig:1lepCutFlow}
-\end{figure}
+%%%\begin{figure}[ht]
+%%%    \centering
+%%%    \begin{subfigure}{\textwidth}
+%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSR50.tex}}
+%%%        \caption{SR High Purity Merged}
+%%%    \end{subfigure}
+%%%    \begin{subfigure}{\textwidth}
+%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSR80.tex}}
+%%%        \caption{SR Low Purity Merged}
+%%%    \end{subfigure}
+%%%    \begin{subfigure}{\textwidth}
+%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSRRes.tex}}
+%%%        \caption{SR Resolved}
+%%%    \end{subfigure}
+%%%    \begin{subfigure}{\textwidth}
+%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTop50.tex}}
+%%%        \caption{TopCR High Purity Merged}
+%%%    \end{subfigure}
+%%%    \begin{subfigure}{\textwidth}
+%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTop80.tex}}
+%%%        \caption{TopCR Low Purity Merged}
+%%%    \end{subfigure}
+%%%    \begin{subfigure}{\textwidth}
+%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTopRes.tex}}
+%%%        \caption{TopCR Resolved}
+%%%    \end{subfigure}
+%%%    \begin{subfigure}{\textwidth}
+%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRVjetsMer.tex}}
+%%%        \caption{WjetsCR Merged}
+%%%    \end{subfigure}
+%%%    \begin{subfigure}{\textwidth}
+%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRVjetsRes.tex}}
+%%%        \caption{WjetsCR Resolved}
+%%%    \end{subfigure}
+%%%    \caption{1-lepton event selection cutflows. Event selection has no region priority, meaning that an event that passes the event selection for two regions counts for both regions in the cutflow (in the analysis merged regions have priority over resolved ones). "Preselection" cuts here mean having 1 lepton with $p_T >$ 28 GeV and passing trigger selections.}
+%%%    \label{fig:1lepCutFlow}
+%%%\end{figure}
 
 %%%%%%%%%%%%%%%%%%
 
 
 %% 0 lepton channel cutflow 
-
 \clearpage
 
 \begin{table}
@@ -300,28 +214,6 @@ data & 16131 & \\ \hline
 \end{center}
 \end{table}
 
-
-\begin{table}
-\caption{Prefit event yields for the analysis regions in Merged VCR.}
-\label{tab:PrefitYield_VCRMer_Per}
-\begin{center}
-%\scalebox{0.7}{
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c|}{CRVjetMerged L0}\\ \hline
-W & 5395.71 $\pm$ 847.09 & 31.3\% \\
-Z & 6493.33 $\pm$ 1636.65 & 37.7\% \\
-Diboson & 494.25 $\pm$ 261.49 & 2.9\% \\
-stop & 467.34 $\pm$ 148.16 & 2.7\% \\
-ttbar & 4361.00 $\pm$ 1448.54 & 25.3 \% \\
-\hline
-Bkg & 17211.62 $\pm$ 2642.78 & \\
-\hline
-data & 16833 & \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
-
 \begin{table}
 \caption{Prefit event yields for the analysis regions in \Wjets Merged CR.}
 \label{tab:PrefitYield_WCRMer_Per}
@@ -342,47 +234,6 @@ data & 64166 & \\ \hline
 \end{center}
 \end{table}
 
-\begin{table}
-\begin{center}
-\caption{Prefit event yields for the analysis regions in \Zjets Merged CR.}
-\label{tab:PrefitYield_ZCRMer_Per}
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c|}{CRVjetMerged L2}\\ \hline
-W & 3.13 $\pm$ 0.15 & 0.04\% \\
-Z & 7964.27 $\pm$ 792.98 & 94.2\%\\
-Diboson & 283.38 $\pm$ 144.67 & 3.4\% \\
-stop & 8.21 $\pm$ 2.92 & 0.1\% \\
-ttbar & 194.44 $\pm$ 20.16 & 2.3\% \\
-\hline
-Bkg & 8453.44 $\pm$ 843.95 & \\
-\hline
-data & 6645 & \\ \hline
-\end{tabular}
-%}
-\end{center}
-\end{table}
-
-\begin{table}
-\caption{Prefit event yields for the analysis regions in Resolved VCR.}
-\label{tab:PrefitYield_VCRRes_Per}
-\begin{center}
-%\scalebox{0.7}{
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c|}{CRVjetTight\_L0}\\ \hline
-W & 67436.46 $\pm$ 9465.21 & 38.0\% \\
-Z & 80524.07 $\pm$ 25178.17 & 45.3\& \\
-Diboson & 4375.68 $\pm$ 1409.05 & 2.5\& \\
-stop & 3463.97 $\pm$ 1066.33 & 2.0\%  \\
-ttbar & 21802.09 $\pm$ 13191.12 & 12.3 \% \\
-\hline
-Bkg & 177602.28 $\pm$ 32897.72& \\
-\hline
-data & 175982 & \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
 
 \begin{table}
 \caption{Prefit event yields for the analysis regions in Resolved \Wjets CR.}
@@ -400,49 +251,6 @@ ttbar & 220957.76 $\pm$ 16705.74 & 27.3\% \\
 Bkg & 810352.57 $\pm$ 100562.11 & \\
 \hline
 data & 788869 & \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
-
-
-\begin{table}
-\caption{Prefit event yields for the analysis regions in Resolved \Zjets CR.}
-\label{tab:PrefitYield_ZCRRes_Per}
-\begin{center}
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c|}{CRVjetTight\_L2}\\ \hline
-W & 57.63 $\pm$ 9.68 & 0.02\%\\
-Z & 228206.07 $\pm$ 39622.92 & 94.9 \%  \\
-Diboson & 4645.71 $\pm$ 1505.12 & 1.9\% \\
-stop & 266.54 $\pm$ 88.88 & 0.1\% \\
-ttbar & 7306.82 $\pm$ 773.02 & 3.0\%\\
-\hline
-Bkg & 240482.77 $\pm$ 40877.86 & \\
-\hline
-data & 200097 & \\ \hline
-\end{tabular}
-%}
-\end{center}
-\end{table}
-
-\clearpage 
-\begin{table} [h]
-\caption{Prefit event yields for the analysis regions in \zlep Merged HP SR.}
-\label{tab:PrefitYield_0lepHPSR_Per}
-\begin{center}
-%\scalebox{0.7}{
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c|}{SRVBSHP L0}\\ \hline
-W & 777.52 $\pm$ 76.77 & 21.9\% \\
-Z & 848.97 $\pm$ 82.89 & 23.9\% \\
-Diboson & 207.59 $\pm$ 28.62 & 5.8\% \\
-stop & 189.68 $\pm$ 47.76 & 5.3\% \\
-ttbar & 1533.32 $\pm$ 278.96 & 43.1\% \\
-\hline
-Bkg & 3557.08 $\pm$ 376.53 & \\
-\hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -468,48 +276,6 @@ Bkg & 13423.20 $\pm$ 1934.58 & \\
 
 
 \begin{table}
-\caption{Prefit event yields for the analysis regions in \tlep Merged HP SR.}
-\label{tab:PrefitYield_2lepHPSR_Per}
-\begin{center}
-\begin{tabular}{|l|c|c|}
-\hline
-  \multicolumn{3}{|c|}{SRVBSHP L2}\\ \hline
-W & 0.61 $\pm$ 0.06 & 0.05\%\\
-Z & 1082.40 $\pm$ 136.78 & 88.3\%\\
-Diboson & 109.07 $\pm$ 57.37& 8.9\% \\
-stop & 2.28 $\pm$ 0.78 & 0.2\%\\
-ttbar & 31.77 $\pm$ 4.14 & 2.6\%\\
-\hline
-Bkg & 1226.12 $\pm$ 157.75 & \\\hline
-\end{tabular}
-%}
-\end{center}
-\end{table}    
-
-
-\begin{table} [h]
-\caption{Prefit event yields for the analysis regions in \zlep Merged LP SR.}
-\label{tab:PrefitYield_0lepLPSR_Per}
-\begin{center}
-%\scalebox{0.7}{
-% \small
-\begin{tabular}{|l|c|c|}
-\hline
-  \multicolumn{3}{|c|}{SRVBSLP L0}\\ \hline  
-W & 2123.99 $\pm$ 336.97 & 29.5\% \\
-Z & 2568.04 $\pm$ 650.00 & 35.6\% \\
-Diboson & 274.60 $\pm$ 148.01 & 3.8\% \\
-stop & 230.32 $\pm$ 74.22 & 3.2\%\\
-ttbar & 2009.29 $\pm$ 655.52& 27.9\%\\
-\hline
-Bkg & 7206.25 $\pm$ 1128.55 & \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-
-
-\begin{table}
 \begin{center}
 \caption{Prefit event yields for the analysis regions in \olep Merged LP SR.}
 \label{tab:PrefitYield_1lepLPSR_Per}
@@ -523,46 +289,6 @@ stop & 974.63 $\pm$ 313.39 & 3.9\% \\
 ttbar & 10758.08 $\pm$ 1210.77 & 42.8\% \\
 \hline
 Bkg & 25152.11 $\pm$ 2267.96 & \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\begin{table}
-\caption{Prefit event yields for the analysis regions in \tlep Merged LP SR.}
-\begin{center}
-\label{tab:PrefitYield_2lepLPSR_Per}
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c|}{SRVBSLP L2}\\ \hline
-W & 1.73 $\pm$ 0.17 & 0.05\% \\
-Z & 3158.10 $\pm$ 272.60 & 93.2\% \\
-Diboson & 147.28 $\pm$ 76.41 & 4.3\% \\
-stop & 3.82 $\pm$ 1.28 & 0.1\%\\
-ttbar & 75.10 $\pm$ 5.88 & 2.2\% \\
-\hline
-Bkg & 3386.03 $\pm$ 297.71 & \\ \hline
-\end{tabular}
-%}
-\end{center}
-\end{table}
-
-\begin{table}[h]
-\caption{Prefit event yields for the analysis regions in \zlep Resolved SR.}
-\label{tab:PrefitYield_0lepResSR_Per}
-\begin{center}
-%\scalebox{0.7}{
-% \small
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c|}{SRVBSTight\_L0}\\ \hline
-W & 8756.32 $\pm$ 1017.46 & 40.1\% \\
-Z & 10859.56 $\pm$ 3273.50 & 49.8\% \\
-Diboson & 586.01 $\pm$ 186.87 & 2.7\% \\
-stop & 329.14 $\pm$ 100.11 & 1.5\% \\
-ttbar & 1283.59 $\pm$ 772.77 & 5.9\%\\
-\hline
-Bkg & 21814.63 $\pm$ 3655.08 & \\
- \hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -587,22 +313,3 @@ Bkg & 73504.70 $\pm$ 6131.43 & \\
 \end{table}
 
 
-\begin{table}
-\caption{Prefit event yields for the analysis regions in \tlep Resolved SR.}
-\label{tab:PrefitYield_2lepResSR_Per}
-\begin{center}
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c|}{SRVBSTight\_L2}\\ \hline
-W & 14.10 $\pm$ 2.41 & 0.04\% \\
-Z & 31415.55 $\pm$ 3624.61 & 95.5\% \\
-Diboson & 599.57 $\pm$ 189.02 & 1.8\% \\
-stop & 31.03 $\pm$ 9.66 & 0.1\%\\
-ttbar & 819.35 $\pm$ 36.55 & 2.5\% \\
-\hline
-Bkg & 32879.61 $\pm$ 3692.52 & \\
-\hline
-\end{tabular}
-%}
-\end{center}
-\end{table}

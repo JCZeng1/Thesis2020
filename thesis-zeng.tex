@@ -2,12 +2,14 @@
 % uiucthesis2009.dtx  (with options: `example')
 \def\fileversion{v2.25a} \def\filedate{2009/10/10}
 % Package and Class "uiucthesis2009" for use with LaTeX2e.
-\documentclass[edeposit,fullpage]{latex/uiucthesis2009}
+%%\documentclass[edeposit,fullpage]{latex/uiucthesis2009}
+\documentclass[edeposit,fullpage]{uiucthesis2009}
 
 \input{latex/packages.tex}
 \input{latex/user_packages.tex}
 
-% \linenumbers % uncomment if want draft printing
+%%\usepackage[hidelinks]{hyperref} % remove the colored borders around hyperlinks
+\linenumbers % uncomment if want draft printing
 
 \begin{document}
 
@@ -17,7 +19,7 @@
 \schools{Previous Degrees}
 \phdthesis
 \advisor{Ph.D Mark Neubauer}
-\degreeyear{Current Year}
+\degreeyear{2024}
 \committee{Committee Chair, Chair\\
            Theis Advisor, Director of Research\\
            Third Member of Committee\\
@@ -41,74 +43,93 @@
 % List Symbols and/or Abbreviations
 % etc.
 
+{
+    \hypersetup{linkcolor=black}  % disable link coloring locally
+    \setcounter{tocdepth}{2}
+    \tableofcontents
+    % the Graduate College doesn't recommend including lot or lof
+    % \listoftables
+    % \listoffigures
+}
 
-\tableofcontents
-\listoftables
-\listoffigures
-\input{src/symbols.tex}
+%\tableofcontents
+%\listoftables
+%\listoffigures
+%\input{src/symbols.tex}
+
+\mainmatter
 
 \chapter{Introduction}
+\input{src/Introduction.tex}
 
 \chapter{Theoretical Overview}
-\section{Standard Model}
-\section{The Higgs Mechanism}
-\section{Vector Boson Scattering}
-\section{Beyond the Standard Model}
-\subsection{aQGC}
+\input{src/theoretical_overview.tex}
+%\section{Standard Model}
+%\section{The Higgs Mechanism}
+%\section{Vector Boson Scattering}
+%\section{Beyond the Standard Model}
+%\subsection{aQGC}
 
 \chapter{Experimental Apparatus}
-\section{The LHC}
-\section{The ATLAS Detector}
-\subsection{The Inner Detector}
-\subsection{The Calorimeters}
-\subsection{The Muon Spectrometer}
-\section{The Trigger and Data Acquisition}
-\subsection{Fast Tracker}
+\input{src/Experimental_Apparatus.tex}
+%\section{The LHC}
+%\section{The ATLAS Detector}
+%\subsection{The Inner Detector}
+%\subsection{The Calorimeters}
+%\subsection{The Muon Spectrometer}
+%\section{The Trigger and Data Acquisition}
+%\subsection{Fast Tracker}
 
 \chapter{Experimental Methods}
-\section{Data Samples}
-\section{Monte Carlo Samples}
-\section{Derivation and CxAOD Framework}
+\input{src/Exp_Methods.tex}
+%\section{Data Samples}
+%\section{Monte Carlo Samples}
+%\section{Derivation and CxAOD Framework}
 
 \chapter{Object Definition}
-\section{Electron Definition}
-\section{Muon Definition}
-\section{Jet Definitions}
-\subsection{Small-R Jet Selection}
-\subsection{Large-R Jet Selection}
-\section{Missing Energy Definition}
-\section{Jet Flavor Tagging Definition}
-\section{Overlap Removal}
+\input{src/ObjectDefinition.tex}
+%\section{Electron Definition}
+%\section{Muon Definition}
+%\section{Jet Definitions}
+%\subsection{Small-R Jet Selection}
+%\subsection{Large-R Jet Selection}
+%\section{Missing Energy Definition}
+%\section{Jet Flavor Tagging Definition}
+%\section{Overlap Removal}
 
 \chapter{Event Selections}
-\section{Trigger Requirements}
-\section{Event Pre-selection}
-\section{Leptonically Decaying Boson}
-\subsection{1-leption Channel}
-\section{VBS Selections}
-\section{Signal Regions (SRs) Definitions}
-\subsection{Boosted Selections}
-\subsection{Resolved Selections}
-\section{Control Regions (CRs) Definitions}
+\input{src/EventSelection.tex}
+%\section{Trigger Requirements}
+%\section{Event Pre-selection}
+%\section{Leptonically Decaying Boson}
+%\subsection{1-leption Channel}
+%\section{VBS Selections}
+%\section{Signal Regions (SRs) Definitions}
+%\subsection{Boosted Selections}
+%\subsection{Resolved Selections}
+%\section{Control Regions (CRs) Definitions}
 
-\chapter{Background Modelling and Estimations}
-\section{Re-weighting for the tagging jets}
-\section{\( W \) + Jets Control Region}
-\section{Top Background Control Region}
+%\chapter{Background Modelling and Estimations}
+\input{src/BkgModelling.tex}
+%\section{Re-weighting for the tagging jets}
+%\section{\( W \) + Jets Control Region}
+%\section{Top Background Control Region}
 %\section{Multijet Background}
 %\section{Diboson Background}
 %\section{Normalization of the \( WZ \) + Jets and Multijet Backgrounds in \( WZ \) + Jets control region}
 
 \chapter{Machine Learning Analysis}
-\section{Motivations and Architecture}
-\section{Input Variables}
-\section{Trainings and Validations}
-\section{Performances}
+\input{src/MLApproach_1lep.tex}
+%\section{Motivations and Architecture}
+%\section{Input Variables}
+%\section{Trainings and Validations}
+%\section{Performances}
 
 \chapter{Systematic Uncertainties}
-\section{Experimental Uncertainties}
-\section{Background Uncertainties}
-\section{Signal Uncertainties}
+\input{src/SystsUncer.tex}
+%\section{Experimental Uncertainties}
+%\section{Background Uncertainties}
+%\section{Signal Uncertainties}
 %\section{Event Yield Uncertainty}
 %\section{Trigger Efficiency}
 %\section{Electron Reconstruction, Energy Scale and Resolution}
@@ -120,23 +141,28 @@
 %\section{Normalization and Shape Uncertainty}
 %\section{PDF Uncertainty}
 %\section{ISR/FSR Uncertainty}
-\section{Summary of Systematic Uncertainties}
+%\section{Summary of Systematic Uncertainties}
 
 \chapter{Statistical Interpretation}
-\section{Fit Inputs and Options}
-\section{Prefit Plots}
-\section{Asimov Fit Results}
-\section{Expected Significance}
+\input{src/StatisticalInterpretation.tex}
+%\section{Fit Inputs and Options}
+%\section{Prefit Plots}
+%\section{Asimov Fit Results}
+%\section{Expected Significance}
 
-\chapter{Results}
+%\chapter{Results}
 
-\chapter{Conclusions}
+%\chapter{Conclusions}
 
 % Here you would add your references section
 
 % ... continue for other chapters
 
-\mainmatter
+%\listoftables
+%\listoffigures
+%\input{src/symbols.tex}
+
+%\mainmatter
 
 %\input{src/preface.tex}
 
@@ -144,9 +170,12 @@
 
 %\input{src/EventSelection}
 
+%\input{src/BkgModelling.tex}
+
 %\input{src/MLApproach_1lep.tex}
 
 \appendix
+%\input{src/appendices/samplelist.tex}
 \input{src/appendix_A.tex}
 
 \backmatter

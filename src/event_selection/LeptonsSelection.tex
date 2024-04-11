@@ -1,35 +1,36 @@
-\subsection{Leptonically decaying boson}
-\label{subsec:leptons_selection}
+%\subsection{Leptonically decaying boson}
+%\label{subsec:leptons_selection}
 
-Events are categorized into 0-, 1- and 2-lepton channels by number of Loose leptons in the final state. The common definition of Loose lepton (see Sec.~\ref{sec:ObjectDefinition}) ensures three channels to be orthogonal. 
-Basically we can follow the event selections used in the previous analysis based on the 36\,\ifb dataset\cite{Ryzhov:2310214}.
-This section focuses on the dedicated selection we have for the three leptons channels.
-
-%%% 0-lepton channel
-
+%%Events are categorized into 0-, 1- and 2-lepton channels by number of Loose leptons in the final state. The common definition of Loose lepton (see Sec.~\ref{sec:ObjectDefinition}) ensures three channels to be orthogonal. 
+%%Basically we can follow the event selections used in the previous analysis based on the 36\,\ifb dataset\cite{Ryzhov:2310214}.
+%%This section focuses on the dedicated selection we have for the three leptons channels.
 
 %%% 1-lepton channel
-\clearpage
-\subsubsection{1-lepton channel}
-\label{subsubsec:1lep_event_selection}
-This section summarizes the SR definitions in 1-lepton channel.
+%\clearpage
+%\subsubsection{1-lepton channel}
+%\label{subsubsec:1lep_event_selection}
+%This section summarizes the SR definitions in 1-lepton channel.
 
-\textbf{$W \to \ell\nu$}
+%\textbf{$W \to \ell\nu$}
+%%The 0-lepton channel requires events containing a $\nu\nu$ pair from a $Z$ boson decay and boosted $W/Z \to q\bar{q}$ candidate defined in Section~\ref{subsubsec:merged_jets_selection}.
+%%The $Z \rightarrow \nu\nu$ identification requires no Loose lepton and high missing energy in the final state.
 
-To select events consistent with $W \to \ell\nu$ candidate, exactly one Tight lepton is required. In addition,
-the following cuts are defined for all regions as common cuts:
+The event selections for this analysis are largely based on the methodology used in a previous study with the 36,\ifb dataset \cite{Ryzhov:2310214}. In the 1-lepton channel, events are required to contain a $\ell\nu$ pair indicative of a $W$ boson decay, along with a $W/Z \to q\bar{q}$ candidate. The candidate for $W \to \ell\nu$ decay is identified by the presence of exactly one Tight lepton and the absence of any Loose leptons in the final state.
 
+The following anti-QCD cuts are applied to reject the QCD multijet and non-collision background.
 \begin{itemize}
 \item $\met > 80 \,\GeV$
 \item $\ptl > 28 \,\GeV$ %and \textcolor{red}{I think this is related to lepSF binning} 
 %\item $m_{J} > 50 \, \GeV$ (merged only)
 \end{itemize}
-are applied in the merged (resolved) analysis to suppress the multi-jet background.
-Merged and resolved regime selections are discussed in details in Section \ref{subsec:sr_selection}.
 
-Examples of distributions for MC samples as well as observed data are shown in Figure \ref{fig:1LepPreselCuts}; in particular, we can nicely see the W-peak in the $t\bar{t}$ process.
+Merged and resolved regime selections are detailed in Section \ref{subsec:sr_selection}.
+Figure \ref{fig:1LepPreselCuts} presents distributions for MC samples and observed data at the early stages of the analysis selection.
 
-%\textcolor{red}{do we have any d-phi selection in 1-lep?? NO , this comment can be deleted after}
+The observed data that are not well-represented by the simulated events primarily stem from multijet and non-collision backgrounds. These backgrounds mainly arise due to the mis-measurement of a jet's energy. While these backgrounds are relatively minor, it is important to note that Monte Carlo (MC) simulations do not accurately estimate their shape or rate. The multijet background, often referred to as the QCD background, commonly occurs when jets are misidentified as leptons or when jets produce leptons later in their decay process. Specifically, electron-related backgrounds are mostly due to jets generating extensive showers in the ECAL, which then meet the criteria for electron selection. In the case of muons, the background is typically a result of hadron decays within a jet.
+The QCD multijets background are highly suppressed by these selections, and we can also see the $W$-peak in the $t\bar{t}$ process.
+%%Examples of distributions for MC samples as well as observed data are shown in Figure \ref{fig:1LepPreselCuts}; in particular, we can nicely see the W-peak in the $t\bar{t}$ process.
+
 
 \begin{figure}[ht]
 \centering
@@ -100,11 +101,3 @@ Examples of distributions for MC samples as well as observed data are shown in F
 %\item $\Delta \phi(j1(2), \met) > XX$;
 %\end{itemize}
 %where $\Delta \phi(i, j)$ is the distance in the  coordinate between objects $i$ and $j$.
-
-%%% 2-leptons channel
-
-%In particular, modelling of the leading and sub-leading muon \pt look slighlty different. 
-%This is an effect of the first bin in both distributions that has different values in the 
-%data/MC ratio. After removing the first bin in the subleading muon \pt distribution the modelling
-%qfor the two muons \pt is consistent as checked in Appendix \ref{app:leptonin2lep}.
-

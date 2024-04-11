@@ -1,12 +1,12 @@
-\subsection{Trigger requirements}
-\label{subsec:trigger_requirements}
-The data were collected by the lowest unprescaled single-lepton or \met\ triggers summarized in Table~\ref{tab:triggers} according to the number of leptons in each channel.
-
-We rely on the trigger setup other analyses with semi-leptonic final states use given the very similar final states;
-
-in particular, we rely on studies made 
-in the VV semi-leptonic search \cite{Bachas:2646593}
-and in the SM $V\left(H\to bb\right)$ analysis \cite{HIGG-2018-04, ATL-COM-PHYS-2018-517}. 
+%\subsection{Trigger requirements}
+%\label{subsec:trigger_requirements}
+%%The data were collected by the lowest unprescaled single-lepton or \met\ triggers summarized in Table~\ref{tab:triggers} according to the number of leptons in each channel.
+%%
+%%We rely on the trigger setup other analyses with semi-leptonic final states use given the very similar final states;
+%%
+%%in particular, we rely on studies made 
+%%in the VV semi-leptonic search \cite{Bachas:2646593}
+%%and in the SM $V\left(H\to bb\right)$ analysis \cite{HIGG-2018-04, ATL-COM-PHYS-2018-517}. 
 
 %and optimisation performed 
 %in the previous round of the analysis and especially on the recent VV resonant search. 
@@ -20,26 +20,20 @@ and in the SM $V\left(H\to bb\right)$ analysis \cite{HIGG-2018-04, ATL-COM-PHYS-
 
 %Due to the \met trigger efficiency reaches to the plateau at $\met=250\,\si{\GeV}$, 0-lepton channel does not cover the region of $m<500\,\si{\GeV}$.
 
-Possible data/MC differences on the lepton trigger efficiency are taken into account by applying scale factors implemented in \texttt{AsgElectronEfficiencyCorrectionTool} and \texttt{MuonEfficiencyScaleFactors} packages to the simulated events.
+The trigger requirements are summarized in Table~\ref{tab:triggers} and comprise the lowest unprescaled single-lepton or \met\ triggers. The trigger setup is used by studies conducted for the VV semi-leptonic search  \cite{Bachas:2646593}
+and in the SM $V\left(H\to bb\right)$ analysis \cite{HIGG-2018-04, ATL-COM-PHYS-2018-517}. Analyses from these studies feature semi-leptonic final states, closely resembling those in this analysis.
 
-%For the modelling of the \met trigger efficiency, we rely on what has done in VV semi-leptonic search \cite{Bachas:2646593}; 
-%in particular, it relys on a measurement made in the SM $V\left(H\to bb\right)$ analysis \cite{HIGG-2018-04, ATL-COM-PHYS-2018-517}. 
+Differences between data and Monte Carlo (MC) simulations in lepton trigger efficiency are addressed by applying scale factors. These factors are implemented through the \texttt{AsgElectronEfficiencyCorrectionTool} and \texttt{MuonEfficiencyScaleFactors} packages, ensuring accurate adjustments to the simulated events.
 
-%The latest results is found \href{https://indico.cern.ch/event/808675/contributions/3429367/attachments/1842666/3021872/20190130_METtrigger_2018-2.pdf}{here}.
-%As an example, the efficiency of HLT\_xe110\_pufit\_xe70\_L1XE50 using data18 is shown in Fig~\ref{fig:met_trig_eff}.
-%From the 36~\ifb\ \lvqq\ analysis~\cite{EXOT-2016-28}, the impact of \met trigger efficiency scale factor effect was negligible and thus is not considered for this round.
-%The trigger efficiency obtained from data and $W \to \mu\nu$ simulated sample are used to estimate the scale factor.
-%A difference between $W \to \mu\nu$ and $\ttbar$ samples are considered as a systematic uncertainty.
-
-%\textbf{[Note]} \mbox{} \\
-%The trigger navigation information for HLT\_e300\_etcut is corrupted in our DxAODs and we cannot apply the efficiency SF for it, but its efficiency is about 100\% at the highest-\et region and egamma trigger group agreed that we do not need to apply it.
+%Possible data/MC differences on the lepton trigger efficiency are taken into account by applying scale factors implemented in \texttt{AsgElectronEfficiencyCorrectionTool} and \texttt{MuonEfficiencyScaleFactors} packages to the simulated events.
 
 
-\begin{landscape}
-\begin{table}[p]
+%\begin{landscape}
+\begin{table}[h]
   \caption{The list of triggers used in the analysis.} \label{tab:triggers}
 \begin{center} 
-\small
+%\footnotesize
+\resizebox{\textwidth}{!}{
 \begin{tabular}{|l|c|c|c|}
 \hline
 %%%\multirow{2}{*}{Data-taking period} & \multirow{2}{*}{$e\nu qq$ and $eeqq$ channels} & $\mu\nu qq$ ($\pt(\mu\nu)<150\,\si{\GeV}$) & $\mu\nu qq$ ($\pt(\mu\nu) > 150\,\si{\GeV}$)  \\
@@ -65,9 +59,10 @@ Possible data/MC differences on the lepton trigger efficiency are taken into acc
 {\centering {2018}} & same as above & same as above  &  HLT\_xe110\_pufit\_xe70\_L1XE50  \\
 \hline
 \end{tabular}
+}
 \end{center}
 \end{table}
-\end{landscape}
+%\end{landscape}
 
 
 %\begin{figure}[h]

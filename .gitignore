@@ -274,3 +274,9 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# recycle bin
+src/excluded/
+
+# container files
+*.sif
