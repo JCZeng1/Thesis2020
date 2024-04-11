@@ -141,7 +141,7 @@ Majority & Majority & Select Track with lowest \(\chi^2\) \\
 \label{table:track_selection_scheme}
 \end{table}
 
-After each track is compared, the outcome is forwarded to the Decoder, which logs the results of all track comparisons. Each comparator can issue one of four possible outcomes, encoded as two bits: \textit{idle}, \textit{no match}, \textit{delete RAM}, and \textit{delete Stream}. The Decoder synthesizes these outcomes with the current track count and the comparator's index to generate a "copy vector." This vector is essential for managing the write process to the CUT FIFO.
+After each track is compared, the outcome is forwarded to the Decoder, which logs the results of all track comparisons. Each comparator can issue one of four possible outcomes, encoded as two bits: \textit{idle}, \textit{no match}, \textit{delete RAM}, and \textit{delete Stream}. The Decoder synthesizes these outcomes with the current track count and the comparator's index to generate a ``copy vector.'' This vector is essential for managing the write process to the CUT FIFO.
 
 Once every track for the event has been examined and the copy vector is complete, the RAW FIFO's content is moved. This FIFO contains a copy of every track. This data is then transferred to a second FIFO, named the CUT FIFO, guided by the copy vector to ensure only the valid tracks are preserved. This arrangement allows for the removal of gaps in the data by excluding the tracks as dictated by the copy vector.
 

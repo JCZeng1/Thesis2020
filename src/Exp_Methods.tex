@@ -5,9 +5,6 @@
 \section{Data Samples}
 \label{sec:data_sample}
 
-%%%Data15-16 is reprocessed with rel.21 framework (tag r9264), data17 with r10258 and data18 with f937; 
-%%%reference to the full data containers is here: 
-%%%\mbox{\href{https://its.cern.ch/jira/projects/ATLASDPD/issues/ATLASDPD-1521}{data derivation production link}}
 %%%
 The semileptonic VBS analysis is based on proton-proton (\pp) collision data collected from 2015 to 2018, amounting to an integrated luminosity of \intLumi\,\ifb. The overall uncertainty for the integrated luminosity, measured at 1.7\%\cite{ATLAS-CONF-2019-021}, was determined using the LUCID-2 (LUminosity Cherenkov Integrating Detector)~\cite{Avoni:2633501} for primary luminosity measurements.
 Table~\ref{tab:intLumi} summarizes the integrated luminosity used in this analysis.
@@ -89,12 +86,6 @@ Both $W^{+}$ and $W^{-}$ decays are included, and for $WWjj$, all charge combina
 Table~\ref{tab:VBS_sig_samples} details the EWK $VV+jj$ samples used in this analysis.
 In these samples, we account for all purely-electroweak tree-level diagrams of order $\mathcal{O}(\alpha_{EW}^6)$ that contribute to the final states. This includes both VBS diagrams and non-VBS electroweak diagrams. Detailed examples of these diagrams have been previously discussed and are showcased in Figures~\ref{fig:feynmanVBS} and \ref{fig:feynmanEWKnonVBS}, as found in Section~\ref{section:Vector_Boson_Scattering}.
 
-%For each sample, we include all purely-electroweak tree-level diagrams of order $\mathcal{O}(\alpha_{EW}^6)$ that contribute to the final state:
-%\begin{itemize}
-%  \item Vector Boson Scattering (VBS) diagrams, as shown in examples in Fig.~\ref{fig:feynmanVBS};
-%  \item Non-VBS electroweak diagrams excluding $b$-quarks in the initial and final states, with examples in Fig.~\ref{fig:feynmanEWKnonVBS} (a)--(d);
-%  \item Non-VBS electroweak diagrams including $b$-quarks in the initial or final states, with examples in Fig.~\ref{fig:feynmanEWKnonVBS} (e)--(f).
-%\end{itemize}
 
 For EWK $WW+jj$ production, the non-VBS electroweak $t\bar{t}$ diagrams, as depicted in Fig.~\ref{fig:feynmanEWKnonVBS}(e) and (f), could significantly contribute. This potential issue is effectively mitigated through the use of a $b$-veto. Despite this mitigation, the contribution from the non-VBS $tZb$ process, illustrated in Fig.~\ref{fig:feynmantZb}, remains considerable. To address this, a cut was implemented near the reconstructed top mass, effectively reducing its impact, as detailed in Table~\ref{tab:1lep_resolved}.
 
@@ -124,48 +115,6 @@ $\Zll\Zqq jj$            & 364854   &   1990000 &  2388000 & 3396000 & 1.0  &  0
 \label{tab:VBS_sig_samples}
 \end{center}
 \end{table}
-
-
-%%% feynman diagrams, VBS
-%%
-%\begin{figure}[tbp]
-%\begin{center}
-%\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/samples/feynVBS2.pdf}}
-%\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/samples/feynVBS1.pdf}}
-%\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/samples/feynVBS3.pdf}}\\
-%\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/samples/feynVBS4.pdf}}
-%\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/samples/feynVBS5.pdf}}
-%\caption{
-%Examples of VBS diagrams that contribute to the signal.  Note that not all VBS diagrams contain quartic gauge couplings.
-%The dashed line represents the Higgs boson; while the solid lines represent quarks and the rippled ones the vector bosons.  
-%These and other Feynman diagrams in this note are made
-%using the JaxoDraw~\cite{Binosi:2003yf} program. The decays of the bosons are not shown.
-%}
-%\label{fig:feynmanVBS}
-%\end{center}
-%\end{figure}
-%
-%
-%%% feynman diagrams, non-VBS
-%%
-%\begin{figure}[tbp]
-%\begin{center}
-%\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/samples/feynEWKnonVBS3.pdf}}
-%\subfloat[\label{subfig:feynEWKnonVBSb}]{\includegraphics[width=0.3\textwidth]{figures/samples/feynEWKnonVBS4.pdf}}
-%\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/samples/feynEWKnonVBS5.pdf}}\\
-%\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/samples/feynEWKnonVBS6.pdf}}
-%\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/samples/feynEWKnonVBS1.pdf}}
-%\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/samples/feynEWKnonVBS2.pdf}}\\
-%\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/samples/feynEWKnonVBS7.pdf}}
-%\caption{
-%Examples of non-VBS $\mathcal{O}(\alpha_{EW}^6)$ diagrams that contribute to the signal. 
-%The dashed line represents the Higgs boson; while the solid lines represent quarks and the rippled ones the vector bosons.
-%The decays of the bosons are not
-%explicitly shown, but the counting of powers of $\alpha$ includes the boson decays.
-%}
-%\label{fig:feynmanEWKnonVBS}
-%\end{center}
-%\end{figure}
 
 %% feynman diagram, tZb
 \begin{figure}[tbp]
@@ -207,25 +156,6 @@ Here, $|A_{\text{SM}}|^2$ denotes the squared matrix element for the SM process,
 To model the Eboli D-8 EFT processes, we generate a series of samples for each operator \(A_i\) at varying coefficient values (\(c_i\)). We utilize MadGraph5\_aMC@NLO version 2.7.2 for these simulations at leading order (LO), incorporating the NNPDF30LO parton distribution function (PDF) set~\cite{Ball:2012cx}, and Pythia 8.244~\cite{Sjostrand:2007gs} for fragmentation processes. The matrix element calculation results in two on-shell \(W/Z\) bosons, which are subsequently decayed using \textsc{MadSpin}~\cite{Artoisenet:2012st} to represent the leptonic and hadronic decay channels. Due to the matrix-element weighting requirements, simulations for each weak isospin state of the boson (e.g., \(W^+W^-\), \(W^+W^+\), \(W^-W^-\), \(W^+Z\), \(W^-Z\), \(ZZ\)) are conducted separately.
 
 
-%%%
-%\begin{figure}[tbp]
-%  \centering
-%  \subfloat[]{
-%   \includegraphics[width=0.45\textwidth]{figures/aQGC/decomp/aQGC_decomp_1} \qquad
-%  }
-%  \subfloat[]{
-%    \includegraphics[width=0.45\textwidth]{figures/aQGC/decomp/aQGC_decomp_2}
-%  }
-%  \caption{
-%    Closure of piece-wise generator with respect to full simultaneous generation 
-%    on the invariant mass distribution of the diboson;
-%    one-term comparison for operator FT0 (c.f. green and purple) (left)
-%    and cross-term comparison for FT0,FT1 (c.f. yellow and purple) (right).
-%  }
-%  \label{fig:aQGC_decomp}
-%  \end{figure}
-  
-
 \section{Derivation and CxAOD framework}
 \label{subsec:DxAOD_and_CxAOD}
 %Some technical details on the derivations and analysis framework are described in this section.
@@ -260,9 +190,3 @@ We use the common analysis \texttt{CxAOD} framework (version \texttt{r33-12}) fo
 The \texttt{CxAOD} framework is used to define physics objects, adhere to all CP recommendations for them, and apply pre-selection cuts.
 These procedures and definitions are detailed in Sections~\ref{chap:objects_def} and \ref{subsec:event_preselection}, respectively.
 The CP recommendations are providede by the combined performance (CP) groups for use in analysis.
-
-%%%The details of CxAOD framework is found in \mbox{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/CxAODFramework}{TWiki}} or README at:
-%%%\begin{itemize}
-%%%\item \url{https://gitlab.cern.ch/CxAODFramework/CxAODBootstrap_VHbb/tree/master},
-%%%\item \url{https://gitlab.cern.ch/CxAODFramework/CxAODMakerCore}.
-%%%\end{itemize}
