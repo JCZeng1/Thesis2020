@@ -1,0 +1,183 @@
+%Experimental Apparatus
+\label{ch:Experimental_Apparatus}
+
+\section{The LHC}
+\label{the_lhc}
+
+The Large Hadron Collider (LHC)~\cite{Brüning:782076} at CERN is currently the world's largest and most powerful hadron accelerator and collider.
+It is located in a circular tunnel roughly 100 m beneath the borders of Switzerland and France. The tunnel is about 27 kilometers long and was initially built for the Large Electron-Positron Collider (LEP), which operated from 1989 to 2000. Construction of the LHC began in 1998 and was completed in 2008. There are eight Interaction Points (IP) where particle beams can collide, four located in caverns, each housing one of the four experiments of the LHC: ATLAS~\cite{TheATLASCollaboration_2008}, CMS~\cite{TheCMSCollaboration_2008}, LHCb~\cite{TheLHCbCollaboration_2008}, and ALICE~\cite{TheALICECollaboration_2008}.
+The ATLAS and CMS experiments search for the same types of collision events and are used to cross-check one another’s results.
+
+The LHC was designed to collide proton beams at a center-of-mass energy of 14 TeV and a maximum instantaneous luminosity of 
+$10 \, \mathrm{nb}^{-1} \, \mathrm{s}^{-1} (10^{34} \, \mathrm{cm}^{-2}\mathrm{s}^{-1})$~\cite{LyndonEvans_2008}.
+The proton beams are guided by a sophisticated system of superconducting magnets. This system includes 1,232 dipole magnets with an \SI{8.3}{\tesla} strength for bending the beams and 392 main quadrupole magnets with a \SI{7.5}{\tesla} strength for focusing the beams~\cite{1288863}~\cite{1324760}.
+To sustain their superconducting state and counteract external sources of heat, the magnets are immersed in a liquid helium bath at 1.9 K within a vacuum-sealed inner vessel, as seen in Figure~\ref{fig:lhc_dipole}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/LHC/LHC_dipole.jpg}
+    \caption[]{The cross-section of an LHC dipole magnet with vacuum chamber~\cite{Team:40524}.}
+    \label{fig:lhc_dipole}
+\end{figure}
+
+Before entering the LHC, the proton beams went through a sequence of accelerators, as shown in Figure~\ref{fig:cern_complex}, which gradually increased the beams' energy. 
+A single bottle of Hydrogen gas serves as the sole proton source for the whole LHC. 
+At the LINAC2 linear accelerator site, the hydrogen gas is introduced into the duoplasmatron, which ionizes the gas to create a plasma of electrons and hydrogen ions~\cite{Burnet:1359959}. The plasma is then manipulated by strong electrical and magnetic fields, which separate and accelerate the protons out of the duoplasmatron and into the accelerator. 
+The protons enter the LINAC2 at about 90 keV and are accelerated to 50 MeV before arriving in the Booster.
+The Booster is a (relatively) small synchrotron, followed by the Proton Synchrotron (PS) and Super Proton Synchrotron (SPS). The proton beam is accelerated gradually at each stage and split before entering the LHC as two countercirculating beams. The details of this process are summarized in Table~\ref{table:accelerators}.
+
+Within the synchrotrons, the proton beam is repeatedly passed through the radiofrequency (RF) cavities, metallic chambers containing an electromagnetic field.
+This process accelerates the protons and organizes them into bunches with 25 ns spacing.
+Once the proton bunches circulate in the LHC, they are further accelerated while maintaining a 25 ns spacing. The beams can circulate stably in the LHC for many hours and only need to be refilled if the beam is dumped~\cite{LyndonEvans_2008}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/LHC/CERN_ComplexL.jpg}
+    \caption[]{The CERN accelerator complex~\cite{Haffner:1621894}. The LHC proton injector chain is denoted by the light grey arrows.}
+    \label{fig:cern_complex}
+\end{figure}
+
+\begin{table}[ht]
+\centering
+\begin{adjustbox}{width=0.95\textwidth}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Accelerator Name} & \textbf{Type} & \textbf{Dimensions/Circumference} & \textbf{Exit/Final Energy} \\ \hline
+LINAC2 & Linear Accelerator & - & 50 MeV \\ \hline
+Booster & Synchrotron & 157 m & 1.4 GeV \\ \hline
+Proton Synchrotron (PS) & Synchrotron & 628 m & 26 GeV \\ \hline
+Super Proton Synchrotron (SPS) & Synchrotron & 7 km & 450 GeV \\ \hline
+Large Hadron Collider (LHC) & Synchrotron & 27 km & 6.5 TeV (per beam) \\ \hline
+\end{tabular}
+\end{adjustbox}
+\caption{Summary of CERN's Accelerator Chain Leading to the LHC}
+\label{table:accelerators}
+\end{table}
+
+\clearpage
+\section{The ATLAS Detector}
+The ATLAS (A Toroidal LHC ApparatuS) detector~\cite{TheATLASCollaboration_2008} is a general purpose detector designed to search for all types of interesting physics events at a high luminosity. The ATLAS experiment is one of the four main LHC experiments. The ATLAS detector is located in the experiment cavern at Point 1 of the LHC at the same depth as the tunnel, roughly 100 m underground.
+
+The detector is a large cylindrical shape, 44 m long and 25 m in diameter, and weighs approximately 7000 tonnes. Figure~\ref{fig:atlas_scale} shows the sub-detector systems of ATLAS and the relative human scale. The beam pipe is encased by the Inner Detector (ID), which in turn is surrounded by the calorimeters, and these are all nested inside the muon spectrometer (see Figure \ref{fig:atlas_cross}).
+The LHC coordinate system is illustrated as a rectangular coordinate system in Figure~\ref{fig:atlas_coordinate}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/LHC/atlas_scale.jpg}
+    \caption[]{ATLAS detector with human models included for scale~\cite{Pequenao:1095924}.}
+    \label{fig:atlas_scale}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/LHC/atlas_cross.jpg}
+    \caption[]{The inner layers of ATLAS, depicted in a cross-sectional view along the x-y plane~\cite{Pequenao:1095924}.}
+    \label{fig:atlas_cross}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.75\textwidth]{figures/LHC/axis3D_CMS-003.png}
+\caption[The LHC coordinate system]{The LHC coordinate system as seen from the ATLAS detector~\cite{neutelings2023lhc}.}
+\label{fig:atlas_coordinate}
+\end{figure}
+
+In the transverse plane of this right-handed coordinate system, positive x points toward the center of the LHC ring, and positive y points toward the sky.
+The beam pipe defines the orientation of the z-axis, with the positive direction going counterclockwise around the LHC ring.
+While the LHC coordinate system is Cartesian, the coordinate system preferred for describing LHC events, particularly in the ATLAS experiment, utilizes a particle's transverse momentum ($p_T$), pseudorapidity ($\eta$), and azimuthal angle ($\phi$). The polar angle ($\theta$) is defined relative to the beam axis, whereas the azimuthal angle ($\phi$) is measured in the plane perpendicular to the beam.
+In practice, pseudorapidity is preferred over the polar angle. It is defined as
+\begin{equation}
+    \eta = -\ln \left( \tan \frac{\theta}{2} \right)
+\end{equation}
+and is a good approximation of the rapidity of a particle in the high-energy regime, which is a measurement of the particle's velocity along the beam axis, given by
+\begin{equation}
+    y = \frac{1}{2} \ln \left( \frac{E + p_z}{E - p_z} \right).
+\end{equation}
+
+While neither the rapidity nor the pseudorapidity are Lorentz invariants, the rapidity difference between the two particles is invariant under Lorentz boosts along the direction of motion. Similarly, the difference in pseudorapidities is approximately invariant under such boosts, especially for highly relativistic particles in LHC/ATLAS events.
+
+%%%ID
+\subsection{The Inner Detector}
+Located inside the solenoid magnet, the Inner Detector (ID)~\cite{ATLAS:1998yql} consists of three subsystems designed to detect charged particles, covering a pseudorapidity range of \(|\eta| < 2.5\). As seen in Figure~\ref{fig:id_layout}, these subsystems are described from the innermost to the outermost as follows.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/LHC/id_layout.jpg}
+    \caption[]{ATLAS Inner Detector cut-away: Pixel Detector, Semiconductor Tracker, and Transition Radiation Tracker~\cite{Pequenao:1095926}.}
+    \label{fig:id_layout}
+\end{figure}
+
+The first, the Pixel detector, consists of four layers of pixel detectors.
+These pixel layers comprise a two-dimensional array of silicon pixels, providing high-precision measurements close to the interaction point.
+The innermost layer is the Insertable B-Layer (IBL). The ``B'' in its name stands for ``Barrel,'' though the IBL is crucial in detecting short-lived particles, like hadrons with $b$ quarks. Due to its closeness to the interaction point, the IBL enhances the performance of the Pixel detector by improving the precisions of vertexing and track reconstruction.
+
+The second subsystem, the SemiConductor Tracker (SCT), comprises four double layers of silicon strips. The SCT behaves similarly to the Pixel detector, except the measurement is one-dimensional. 
+When a charged particle moves through a silicon layer, it bumps electrons to a higher energy level, creating ``holes'' in their place. This generates a current and signal the detector can read as a ``hit.''
+
+The last subsystem is the Transition Radiation Tracker (TRT)~\cite{TheATLASTRTcollaboration_2008}, a straw tracker comprised of approximately 300,000 4 mm-diameter straw tubes. 
+A straw tube is a long tube with a wire in the center filled with gas (Xenon). When a charged particle passes through, the gas becomes ionized, creating an electronic signal (a ``hit'').
+The superconducting solenoid magnet bends the paths of charged particles based on their momentum, with the numerous hits in the TRT greatly enhancing momentum measurement accuracy.
+
+\subsection{The Calorimeters}
+The calorimeter system, enclosing the solenoid magnet and the inner detector, provides coverage up to \(|\eta| < 4.9\), although the coverage varies for each subdetector.
+The calorimeters employs a fundamentally different detection method compared to the ID. While the ID is designed to track particles with minimal interaction, the calorimeters are designed to completely absorb the particles. This absorption prevents most particles from reaching further layers of detection. A significant advantage of calorimeters is their ability to detect neutral particles, with the exception of neutrinos. The calorimeter system comprises various subsystems, each responsible for covering a specific range of particles. Figure~\ref{fig:cal_layout} illustrates these subsystems.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/LHC/cal_layout.jpg}
+    \caption[]{Cut-away view of the ATLAS calorimeter system~\cite{Pequenao:1095927}.}
+    \label{fig:cal_layout}
+\end{figure}
+
+Calorimeters operate on a fundamental principle where particles enter a region filled with dense matter, leading to the creation of particle showers as they release their energy within the calorimeter. These devices are typically constructed from alternating layers of materials: a dense material that absorbs the particles, and a sampling material positioned between the absorber layers. The purpose of the sampling material is to detect the particle showers generated by the absorbers.
+This detection is achieved through sensors connected to the sampling material. There are two prevalent types of sampling materials used in calorimeters: scintillating plastics and ionizable liquids. Scintillating plastics emit light when struck by particles and are read by photodiodes, while the ionizable liquids create ions that are detected by electrodes.
+
+The innermost section of the calorimeter is occupied by the Electro-Magnetic Calorimeter (ECAL)~\cite{ATLAS:1996ab}. Noted for its unique accordion design, the ECAL ensures complete azimuthal coverage, eliminating gaps along the azimuthal direction. Despite this, a gap exists between the barrel and endcap sections of the ECAL along the $z$-direction, leading to a common practice of excluding particles within the pseudorapidity range of \(1.37 < |\eta| < 1.52\). The ECAL employs lead as the primary absorbing material, complemented by steel, and utilizes liquid argon as the sampling medium. Upon interaction with incoming particles, the liquid argon becomes ionized. These ionization events are then detected by electrodes shaped to match the accordion design of the calorimeter. The coverage of the ECAL extends to a pseudorapidity range of \(|\eta| < 3.2\).
+
+The principal hadronic calorimeter, known as TileCAL~\cite{ATLAS:1996aa}, is designed to accommodate the penetrating nature of hadrons, which travel deeper into materials before stopping. TileCAL is considerably larger, utilizing steel as its absorbing material and scintillating plastic as the sampling material, ensuring effective energy measurement of hadrons. TileCAL is specifically engineered to cover a pseudorapidity range of \(|\eta| < 1.7\). In contrast, the endcaps of the calorimeter, which are constructed differently, employ copper as the absorbing material and liquid argon as the sampling medium. These endcaps extend the calorimeter's coverage to a range of \(1.5 < |\eta| < 3.2\), complementing TileCAL. Due to the endcaps being nested within TileCAL's structure, there is a significant degree of overlap between these components, ensuring that there are no gaps in the hadronic calorimeter's coverage.
+
+The Forward Calorimeter (FCAL)~\cite{AArtamonov_2008} plays a crucial role in capturing particles that travel almost parallel to the beam line, essential for accurately measuring missing energy in experiments. Its design enables it to cover an extended pseudorapidity range of \(3.1 < |\eta| < 4.9\), significantly beyond the coverage of the central detectors. Although most physics analyses focus on events within a much narrower range, the ability of the FCAL to detect particles in this extended range is vital for ensuring that no energy goes unaccounted for, which is crucial for precision measurements. The FCAL comprises two distinct sections: an inner section with copper as the absorbing material and an outer section that utilizes tungsten. Liquid argon is employed as the sampling material across the entire FCAL, facilitating the detection and measurement of particle energies.
+
+
+\subsection{The Muon Spectrometer}
+
+The muon spectrometer (MS)~\cite{ATLAS:1997ad}, designed to detect muons within \(|\eta| < 2.7\), encircles the calorimeters and forms the detector's outermost layer. Its barrel region is defined in the range of \(|\eta| < 1.05\), with the endcap regions covering the remaining area.
+The MS is supplemented by three large toroid magnets surrounding the calorimeters, bending the charged particles in the z direction with a strength of about \(2.5 \, \text{T}\cdot\text{m}\) in the barrel region and up to \(6 \, \text{T}\cdot\text{m}\) in the endcaps.
+Only muons and neutrinos, due to their unique properties, can penetrate the calorimeters to reach the MS, which is specifically designed for precise measurements of muon momentum.
+As seen in Figure~\ref{fig:muon_spec}, the trigger system of the muon system features the Resistive Plate Chamber (RPC) and Thin Gap Chamber (TGC). These trigger chambers offer bunch-crossing identification, well-defined transverse momentum (\pt) thresholds, and measurements of the muon's track coordinate~\cite{TheATLASCollaboration_2008}.
+Combined with the corresponding measurements from the ID, one can determine all three components of a muon's momentum.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/LHC/muon_spec.jpg}
+    \caption[]{Cut-away view of the Muon Spectrometer system~\cite{Pequenao:1095929}.}
+    \label{fig:muon_spec}
+\end{figure}
+
+%Pequenao:1095929
+
+
+\input{src/tdaq/TDAQ.tex}
+\input{src/tdaq/FTK.tex}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

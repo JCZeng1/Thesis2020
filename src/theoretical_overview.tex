@@ -1,0 +1,166 @@
+%%%Theory
+\label{ch:theory_overview}
+
+The Standard Model of particle physics is our best description of elementary particles and how they interact. The SM has been tested and proven right by many experiments worldwide at various energy levels. Even though the SM has been very successful, it doesn't answer every question about the universe, leaving space for new theories beyond the SM that try to fill these gaps and explain the mysteries. This chapter gives a simple overview of the SM, discusses the importance of the Higgs field, and explains why studying VBS and aQGCs is essential.
+
+\section{Standard Model}
+The Standard Model of particle physics offers a comprehensive framework that describe the fundamental particles and the interactions governing them, excluding gravity~\cite{PeskinSchroeder1995}. 
+Table~\ref{table:fundamental_forces} shows the relative strengths of these four fundamental forces, highlighting the marked disparity between gravity and the other forces within the realm of subatomic particles.
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Force}         & \textbf{Relative Strength} \\ \hline
+Strong Nuclear Force   & 1                          \\ \hline
+Electromagnetic Force  & \textasciitilde{}1/137     \\ \hline
+Weak Nuclear Force     & \textasciitilde{}10\(^{-6}\) \\ \hline
+Gravitational Force    & \textasciitilde{}10\(^{-38}\) \\ \hline
+\end{tabular}
+\caption{Relative Strengths of the Fundamental Forces}
+\label{table:fundamental_forces}
+\end{table}
+
+
+The particles of the Standard Model are classified into four distinct categories. Leptons and quarks constitute all known matter, each possessing half-integer spin and adhering to Fermi-Dirac statistics. This principle prohibits any two identical fermions from occupying identical quantum states simultaneously. The model includes six leptons and six quarks, each accompanied by a corresponding antiparticle counterpart. A fundamental distinction between these particle types is that quarks are subject to the strong nuclear force, whereas leptons are not. Furthermore, quarks are perpetually bound within composite particles known as hadrons—protons and neutrons being the most recognized examples.
+
+The remaining particles within the Standard Model facilitate the interactions among leptons and quarks and are characterized by integer spin, thereby following Bose-Einstein statistics. This group encompasses the gauge bosons, which are spin-1 particles responsible for mediating the three fundamental forces, and the Higgs boson~\cite{Higgs:1964ia}, a unique scalar particle with a spin-0, crucial for imparting mass to other particles. 
+Figure \label{fig:stdm_higgs} and Table~\ref{table:SMparticles} show all Standard Model particles, alongside their properties.
+
+%figures/theory/STDM_higgs.png
+
+\begin{figure}[ht]
+    \centering
+%%    \includegraphics[width=0.95\textwidth]{figures/theory/STDM_higgs.png}
+    \includegraphics[width=0.95\textwidth]{figures/theory/model-physics.pdf}
+    \caption{Illustration of Standard Model particles~\cite{Burgard2019}.}
+    \label{fig:stdm_higgs}
+\end{figure}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Particle Type} & \textbf{Particle} & \textbf{Spin} & \textbf{Charge (e)} & \textbf{Mass}            \\ \hline
+\multirow{6}{*}{Lepton}& Electron (e\(^-\))        & 1/2           & -1               & 0.511 MeV/c\(^2\)        \\ \cline{2-5}
+                       & Muon (\(\mu^-\))          & 1/2           & -1               & 105.7 MeV/c\(^2\)        \\ \cline{2-5}
+                       & Tau (\(\tau^-\))          & 1/2           & -1               & 1.777 GeV/c\(^2\)        \\ \cline{2-5}
+                       & Electron Neutrino (\(\nu_e\))    & 1/2           & 0                & $< 2 \, \text{eV}/c^2$           \\ \cline{2-5}
+                       & Muon Neutrino (\(\nu_{\mu}\))    & 1/2           & 0                & $< 0.19 \, \text{MeV}/c^2$       \\ \cline{2-5}
+                       & Tau Neutrino (\(\nu_{\tau}\))    & 1/2           & 0                & $< 18.2 \, \text{MeV}/c^2$       \\ \hline
+\multirow{6}{*}{Quark} & Up (u)                & 1/2           & +2/3              & 2.3 MeV/c\(^2\)          \\ \cline{2-5}
+                       & Down (d)              & 1/2           & -1/3              & 4.8 MeV/c\(^2\)          \\ \cline{2-5}
+                       & Charm (c)             & 1/2           & +2/3              & 1.275 GeV/c\(^2\)        \\ \cline{2-5}
+                       & Strange (s)           & 1/2           & -1/3              & 95 MeV/c\(^2\)           \\ \cline{2-5}
+                       & Top (t)               & 1/2           & +2/3              & 173.1 GeV/c\(^2\)        \\ \cline{2-5}
+                       & Bottom (b)            & 1/2           & -1/3              & 4.18 GeV/c\(^2\)         \\ \hline
+\multirow{4}{*}{Gauge Boson} & Photon (\(\gamma\))         & 1             & 0                & 0                        \\ \cline{2-5}
+                       & W Boson (W\(^{\pm}\))       & 1             & \(\pm 1\)        & 80.379 GeV/c\(^2\)       \\ \cline{2-5}
+                       & Z Boson (Z\(^0\))          & 1             & 0                & 91.1876 GeV/c\(^2\)       \\ \cline{2-5}
+                       & Gluon (g)             & 1             & 0                & 0                         \\ \hline
+Scalar Boson           & Higgs (H)             & 0             & 0                & 125.10 GeV/c\(^2\)       \\ \hline
+\end{tabular}
+\caption{Standard Model Particles and Their Known Properties.}
+\label{table:SMparticles}
+\end{table}
+
+The SM is a quantum field theory anchored in the symmetry group $\mathrm{SU}(3)_C \otimes \mathrm{SU}(2)_L \otimes \mathrm{U}(1)_Y$, where each component of the symmetry group governs a different aspect of particle interactions. In this context, the $\mathrm{SU}(3)_C$ symmetry relates to the strong interaction, with the subscript $C$ denoting color charge—a conserved property. Color charge exists in three forms—red, blue, and green—alongside their anticolors (anti-red, anti-blue, and anti-green). 
+
+One of the foundational principles of quantum chromodynamics (QCD)~\cite{CampbellHustonKrauss2017}, the theory of the strong interaction, is that color charge is never observed in isolation. This phenomenon, known as color confinement, dictates that quarks are always found in composite particles called hadrons, which exhibit a neutral color charge. 
+Hadrons are categorized into mesons and baryons. Mesons consist of a quark and an antiquark pair, combining a color with its anticolor. Baryons, such as the proton and neutron, are formed from three quarks, each of a distinct color (or anticolor), which collectively neutralize their color charge. This configuration explains why hadrons are observable in nature, contrary to isolated quarks.
+As quarks attempt to separate, they undergo a process known as \emph{hadronization}. During hadronization, new quark-antiquark pairs spontaneously emerge from the vacuum. These new particles arrange themselves to neutralize the color charge of the initially separating quarks. As a result, instead of isolated quarks, we observe the formation of new hadrons, ensuring that the color charge remains confined.
+Hadronization and its resulting particle decays produce a shower(cascade) of hadrons and leptons known as a ``jet.'' These jets, which will be discussed on in Section~\ref{subsec:jet_selection}, are crucial for probing QCD physics. 
+
+The electroweak interaction, described by the symmetry group $\mathrm{SU}(2)_L \times \mathrm{U}(1)_Y$, unifies the electromagnetic and weak forces~\cite{GLASHOW1961579, PhysRev.127.965, PhysRevLett.19.1264}. The conservation of electric charge ($Q$) is central to this theory, governed by the formula: $Q = \frac{Y}{2} + T_3$. Here, $Y$ denotes the hypercharge, and $T_3$ is the third component of the weak isospin ($T$), akin to the third component of spin in quantum mechanics, differentiating ``up'' and ``down'' states within isospin doublets. This framework introduces a distinction in symmetry for particles based on their chirality: left-handed particles exhibit doublet configurations under $\mathrm{SU}(2)_L$, while right-handed particles form singlets, indicating they do not participate in weak isospin doublets. 
+
+Spin-1 particles, known as gauge bosons or vector bosons, are the force carriers in the SM. The photon mediates the electromagnetic force. The weak force is mediated by three vector bosons, the $W^{\pm}$ and $Z$ bosons. For the strong force, it is mediated by eight different gluons. A key feature of the weak force is lepton universality, meaning all types of leptons couple to the $W^{\pm}$ and $Z$ bosons in the same way, leading to identical branching ratios for each lepton type.
+
+\section{The Higgs Mechanism}
+
+%%%Higgs
+
+In the SM, the requirement of gauge invariance under the group $\mathrm{SU}(2)_L \otimes \mathrm{U}(1)_Y$ implies that weak bosons and fermions should be massless. However, this stands in contradiction to the observed masses of these particles. 
+The resolution within the SM framework is the Higgs mechanism \cite{Higgs:1964ia, PhysRevLett.13.508, PhysRevLett.13.321, PhysRevLett.13.585}, which introduces the Higgs field. Through spontaneous symmetry breaking, this scalar field gives mass to the weak bosons and fermions, reconciling the SM with experimental observations.
+
+Spontaneous symmetry breaking refers to a phenomenon where the ground state of a symmetric system does not reflect the system's symmetry after perturbation. The term ``breaking'' does not imply the destruction of the Lagrangian symmetry. Instead, the symmetry is not apparent in the perturbed ground state of the system.
+A classical example of spontaneous symmetry breaking is the magnetization of iron. Above its Curie temperature, iron's magnetic moments are oriented randomly, respecting rotational symmetry. Upon cooling below this temperature, the moments align uniformly, creating a magnet with distinct poles. Although the magnet displays a specific orientation, the physical principles governing magnetism retain their inherent symmetry.
+
+The scalar field (Higgs field), $\phi$, represented as a complex doublet, takes on a non-zero vacuum expectation value (VEV) of $v \approx 246$ GeV, leading to three massive gauge bosons ($W^{\pm}$ and $Z$) and the Higgs boson ($H$).
+
+% The complex scalar doublet
+\begin{equation}
+\phi =
+\begin{pmatrix}
+\phi^+ \\
+\phi^0
+\end{pmatrix}
+=
+\frac{1}{\sqrt{2}}
+\begin{pmatrix}
+\phi_1 + i\phi_2 \\
+\phi_3 + i\phi_4
+\end{pmatrix}
+\end{equation}
+
+
+
+The Lagrangian density of the Higgs field, $\mathcal{L}_\text{Higgs}$, respects local $\mathrm{SU}(2)_L \otimes \mathrm{U}(1)_Y$ symmetry and includes the Higgs potential $V(\phi)$, as shown in Figure~\ref{fig:higgs_potential}. This potential is defined with parameters $\mu^2 < 0$ and $\lambda > 0$ to ensure stable minima. 
+% The Lagrangian density
+\begin{equation}
+\mathcal{L}_\text{Higgs} = (D^\mu\phi)^\dagger (D_\mu\phi) - V(\phi),
+\end{equation}
+where \(V(\phi)\) is the Higgs potential, given by
+\begin{equation}
+V(\phi) = \mu^2\phi^\dagger\phi + \lambda (\phi^\dagger\phi)^2.
+\end{equation}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.75\textwidth]{figures/theory/higgspotential.png}
+\caption[Higgs Potential]{The Higgs potential, adapted from Ellis (2013) \cite{ellis2013higgs}.}
+\label{fig:higgs_potential}
+\end{figure}
+
+Choosing a ground state breaks the $\mathrm{SU}(2)_L \otimes \mathrm{U}(1)_Y$ symmetry to the subgroup $\mathrm{U}(1)_\text{QED}$, reparameterizing the complex scalar doublet's components into observable fields.
+After this symmetry breaking, the scalar doublet fields are reparameterized as:
+\begin{equation}
+\phi(x) = \frac{1}{\sqrt{2}}
+\begin{pmatrix}
+0 \\
+v + h(x)
+\end{pmatrix}
+\exp\left( \frac{i \tau^i \phi^i(x)}{2} \right),
+\end{equation}
+where $h(x)$ is the Higgs boson field, and the $\phi^i(x)$ are the Goldstone bosons that become gauge degrees of freedom in the unitary gauge $\phi^i(x) = 0$. This simplifies the kinetic term of the Lagrangian, resulting in mass terms for the $W^\pm$ and $Z$ bosons as:
+\begin{equation}
+m_W = \frac{1}{2}vg, \quad m_Z = \frac{vg}{2\cos\theta_W}.
+\end{equation}
+The Higgs boson mass is determined as:
+\begin{equation}
+m_h = \sqrt{-2\mu^2} = v\sqrt{2\lambda}.
+\end{equation}
+
+In the SM, the VEV of the Higgs field, denoted by \( v \), along with the gauge coupling constants \( g_1 \) and \( g_2 \), are free parameters. These are not predicted by the theory but are determined through experimental measurements. The VEV has been established to be about 246 GeV~\cite{Plehn_2005}. This VEV is crucial as it gives mass to the $W^\pm$ and $Z$ bosons through the mechanism previously discussed.
+
+Quarks and charged leptons also gain their mass by interacting with the Higgs field. These interactions are described by Yukawa couplings~\cite{10.1143/PTPS.1.1}.
+Each type of fermion has its own Yukawa coupling constant \( c_i \), which determines the strength of its interaction with the Higgs field, and therefore, its mass.
+
+
+\begin{equation}
+\mathcal{L}_\text{Yukawa} = -\frac{1}{\sqrt{2}} (v + h)(c_{1} \bar{d}d + c_{2} \bar{u}u + c_{3} \bar{e}e)
+\end{equation}
+
+\begin{equation}
+= -\left( 1 + \frac{h}{v} \right)(m_{d} \bar{d}d + m_{u} \bar{u}u + m_{e} \bar{e}e) .
+\end{equation}
+
+
+Neutrinos, however, do not acquire mass through the same mechanism. They remain massless in the SM's framework of electroweak symmetry breaking. The fact that neutrinos have been observed to have mass in experiments is an unsolved issue within the SM, hinting at new physics beyond the current theory.
+
+\section{Vector Boson Scattering}
+\input{src/theoretical/vbs_theory.tex}
+
+\clearpage
+\section{Beyond the Standard Model}
+\input{src/theoretical/aqgc_bsm.tex}

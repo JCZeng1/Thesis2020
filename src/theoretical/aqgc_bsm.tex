@@ -1,0 +1,151 @@
+%aQGCs
+Despite intensive searches, experiments at the LHC have not yet observed new physics phenomena beyond those predicted by the Standard Model of particle physics.
+After the discovery of the Higgs boson, a significant number of analyses have been dedicated to searching for traces of new particles. In the meantime, we also explore the possibility of Beyond the Standard Model (BSM) interactions involving known Standard Model particles, such as the Higgs, $W$, and $Z$ bosons. Any potential new physics related to EWSB could thus modify the interactions of these particles.
+In our case where no new physics has yet been found, the Standard Model can be considered as a low-energy approximation of a more comprehensive theory.
+This perspective allows us to describe potential BSM phenomena through an Effective Field Theory (EFT)  approach~\cite{Weinberg:1978kz}~\cite{RevModPhys.52.515}.
+
+\subsection{Anomalous Quartic Gauge Couplings}
+\label{Anomalous_Quartic_Gauge_Couplings}
+
+The concept of anomalous couplings among electroweak vector bosons existed before the Higgs boson was discovered~\cite{GaemersGounaris1979}. Even then, it was widely believed that EWSB governed the electroweak interactions, ensuring they remained consistent without violating any unitarity constraints.
+Given the discovery of the Higgs boson and the solid foundation of the $\mathrm{SU}(3)_C \otimes \mathrm{SU}(2)_L \otimes \mathrm{U}(1)_Y$ gauge symmetry, employing an EFT approach has emerged as a compelling method for predicting and analyzing precise measurements of electroweak processes, including any deviations from expected results.
+
+The EFT framework offers a streamlined and versatile way to explore anomalous couplings without being tied to any specific model~\cite{Degrande_2013}. This includes both anomalous triple gauge couplings (aTGCs) and anomalous quartic gauge couplings (aQGCs). Although aTGCs remain a significant area of interest, our focus here will be aQGCs. aQGCs are particularly intriguing because they can be investigated through VBS, providing a clear pathway for probing these potential deviations.
+
+Assuming that new physics emerges only at energies above the scale $\Lambda$, we can describe any phenomena beyond the Standard Model (including anomalous gauge couplings) using an effective Lagrangian:
+\begin{equation}
+\mathcal{L}_{\text{eff}} = \mathcal{L}_{\text{SM}} + \sum_i \frac{c^{(6)}_i}{\Lambda^2} \mathcal{O}^{(6)}_i + \sum_j \frac{c^{(8)}_j}{\Lambda^4} \mathcal{O}^{(8)}_j + \ldots
+\end{equation} 
+where $\mathcal{L}_{\text{SM}}$ is the Standard Model Lagrangian, $\mathcal{O}_i$ are the higher-dimensional operators of dimension $d_i$, $c_i$ are the Wilson coefficients.
+In the effective Lagrangian, we include only even-dimensional operators because odd-dimensional operators would violate lepton and/or baryon number conservation~\cite{Degrande_2013}. 
+The dimension-6 (D-6) terms, $\frac{c^{(6)}_i}{\Lambda^2} \mathcal{O}^{(6)}_i$, are often associated with aTGCs. 
+The dimension-8 (D-8) terms, $\frac{c^{(8)}_j}{\Lambda^4} \mathcal{O}^{(8)}_j$, are typically associated with aQGCs, introducing or modifying interactions involving four gauge bosons.
+Although both D-6 and D-8 operators can contribute to the VBS processes, the D-6 operators have been tightly constrained to values around zero by previous diboson measurements. Therefore, we will focus our discussion on the D-8 operators here.
+
+
+Building on the EFT approach to model the effects of possible aQGCs, we adopt the Eboli model, which introduces 21 new D-8 operators adhering to the SM $SU(2)\times U(1)_Y$ gauge symmetry~\cite{eboli2006p}.
+These operators can be classified into three categories: scalar, tensor, and mixed types. A list of these operators is provided at the end of this section.
+As shown in Table~\ref{table:eboli_op}, the semileptonic VBS stands out as an exceptional process capable of testing nineteen D-8 operators concurrently, with final states that involved $WW$, $WZ$, and $ZZ$ boson pairs.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|c|c||c|c|c|c|c|c|}
+		\hline
+		& WWWW & WWZZ & ZZZZ & WW$\gamma$Z & WW$\gamma\gamma$ & ZZZ$\gamma$ & ZZ$\gamma\gamma$ & Z$\gamma\gamma\gamma$ & $\gamma\gamma\gamma\gamma$ \\ \hline
+		$\mathcal{L}_{S0,2}, \mathcal{L}_{S1}$ & X & X & X & — & — & — & — & — & — \\ \hline
+		$\mathcal{L}_{M0}, \mathcal{L}_{M1}, \mathcal{L}_{M6}, \mathcal{L}_{M7}$ & X & X & X & X & X & X & X & — & — \\ \hline
+		$\mathcal{L}_{M2}, \mathcal{L}_{M3}, \mathcal{L}_{M4}, \mathcal{L}_{M5}$ & — & X & X & X & X & X & X & — & — \\ \hline
+		$\mathcal{L}_{T0}, \mathcal{L}_{T1}, \mathcal{L}_{T2}$ & X & X & X & X & X & X & X & X & X \\ \hline
+		$\mathcal{L}_{T5}, \mathcal{L}_{T6}, \mathcal{L}_{T7}$ & — & X & X & X & X & X & X & X & X \\ \hline
+		$\mathcal{L}_{T8}, \mathcal{L}_{T9}$ & — & — & X & — & — & — & X & X & X \\ \hline
+	\end{tabular}
+	\caption{Correspondences between the vertices and operators. The ``X'' marks indicate the quartic gauge vertices that can be modified by the specified D-8 operators.}
+	\label{table:eboli_op}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The following are the three classes of D-8 operators in the Eboli model~\cite{eboli2006p}.
+
+The scalar operators containing just covariant derivatives of the Higgs field, $D_\mu\Phi$:
+\begin{eqnarray}
+  {\cal L}_{S0,2} &=& \left [ \left ( D_\mu \Phi \right)^\dagger
+ D_\nu \Phi \right ] \times
+\left [ \left ( D^\mu \Phi \right)^\dagger
+D^\nu \Phi \right ]
+\\
+  {\cal L}_{S1} &=& \left [ \left ( D_\mu \Phi \right)^\dagger
+ D^\mu \Phi  \right ] \times
+\left [ \left ( D_\nu \Phi \right)^\dagger
+D^\nu \Phi \right ]
+\end{eqnarray}
+Here, the operators $\mathcal{L}_{S0}$ and $\mathcal{L}_{S2}$ are Hermitian conjugates, and can be treated as the same operator in practice.
+
+The tensor operators containing just the field strength tensor:
+\begin{eqnarray}
+ {\cal L}_{T,0} &=&   \hbox{Tr}\left [ \hat{W}_{\mu\nu} \hat{W}^{\mu\nu} \right ]
+\times   \hbox{Tr}\left [ \hat{W}_{\alpha\beta} \hat{W}^{\alpha\beta} \right ]
+\\
+ {\cal L}_{T,1} &=&   \hbox{Tr}\left [ \hat{W}_{\alpha\nu} \hat{W}^{\mu\beta} \right ]
+\times   \hbox{Tr}\left [ \hat{W}_{\mu\beta} \hat{W}^{\alpha\nu} \right ]
+\\
+ {\cal L}_{T,2} &=&   \hbox{Tr}\left [ \hat{W}_{\alpha\mu} \hat{W}^{\mu\beta} \right ]
+\times   \hbox{Tr}\left [ \hat{W}_{\beta\nu} \hat{W}^{\nu\alpha} \right ]
+\\
+ {\cal L}_{T,3} &=&   \hbox{Tr}\left [ \hat{W}_{\alpha\mu}
+   \hat{W}^{\mu\beta}  \hat{W}^{\nu\alpha} \right ]
+\times   B_{\beta\nu}
+\\
+ {\cal L}_{T,4} &=&   \hbox{Tr}\left [ \hat{W}_{\alpha\mu}
+   \hat{W}^{\alpha\mu}  \hat{W}^{\beta\nu} \right ]
+\times   B_{\beta\nu}
+\\
+ {\cal L}_{T,5} &=&   \hbox{Tr}\left [ \hat{W}_{\mu\nu} \hat{W}^{\mu\nu} \right ]
+\times   B_{\alpha\beta} B^{\alpha\beta}
+\\
+ {\cal L}_{T,6} &=&   \hbox{Tr}\left [ \hat{W}_{\alpha\nu} \hat{W}^{\mu\beta} \right ]
+\times   B_{\mu\beta} B^{\alpha\nu} 
+\\
+ {\cal L}_{T,7} &=&   \hbox{Tr}\left [ \hat{W}_{\alpha\mu} \hat{W}^{\mu\beta} \right ]
+\times   B_{\beta\nu} B^{\nu\alpha} 
+\\
+ {\cal L}_{T,8} &=&   B_{\mu\nu} B^{\mu\nu}  B_{\alpha\beta} B^{\alpha\beta}
+\\
+ {\cal L}_{T,9} &=&  B_{\alpha\mu} B^{\mu\beta}   B_{\beta\nu} B^{\nu\alpha} 
+\end{eqnarray}
+
+The mixed operators containing $D_\mu\Phi$ and field strength:
+\begin{eqnarray}
+ {\cal L}_{M,0} &=&   \hbox{Tr}\left [ \hat{W}_{\mu\nu} \hat{W}^{\mu\nu} \right ]
+\times  \left [ \left ( D_\beta \Phi \right)^\dagger
+D^\beta \Phi \right ]
+\\
+ {\cal L}_{M,1} &=&   \hbox{Tr}\left [ \hat{W}_{\mu\nu} \hat{W}^{\nu\beta} \right ]
+\times  \left [ \left ( D_\beta \Phi \right)^\dagger
+D^\mu \Phi \right ]
+\\
+ {\cal L}_{M,2} &=&   \left [ B_{\mu\nu} B^{\mu\nu} \right ]
+\times  \left [ \left ( D_\beta \Phi \right)^\dagger
+D^\beta \Phi \right ]
+\\
+ {\cal L}_{M,3} &=&   \left [ B_{\mu\nu} B^{\nu\beta} \right ]
+\times  \left [ \left ( D_\beta \Phi \right)^\dagger
+D^\mu \Phi \right ]
+\\
+  {\cal L}_{M,4} &=& \left [ \left ( D_\mu \Phi \right)^\dagger \hat{W}_{\beta\nu}
+ D^\mu \Phi  \right ] \times B^{\beta\nu}
+\\
+  {\cal L}_{M,5} &=& \left [ \left ( D_\mu \Phi \right)^\dagger \hat{W}_{\beta\nu}
+ D^\nu \Phi  \right ] \times B^{\beta\mu}
+\\
+  {\cal L}_{M,6} &=& \left [ \left ( D_\mu \Phi \right)^\dagger \hat{W}_{\beta\nu}
+\hat{W}^{\beta\nu} D^\mu \Phi  \right ] 
+\\
+  {\cal L}_{M,7} &=& \left [ \left ( D_\mu \Phi \right)^\dagger \hat{W}_{\beta\nu}
+\hat{W}^{\beta\mu} D^\nu \Phi  \right ] 
+\end{eqnarray}
+
+
+%\section{Anomalous Quartic Gauge Couplings}
+
+%%%Using a low-energy effective theory, BSM physics can be parameterized and incorporated into the VBS process without committing to a specific BSM theory. This approach suits analyses in which no resonance is predicated or is expected at a high energy scale that can't be observed directly. 
+%%%
+%%%In the effective theory framework, aQGCs can modify the VBS and typically enhance its cross-section at high energy.
+%%%The VBS process is highly sensitive to the quartic-gauge coupling vertices of the SM.
+%%%
+%%%%%%%
+%%%
+%%%To model possible aQGC effect in the VBS process, the Eboli model \cite{eboli2006p} which introduces 21 new dim-8 operators which satisfy the SM $SU(2)\times U(1)_Y$ symmetry is used.
+%%%Of these operators, 19 can effect the semileptonic VBS final state.
+%%%As typical for EFT expansions, the modified lagrangian with these new operators $\mathcal{L}_n$ and corresponding Wilson coeffiencts $c_n$ and UV scale $\Lambda$ is:
+%%%\begin{equation*}
+%%%  \mathcal{L}=\mathcal{L}_{sm}+\sum_{n}\frac{c_n}{\Lambda^{4}}\mathcal{L}_n
+%%%\end{equation*}
+%%%
+%%%In generality, the matrix-element of a SM process with the addition of new EFT contributions can be written as:
+%%%\begin{equation}
+%%%  |A_{SM}+c_iA_i|=|A_{SM}^2|+\sum\limits_i c_i^2|A_{i}^2|+ \sum\limits_i 2 c_i \mathrm{Re}(A_{SM}^\star A_i) +\sum\limits_{i\neq j} c_i c_j \mathrm{Re}(A_i^\star A_j)
+%%%\end{equation}
+%%%where $|A_SM|^2$ is the SM matrix element, $|A_{i}^2|$ represents the pure-EFT matrix element, $2 \mathrm{Re}(A_{SM}^\star A_i)$ is their corresponding interference term, and $\mathrm{Re}(A_i^\star A_j)$ is the possible interference between EFT amplitudes.
+%%%This structure can be exploited in recent MadGraph5\_aMC@NLO versions which allows the specific generation of each of these terms individually, known as the matrix-element decomposition method.
+

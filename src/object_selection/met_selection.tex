@@ -1,0 +1,32 @@
+%\subsection{MET reconstruction}
+\label{sec:MET_reconstruction}
+%In the ATLAS experiment, missing transverse energy (MET) represents the total energy of particles not detected, typically neutrinos. In analyses with just one neutrino in the final state, it's assumed that the MET directly corresponds to this single neutrino's energy. 
+Missing transverse energy, \MET , is the total energy of all the undetected particles in an event. In this analysis, with just one neutrino in the final state, it’s assumed that the \MET directly corresponds to this single neutrino’s energy. The \MET reconstruction is done based on the signals of detected particles in the final state.
+%The MET reconstruction is done based on the signals of detected particles in the final state.
+\begin{equation}
+\label{eq:METformula}
+E_{x(y)}^{\text{miss}} = E_{x(y)}^{\text{miss}, e} + E_{x(y)}^{\text{miss}, \gamma} + E_{x(y)}^{\text{miss}, \tau} + E_{x(y)}^{\text{miss, jets}} + E_{x(y)}^{\text{miss}, \mu} + E_{x(y)}^{\text{miss, soft}}
+\end{equation}
+
+After the calibrations for pileup, two types of contributions are taken into account in the reconstruction.
+        \begin{itemize}
+                \item hard-event signals: fully reconstructed and calibrated particles ($e, \gamma, \tau, \mu$) and small-R jets
+                \item soft-event signals: soft tracks in the inner detector not parts of any reconstructed physical object 
+        \end{itemize}
+%fully reconstructed and calibrated particles($e, \gamma, \tau, \mu$) and small-R jets
+When taking the negative vectorial sum of all contributing physics objects, only the calorimeter signals are used to avoid double counting~\cite{PERF-2016-07}.
+
+%%%Missing transverse energy, $E_{\text{T}}^{\text{miss}}$, is reconstructed by taking the negative vectorial sum of all the reconstructed and calibrated 
+%%%electrons, muons, and small-R jets, after the calibrations have accounted for pileup:
+%%%\begin{equation}
+%%%\label{eq:METformula}
+%%%E_{x(y)}^{\text{miss}} = E_{x(y)}^{\text{miss}, e} + E_{x(y)}^{\text{miss}, \gamma} + E_{x(y)}^{\text{miss}, \tau} + E_{x(y)}^{\text{miss, jets}} + E_{x(y)}^{\text{miss}, \mu} + E_{x(y)}^{\text{miss, soft}}
+%%%\end{equation}
+%%%
+%%%For all of these physics objects used to reconstruct $E_{\text{T}}^{\text{miss}}$, only the calorimeter signals are used. 
+%%%Large-R jets are not included in this definition to avoid double counting with small-R jets, and a ``soft term'' is used to account 
+%%%for soft radiation terms that leave tracks in the inner detector but are not used in any reconstruction of physics objects~\cite{PERF-2016-07}.
+%%%
+%%%In this note, the term $p_{T}^{\text{miss}}$ is also used. For the purpose of this note, $p_{T}^{\text{miss}}$ means the vectorial sum of 
+%%%transverse momenta reconstructed from particle tracks, and is used interchageably with the term $p_{track}$. This $p_{T}^{\text{miss}}$ term
+%%%is used together with $E_{\text{T}}^{\text{miss}}$ to set MET requirements in the event selection. 

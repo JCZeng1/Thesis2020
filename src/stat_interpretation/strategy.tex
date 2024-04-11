@@ -1,0 +1,102 @@
+\subsection{Unblinding strategy}
+\label{sec:fit_unbliding_str}
+
+We aimed an unblinding procedure to take into account the different aspects of the analysis.
+The analysis is designed as a search both for the SM EW VV+jj processes both for the aQGC interpretation, 
+so, we want to keep sensitive regions blinded and not use data in fit validation.
+On the other hand, we want to make sure our ML discriminant has good modelling and avoid the need to have strong constraints or pulls after the unblinding.
+Therefore, we designed the procedure to have:
+
+\begin{itemize}
+  \item model inspections and validation
+  \item fit on data as much as possible close to the sensitive region but keeping the sensitive region completely blinded
+\end{itemize}
+
+In the following we will refer to 'left-side' or 'leftmost side' of the SR discriminant distribution 
+as the bins in the SR that are less sensitive to the signal. In particular, we use a fixed signal threshold 
+to define them, as explained in the following, and we also checked that signal significance is negligible
+in those bins.
+
+The procedure is the following:
+
+\underline{Preliminary}:
+
+\begin{itemize}
+\item each variable is unblinded already in CRs
+\item for conditional fits, 
+  \begin{itemize}
+    \item we can rely on EW VV+jj fully leptonic measurements, they observed $\mu \sim 1.5$
+    \item this is the preference but it should not matter too much if we stay in the left-side only of the SRs
+  \end{itemize}
+\end{itemize}
+  
+\underline{Discriminant distribution [SR]}:
+
+\begin{itemize}
+  \item the binning results from Transformation-D; parameters of the transformation used are (10,5), 
+        this is a good starting point and we are currently using this setup for the results shown in this section.
+  \item split the SR in left/right-sides:
+    \begin{itemize}
+      \item the rightmost bins contain 75\% of the signal.
+      \item the leftmost bins contain 25\% of the signal.
+      \item since these 25\%/75\% will not match exactly a bin boundary, the criterion is to keep rather fewer than more leftmost bins.
+    \end{itemize}
+    \item unblind the left-side of the distribution only
+    \item the right side is kept blinded and excluded from both Data/MC plots and fitting for now
+\end{itemize}
+
+\underline{Fit strategy with left-side unblinded}:
+\begin{itemize}
+  \item Step 0: Asimov fit over the full range.
+  \item Step 0+: global data fit in CRs (this is shown in Appendix \ref{app:CROnlyFits}).
+  \item Step 1: Asimov fit restricted to the leftmost bins.
+  \item Step 2: Global data fit restricted to the leftmost bins.
+    \begin{itemize}
+      \item investigate whether all pulls and constraints are justified. 
+    \end{itemize}
+      %\item we could try unconditional as well, but we should check the actual significance of the left-side bins
+  {\color{gray}
+  \item Step 3: %(assuming it is good what we see so far):
+    [we designed this step as well in the main model inspection strategy but then we decided to post-pone it]
+  \begin{itemize}
+      \item adjust the background (and signal) model according to the floating normalizations and NP pulls determined in Step 2.
+      \item build hybrid data: real data in the leftmost bins, Asimov SM (bkg+signal) in the rightmost bins
+      \item evaluate the signal significance 
+      \item conditional Global fit over the whole range
+    \end{itemize}
+  }
+\end{itemize}
+
+
+Figure \ref{fig:RNN_SoB_nJets5} shows the score distributions in the 9 SRs; 
+in particular, the ratio panels show some estimator of the signal contribution, 
+like the signal efficiency (blue) and the SoB in each bin (orange). 
+They give a feeling of the most sensitive bins and they have been used to fine-tune the un-blinding strategy in the SR. 
+The SoB(<0.05) seems to be too aggressive, then a fixed signal efficiency threshold has been used. 
+Furthermore, since the final discriminant has been slightly updated towards final results 
+the threshold has been increased to 75\% to avoid undesired un-blinding in the border region.
+Now, the results shown are with the latest and frozen discriminant setup.
+
+%%% SoB plots
+\begin{figure}[ht]
+      \centering
+       \subfigure[\emph{\zlep, Resolved SR}]{\includegraphics[width=0.3\textwidth]{figures/ml_analysis/RNN_SoBPlots/SoB/0lep/nJets5/PlotAsySig_EWZVjj-1.pdf}}
+       \subfigure[\emph{\zlep, Merged HP SR}]{\includegraphics[width=0.3\textwidth]{figures/ml_analysis/RNN_SoBPlots/SoB/0lep/nJets5/PlotAsySig_EWZVjj-2.pdf}}
+       \subfigure[\emph{\zlep, Merged LP SR}]{\includegraphics[width=0.3\textwidth]{figures/ml_analysis/RNN_SoBPlots/SoB/0lep/nJets5/PlotAsySig_EWZVjj-3.pdf}} \\
+
+       \subfigure[\emph{\olep, Resolved SR}]{\includegraphics[width=0.3\textwidth]{figures/ml_analysis/RNN_SoBPlots/SoB/1lep/nJets5/PlotAsySig_EWWVjj-1.pdf}}
+       \subfigure[\emph{\olep, Merged HP SR}]{\includegraphics[width=0.3\textwidth]{figures/ml_analysis/RNN_SoBPlots/SoB/1lep/nJets5/PlotAsySig_EWWVjj-2.pdf}}
+       \subfigure[\emph{\olep, Merged LP SR}]{\includegraphics[width=0.3\textwidth]{figures/ml_analysis/RNN_SoBPlots/SoB/1lep/nJets5/PlotAsySig_EWWVjj-3.pdf}} \\
+
+       \subfigure[\emph{\tlep, Resolved SR}]{\includegraphics[width=0.3\textwidth]{figures/ml_analysis/RNN_SoBPlots/SoB/2lep/nJets5/PlotAsySig_EWZVjj-1.pdf}}
+       \subfigure[\emph{\tlep, Merged HP SR}]{\includegraphics[width=0.3\textwidth]{figures/ml_analysis/RNN_SoBPlots/SoB/2lep/nJets5/PlotAsySig_EWZVjj-2.pdf}}
+       \subfigure[\emph{\tlep, Merged LP SR}]{\includegraphics[width=0.3\textwidth]{figures/ml_analysis/RNN_SoBPlots/SoB/2lep/nJets5/PlotAsySig_EWZVjj-3.pdf}} \\
+
+       \caption{[nJets5 models] Score distributions for the MC predictions of the SM bkg and the EW VV+jj process for the 9 SRs. The ratio panel shows the integrate signal efficiency starting from the left side (blue), the local SoB in each single bin (orange) and the cumulative SoB starting from the left side (green).}
+       \label{fig:RNN_SoB_nJets5}
+\end{figure}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../ANA-STDM-2018-27-INT1"
+%%% End:

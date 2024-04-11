@@ -1,63 +1,138 @@
 %%% EventSelection %%%
 
-This section describes the event selection, which has been optimized in order to maximize the expected significance of the signal over background.
+%%This section describes the event selection, which has been optimized in order to maximize the expected significance of the signal over background.
+%%
+%%A set of preselection cuts are applied first, including basic quality cuts (event cleaning) and  trigger requirements.
+%%Some preselection cuts applied in the \texttt{CxAODMaker} are also summarized.
 
-A set of preselection cuts are applied first, including basic quality cuts (event cleaning) and  trigger requirements.
-Some preselection cuts applied in the \texttt{CxAODMaker} are also summarized.
+This chapter outlines the event selection process, optimized to enhance the expected significance of the signal relative to the background.
+A series of preselection criteria are employed, including basic quality cuts (event cleaning) and trigger requirements. Additionally, the preselection cuts applied in the \texttt{CxAODMaker} are outlined.
 
-For the main event selection, first the selection of the $W/Z$ boson decaying leptonically is performed. 
-The candidate boson is selected targeting $Z\to \ell\ell$, $W\to \ell\nu$ and $Z\to \nu\nu$, respectively.
+In the primary phase of event selection, the focus is on identifying the $W/Z$ boson decaying leptonically. For the 1-lepton channel, the candidate boson is chosen targeting $W\to \ell\nu$.
+Next, the focus shifts to the hadronic components of the final state. This step aims to enhance the identification of VBS-associated objects and to select the (second) boson that decays hadronically. For selecting VBS-jet candidates, a standard tagging jets procedure is implemented. The hadronically decaying $V$ candidate is identified, either as a large-$R$ jet in the merged regime or as a pair of small-$R$ jets in the resolved regime. 
 
-Then in each lepton channel, the hadronic part of the final state is considered 
-in order to enhance the VBS associated objects and to select the second boson decaying hadronically. 
-A usual tagging jets procedure is performed for the VBS-jet candidates selection 
-while a hadronically decaying $V$ candidate is identified, 
-either reconstructed as a large-$R$ jet (merged regime), or two small-$R$ jets (resolved regime).
+After the two bosons are indentified, topological cuts are applied to further reduce the background. In the merged regime, the boson tagger defines the SRs and a reversed cut specifies CRs for the \Vjets background. In the resolved regime, a signal di-jets system is constructed, and its invariant mass is utilized to deine a mass window for SRs or sidebands for \Vjets CRs. Additionally, for the \olep channel, dedicated TopCRs are established by including events with additional b-jets.
 
-In each channel, some topological cuts are applied to suppress the background. 
-Cuts are designed to define some analysis SRs, with enhanced sensitivity to the target signal,
-and some analysis CRs, with enhanced SM background processes to constraint them in the fit. 
-In particular, for events falling in the merged regime the boson tagger is used to define the SRs 
-and reverted cut for defining CRs for the \Vjets background; for events in the resolved regime,
-a signal di-jets system is built and the invariant mass of it is used to define a mass window (SR) 
-or sidebands (CRs for \Vjets). Only in the \olep channel, dedicated TopCR are defined r
-equiring additional b-jets in the event.
+%The next section concludes with a summary of all the selections, offering a comprehensive overview to the reader. Following this, the chapter will delve into detailed explanations of each selection.
 
-%The current selection is mainly reproducing what has been optmised in the previous round, 
-%except for some dedicated optimisations:
+The selections applied are summarized here in tables
+\ref{tab:1lep_merged}-\ref{tab:1lep_resolved}
+.
+%Following this, the current chapter will delve into detailed explanations of each selection.
+Subsequent sections of this chapter will provide detailed discussions of each selection criterion, following the sequence in which they were applied.
 
-First a summary of all the selections will be provided to give an full overview of it to the reader,
-then, the detailed selections will be explained throughout this section. 
+%%% 1-lepton channel
+\begin{table}[t]
+\caption{A summary of regions event selection for \olep channel in the merged regime.}
+\label{tab:1lep_merged}
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|c|c|c|c|c|}
+\hline
+\multicolumn{2}{|l|}{\multirow{2}{*}{Selection}} & \multicolumn{2}{c|}{SR}  &  $W$ CR (WR)  & \multicolumn{2}{c|}{$t\bar{t}$ CR (TR)} \\
+\cline{3-7}
+\multicolumn{2}{|l|}{} & HP & LP & incl & HP & LP \\
+\hline
+\multirow{4}{*}{$W\rightarrow \ell\nu$} & Num of Tight leptons & \multicolumn{5}{c|}{ 1 } \\
+\cline{2-7}
+&Num of Loose (!Tight) leptons & \multicolumn{5}{c|}{ 0 }  \\
+\cline{2-7}
+&\vphantom{\Large B} \met & \multicolumn{5}{c|}{ $>80\,\si{\GeV}$ } \\
+\cline{2-7}
+&\pt{$(\ell)$} & \multicolumn{5}{c|}{ $>28\,\si{\GeV}$ } \\
+\hline
+\multirow{3}{*}{VBS jets candidates} & Leading Tag jet \pt & \multicolumn{5}{c|}{ $>30\,\si{\GeV}$ } \\
+\cline{2-7}
+                          & Subleading Tag jet \pt & \multicolumn{5}{c|}{ $>30\,\si{\GeV}$ }\\
+\cline{2-7}
+                          & $m_{jj}$ & \multicolumn{5}{c|}{ $> 400 \si{\GeV}$ } \\
+\hline
+\multirow{2}{*}{$W/Z\rightarrow J$} & Num of large-$R$ jets & \multicolumn{5}{c|}{ $\geq 1$ } \\
+\cline{2-7}
+& 3-Var Tagger & pass50WP & pass80WP \&\& !pass50WP & fail80WP & pass50WP & pass80WP \&\& !pass50WP \\
+%& \vphantom{\Large B} $D_2/n_{Tracks}$ cut & pass & fail & pass & fail & pass & fail \\
+%\cline{2-8}
+%& $W/Z$ mass window cut & pass & pass & fail & fail & pass & pass\\
+\hline
+Top veto & Num of $b$-tagged jets outside of large-R jet & \multicolumn{3}{c|}{0} & \multicolumn{2}{c|}{$\geq 1$} \\
+\hline
+\end{tabular}
+}
+\end{center}
+\end{table}
 
-During this pass of the analysis, 
-we focused on the optimization of the signal jets selection in both resolved and merged regime 
-during the R\&D phase of the analysis and introduced new criteria with respect to the early run-2 version of this analysis:
+\begin{table}[t]
+  \caption{A summary of regions event selection for \olep channel in the resolved regime.}
+\label{tab:1lep_resolved}
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|c|c|c|}
+\hline
+\multicolumn{2}{|l|}{Selection} & SR & $W$ CR (WR) & \ttbar CR (TR) \\
+\hline
+\multirow{4}{*}{$W\rightarrow \ell\nu$ } & Number of Tight leptons & \multicolumn{3}{c|}{ 1 } \\
+\cline{2-5}
+&Number of Loose (!Tight) leptons & \multicolumn{3}{c|}{ 0 }  \\
+\cline{2-5}
+&\met & \multicolumn{3}{c|}{ $>80\,\si{\GeV}$ } \\
+\cline{2-5}
+&\pt{$(\ell)$} & \multicolumn{3}{c|}{ $>28\,\si{\GeV}$ } \\
+\hline
+\multirow{3}{*}{VBS jets candidates} & Leading Tag jet \pt & \multicolumn{3}{c|}{ $>30\,\si{\GeV}$ } \\
+\cline{2-5}
+                          & Subleading Tag jet \pt & \multicolumn{3}{c|}{ $>30\,\si{\GeV}$ }\\
+\cline{2-5}
+                          & $m_{jj}$ & \multicolumn{3}{c|}{ $> 400 \si{\GeV}$ } \\
+\hline
+\multirow{4}{*}{$W/Z\rightarrow jj$ } & Number of small-R jets & \multicolumn{3}{c|}{ $\geq 4$ } \\ %$\geq 2$ & $\geq 2$ & $\geq 2$  \\
+\cline{2-5}
+& Leading jet \pt & \multicolumn{3}{c|}{ $>40\,\si{\GeV}$}\\
+\cline{2-5}
+& Subleading jet \pt & \multicolumn{3}{c|}{ $>20\,\si{\GeV}$}\\
+\cline{2-5}
+ &$Z \to q\bar{q}$ and $W \to qq'$     &   $64 < m_{jj} < 106 \, \si{\GeV}$ & $50<m_{jj}<64 \, \si{\GeV}$ or $m_{jj}>106 \, \si{\GeV} $ & $64 < m_{jj} < 106 \, \si{\GeV}$ \\
+\hline
+Top veto &  Number of additional $b$-tagged jets & \multicolumn{2}{c|}{0} & $\geq 1$ \\
+\hline
+VBS enhancing & $m_{jjj}$ & \multicolumn{3}{c|}{ $>220\,\si{\GeV}$} \\
+\hline
+\end{tabular}
+}
+\end{center}
+\end{table}
 
-\begin{itemize}
-  \item moving signal jets selection ($V \rightarrow qq$ decay products) from close-V algorithm to leading $p_T$ criteria; some studies are showed in appendix \ref{app:res_opt};
-  \item moving to latest boson tagger configuration (3-variables instead of the previous 2-variables), details and references to the new tagger are put in section \ref{subsec:large-Rjet};
-  \item moving to an inclusive merged CR instead of HighPurity/LowPurity (defined in Section \ref{subsubsec:merged_jets_selection}) CRs in order to take into account recommendation for boson tagger SFs, details are discussed in appendix \ref{app:merged_cr}.
-\end{itemize}
 
-The SM EW VV+jj MC samples have been used to check the sensitivity to our target signal process.
-
-% move here after Oldrich comment
-\input{src/event_selection/SummarySelections}
-%
-\input{src/event_selection/EventCleaning}
-%
+%%% move here after Oldrich comment
+%%\input{src/event_selection/SummarySelections}
+%%%
+%%\input{src/event_selection/EventCleaning}
+%%%
+\clearpage
+\section{Trigger Requirements}
 \input{src/event_selection/TriggerSelection}
-%
+%%%
+\clearpage
+\section{Event Pre-selection}
 \input{src/event_selection/EventPreSel}
-%
+%%%
+\clearpage
+\section{Leptonically Decaying Boson Selection}
 \input{src/event_selection/LeptonsSelection}
-%
+%%%
+\clearpage
+\section{VBS Selection}
 \input{src/event_selection/VBSSelection}
-%
+%%%
+\clearpage
+\section{Signal Regions (SRs) Selection}
 \input{src/event_selection/SRSelection}
-%
-\input{src/event_selection/TopVetoSelection}
-%
+%%%
+%%\input{src/event_selection/TopVetoSelection}
+%%%
+\clearpage
+\section{Control Regions (CRs) Definitions}
 \input{src/event_selection/CRSelection}
-%
+%%%
+\clearpage
+\section{Signal and Background Cut-flows}
 \input{src/event_selection/CutFlows}

@@ -1,0 +1,32 @@
+\clearpage
+\section{Introduction}
+
+The statistical analysis uses a binned likelihood approach, formulated as a product of Poisson probability terms to evaluate the data. The likelihood function is represented by:
+
+\begin{equation}
+\mathrm{Pois}\,(n|\mu S+B)\left[ \prod_{b\in \text{bins}}^{n} \frac{\mu \nu^{\mathrm{sig}}_{b}+\nu^{\mathrm{bkg}}_{b}}{\mu S+B} \right],
+\end{equation}
+
+In this equation, $\mu$ is the signal strength parameter that scales the expected signal yield $\nu^{\mathrm{sig}}_b$ in each histogram bin $b$. 
+The term $\nu^{\mathrm{bkg}}_b$ indicates the expected background contribution in the same bin.
+
+The signal and background predictions' sensitivity to systematic uncertainties is captured through nuisance parameters (NPs) $\theta$. 
+These NPs are governed by either Gaussian or log-normal distributions, with log-normal priors preferred for normalization uncertainties to ensure the likelihood remains positive. 
+The expected counts of signal and background events in each bin are modeled as functions of $\theta$, 
+and are structured so that event rates across different categories follow a log-normal distribution when $\theta$ is normally distributed.
+
+Priors are used to constrain the NPs towards their nominal values within their assigned uncertainties. This implementation is achieved through penalty terms or auxiliary measurements that are added to the likelihood function. These additions ensure that the likelihood increases whenever an NP deviates from its nominal value. 
+Consequently, the likelihood function, denoted as $\mathcal{L} (\mu,\theta)$, depends on both $\mu$ and $\theta$.
+This setup helps to incorporate our understanding and uncertainties about the system into the analysis, ensuring that the estimation of $\mu$ is consistent with prior knowledge encapsulated in $\theta$.
+
+The nominal fit result in terms of $\mu$ and its uncertainty, $\sigma_{\mu}$, are determined by maximizing the likelihood function across all parameters. 
+This process yields the maximized log-likelihood value (MLL). 
+
+%%%%
+
+%%%The nominal fit result in terms of $\mu$ and $\sigma_{\mu}$ is obtained by maximizing the likelihood function with respect to all parameters.
+%%%This is referred to as the maximized log-likelihood value, MLL.
+%%%The test statistic $q_\mu$ is then constructed according to the profile likelihood: $q_\mu = 2 \ln (\mathcal{L} (\mu, \hat{\hat{\theta_\mu}})/\mathcal{L} (\hat{\mu}, \hat{\theta}))$, where $\hat{\mu}$ and $\hat{\theta}$ are the parameters that maximize the likelihood (with the constraint $0 \leq \hat{\mu} \leq \mu$), and $\hat{\hat{\theta}}_\mu$ are the nuisance parameter values that maximize the likelihood for a given $\mu$.
+%%%This test statistic is used to measure the compatibility of the background-only model with the observed data and for exclusion intervals derived with the $CL_s$ method~\cite{Cowan:2010js}.
+%%%The limit set on $\mu$ is then translated into a limit on the signal cross section times branching ratio, using the theoretical cross section and branching ratio for the given signal model.
+

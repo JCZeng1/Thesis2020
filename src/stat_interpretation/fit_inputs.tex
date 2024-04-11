@@ -1,0 +1,85 @@
+\clearpage
+\section{Fit inputs and options}
+\label{subsec:fit_options}
+
+For the statistical interpretation, we utilize outputs from the CxAODReader framework, providing histograms of relevant distributions within designated regions to the WSMaker 
+\mbox{\texttt{\href{https://gitlab.cern.ch/atlas-physics/sm/ew/vbs-semileptonic-run2/WSMaker\_VBSVV}{WSMaker\_VBSVV}}}
+statistical framework for this analysis.
+
+In the fit part of the analysis, the relevant variables are the \mjjtag and the final DNN score distributions.
+Table \ref{tab:fitregions_1lep} summarizes the regions and variables used in the fit of the analysis.
+These regions are simultaneously fitted using a binned profile likelihood to extract the parameter of interest (POI), which for the SM measurement is the signal strength of the EW VBS production.
+
+The control regions employ bins of \mjjtag with boundaries at \{400, 600, 800, 1000, 1200, 1600, 6000\}~GeV, where the final bin contains all overflow. For the DNN, binning is based on the transformation \(D\), as detailed in reference~\cite{Buscher:2232472}, with a parametrization $Z(signal, background) = (10,5)$.
+
+
+%%%%%%%%%%%%%%%
+
+%%\begin{table}[h]
+%%  \centering
+%%  \scalebox{0.8}{
+%%    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+%%      \hline
+%%      && \multicolumn{15}{c|}{up-threshold}\\ \hline
+%%      Signal region & bin & 1&   2&   3&   4&   5&   6&   7&   8&   9&  10&  11&  12&  13&  14&  15\\ \hline
+%%      1L HP      & 0&0.19&0.25&0.30&0.35&0.42&0.49&0.56&\#0.64&0.72&0.79&0.85&0.90&0.94&0.97&1.01\\      
+%%      1L LP      & 0&0.13&0.18&0.22&0.26&0.30&0.35&\#0.42&0.49&0.57&0.67&0.76&0.84&0.91&0.96&1.01\\      
+%%      1L Tight   & 0&0.09&0.14&0.20&0.27&0.34&0.42&0.50&\#0.58&0.66&0.73&0.80&0.86&0.91&0.95&1.01\\\hline
+%%  \end{tabular}
+%%  }
+%%  \caption{Up thresholds of the bins after applying the binning tranformation D. The marker \# indicates the first bin that needs to be blinded to present a 75\% of data. }
+%%  \label{tab:DNNbins}
+%%\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%Table 
+%%%\ref{tab:fitregions_1lep}
+%%%reports the summary of the regions and observables used in the fit of the analysis.
+
+\begin{table}[htb!]
+  \centering
+  \begin{tabular}{lccc}
+          \toprule\midrule
+          \multirow{2}{*}{Regions} & \multicolumn{3}{c}{1lep channel fit model} \\
+          \cmidrule{2-4}
+                & Merged high-purity & Merged low-purity & Resolved \\
+          \midrule
+          SR     & DNN & DNN & DNN \\
+          WCR    & \multicolumn{2}{c}{\mjjtag} & \mjjtag \\
+          TopCR  & One bin & One bin & \mjjtag \\
+          \midrule
+          \bottomrule
+  \end{tabular}
+\caption{\label{tab:fitregions_1lep} Summary of the regions from 1lep channel entering the likelihood of the fit models. 
+``One bin'' implies that a single bin without any shape information is used in the corresponding fit region.}
+\end{table}
+
+There are two types of nuisance parameters (NPs): those arising from experimental uncertainties and those from MC modeling uncertainties.
+
+For the experimental uncertainties, performance groups have developed various methods to alter particle reconstruction, introducing around a hundred NPs. 
+These parameters are subject to Gaussian priors, which reduce the likelihood whenever the fitted values deviate from their nominal values.
+
+For background MC modeling uncertainties, we consider the main background samples like \ttbar, \Wjets, \Zjets, and QCD-produced diboson. We obtain additional NPs by comparing the default generator to an alternative. As shown in Table \ref{tab:NPs:float}, background normalizations are left floating in the fit. The single-top background normalization is constrained with a 30\% Gaussian prior.
+For the signal, modeling uncertainties stem from variations in the scale ($\alpha_S$),
+PDF, alternative PDF sets, and radiation parameters within the \textsc{Pythia} simulation, as mentioned in section \ref{subsec:sig_uncer}.
+
+\begin{table}[h]
+    \centering
+\resizebox{0.99\textwidth}{!}{
+  \begin{tabular}{|c|c|c| } \hline
+    Treatment & NP name & NP name simplified \\ \hline
+      Float & ATLAS\_norm\_WjetsMerged                                           &  W norm. Merged \\
+      Float & ATLAS\_norm\_WjetsResolved                                         &  W norm. Resolved \\
+      Float & ATLAS\_norm\_ZjetsMerged                                           &  Z norm. Merged \\
+      Float & ATLAS\_norm\_ZjetsResolved                                         &  Z norm. Resolved \\
+      Float & ATLAS\_norm\_ttbarMerged                                           &  $t\bar{t}$ norm. Merged \\
+      Float & ATLAS\_norm\_ttbarResolved                                         &  $t\bar{t}$ norm. Resolved \\\hline
+      Floating & mu\_SemileptonicVBS                                               &  Signal strength $\mu$(VBS) \\\hline
+%%      Floating & mu\_SemileptonicVV                                                &  Signal strength $\mu$(VV) \\\hline
+
+    \end{tabular}
+    }
+    \caption{Floating parameter (includes signal strength parameter). The normalization factors for \Zjets have minimal impact due to their small contribution in the 1-lepton channel.}
+    \label{tab:NPs:float}
+\end{table}
+

@@ -1,0 +1,382 @@
+
+\subsection{Re-weighting for the tagging jets}
+\label{subsec:mjj_reweight}
+
+The invariant mass of the two selected tagging jets variable is well known mis-modelled in the current Sherpa 2.2.1 V+jets samples; 
+this is also a variable quite sensitive to our final state due to the forward topology, 
+therefore, we decided to do a re-weighting procedure of the \Wjets as well as \Zjets MC samples in the three lepton channels.
+A baseline linear re-weighting to data in CR has been used.
+%as similar approach from the previous round. 
+In particular, differences coming from pile-up contributions of the different data periods as well as a dedicated derivation in the \zlep channels have been added as improvement with respect to the past.
+
+The results for the three lepton channels are shown in the following subsections.
+
+%%% 0-lepton channel %%%
+\subsubsection{\zlep channel}
+\label{subsec:mjj_reweight_0lep}
+While in the 1- and 2-lepton channels the $m(jj)^\text{tag}$ re-weighting was only applied to either the $W+$ jets or the $Z+$ jets background, in the 0-lepton channel both backgrounds have to be re-weighted. 
+This is because in this channel both backgrounds have non-negligible yields.
+It was at first tested to apply $W+$ jets factors derived in the 1-lepton channel and $Z+$ jets factors derived in the 2-lepton channel but the resulting re-weighting process still left a considerable slope in the 0-lepton $m(jj)^\text{tag}$ distribution.
+As a result an independent re-weighting was derived from the 0-lepton control regions.
+For this purpose the sum of $W+$ jets and $Z+$ jets background was compared with the data 
+minus all other backgrounds in the usual VCR in this channel, as defined in Section \ref{subsec:cr_selection}; 
+the result of which can be seen in Fig. \ref{fig:0lepReweighting}.
+Linear fits were performed to the ratios of these distributions with each other.
+The resulting slopes and constants, the re-weighting factors, can be seen in Tab. \ref{tab:0lepReweighting}.
+This procedure was done separately for the three Monte Carlo campaigns mc16a-d-e.
+Fig. \ref{fig:0lepReweightingSRVBS_HP}, \ref{fig:0lepReweightingSRVBS_LP}, \ref{fig:0lepReweightingSRVBS_Fid}, \ref{fig:0lepReweightingSRVBS_Fid}, \ref{fig:0lepReweightingCRVjet_Mer}, and \ref{fig:0lepReweightingCRVjet_Fid} show the difference of the $m(jj)^\text{tag}$ distribution before (left columns) and after (middle columns) the re-weighting in the five analysis regions.
+The necessity for the re-weighting process is especially apparent in the resolved signal region.
+The right columns show the same distributions where the $W/Z+$ jets backgrounds are modelled with the alternative MadGraph samples instead of the nominal Sherpa samples (see Sec. \ref{app:samplelist}).
+No re-weighting has been applied to the alternative samples.
+The alternative samples show a smaller slope compared to the nominal samples before re-weighting.
+It should be noted here that the alternative samples also show a significant difference in the modelling of the number of jets in the event. 
+%(see Sec. \textcolor{red}{to do})
+
+
+\begin{table}[ht]
+     \centering
+         \begin{tabular}{ r|cc|cc }
+                 campaign & offset merged & slope merged & offset resolved & slope resolved\\
+                 \hline
+                 mc16a & $1.12\pm0.04$ & $(2.9\pm0.2)\times10^{-4}$ & $1.11\pm0.01$ & $(1.7\pm0.1)\times10^{-4}$\\
+                 mc16d & $1.07\pm0.04$ & $(1.4\pm0.3)\times10^{-4}$ & $1.06\pm0.01$ & $(1.0\pm0.1)\times10^{-4}$\\
+                 mc16e & $1.01\pm0.03$ & $(1.3\pm0.3)\times10^{-4}$ & $1.07\pm0.01$ & $(1.1\pm0.09)\times10^{-4}$\\
+         \end{tabular}
+    \caption{0-lepton $m(jj)^\text{tag}$ re-weighting factors derived by the linear fits shown in Fig. \ref{fig:0lepReweighting}.}
+    \label{tab:0lepReweighting}
+\end{table}
+
+%%%
+\begin{figure}[ht]
+  \centering
+      \subfigure[mc16a merged]{\includegraphics[width=0.4\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16a-r33/plots/rewe_MTagJets_CRVjet_Mer.pdf}}
+    	\subfigure[mc16a resolved]{\includegraphics[width=0.4\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16a-r33/plots/rewe_MTagJets_CRVjet_Fid.pdf}}\\
+    	\subfigure[mc16d merged]{\includegraphics[width=0.4\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16d-r33/plots/rewe_MTagJets_CRVjet_Mer.pdf}}
+    	\subfigure[mc16d resolved]{\includegraphics[width=0.4\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16d-r33/plots/rewe_MTagJets_CRVjet_Fid.pdf}}\\
+    	\subfigure[mc16e merged]{\includegraphics[width=0.4\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16e-r33/plots/rewe_MTagJets_CRVjet_Mer.pdf}}
+    	\subfigure[mc16e resolved]{\includegraphics[width=0.4\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16e-r33/plots/rewe_MTagJets_CRVjet_Fid.pdf}}\\
+        \caption{Derivation of the 0-lepton $m(jj)^\text{tag}$ re-weighting. The linear fits to the ratio of these distributions correspond to the resulting re-weighting factors summarized in Tab. \ref{tab:0lepReweighting}.} 
+\label{fig:0lepReweighting}
+\end{figure}
+
+%%%
+\begin{figure}[ht]
+  \centering
+  \subfigure[mc16a before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16a-r33/plots/nom_MTagJets_SRVBS_HP.pdf}}
+  \subfigure[mc16a after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16a-r33/plots/nom_MTagJets_SRVBS_HP.pdf}}
+  \subfigure[mc16a MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16a-r33/plots/alt_madgraph_MTagJets_SRVBS_HP.pdf}}\\
+  \subfigure[mc16d before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16d-r33/plots/nom_MTagJets_SRVBS_HP.pdf}}
+  \subfigure[mc16d after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16d-r33/plots/nom_MTagJets_SRVBS_HP.pdf}}
+  \subfigure[mc16d MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16d-r33/plots/alt_madgraph_MTagJets_SRVBS_HP.pdf}}\\
+  \subfigure[mc16e before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16e-r33/plots/nom_MTagJets_SRVBS_HP.pdf}}
+  \subfigure[mc16e after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16e-r33/plots/nom_MTagJets_SRVBS_HP.pdf}}
+  \subfigure[mc16e MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16e-r33/plots/alt_madgraph_MTagJets_SRVBS_HP.pdf}}\\
+  \subfigure[combined before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/merged/plots/nom_MTagJets_SRVBS_HP.pdf}}
+  \subfigure[combined after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/merged/plots/nom_MTagJets_SRVBS_HP.pdf}}
+  \subfigure[combined MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/merged/plots/alt_madgraph_MTagJets_SRVBS_HP.pdf}}
+  \caption{$m(jj)^\text{tag}$ distributions in the 0-lepton merged HP signal region before (left) and after (right) re-weighting as well as using alternative $W/Z+$ jets samples without re-weighting (right).} 
+  \label{fig:0lepReweightingSRVBS_HP}
+\end{figure}
+
+%%%
+\begin{figure}[ht]
+  \centering
+  \subfigure[mc16a before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16a-r33/plots/nom_MTagJets_SRVBS_LP.pdf}}
+  \subfigure[mc16a after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16a-r33/plots/nom_MTagJets_SRVBS_LP.pdf}}
+  \subfigure[mc16a MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16a-r33/plots/alt_madgraph_MTagJets_SRVBS_LP.pdf}}\\
+  \subfigure[mc16d before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16d-r33/plots/nom_MTagJets_SRVBS_LP.pdf}}
+  \subfigure[mc16d after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16d-r33/plots/nom_MTagJets_SRVBS_LP.pdf}}
+  \subfigure[mc16d MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16d-r33/plots/alt_madgraph_MTagJets_SRVBS_LP.pdf}}\\
+  \subfigure[mc16e before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16e-r33/plots/nom_MTagJets_SRVBS_LP.pdf}}
+  \subfigure[mc16e after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16e-r33/plots/nom_MTagJets_SRVBS_LP.pdf}}
+  \subfigure[mc16e MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16e-r33/plots/alt_madgraph_MTagJets_SRVBS_LP.pdf}}\\
+  \subfigure[combined before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/merged/plots/nom_MTagJets_SRVBS_LP.pdf}}
+  \subfigure[combined after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/merged/plots/nom_MTagJets_SRVBS_LP.pdf}}
+  \subfigure[combined MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/merged/plots/alt_madgraph_MTagJets_SRVBS_LP.pdf}}
+  \caption{$m(jj)^\text{tag}$ distributions in the 0-lepton merged LP signal region before (left) and after (right) re-weighting as well as using alternative $W/Z+$ jets samples without re-weighting (right).} 
+  \label{fig:0lepReweightingSRVBS_LP}
+\end{figure}
+
+%%%
+\begin{figure}[ht]
+  \centering
+  \subfigure[mc16a before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16a-r33/plots/nom_MTagJets_SRVBS_Fid.pdf}}
+  \subfigure[mc16a after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16a-r33/plots/nom_MTagJets_SRVBS_Fid.pdf}}
+  \subfigure[mc16a MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16a-r33/plots/alt_madgraph_MTagJets_SRVBS_Fid.pdf}}\\
+  \subfigure[mc16d before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16d-r33/plots/nom_MTagJets_SRVBS_Fid.pdf}}
+  \subfigure[mc16d after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16d-r33/plots/nom_MTagJets_SRVBS_Fid.pdf}}
+  \subfigure[mc16d MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16d-r33/plots/alt_madgraph_MTagJets_SRVBS_Fid.pdf}}\\
+  \subfigure[mc16e before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16e-r33/plots/nom_MTagJets_SRVBS_Fid.pdf}}
+  \subfigure[mc16e after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16e-r33/plots/nom_MTagJets_SRVBS_Fid.pdf}}
+  \subfigure[mc16e MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16e-r33/plots/alt_madgraph_MTagJets_SRVBS_Fid.pdf}}\\
+  \subfigure[combined before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/merged/plots/nom_MTagJets_SRVBS_Fid.pdf}}
+  \subfigure[combined after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/merged/plots/nom_MTagJets_SRVBS_Fid.pdf}}
+  \subfigure[combined MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/merged/plots/alt_madgraph_MTagJets_SRVBS_Fid.pdf}}
+  \caption{$m(jj)^\text{tag}$ distributions in the 0-lepton resolved signal region before (left) and after (right) re-weighting as well as using alternative $W/Z+$ jets samples without re-weighting (right).} 
+  \label{fig:0lepReweightingSRVBS_Fid}
+\end{figure}
+
+%%%
+\begin{figure}[ht]
+  \centering
+  \subfigure[mc16a before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16a-r33/plots/nom_MTagJets_CRVjet_Mer.pdf}}
+  \subfigure[mc16a after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16a-r33/plots/nom_MTagJets_CRVjet_Mer.pdf}}
+  \subfigure[mc16a MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16a-r33/plots/alt_madgraph_MTagJets_CRVjet_Mer.pdf}}\\
+  \subfigure[mc16d before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16d-r33/plots/nom_MTagJets_CRVjet_Mer.pdf}}
+  \subfigure[mc16d after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16d-r33/plots/nom_MTagJets_CRVjet_Mer.pdf}}
+  \subfigure[mc16d MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16d-r33/plots/alt_madgraph_MTagJets_CRVjet_Mer.pdf}}\\
+  \subfigure[mc16e before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16e-r33/plots/nom_MTagJets_CRVjet_Mer.pdf}}
+  \subfigure[mc16e after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16e-r33/plots/nom_MTagJets_CRVjet_Mer.pdf}}
+  \subfigure[mc16e MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16e-r33/plots/alt_madgraph_MTagJets_CRVjet_Mer.pdf}}\\
+  \subfigure[combined before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/merged/plots/nom_MTagJets_CRVjet_Mer.pdf}}
+  \subfigure[combined after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/merged/plots/nom_MTagJets_CRVjet_Mer.pdf}}
+  \subfigure[combined MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/merged/plots/alt_madgraph_MTagJets_CRVjet_Mer.pdf}}
+  \caption{$m(jj)^\text{tag}$ distributions in the 0-lepton merged control region before (left) and after (right) re-weighting as well as using alternative $W/Z+$ jets samples without re-weighting (right).} 
+  \label{fig:0lepReweightingCRVjet_Mer}
+\end{figure}
+
+%%%
+\begin{figure}[ht]
+  \centering
+  \subfigure[mc16a before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16a-r33/plots/nom_MTagJets_CRVjet_Fid.pdf}}
+  \subfigure[mc16a after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16a-r33/plots/nom_MTagJets_CRVjet_Fid.pdf}}
+  \subfigure[mc16a MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16a-r33/plots/alt_madgraph_MTagJets_CRVjet_Fid.pdf}}\\
+  \subfigure[mc16d before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16d-r33/plots/nom_MTagJets_CRVjet_Fid.pdf}}
+  \subfigure[mc16d after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16d-r33/plots/nom_MTagJets_CRVjet_Fid.pdf}}
+  \subfigure[mc16d MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16d-r33/plots/alt_madgraph_MTagJets_CRVjet_Fid.pdf}}\\
+  \subfigure[mc16e before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/Condor0LepMc16e-r33/plots/nom_MTagJets_CRVjet_Fid.pdf}}
+  \subfigure[mc16e after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16e-r33/plots/nom_MTagJets_CRVjet_Fid.pdf}}
+  \subfigure[mc16e MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/Condor0LepMc16e-r33/plots/alt_madgraph_MTagJets_CRVjet_Fid.pdf}}\\
+  \subfigure[combined before]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-not-reweighted/merged/plots/nom_MTagJets_CRVjet_Fid.pdf}}
+  \subfigure[combined after]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/merged/plots/nom_MTagJets_CRVjet_Fid.pdf}}
+  \subfigure[combined MadGraph]{\includegraphics[width=0.3\textwidth]{figures/0lep/final-fullSyst/merged/plots/alt_madgraph_MTagJets_CRVjet_Fid.pdf}}
+  \caption{$m(jj)^\text{tag}$ distributions in the 0-lepton resolved control region before (left) and after (right) re-weighting as well as using alternative $W/Z+$ jets samples without re-weighting (right).} 
+  \label{fig:0lepReweightingCRVjet_Fid}
+\end{figure}
+
+
+%%% 1-lepton channel %%%
+\clearpage
+\subsubsection{\olep channel}
+\label{subsec:mjj_reweight_1lep}
+
+%%%
+%The generator we use to model \Wjets background, Sherpa(v2.2.1) has a well known mis-modelling issue 
+%in the tag jets mass (\mjjtag) distribution, as shown in Figure \ref{fig:mjjReweight1LepMjjDistBefore}. 
+%A clear slope can be observed in the data-MC ratio.  
+%Assuming that the mis-modelling depends linearly on \mjjtag, we use the following equation 
+%to re-weight \Wjets events in an attempt to correct for this mis-modelling:
+
+%%%
+The modelling of the \Wjets background for the 1-lepton channel,
+is studied in this subsection. 
+In Figure \ref{fig:mjjReweight1LepMjjDistBefore} the $\Mtag$ distributions for the merged and resolved regions are plotted.  
+Similarly to the 0- and 2-lepton channels, 
+a clear mis-modelling between the main background source and data is also observed in the 1-lepton channel. 
+In order to account for this mis-modelling, a re-weighting for the \Wjets MC is derived. 
+
+Assuming that the mis-modelling depends linearly on \mjjtag, we use the following equation 
+to re-weight \Wjets events in an attempt to correct for this mis-modelling:
+
+\begin{equation}
+  %w(m_{jj}^{tag})_{reweight} =  S_{reweight} * m_{jj}^{tag} + C_{reweight}
+  w(m_{jj}^{tag}) =  p_0 + p_1 * m_{jj}^{tag} ,
+\end{equation}
+%, where $S_{reweight}$ and $C_{reweight}$ 
+where $p_0$ and $p_1$
+are parameters to be derived separately for merged and resolved regions. Once the slope and constants in the correction function are derived separately for merged and resolved cases in the control regions as defined in Table \ref{tab:mjjReweight1LepRegions}, it is then assumed that the corrections apply to the corresponding signal region. In both the resolved and merged cases, these two constants are derived by fitting the ratio of Sherpa \Wjets modelling and data with non \Wjets background subtracted. In the resolved case, to account for possible dependence of the slope and constant on $m_{jj}^{sig}$, the re-weighting study is performed in $m_{jj}^{sig}$ bins of [50,60,70,100,120,150,200,300] GeV, and an interpolation from the control region to the signal region is performed. In the merged case, a fit to the entire $m_{J}$ range is performed to get better statistical significance on the result. The fit results are shown in Figure \ref{fig:mjjReweight1LepResPtBins}, \ref{fig:mjjReweight1LepMer}. Once the constants and slopes have been derived for different $m_{jj}^{sig}$ bins, they are fitted to get the final result in the signal $m_{jj}^{sig}$ bin, as shown in Figure \ref{fig:mjjReweight1LepResFit}. \\
+
+All the above studies were done with all of the data periods and corresponding MC campaigns (mc16a, mc16d, and mc16e) combined. To check that there are no significant differences between different data periods and pileup conditions, the studies were repeated for each mc campaign and the result is shown in Figure \ref{fig:mjjReweight1LepResTotal}. 
+
+\begin{figure}[ht]
+    \centering
+    \subfigure[MC16A merged HP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16A_0ptag1pfat0pjet_0ptv_SRVBS_HP_Mer_tagMjj_LinNoMjj.png}}
+    \subfigure[MC16A merged LP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16A_0ptag1pfat0pjet_0ptv_SRVBS_LP_Mer_tagMjj_LinNoMjj.png}}
+    \subfigure[MC16A resolved SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16A_0ptag2pjet_0ptv_SRVBS_RES_Res_tagMjj_LinNoMjj.png}} \\
+    \subfigure[MC16D merged HP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16D_0ptag1pfat0pjet_0ptv_SRVBS_HP_Mer_tagMjj_LinNoMjj.png}}
+    \subfigure[MC16D merged LP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16D_0ptag1pfat0pjet_0ptv_SRVBS_LP_Mer_tagMjj_LinNoMjj.png}}
+    \subfigure[MC16D resolved SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16D_0ptag2pjet_0ptv_SRVBS_RES_Res_tagMjj_LinNoMjj.png}} \\
+    \subfigure[MC16E merged HP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16E_0ptag1pfat0pjet_0ptv_SRVBS_HP_Mer_tagMjj_LinNoMjj.png}}
+    \subfigure[MC16E merged LP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16E_0ptag1pfat0pjet_0ptv_SRVBS_LP_Mer_tagMjj_LinNoMjj.png}}
+    \subfigure[MC16E resolved SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16E_0ptag2pjet_0ptv_SRVBS_RES_Res_tagMjj_LinNoMjj.png}} \\
+    \subfigure[MC16ADE merged HP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16ADE_0ptag1pfat0pjet_0ptv_SRVBS_HP_Mer_tagMjj_LinNoMjj.png}}
+    \subfigure[MC16ADE merged LP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16ADE_0ptag1pfat0pjet_0ptv_SRVBS_LP_Mer_tagMjj_LinNoMjj.png}}
+    \subfigure[MC16ADE resolved SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16ADE_0ptag2pjet_0ptv_SRVBS_RES_Res_tagMjj_LinNoMjj.png}}  
+    \caption{\mjjtag distributions without any corrections in the signal regions.}
+    \label{fig:mjjReweight1LepMjjDistBefore}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \subfigure[MC16A merged HP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16A_0ptag1pfat0pjet_0ptv_SRVBS_HP_Mer_tagMjj_Lin.png}}
+    \subfigure[MC16A merged LP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16A_0ptag1pfat0pjet_0ptv_SRVBS_LP_Mer_tagMjj_Lin.png}}
+    \subfigure[MC16A resolved SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16A_0ptag2pjet_0ptv_SRVBS_RES_Res_tagMjj_Lin.png}} \\
+    \subfigure[MC16D merged HP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16D_0ptag1pfat0pjet_0ptv_SRVBS_HP_Mer_tagMjj_Lin.png}}
+    \subfigure[MC16D merged LP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16D_0ptag1pfat0pjet_0ptv_SRVBS_LP_Mer_tagMjj_Lin.png}}
+    \subfigure[MC16D resolved SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16D_0ptag2pjet_0ptv_SRVBS_RES_Res_tagMjj_Lin.png}} \\
+    \subfigure[MC16E merged HP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16E_0ptag1pfat0pjet_0ptv_SRVBS_HP_Mer_tagMjj_Lin.png}}
+    \subfigure[MC16E merged LP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16E_0ptag1pfat0pjet_0ptv_SRVBS_LP_Mer_tagMjj_Lin.png}}
+    \subfigure[MC16E resolved SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16E_0ptag2pjet_0ptv_SRVBS_RES_Res_tagMjj_Lin.png}} \\
+    \subfigure[MC16ADE merged HP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16ADE_0ptag1pfat0pjet_0ptv_SRVBS_HP_Mer_tagMjj_Lin.png}}
+    \subfigure[MC16ADE merged LP SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16ADE_0ptag1pfat0pjet_0ptv_SRVBS_LP_Mer_tagMjj_Lin.png}}
+    \subfigure[MC16ADE resolved SR]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/MC16ADE_0ptag2pjet_0ptv_SRVBS_RES_Res_tagMjj_Lin.png}}  
+    \caption{\mjjtag distributions after applying mjj-reweighting, in the signal regions.}
+    \label{fig:mjjReweight1LepMjjDistAfter}
+\end{figure}
+
+
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \multirow{2}{4em}{Resolved} & pass Resolved Selection (NoMassWindowCut)  \\
+         & BjetVeto  \\
+         \hline
+        \multirow{2}{4em}{Merged} &  pass Merged Selection (NoMassWindowCut) \\
+        & BjetVeto  \\
+         \hline
+    \end{tabular}
+    \caption{Definition of control regions used to derive \Wjets re-weighting factors.}
+    \label{tab:mjjReweight1LepRegions}
+\end{table}
+
+\begin{figure}[ht]
+    \centering
+    \subfigure[]{\includegraphics[width=0.7\textwidth]{figures/mjjreweight1lep/merged_WjetsAllMC16T.png}}
+    \caption{Fit of \mjjtag slope in merged region, for the entire $M_J$ range. }
+    \label{fig:mjjReweight1LepMer}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering
+    \subfigure[50GeV to 60GeV bin]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/resolved_Wjets50_to_60_GeVMC16T.png}}
+    \subfigure[60GeV to 70GeV bin]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/resolved_Wjets60_to_70_GeVMC16T.png}}
+    \subfigure[100GeV to 150GeV bin]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/resolved_Wjets100_to_150_GeVMC16T.png}}
+
+	\subfigure[150GeV to 200GeV bin]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/resolved_Wjets150_to_200_GeVMC16T.png}}
+    \subfigure[200GeV to 300GeV bin]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/resolved_Wjets200_to_300_GeVMC16T.png}}
+    \caption{Fit of \mjjtag slope in W+jet resolved control regions, for different $m_{jj}^{sig}$ slices. } 
+    \label{fig:mjjReweight1LepResPtBins}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering
+    \subfigure[Fit results for "Constant".]{\includegraphics[width=0.45\textwidth]{figures/mjjreweight1lep/fitCResMC16T.pdf}}
+    \subfigure[Fit results for "Slope".]{\includegraphics[width=0.45\textwidth]{figures/mjjreweight1lep/fitSResMC16T.pdf}}
+    \caption{Slopes and constants as a function of $m_{jj}^{sig}$. The red band presents the 68\% confidence level of the fit. The fitted linear function is shown at the top and the fitted result at the signal $m_{jj}^{sig}$ bin is shown at the bottom. } 
+    \label{fig:mjjReweight1LepResFit}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering
+    \subfigure[Fitted results for "Constant".]{\includegraphics[width=0.45\textwidth]{figures/mjjreweight1lep/TotalConstant.png}}
+    \subfigure[Fitted results for "Slope".]{\includegraphics[width=0.45\textwidth]{figures/mjjreweight1lep/TotalSlope.png}}
+    \caption{Fitted results for slopes and constants for each data period.} 
+    \label{fig:mjjReweight1LepResTotal}
+\end{figure}
+
+Table ~\ref{tab:1lepReweighting} shows the final parameters derived for the \olep channel.
+
+\begin{table}[ht]
+     \centering
+     \caption{1-lepton $m(jj)^\text{tag}$ re-weighting factors.}
+     \label{tab:1lepReweighting}
+         \begin{tabular}{ |c|c|c| }
+\hline
+Parameter & Merged CRVjet & Resolved CRVjet  \\ 
+\hline
+$p_{0}$ (slope) [$\GeV^{-1}$] & $(-51.4 \pm 2.9)10^{-5}$ &  $(-14.4 \pm 6.1)10^{-5}$ \\
+ \hline
+$p_{1}$ (constant)  & $1.47 \pm 0.03$ & $1.13 \pm 0.02$ \\ 
+\hline
+         \end{tabular}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% 2-lepton channel %%%
+\clearpage
+\subsubsection{\tlep channel}
+\label{subsec:mjj_reweight_2lep}
+
+The modelling of the dominant background for the 2-lepton channel, \Zjets, 
+is studied in this subsection. 
+In Figure \ref{fig:2lep_mtag_before_rw} the $\Mtag$ distributions for the merged and resolved 
+control regions are plotted.  Similarly to the 0- and 1-lepton channels, 
+a clear mis-modelling between the main background source and data is also observed in the 2-lepton channel. 
+In order to account for this mis-modelling, a re-weighting for the \Zjets MC is derived. 
+Two re-weighting functions are obtained separately for the merged and resolved regimes. 
+The different re-weighting functions are derived in the control regions and used to apply corrections in the signal regions. 
+A simple linear fit to the $\Mtag$ distribution is performed. 
+The fit function is defined as follows : 
+
+%$$ R = p_{0}*\Mtag + p_{1}$$ 
+
+\begin{equation}
+  w(m_{jj}^{tag}) =  p_0 + p_1 * m_{jj}^{tag}
+\end{equation}
+
+, where $p_0$ and $p_1$ are the fit parameters and $w(m_{jj}^{tag})$ will be the re-weighted applied. Since the correction functions are derived for the \Zjets MC only, all the non \Zjets MC events are first subtracted from data. In Figure  \ref{fig:2lep_merged_summary_rw} and  \ref{fig:2lep_resolved_summary_rw} fit results for the combined and individual MC16a,d and e periods are plotted for the merged and resolved regions respectively. Some dependence on the MC period is noticed especially in the resolved regime. However, the gain on the final re-weighted distribution from using a per period $\Mtag$ re-weighting is found to be small and therefore fit results from the combined period are used. 
+
+
+\begin{figure}[ht]
+    \centering
+    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/before_reweighting/C_0ptag1pfat0pjet_0ptv_CRVjet_MTagMerJets_Log.eps}}
+    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/before_reweighting/C_0ptag2pjet_0ptv_CRVjet_Fid_MTagResJets_Log.eps}}
+    \caption{ $\Mtag$ distributions for the merged (a) and resolved (b) control regions in the 2-lepton channel.} 
+    \label{fig:2lep_mtag_before_rw}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/fitSlope_merged_CR.pdf}}
+    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/fitConst_merged_CR.pdf}}
+    \caption{ Fit summary results for the merged regime in the 2-Lepton Channel} 
+    \label{fig:2lep_merged_summary_rw}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/fitSlope_resolved_CR.pdf}}
+    \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/2lep/reweighting/fitConst_resolved_CR.pdf}}
+    \caption{ Fit summary results for the resolved regime in the 2-Lepton Channel} 
+    \label{fig:2lep_resolved_summary_rw}
+\end{figure}
+
+In Figure \ref{fig:2lep_mtag_after_rw}, the fitted slopes as a function of $\Mtag$ for the merged and resolved control regions are shown for the combined MC16a,d and e periods. All distributions are first normalized, thus the derived correction functions account only for shape differences between \Zjets MC and data. Differences coming from normalization will be considered later in the final fit model. 
+
+
+\begin{figure}[ht]
+    \centering
+    \subfigure[]{\includegraphics[width=0.47\textwidth]{figures/2lep/reweighting/2Lep_MjjReweighting_CRVjet_MTagMerJets.pdf}}
+    \subfigure[]{\includegraphics[width=0.47\textwidth]{figures/2lep/reweighting/2Lep_MjjReweighting_CRVjet_Fid_MTagResJets.pdf}}
+    \caption{ $\Mtag$ re-weighting for the merged (a) and resolved (b) regimes. Distributions are normalized and a re-binning has been performed in order for the statistical uncertainty of each bin to be less than 5\%. A linear fit is performed to the data/MC ratio. The pull from the fit for each bin is also computed and plotted.} 
+    \label{fig:2lep_mtag_after_rw}
+\end{figure}
+
+The fitted parameters for the merged and resolved regimes are summarized in Table \ref{tab:fit_res}. The uncertainties on the fitted parameters are also used in the final fit model to describe uncertainties coming from the \Mtag re-weighting.
+
+\begin{table}[htbp]
+ \footnotesize
+\begin{center}
+\begin{tabular}{ | c | c | c |}
+\hline
+Parameter & Merged CRVjet & Resolved CRVjet  \\ 
+\hline
+$p_{0}$ (slope) [$\GeV^{-1}$] & $(-23.8 \pm 2.5)e^{-5}$ &  $(-17.5 \pm 0.5)e^{-5}$ \\
+ \hline
+$p_{1}$ (constant)  & $1.298 \pm 0.031$ & $1.187 \pm 0.005$ \\ 
+\hline
+\end{tabular}
+\caption{\label{tab:fit_res} Fitted re-weighting parameters for the merged and resolved regions. }
+  \end{center}
+\end{table}
+
+
+

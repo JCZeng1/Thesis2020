@@ -1,0 +1,69 @@
+%\subsection{Electron selection}
+\label{subsec:electron_selection}
+Electron candidates for the analysis were chosen based on specific selection criteria, primarily focusing on their momentum and isolation from surrounding detector activity to identify signal electrons effectively. Electrons traversing the calorimeter's crack were excluded. 
+In this 1-lepton channel analysis, exactly one signal electron is required. Electrons failing to meet basic quality standards during data collection are excluded.
+The criteria for electron isolation are optimized to reduce the presence of non-prompt electrons.
+This analysis uses two electron definitions, Tight and Loose, summarized in Table~\ref{tab:electron_selection}.
+%Two distinct electron definitions are used in this analysis.
+\begin{itemize}
+\item ``Tight'' electron: used to select $W\to e \nu$ candidate.
+\item ``Loose'' electron: used to veto events with additional leptons.
+\end{itemize}
+
+%In 1-lepton channel, the electron isolation working points are optimized to minimize the contribution of the non-prompt electrons.
+%The definitions of the Tight and Loose electrons are summarized in Table~\ref{tab:electron_selection}.
+
+\begin{table}[ht]
+\caption{Summary of Electron Selections}
+\label{tab:electron_selection}
+\resizebox{\textwidth}{!}{
+\begin{tabular}[ht]{|c|c|c|c|}
+  \hline
+  \emph{criteria} & \emph{Loose} & \emph{Tight}\\
+  \hline
+%  \hline
+%  Pseudorapidity range & \multicolumn{2}{c|}{$|\eta| < 2.47$} & $(|\eta| < 1.37) \quad || \quad (1.52 < |\eta| < 2.47)$ \\
+  Pseudorapidity range & \multicolumn{2}{c|}{$|\eta| < 2.47$ (veto in [1.37, 1.52] region)} \\
+  \hline
+  Energy calibration & \multicolumn{2}{c|}{``es2017\_R21\_v0'' (ESModel)}\\
+  \hline
+  Transverse momentum & $\pt > 7\,\GeV$ & $\pt > 28~\GeV$ \\
+  \hline
+  \multirow{2}{*}{Object quality~\cite{twiki_egQual}} & \multicolumn{2}{c|}{Not from a bad calorimeter cluster (BADCLUSELECTRON)} \\ \cline{2-3}
+  & \multicolumn{2}{c|}{Remove clusters from regions with EMEC bad HV (2016 data only)} \\
+  \hline
+  \multirow{2}{*}{Track to vertex association} & \multicolumn{2}{c|}{$|d_{0}^{BL}(\sigma)|$ $<$ 5} \\ \cline{2-3}
+  & \multicolumn{2}{c|}{$|\Delta z_{0}^{BL} \sin{\theta}| <$ 0.5~mm} \\
+  \hline
+  Identification & Loose & Tight \\
+  \hline
+            %& LooseTrackOnly & \\
+  Isolation &  FCLoose at $\pt<100\,\GeV$                   &  FixedCutHighPtCaloOnly \\
+            &  and no isolation requirement at $>100\,\GeV$ & \\
+  \hline
+ \end{tabular}}
+\end{table}
+
+\vspace{1cm}
+
+%Notes:
+%\begin{itemize}
+% \item Electron ID: 3 working points (Loose/Medium/Tight) are evaluated using the Likelihood-based (LH) method, by the
+% \mbox{\texttt{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaIdentificationRun2}{ElectronPhotonSelectorTools}}}.
+%\item Energy calibration of electrons is implemented in the\\
+%  \mbox{\texttt{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection}{ElectronPhotonFourMomentumCorrection}}} tool.
+%\item Scale Factors for efficiencies for electrons are implemented in the\\
+%  \mbox{\texttt{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/XAODElectronEfficiencyCorrectionTool}{ElectronEfficiencyCorrection}}} tool.
+%\item Updated configurations for the EGamma CP tools can be found on this \mbox{\texttt{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaRecommendationsR21}{twiki}}} page.
+%\end{itemize}
+
+%%%Electron ID working points are evaluated using the Likelihood-based (LH) method, by the 
+%%%\mbox{\texttt{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaIdentificationRun2}{ElectronPhotonSelectorTools}}}
+%%%;
+%%%energy calibration of electrons is implemented in the\\
+%%% \mbox{\texttt{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection}{ElectronPhotonFourMomentumCorrection}}} tool
+%%%;
+%%%Scale Factors for efficiencies for electrons are implemented in the\\
+%%% \mbox{\texttt{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/XAODElectronEfficiencyCorrectionTool}{ElectronEfficiencyCorrection}}} tool.
+
+%\newpage

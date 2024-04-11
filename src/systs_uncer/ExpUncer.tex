@@ -1,0 +1,306 @@
+%\subsection{Experimental Uncertainties}
+\label{subsec:exp_uncer}
+
+
+\subsection{Baseline uncertainties}
+\label{subsubsec:baseline_unc}
+The summary of experimental uncertainties is presented in Tab.~\ref{tab:syst_summary_sources_1} to \ref{tab:syst_summary_sources_3}.
+ 
+\begin{table}[!hp]
+  \caption{ Qualitative summary of the systematic uncertainties included in this analysis. }
+  \label{tab:syst_summary_sources_1}
+  \centering
+  \footnotesize
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      Source        & Description                     & Analysis Name                         & Notes              \\ \hline
+      Electrons     & Energy scale                    &  EG\_SCALE\_ALL                     & \\ 
+      Electrons     & Energy resolution               &  EG\_RESOLUTION\_ALL                & \\ 
+      Electrons     & Trigger                        &  EL\_EFF\_Trigger\_TOTAL\_1NPCOR\_PLUS\_UNCOR                    & \\ 
+      Electrons     & ID efficiency SF                &  EL\_EFF\_ID\_TOTAL\_1NPCOR\_PLUS\_UNCOR  & \\
+      Electrons     & Isolation efficiency SF                &   EL\_EFF\_Iso\_TOTAL\_1NPCOR\_PLUS\_UNCOR  & \\
+      Electrons     & Reconstruction efficiency SF                &   EL\_EFF\_Reco\_TOTAL\_1NPCOR\_PLUS\_UNCOR  & \\ \hline
+      Muons         & \pt\ scale                       &   MUONS\_SCALE                       & \\ 
+      Muons         & \pt\ scale (charge dependent)          &   MUON\_SAGITTA\_RHO                    & \\ 
+      Muons         & \pt\ scale (charge dependent)          &   MUON\_SAGITTA\_RESBIAS                     & \\ 
+      Muons         & \pt\ resolution MS               &   MUONS\_MS                          & \\ 
+      Muons         & \pt\ resolution ID               &   MUONS\_ID                          & \\ 
+      Muons         & Isolation efficiency SF         &   MUON\_ISO\_SYS                     & \\ 
+      Muons         & Isolation efficiency SF         &   MUON\_ISO\_STAT                    & \\ 
+      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_STAT                          & \\ 
+      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_STAT\_LOWPT                          & \\ 
+      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_SYST                          & \\ 
+      Muons         & Muon reco \& ID efficiency SF               &   MUONS\_EFF\_SYST\_LOWPT                          & \\ 
+      Muons         & Track-to-vertex association efficiency SF         &   MUON\_TTVA\_SYS                     & \\ 
+      Muons         & Track-to-vertex association efficiency SF         &   MUON\_TTVA\_STAT                     & \\ 
+      Muons         & Trigger         &   MUON\_EFF\_TrigSystUncertainty   & \\
+      Muons         & Trigger         &   MUON\_EFF\_TrigStatUncertainty   & \\    \hline
+        %MET           & Trigger scale factor            &   METTrigStat                        & \\
+        %MET           & Trigger scale factor            &   METTrigTop                         & \\
+      MET           & Soft term                       &   MET\_SoftTrk\_ResoPerp             & \\ 
+      MET           & Soft term                       &   MET\_SoftTrk\_ResoPara             & \\ 
+      MET           & Soft term                       &   MET\_SoftTrk\_Scale              & \\
+      %MET           & Jet track uncertainties         &   MET\_JetTrk\_Scale                 & \\ 
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+%\textcolor{red}{cross-check with latest fit inputs}
+
+\begin{table}[!hp]
+  \caption{ Qualitative summary of the systematic uncertainties included in this analysis. }
+  \label{tab:syst_summary_sources_2}
+  \centering
+  \footnotesize
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      Source        & Description                     & Analysis Name                         & Notes              \\ \hline
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_BJES\_Response                             & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Detector1                     & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Detector2                     & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Mixed1                        & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Mixed2                        & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Mixed3                        & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Modelling1                    & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Modelling2                    & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Modelling3                    & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Modelling4                    & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Statistical1                  & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Statistical2                  & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Statistical3                  & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Statistical4                  & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Statistical5                  & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EffectiveNP\_Statistical6                  & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_Flavor\_Composition                        & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_Flavor\_Response                           & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_Pileup\_OffsetMu                           & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_Pileup\_OffsetNPV                          & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_Pileup\_PtTerm                             & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_Pileup\_RhoTopology                        & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_PunchThrough\_MC16                         & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_SingleParticle\_HighPt                     & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EtaIntercalibration\_TotalStat             & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EtaIntercalibration\_Modelling             & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EtaIntercalibration\_NonClosure\_highE     & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EtaIntercalibration\_NonClosure\_negEta    & \\ 
+      Small-R Jets  & JES category reduction            &  JET\_CR\_JET\_EtaIntercalibration\_NonClosure\_posEta    & \\ 
+        \hline
+        Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_DataVsMC                  & \\ 
+        Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_1            & \\ 
+        Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_2            & \\ 
+        Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_3            & \\ 
+        Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_4            & \\ 
+        Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_5            & \\ 
+        Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_6            & \\ 
+        Small-R Jets  & JER                  &  JET\_CR\_JET\_JER\_EffectiveNP\_7restTerm    & \\ 
+        \hline
+        Small-R Jets  & JVT                  &  JET\_JvtEfficiency    & \\
+%        Small-R Jets  & fJVT                  &  JET\_fJvtEfficiency    & \\ 
+        \hline
+        \end{tabular}
+    \end{center}
+  \end{table}
+
+%\textcolor{red}{cross-check with latest fit inputs}
+
+\begin{table}[!hp]
+  \caption{ Qualitative summary of the systematic uncertainties included in this analysis. }
+  \label{tab:syst_summary_sources_3}
+  \centering
+  \footnotesize
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      Source        & Description                     & Analysis Name                         & Notes              \\ \hline
+      Large-R Jets  & \pt scale                       & FATJET\_Medium\_JET\_Rtrk\_Baseline\_pT                            &  \\
+      %Large-R Jets  & \pt scale                       & FATJET\_Medium\_JET\_Rtrk\_Closure\_pT                             &  \\
+      Large-R Jets  & \pt scale                       & FATJET\_Medium\_JET\_Rtrk\_Modelling\_pT                           &  \\
+      Large-R Jets  & \pt scale                       & FATJET\_Medium\_JET\_Rtrk\_TotalStat\_pT                           &  \\
+      Large-R Jets  & \pt scale                       & FATJET\_Medium\_JET\_Rtrk\_Tracking\_pT                            &  \\
+
+      Large-R Jets  & \pt scale                       & FATJET\_BJT\_JET\_EtaIntercalibration\_Modelling      & \\
+      Large-R Jets  & \pt scale                       & FATJET\_BJT\_JET\_Flavor\_Composition                 & \\
+      Large-R Jets  & \pt scale                       & FATJET\_BJT\_JET\_Flavor\_Response                    & \\
+
+      Large-R Jets  & Mass resolution                 & FATJET\_JMR                            & \\\hline
+      Large-R Jets  & JER                             & FATJET\_JER                            & \\\hline
+
+%
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_B\_0\_AntiKt4PFlowJets                                & \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_B\_1\_AntiKt4PFlowJets                                & \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_B\_2\_AntiKt4PFlowJets                                & \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_C\_0\_AntiKt4PFlowJets                                & \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_C\_1\_AntiKt4PFlowJets                                & \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_C\_2\_AntiKt4PFlowJets                                & \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_C\_3\_AntiKt4PFlowJets                                & \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_Light\_0\_AntiKt4PFlowJets                            & \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_Light\_1\_AntiKt4PFlowJets                            & \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_Light\_2\_AntiKt4PFlowJets                            & \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_Eigen\_Light\_3\_AntiKt4PFlowJets                            & \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_extrapolation\_AntiKt4PFlowJets                              & \\
+      B-tagging     & Flavor tagging scale factors    &  FT\_EFF\_extrapolation\_from\_charm\_AntiKt4PFlowJets                 & \\
+
+      \hline                          
+      Pileup reweighting & PRW\_DATASF & PRW\_DATASF &\\ 
+      Luminosity & LumiNP & ATLAS\_LUMI\_2015\_2018 & \\
+\hline
+\end{tabular}
+    \end{center}
+  \end{table}
+
+\clearpage
+\subsubsection*{Luminosity}
+%%The uncertainty on the integrated luminosity for the 2015+2016 dataset is 2.1\%,
+%%and 2.4\% for the 2017 dataset.
+%%The uncertainty for the 2018 data alone is 2.0\%, and the uncertainty for the combined run-2 dataset (2015-2018) is 1.7\% \cite{AtlasLumiRun2}.
+The luminosity uncertainty is applied to those backgrounds estimated from simulation and the signal samples.
+The uncertainties on the integrated luminosity for the datasets are as follows:
+\begin{itemize}
+    \item 2015+2016 dataset: 2.1\%
+    \item 2017 dataset: 2.4\%
+    \item 2018 dataset: 2.0\%
+    \item Combined Run-2 dataset (2015-2018): 1.7\%
+\end{itemize}
+Reference: \cite{AtlasLumiRun2}.
+
+
+\subsubsection*{Pileup reweighting}
+The uncertainty associated with the pileup reweighting is accounted for as \texttt{PRW\_DATASF} \cite{ExtendedPileupReweighting}. 
+Additionally, a variation in the pileup reweighting of MC simulations is included to address the uncertainty in the ratio of the predicted to the measured inelastic cross-section within the fiducial volume defined by $M_X > 13\,\GeV$, where $M_X$ is the mass of the non-diffractive hadronic system \cite{STDM-2015-05}.
+
+%%The uncertainty associated with the pileup reweighting is considered\cite{ExtendedPileupReweighting} as PRW\_DATASF.
+%%A variation in the pileup reweighting of MC is included to cover the uncertainty on the ratio between the predicted
+%%and measured inelastic cross-section in the fiducial volume defined by $M_X > 13\,\GeV$ where $M_X$ is the mass
+%%of the non-diffractive hadronic system~\cite{STDM-2015-05}.
+
+
+\subsubsection*{Trigger}
+Systematic uncertainties on the efficiency of the electron or muon triggers are evaluated using the tag and probe method, applied to backgrounds estimated from simulation and signal samples. 
+The efficiencies are obtained using the \texttt{ElectronEfficiencyCorrection} \cite{AsgElectronEfficiencyCorrectionTool} and \texttt{MuonEfficiencyCorrections} \cite{TrigMuonEfficiency}. The uncertainty in the \met trigger is derived from the scale factor estimation, incorporating statistical contributions and efficiency discrepancies between MC samples, specifically ttbar and $W$+jets \cite{ATLAS-CONF-2016-091, Masubuchi:2151844}. Upon evaluation, trigger uncertainties were found to be less than 1\% and were subsequently excluded from the final fit results.
+
+%%Systematic uncertainties on the efficiency of the electron or muon triggers are evaluated using
+%%the tag and probe method. It is applied to those backgrounds estimated from simulation and the signal samples.
+%%We use \texttt{ElectronEfficiencyCorrection}~\cite{AsgElectronEfficiencyCorrectionTool} and
+%%\texttt{MuonEfficiencyCorrections}~\cite{TrigMuonEfficiency} to obtain them. 
+%%The uncertainty from \met trigger arises from the estimation on scale factor which contains two contributions:
+%%statistics and the efficiency discrepancy between MC samples (ttbar and $W$+jets) \cite{ATLAS-CONF-2016-091, Masubuchi:2151844}.
+%%After trigger uncertainties were evaluated, the effects were found to be less than 1\%. Therefore they were pruned in the final fit result.
+
+\subsubsection*{Muons and electrons}
+The following systematic uncertainties are applied to electrons and muons for simulation-based estimations:
+
+\begin{itemize}
+    \item \textbf{Identification and reconstruction efficiencies:} Measured using the tag and probe method centered around the $Z$ mass peak.
+    \item \textbf{Isolation efficiency:} The scale factor and its uncertainty are derived via the tag and probe method, also utilizing the $Z$ mass peak.
+    \item \textbf{Energy and Momentum scales:} Determined through the $Z$ mass line shape analysis, with contributions from the CP groups.
+    \item \textbf{Track-to-vertex association efficiency:} This applies solely to muons.
+\end{itemize}
+
+Implementation of these uncertainties is carried out through the following tools:
+\begin{itemize}
+    \item \texttt{ElectronPhotonFourMomentumCorrection} \cite{EgammaCalibration}
+    \item \texttt{ElectronEfficiencyCorrection} \cite{AsgElectronEfficiencyCorrectionTool}
+%%    \item \texttt{MuonMomentumCorrections}
+    \item \texttt{MuonMomentumCorrections} and \texttt{MuonEfficiencyCorrections} \cite{MCPAnalysisGuidelines}
+\end{itemize}
+
+%%The following systematic uncertainties are applied to electrons and muons in estimations based on the simulation:
+%%
+%%\begin{itemize}
+%%\item Identification and reconstruction efficiencies: The efficiencies are measured with the tag and probe method using the $Z$ mass peak.
+%%\item Isolation efficiency: Scale factor and its uncertainty are derived by tag and probe method using the $Z$ mass peak as well.
+%%\item Energy and Momentum scales: These are also measured with $Z$ mass line shape, and provided by the CP groups.
+%%\item Track-to-vertex association efficiency: Only for muons.
+%%\end{itemize}
+%%
+%%They are implemented in \texttt{ElectronPhotonFourMomentumCorrection}~\cite{EgammaCalibration},\\
+%%\texttt{ElectronEfficiencyCorrection}~\cite{AsgElectronEfficiencyCorrectionTool}, \\
+%%\texttt{MuonMomentumCorrections} and \texttt{MuonEfficiencyCorrections}~\cite{MCPAnalysisGuidelines}.
+
+
+\subsubsection*{Missing transverse energy}
+The missing transverse energy (\met) is calculated using physics objects, as outlined in Section~\ref{sec:MET_reconstruction}. 
+Consequently, systematic uncertainties in the reconstructed components, such as the jet energy scale, directly affect the \met, representing the primary sources of its uncertainty. 
+Additionally, the uncertainty referred to as the ``Soft Term'' arises from tracks in the inner detector that are not associated with any reconstructed object.
+The resolution and scale of the Soft Term are varied within their respective uncertainties to assess their impact on the total \met uncertainty, utilizing the \texttt{METUtilities} tool \cite{METUtilSystematics}.
+
+
+% The missing transverse energy is calculated using physics objects as described in Section~\ref{sec:ObjectDefinition}. 
+%from the negative vectorial sum of physics objects: muons, electrons, taus, photons, jets and unassociated clusters of calorimeter cells. 
+%%As such, all of the systematic errors on the reconstructed components, e.g. the jet energy scale,
+%%result in an uncertainty on \met. These are the dominant sources of uncertainty on \met.
+%%In addition, there is an uncertainty called the ''Soft Term'', from the unassociated tracks.
+%%The resolution and scale of this soft term are varied within their errors to evaluate their
+%%contribution to the total uncertainty using \texttt{METUtilities}~\cite{METUtilSystematics}.
+
+%\subsubsection*{ Track missing transverse energy}
+%A very loose cut on the track missing \et\ is applied for the event cleaning in 0-lep channel.
+%The impact of possible mis-modelling of track-\met\ on the total background yield is estimated by varying the track-\met value by $\pm 2\%$ and found to be negligible.
+%Details can be found at \url{https://indico.cern.ch/event/850077/contributions/3575954/attachments/1913191/3178067/track-met-study-2.pdf}.
+
+\subsubsection*{Small-$R$ Jet Energy Scale and Resolution Uncertainty}
+The jet energy scale (JES) and resolution (JER) for small-R jets are determined in situ by comparing the response in MC to data across various bins in kinematic phase space, employing the \texttt{JetUncertainties} tool~\cite{JetUncertainties}. 
+The analysis utilizes the configuration \texttt{R4\_CategoryReduction\_SimpleJER.config}, incorporating approximately 30 JES and 8 JER uncertainty components. These uncertainties are also significant in the boosted analysis due to their impact on the calculation of the \met. Additionally, the Jet Vertex Tagger (JVT) efficiency uncertainty is evaluated using \texttt{JetJvtEfficiency} \cite{JVTCalib}; however, its effect was found to be below 1\%, leading to its exclusion from the final fit.
+
+
+%The jet energy scale and resolution of the small-R jets are measured in situ by calculating
+%the response between MC and data in various bins of kinematic phase space using \texttt{JetUncertainties}~\cite{JetUncertainties}. 
+%We use the configuration \texttt{R4\_CategoryReduction\_SimpleJER.config}, 
+%with roughly 30 JES uncertainty components and 8 JER uncertainty components.
+%They also enter the boosted analysis because they are used in the calculation of the missing transverse energy.
+%We also considered the uncertainty on JVT efficiency, using \texttt{JetJvtEfficiency}~\cite{JVTCalib}, 
+%but the effects were under 1\%, so the uncertainty was pruned in the final fit.
+
+
+\subsubsection*{Large-$R$ Jet Energy Scale and Resolution Uncertainty}
+\label{sec:fatjetUncert}
+The uncertainties for the large-\(R\) jet energy scale are incorporated according to the prescription provided by the jet substructure group, as included in the \texttt{JetUncertainties} package~\cite{JSSrecommendation}. 
+The uncertainty related to the jet \pt scale is assessed through the Rtrk method, which involves a comparison of the jet \pt to track-jet \pt ratio in dijet data versus simulation. 
+Beyond the ``baseline'' uncertainty, additional considerations include uncertainties related to track measurements (``Tracking''), variations between Pythia and Sherpa dijet simulations (``Modelling''), and the statistical uncertainty in dijet data (``TotalStat'').
+More information are provided in the main twiki for the large-R jets recommendations \cite{JSSrecommendation2}.
+
+%%The large-$R$ jet energy scale uncertainties are included following the prescription of the
+%%jet substructure group included in the \texttt{JetUncertainties} package~\cite{JSSrecommendation}. 
+%%The uncertainty on the \pt scale of jets is evaluated by
+%%comparing the ratio of the jet \pt to track-jet \pt in dijet data and simulation (Rtrk method).
+%%In addition to this ``Baseline'' uncertainty, the uncertainties on track measurements (``Tracking''), 
+%%differences between Pythia and Sherpa dijet simulations (``Modelling'') 
+%%and the statistical uncertainty of dijet data (``TotalStat'') are considered.
+%%More information are provided in the main twiki for the large-R jets recommendations \cite{JSSrecommendation2}.
+
+%The large-$R$ jet resolution uncertainty recommendation is not included in the \texttt{JetUncertainties} package~\cite{JSSrecommendation}.
+%As a \pt resolution uncertainty, jet \pt is smeared by Gaussian with 2\% width.
+
+
+%\subsubsection{$W/Z$-tagging efficiency SF Uncertainty}
+%On the other hand, we cannot use Rtrk method to evaluate mass and \DTwoBetaOne scale uncertainties, because TCC algorithm uses track measurements to reconstruct jet substructure variables.
+%In order to avoid the possible bias, therefore, the efficiency of $W/Z$-tagging based on cuts on jet mass and \DTwoBetaOne is estimated in data using the control sample and corrected by comparing it with simulation.
+%The efficiency to $W/Z$-induced jet signal is estimated by \ttbar control sample, while the efficiency to single-$q/g$ background is estimated by dijet sample.
+%The effects of experimental and theoretical uncertainties on the efficiency SF is studied.
+%By taking the double ratio (ratio of efficiencies between data and simulation), the uncertainties not coming from jet mass and \DTwoBetaOne scale/resolution are cancel out.
+%The efficiency SF and uncertainties on it are estimated in each of (1) pass mass and pass \DTwoBetaOne (HP SR), (2) pass mass and fail \DTwoBetaOne (LP SR), (3) fail mass and pass \DTwoBetaOne (HP CR) and (4) fail mass and fail \DTwoBetaOne (LP CR) regions, which are used to define SR and CR in our analysis, and correlation between four regions are correctly taken into account.
+
+\subsubsection*{B-tagging systematics}
+Systematic uncertainties related to $b$-tagging are accounted for as described in \cite{BTagCalib}. 
+These uncertainties stem from scaling factors that adjust for any discrepancies in $b$-tagging efficiency between data and MC. 
+Separated scale factors and their respective systematic uncertainties are determined for jets originating from $b$-quarks, $c$-quarks, and light flavor quarks, drawing on various measurements.
+
+%%The systematic uncertainties associated to the $b$-tagging are considered\cite{BTagCalib}.
+%%They are evaluated as uncertainties on the scaling factor to take account for possible disagreement of the $b$-tag efficiency between data and MC.
+%%Separated scale factors and corresponding systematic uncertainties are provided for $b$-, $c$- and light-flavor-induced jets, based on several measurements.
+ 
+%%%
+\subsection{$W/Z$-tagging efficiency SF Uncertainty}
+\input{src/systs_uncer/VTaggerUnc}
+
+%%%
+\subsection{Quark/Gluon jets uncertainty}
+\input{src/systs_uncer/QGUnc}
+
+%%%
+\subsection{Tracks uncertainties}
+\input{src/systs_uncer/TracksUnc}
+

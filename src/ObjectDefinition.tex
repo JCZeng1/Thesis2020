@@ -1,0 +1,30 @@
+%%% ObjectDefinition %%%
+\label{chap:objects_def}
+%This section describes the definitions of the physics objects employed in the analysis (electron, muon, jets and missing transverse energy).
+This section describes the definitions of the physics objects used in the analysis.
+%We have updated some criteria with respect to the previous analysis:
+%
+%   \begin{itemize}
+%        \item isolation requirements for both electrons/muons
+%        \item small-R jets collections (EMTopo $\rightarrow$ PFlow)
+%        \item boson tagger for large-R jets tagging (2Var $\rightarrow$ 3Var tagger)
+%        \item b-tagging (MV2 $\rightarrow$ DL1r)
+%        \item adding fJVT selection
+%   \end{itemize}
+
+\section{Electron Definition}
+\input{src/object_selection/egamma_selection}
+\section{Muon Definition}
+\input{src/object_selection/muon_selection}
+\section{Jet Definitions}
+\input{src/object_selection/jet_selection}
+%\input{src/object_selection/btagging_selection}
+\clearpage
+\section{Missing Energy Definition}
+\input{src/object_selection/met_selection}
+\section{Jet Flavor ($b$) Tagging Definition}
+\input{src/object_selection/btagging_selection}
+%\input{src/object_selection/tracks_selection}
+%\input{src/object_selection/fjvt}
+\section{Overlap Removal}
+\input{src/object_selection/overlap_removal}

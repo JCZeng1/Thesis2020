@@ -1,0 +1,790 @@
+\clearpage
+\subsection{Model inspection: combined fit}
+\label{sec:fit_combo}
+
+%\textcolor{red}{WE NEED TO UPDATE COMBO FIT RESULTS}
+
+%These show the latest single and combined fits (November 18th, 2021), showing the pull plots of the non-prunned nuisance parameters, fitting to Asimov data and to data with a $\mu=1$ condition.
+%It shows also the prefit and post fit plots, where the data points were blinded in the signal from the right to the left until 75\% of the signal is accounted.
+
+Combined fit results are shown in this section.
+Following the single channel strategy we build a fit model including the 9 SRs (3 per lepton channel)
+and the 9 CRs (6 for \Zjets or \Wjets and 3 for top backgrounds) 
+according to the analysis selection summarized in section \ref{subsec:summary_selection}.
+
+%Table~\ref{tab:RNNbins} shows represents the first blinded bin by the marker \#.
+
+
+% \ifthenelse{\equal{aaa}{aaa}}{ equal } { different }
+
+
+% \newcommand{\myvar}{RNN}
+% \newcommand{\dothisVar}[1]{  \ifthenelse{\equal{#1}{DSRVBS}}{\renewcommand{\myvar}{RNN}}{\renewcommand{\myvar}{ttagMjj}}}
+
+  
+\newcommand{\plotSRs}[4]{
+\begin{figure}[h]
+  \centering
+  
+  \subfigure[Resolved 0lep]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_distRNN_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_#2}
+  }
+  \subfigure[Merged LP 0lep]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_distRNN_DSRVBSLP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_#2}
+  }
+  \subfigure[Merged HP 0lep]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_#2}
+  }
+
+  \subfigure[Resolved 1lep]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_distRNN_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_#2}
+  }
+  \subfigure[Merged LP 1lep]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_distRNN_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_#2}
+  }
+  \subfigure[Merged HP 1lep]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_#2}
+  }
+  
+    \subfigure[Resolved 2lep]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_distRNN_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_#2}
+  }
+  \subfigure[Merged LP 2lep]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_distRNN_DSRVBSLP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_#2}
+  }
+  \subfigure[Merged HP 2lep]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_distRNN_DSRVBSHP_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_#2}
+  }
+
+  \caption{#3}
+  \label{fig:#4}
+\end{figure}
+}
+
+\newcommand{\plotCRs}[4]{
+\begin{figure}[h]
+  \centering
+  
+  \subfigure[Resolved 0lep Vjet]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L0_incJet1_#2}
+  }
+  \subfigure[Merged 0lep Vjet]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L0_T0_incFat1_Y6051_incTag1_Fat1_#2}
+  }
+  \subfigure[Resolved 1lep Top]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_disttagMjj_DCRTopTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_#2}
+  }
+
+  \subfigure[Resolved 1lep Vjet]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_#2}
+  }
+  \subfigure[Merged 1lep Vjet]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_#2}
+  }
+  \subfigure[Merged LP 1lep Top]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_disttagMjj_DCRTopLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_#2}
+  }
+
+  
+  \subfigure[Resolved 2lep Vjet]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L2_incJet1_#2}
+  }
+  \subfigure[Merged 2lep Vjet]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L2_T0_incFat1_Y6051_incTag1_Fat1_#2}
+  }
+  \subfigure[Merged HP 1lep Top]{
+    \includegraphics[width=#1\linewidth]{\fitplotlocation/Region_disttagMjj_DCRTopHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_#2}
+  }
+  
+  \caption{#3}
+  \label{fig:#4}
+\end{figure}
+}
+
+
+%\clearpage
+\subsubsection{Prefit plots}
+
+Figures \ref{fig:fit_0lep_prefit}-\ref{fig:fit_1lep_prefit}-\ref{fig:fit_2lep_prefit} in the previous sections dedicated to the single channels fits
+show the pre-fit distributions for the 9 SRs of the analysis;
+
+%Figure \ref{fig:labelPrefitSR} shows the pre-fit distributions for the 9 SRs of the analysis;
+in particular, the most left bins of distributions are showing observed data according to the unblinding strategy
+we defined and discussed in section \ref{sec:fit_unbliding_str}.
+
+All the bins with data already available are showing a good data to MC agreement; 
+in particular, for all the SR the data fluctuation around the global data/MC ratio
+normalization are contained inside the width of the systematic bands, 
+meaning that we can rely on a good shape description in the left-side of our distributions.
+ 
+For completeness, we show all the pre-fit plots in the same place in Appendix \ref{app:fit_prefit}.
+
+\newcommand{\fitplotlocation}{./figures/StatisticalInterpretation/prefit/}
+%\plotSRs{0.31}{Prefit}{captionPreSR}{labelPrefitSR}
+%\plotCRs{0.31}{Prefit}{captionPreCR}{labelPrefitCR}
+
+\clearpage
+\subsubsection{Prefit tables}
+
+Tables 
+\ref{fig:fit_0lep_prefit_yields}-
+\ref{tab:1lepPrefitYield_SR}-\ref{tab:1lepPrefitYield_CR}
+\ref{tab:2lepPrefitYield}
+placed in the previous sections show the expected pre-fit yields for background and signal MC processes.
+
+For completness, we show all the tables in one place in Appendix \ref{app:fit_prefit}.
+
+%\input{\fitplotlocation/../tables/prefit/Yields_Prefit.tex}
+
+
+
+
+%\clearpage
+%\subsubsection{Single lepton fit plots}
+
+%\renewcommand{\fitplotlocation}{./figures/StatisticalInterpretation/singlelepfit/}
+%\plotSRs{0.31}{GlobalFit_conditionnal_mu1}{captionSingleFitSR}{labelSingleFitSR}
+%\plotCRs{0.31}{GlobalFit_conditionnal_mu1}{captionSingleFitCR}{labelSingleFitCR}
+
+%\clearpage
+%\subsubsection{Combine fit plots}
+
+%\renewcommand{\fitplotlocation}{./figures/StatisticalInterpretation/combinedfit/}
+%\plotSRs{0.31}{GlobalFit_conditionnal_mu1}{captionCombineSR}{labelCombinefitSR}
+%\plotCRs{0.31}{GlobalFit_conditionnal_mu1}{captionCombineCR}{labelCombinefitCR}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Extrapolation uncertainties}
+\label{sec:fit_extrap_unc}
+
+In addition to the usual uncertainties exploited already in the single channel fits, 
+we add an extrapolation uncertainty in the combined fit to take into account differences
+in the background compositions coming from the different lepton channels.
+
+In particular, we derived some double ratio of the nominal/alternative samples 
+across the different lepton channels
+for the main background processes; results are summarized 
+in Table \ref{tab:extrapolationNorm:W} for \Wjets process,
+in Table \ref{tab:extrapolationNorm:Z} for \Zjets process,
+in Table \ref{tab:extrapolationNorm:ttbar} for diboson process,
+in Table \ref{tab:extrapolationNorm:VV} for ttbar process.
+Those extrapolation uncertainties are treated as uncorrelated in the combined fit.
+
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|r|r|} \hline
+    Channel                         & \Zjets              &  Resolved &    Merged \\    \hline
+    \multirow{3}{*}{0 lepton}       & Default             &  10859.56 &   3417.01 \\
+             &                        Alternative         &  13316.75 &   4287.80 \\
+             &                        Ratio               &      0.82 &      0.80 \\    \hline
+    \multirow{3}{*}{1 lepton}       & Default             &   2090.52 &    586.66 \\
+             &                        Alternative         &   1068.77 &    307.87 \\
+             &                        Ratio               &      1.96 &      1.91 \\    \hline
+    \multirow{3}{*}{2 lepton}       & Default             &  31415.56 &   4240.50 \\
+             &                        Alternative         &  27207.20 &   4075.08 \\
+             &                        Ratio               &      1.15 &      1.04 \\    \hline
+    \multirow{2}{*}{Extrap. Uncert.}& 2L $\rightarrow$ 0L &    29.4\% &    23.4\% \\    
+                                    & 2L $\rightarrow$ 1L &    41.0\% &    45.4\% \\    \hline
+  \end{tabular}
+  \caption{Extrapolation uncertainty for \Zjets. This is calculated from the double ratio between the channel with the largest yield and another channel. The uncertainty (U) is obtained from this double ratio (R) by: $U=|R-1|$ and applied to the other (smaller-yield) channel (see arrow).}
+  \label{tab:extrapolationNorm:Z}
+\end{table}
+
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|r|r|} \hline
+    Channel                         & \Wjets              &  Resolved &    Merged \\    \hline
+    \multirow{3}{*}{0 lepton}       & Default             &   8756.32 &   2901.51 \\
+             &                        Alternative         &  10777.64 &   3765.38 \\
+             &                        Ratio               &      0.81 &      0.77 \\    \hline
+    \multirow{3}{*}{1 lepton}       & Default             &  60551.72 &  16436.99 \\
+             &                        Alternative         &  67537.09 &  18626.09 \\
+             &                        Ratio               &      0.90 &      0.88 \\    \hline
+    \multirow{1}{*}{Extrap. Uncert.}& 1L $\rightarrow$ 0L &     9.4\% &    12.7\% \\    
+    \hline
+  \end{tabular}
+  \caption{Extrapolation uncertainty for \Wjets. This is calculated from the double ratio between the channel with the largest yield and another channel. The uncertainty (U) is obtained from this double ratio (R) by: $U=|R-1|$ and applied to the other (smaller-yield) channel (see arrow).}
+  \label{tab:extrapolationNorm:W}
+\end{table}
+
+
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|r|r|} \hline
+    Channel                         & \Zjets                  &  Resolved &    Merged \\    \hline
+    \multirow{3}{*}{0 lepton}       & Default                 &   1283.59 &   3542.61 \\
+             &                        Alternative             &    941.03 &   2741.96 \\
+             &                        Ratio                   &      1.36 &      1.29 \\    \hline
+    \multirow{5}{*}{1 lepton}       & Default                 &   7330.60 &  18484.90 \\
+             &                        Alternative (1)         &   3835.13 &  15332.78 \\
+             &                        Alternative (2)         &  12029.01 &  20344.44 \\
+             &                        Ratio (1)               &      1.91 &      1.21 \\   
+             &                        Ratio (2)               &      0.61 &      0.91 \\    \hline
+    \multirow{3}{*}{Extrap. Uncert.}& 1L $\rightarrow$ 0L (1) &    40.1\% &     6.7\% \\    
+                                    & 1L $\rightarrow$ 0L (2) &    44.7\% &    29.7\% \\    
+                                    & 1L $\rightarrow$ 0L (*) &    60.1\% &    30.4\% \\    \hline
+  \end{tabular}
+  \caption{Extrapolation uncertainty for $t\bar t$. This is calculated from the double ratio between the channel with the largest yield and another channel. The uncertainty (U) is obtained from this double ratio (R) by: $U=|R-1|$ and applied to the other (smaller-yield) channel (see arrow). In (1), the $t\bar t$ sample used an alternative parton shower and in (2) used an alternative hard scattering process. In (*), we used the square sum of (1) and (2) for the final extrapolation uncertainty.  }
+  \label{tab:extrapolationNorm:ttbar}
+\end{table}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|r|r|} \hline
+    Channel                         & Diboson             & Resolved & Merged \\    \hline
+    \multirow{3}{*}{0 lepton}       & Default             &  586.01 &  482.19 \\
+             &                        Alternative         &  511.80 &  306.96 \\
+             &                        Ratio               &    1.15 &    1.57 \\    \hline
+    \multirow{3}{*}{1 lepton}       & Default             & 1781.12 & 1373.85 \\
+             &                        Alternative         & 1402.55 &  740.02 \\
+             &                        Ratio               &    1.27 &    1.86 \\    \hline
+    \multirow{3}{*}{2 lepton}       & Default             &  599.57 &  256.34 \\
+             &                        Alternative         &  437.81 &  130.20 \\
+             &                        Ratio               &    1.37 &    1.97 \\    \hline
+    \multirow{2}{*}{Extrap. Uncert.}& 1L $\rightarrow$ 0L &   7.8\% &   6.1\% \\    
+                                    & 1L $\rightarrow$ 2L &   9.8\% &  15.2\% \\    \hline
+  \end{tabular}
+  \caption{Extrapolation uncertainty for diboson. This is calculated from the double ratio between the channel with the largest yield and another channel. The uncertainty (U) is obtained from this double ratio (R) by: $U=|R-1|$ and applied to the other (smaller-yield) channel (see arrow).}
+  \label{tab:extrapolationNorm:VV}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\clearpage
+\subsubsection{Asimov fit results}
+A fit using the full range of the final discriminant in the SRs is performed combining all the lepton channels
+and using Asimov data.
+
+Figures \ref{fig:fit_step0_conditional}-\ref{fig:fit_step0_unconditional}
+show the pulls and constraints for the NPs for a conditional and for an unconditional fit respectively.
+
+In general, unconditional fit reports less constraints on some of the NPs.
+
+%%%
+\begin{figure}[ht]
+      \centering
+       \subfigure[]{\includegraphics[width=0.9\textwidth]{figures/StatisticalInterpretation/full/AsimovFit_conditionnal_mu1/NP_allExceptGammas.pdf}}
+       \caption{Fit cross-check, conditional fit ($\mu=1$) to asimov data.}
+       \label{fig:fit_step0_conditional}
+\end{figure}
+
+%%%
+\begin{figure}[ht]
+      \centering
+       \subfigure[]{\includegraphics[width=0.9\textwidth]{figures/StatisticalInterpretation/full/AsimovFit_unconditionnal_mu1/NP_allExceptGammas.pdf}}
+       \caption{Fit cross-check, unconditional fit to asimov data.}
+       \label{fig:fit_step0_unconditional}
+\end{figure}
+
+In particular, we find a set of parameters that are constrained; 
+they have been already found in the single channels fits as well, 
+therefore we already have knowledge
+of the source of them, as discussed in the relative sections, 
+\ref{sec:fit_0lep}-
+\ref{sec:fit_1lep}-
+\ref{sec:fit_2lep};
+we also rely on the explanation of the most relevant parameters in those sections.
+
+\iffalse
+The following nuisance parameters is constrained and are investigated a further.
+\begin{itemize}
+\item TheoryFSR\_Top 
+\item TheoryISR\_ttbar 
+\item TheoryQCD\_W 
+\item TheoryQCD\_Z 
+\item MJJREWEIGHT\_100per 
+\item Jet\_Flavor\_Composition 
+\item Jet\_Flavor\_Response 
+\item Jet\_Pileup\_OffsetMu 
+\item Jet\_Pileup\_OffsetNPV 
+\item Jet\_Pileup\_RhoTopology 
+\item FATJET\_BJT\_JET\_JetTagSF\_Gammajet\_Modelling 
+\item FATJET\_BJT\_JET\_JetTagSF\_Hadronization 
+\item MODEL\_VV\_PwPy 
+\item MODEL\_W\_MGPy8  
+\item MODEL\_Z\_MGPy8  
+\item MODEL\_ttbar\_PwHwg7 
+\item MODEL\_ttbar\_noShWe 
+\item NormT1Lto0LMerged 
+\item NormT1Lto0LResolved 
+\item NormVVMerged 
+\item NormZ2Lto0LMerged 
+\item NormZ2Lto0LResolved 
+\item PRW\_DATASF 
+\item QG\_exp 
+\item QG\_trackeff 
+\end{itemize}
+
+\fi
+
+For a full debugging procedure, we provide debugging plots for each of them in Appendix \ref{app:FCCs};
+for completeness, a list of them is reported in Table \ref{tab:NPsumary} that provided links to the related plot
+for each of the NPs investigated.
+
+\begin{table}[ht]
+  \centering
+  
+\resizebox{0.99\textwidth}{!}{
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    NP name & Ratio SR & Ratio CR & ttbar & Z & W & VV & stop & VBS \\
+    \hline
+    TheoryFSR\_Top             & \ref{fig:SysTheoryFSR_Top:ratio}     &  \ref{fig:SysTheoryFSR_Top:ratio} & \ref{fig:SysTheoryFSR_Top:ttbar} & & & & & \\  \hline
+    TheoryISR\_ttbar           & \ref{fig:SysTheoryISR_ttbar:ratio}   & \ref{fig:SysTheoryISR_ttbar:ratio}  & \ref{fig:SysTheoryISR_ttbar:ttbar} & & & & & \\  \hline
+    TheoryQCD\_W               & \ref{fig:SysTheoryQCD_W:ratio}       & \ref{fig:SysTheoryQCD_W:ratio}      & & \ref{fig:SysTheoryQCD_W:W} & & & & \\  \hline
+    TheoryQCD\_Z               & \ref{fig:SysTheoryQCD_Z:ratio}       & \ref{fig:SysTheoryQCD_Z:ratio}      & & & \ref{fig:SysTheoryQCD_Z:Z} & & & \\  \hline
+    MJJREWEIGHT\_100per\_L0\_M & \ref{fig:SysMJJREWEIGHT_100per_L0_M} & \ref{fig:SysMJJREWEIGHT_100per_L0_M} & \ref{fig:SysMJJREWEIGHT_100per_L0_M} & \ref{fig:SysMJJREWEIGHT_100per_L0_M} & & & & \\  \hline
+    MJJREWEIGHT\_100per\_L0\_R & \ref{fig:SysMJJREWEIGHT_100per_L0_R} & \ref{fig:SysMJJREWEIGHT_100per_L0_R} & \ref{fig:SysMJJREWEIGHT_100per_L0_R} & \ref{fig:SysMJJREWEIGHT_100per_L0_R} & & & & \\  \hline
+    MJJREWEIGHT\_100per\_L1\_M & \ref{fig:SysMJJREWEIGHT_100per_L1_M} & \ref{fig:SysMJJREWEIGHT_100per_L1_M} & \ref{fig:SysMJJREWEIGHT_100per_L1_M} & \ref{fig:SysMJJREWEIGHT_100per_L1_M} & & & & \\  \hline
+    MJJREWEIGHT\_100per\_L1\_R & \ref{fig:SysMJJREWEIGHT_100per_L1_R} & \ref{fig:SysMJJREWEIGHT_100per_L1_R} & \ref{fig:SysMJJREWEIGHT_100per_L1_R} & \ref{fig:SysMJJREWEIGHT_100per_L1_R} & & & & \\  \hline
+    MJJREWEIGHT\_100per\_L2\_M & \ref{fig:SysMJJREWEIGHT_100per_L2_M} & \ref{fig:SysMJJREWEIGHT_100per_L2_M} & \ref{fig:SysMJJREWEIGHT_100per_L2_M} & \ref{fig:SysMJJREWEIGHT_100per_L2_M} & & & & \\  \hline
+    MJJREWEIGHT\_100per\_L2\_R & \ref{fig:SysMJJREWEIGHT_100per_L2_R} & \ref{fig:SysMJJREWEIGHT_100per_L2_R} & \ref{fig:SysMJJREWEIGHT_100per_L2_R} & \ref{fig:SysMJJREWEIGHT_100per_L2_R} & & & & \\  \hline
+    MODEL\_W\_MGPy8            & \ref{fig:SysMODEL_W_MGPy8:ratio}     & & \ref{fig:SysMODEL_W_MGPy8:W} & & & & & \\  \hline
+    MODEL\_Z\_MGPy8            & \ref{fig:SysMODEL_Z_MGPy8:ratio}     & \ref{fig:SysMODEL_Z_MGPy8:Z} & & & & & & \\  \hline
+    MODEL\_ttbar\_PwHwg7       & \ref{fig:SysMODEL_ttbar_PwHwg7:SR:ratio} & \ref{fig:SysMODEL_ttbar_PwHwg7:SR:ttbar} & & & & & & \\  \hline
+    MODEL\_ttbar\_PwHwg7       & \ref{fig:SysMODEL_ttbar_PwHwg7:CR:ratio} & \ref{fig:SysMODEL_ttbar_PwHwg7:CR:ttbar} & & & & & & \\  \hline
+    MODEL\_VV\_PwPy            & \ref{fig:SysMODEL_VV_PwPy:SR}        & \ref{fig:SysMODEL_VV_PwPy:CR} & & & \ref{fig:SysMODEL_VV_PwPy:SR} / \ref{fig:SysMODEL_VV_PwPy:CR} & & &  \\  \hline
+    MODEL\_ttbar\_noShWe       & \ref{fig:SysMODEL_ttbar_noShWe:ratio} & & \ref{fig:SysMODEL_ttbar_noShWe:ttbar} & & & & & \\  \hline
+    NormVVMerged               & \ref{fig:SysNormVVMerged}            & & & & & & & \\  \hline
+    NormT1Lto0LMerged          & \ref{fig:SysNormT1Lto0LMerged}       & & & & & & & \\  \hline
+    NormT1Lto0LResolved        & \ref{fig:SysNormT1Lto0LResolved}     & & & & & & & \\  \hline
+    NormZ2Lto0LMerged          & \ref{fig:SysNormZ2Lto0LMerged}       & & & & & & & \\  \hline
+    NormZ2Lto0LResolved        & \ref{fig:SysNormZ2Lto0LResolved}     & & & & & & & \\  \hline
+    PRW\_DATASF                & \ref{fig:SysPRW_DATASF:SR:ratio}     & \ref{fig:SysPRW_DATASF:CR:ratio} & \ref{fig:SysPRW_DATASF:tt} & \ref{fig:SysPRW_DATASF:Z} & \ref{fig:SysPRW_DATASF:W} & \ref{fig:SysPRW_DATASF:VV} & \ref{fig:SysPRW_DATASF:stop} & \ref{fig:SysPRW_DATASF:VBS} \\  \hline
+    QG\_exp                    & \ref{fig:SysQG_exp:SR:ratio}         & & \ref{fig:SysQG_exp:ttbar} & \ref{fig:SysQG_exp:Z} & \ref{fig:SysQG_exp:W} & & \ref{fig:SysQG_exp:stop} & \ref{fig:SysQG_exp:VBS} \\  \hline
+    QG\_trackeff               & \ref{fig:SysQG_trackeff:ratio}       & & \ref{fig:SysQG_trackeff:ttbar} & \ref{fig:SysQG_trackeff:Z} & \ref{fig:SysQG_trackeff:W} & \ref{fig:SysQG_trackeff:VV} & \ref{fig:SysQG_trackeff:stop} & \ref{fig:SysQG_trackeff:VBS} \\  \hline
+    JET\_Flavor\_Composition   &\ref{fig:SysJET_Flavor_Composition:SR:ratio} & \ref{fig:SysJET_Flavor_Composition:CR:ratio} & \ref{fig:SysJET_Flavor_Composition:ttbar} & \ref{fig:SysJET_Flavor_Composition:Z} & \ref{fig:SysJET_Flavor_Composition:W_VBS}  & & \ref{fig:SysJET_Flavor_Composition:stop} & \ref{fig:SysJET_Flavor_Composition:W_VBS} \\  \hline
+    JET\_Flavor\_Response      &\ref{fig:SysJET_Flavor_Response:SR:ratio}    & \ref{fig:SysJET_Flavor_Response:CR:ratio} & \ref{fig:SysJET_Flavor_Response:ttbar} & \ref{fig:SysJET_Flavor_Response:Z} & & \ref{fig:SysJET_Flavor_Response:VV} & \ref{fig:SysJET_Flavor_Response:stop} & \ref{fig:SysJET_Flavor_Response:VBS} \\  \hline
+    JET\_Pileup\_OffsetMu      &\ref{fig:SysJET_Pileup_OffsetMu:SR:ratio}    & \ref{fig:SysJET_Pileup_OffsetMu:CR:ratio} & \ref{fig:SysJET_Pileup_OffsetMu:ttbar} & \ref{fig:SysJET_Pileup_OffsetMu:Z} &  \ref{fig:SysJET_Pileup_OffsetMu:W} & \ref{fig:SysJET_Pileup_OffsetMu:VV}  & \ref{fig:SysJET_Pileup_OffsetMu:stop}  & \ref{fig:SysJET_Pileup_OffsetMu:VBS} \\  \hline
+    JET\_Pileup\_OffsetNPV     &\ref{fig:SysJET_Pileup_OffsetNPV:SR:ratio}   & \ref{fig:SysJET_Pileup_OffsetNPV:CR:ratio} & \ref{fig:SysJET_Pileup_OffsetNPV:ttbar} & \ref{fig:SysJET_Pileup_OffsetNPV:Z} & \ref{fig:SysJET_Pileup_OffsetNPV:W} & \ref{fig:SysJET_Pileup_OffsetNPV:VV} & \ref{fig:SysJET_Pileup_OffsetNPV:VBSstop}  & \ref{fig:SysJET_Pileup_OffsetNPV:VBSstop} \\  \hline
+    JET\_Pileup\_RhoTopology   &\ref{fig:SysJET_Pileup_RhoTopology:SR:ratio} & \ref{fig:SysJET_Pileup_RhoTopology:CR:ratio} & \ref{fig:SysJET_Pileup_RhoTopology:ttbar}  & \ref{fig:SysJET_Pileup_RhoTopology:Z} & \ref{fig:SysJET_Pileup_RhoTopology:W} & \ref{fig:SysJET_Pileup_RhoTopology:VV} & \ref{fig:SysJET_Pileup_RhoTopology:stop} & \ref{fig:SysJET_Pileup_RhoTopology:} \\  \hline
+
+    FATJET\_BJT\_JET\_JetTagSF\_Hadronisation &  \ref{fig:SysFATJET_BJT_JET_JetTagSF_Hadronisation:SRCR:ratio} & & \ref{fig:SysFATJET_BJT_JET_JetTagSF_Hadronisation:ttbar} & & & \ref{fig:SysFATJET_BJT_JET_JetTagSF_Hadronisation:VV} & \ref{fig:SysFATJET_BJT_JET_JetTagSF_Hadronisation:stop} & \ref{fig:SysFATJET_BJT_JET_JetTagSF_Hadronisation:VBS} \\  \hline
+    FATJET\_BJT\_JET\_JetTagSF\_Gammajet\_Modelling & \ref{fig:SysFATJET_BJT_JET_JetTagSF_Gammajet_Modelling:SRCR:ratio} & \ref{fig:SysFATJET_BJT_JET_JetTagSF_Gammajet_Modelling:SRCR:ratio} & & \ref{fig:SysFATJET_BJT_JET_JetTagSF_Gammajet_Modelling:rest}  & \ref{fig:SysFATJET_BJT_JET_JetTagSF_Gammajet_Modelling:rest} & \ref{fig:SysFATJET_BJT_JET_JetTagSF_Gammajet_Modelling:rest} & \ref{fig:SysFATJET_BJT_JET_JetTagSF_Gammajet_Modelling:rest} & \\  \hline
+    
+\end{tabular}
+}
+  \caption{Summary of the figures showing the fit cross checks. [CLICK ME]}
+  \label{tab:NPsumary}
+\end{table}
+
+\clearpage
+%\subsubsection{Asimov fit high correlations and rankings}
+
+Figures \ref{fig:fit:corrStep0} show the correlation matrix for 
+conditional and unconditional asimov fit.
+
+Figures \ref{fig:fit:rankSingleStep0}-\ref{fig:fit:rankCombineStep0}
+show the ranking plots for the single channels fits as well as for the combined fit.
+
+\begin{figure}[h]
+  \centering
+  \subfigure[Conditional Asimov $\mu=1$]{\includegraphics[width=0.9\textwidth]{figures/StatisticalInterpretation/full/AsimovFit_conditionnal_mu1/corr_HighCorrNoMCStat.pdf}}
+  \subfigure[Unconditional Asimov]{\includegraphics[width=0.9\textwidth]{figures/StatisticalInterpretation/full/AsimovFit_unconditionnal_mu1/corr_HighCorrNoMCStat.pdf}}
+  \caption{Correlations Asimov fits full SR range}
+  \label{fig:fit:corrStep0}
+\end{figure}
+
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=0.6\textwidth]{figures/StatisticalInterpretation/blindingStrategy/BlindingStep0/Muhat_VBS_channels_Asimov_fullrange.pdf}
+%   \caption{Signal strength parameter from single lepton and combine Asimov fit.}
+%   \label{fig:fit:sigStrenghtCombineStep0}
+% \end{figure}
+
+\begin{figure}[h]
+  \centering
+  \subfigure[Prefit 0L]{\includegraphics[width=0.3\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_prefit_0lep}}
+  \subfigure[Prefit 1L]{\includegraphics[width=0.3\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_prefit_1lep}}
+  \subfigure[Prefit 2L]{\includegraphics[width=0.3\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_prefit_2lep}}
+  \subfigure[Postfit 0L]{\includegraphics[width=0.3\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_postfit_0lep}}
+  \subfigure[Postfit 1L]{\includegraphics[width=0.3\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_postfit_1lep}}
+  \subfigure[Postfit 2L]{\includegraphics[width=0.3\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_postfit_2lep}}
+  \caption{Ranking of nuisance parameters prefit-sorted (top) and postfit-sorted (bottom) for the single lepton Asimov fit.}
+  \label{fig:fit:rankSingleStep0}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \subfigure[Prefit combined]{\includegraphics[width=0.49\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_prefit_3lep}}
+  \subfigure[Postfit combined]{\includegraphics[width=0.49\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_postfit_3lep}}
+  \caption{Ranking of nuisance parameters prefit-sorted and postfit-sorted for the combine Asimov fit. The values for the postfit impact on $\mu$ can be found on table~\ref{tab:rankingPlotValues}. }
+  \label{fig:fit:rankCombineStep0}
+\end{figure}
+
+As shown in Figure \ref{fig:fit:rankCombineStep0} and Table \ref{tab:rankingPlotValues},
+the most leading uncertainties impacting on the fitted $\mu$ are
+the Theory QCD on the signal, the re-weighting in the \tlep channel 
+and the modeling uncertainty of the \Zjets background in the \tlep channel.
+
+\clearpage
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+
+\hline
+Rank & $\mu - -$ & $\mu ++$ & Syst name \\ \hline
+1 & 0.120296 & 0.12635 & Theory QCD VBS \\
+2 & 0.053909 & 0.05518 & m\_{jj} reweight L2 Resolved \\ 
+3 & 0.041131 & 0.04147 & Modelling Z MadGraph+Pythia8 L2 \\
+4 & 0.033355 & 0.03777 &  Modelling VV Powheg+Pythia \\ 
+5 & 0.031799 & 0.03223 & Modelling $t\bar{t}$ Powheg+Herwig7 L1 \\
+6 & 0.023146 & 0.0241 & Modelling W MadGraph+Pythia8 L1 \\ 
+7 & 0.017355 & 0.02611 & Jet JERMC EffNP 4 \\
+8 & 0.022311 & 0.02065 & $t\bar{t}$ norm. Resolved \\
+9 & 0.018933 & 0.02245 & m\_{jj} reweight L0 Resolved \\ 
+10 & 0.020405 & 0.01802 & Modelling $t\bar{t}$ aMCAtNlo+Pythia \\
+11 & 0.015695 & 0.02233 & Jet pileup OffsetMu \\
+12 & 0.019554 & 0.01781 & V-tagging matrix element \\
+13 & 0.018227 & 0.01812 & Luminosity \\
+14 & 0.017913 & 0.01668 & Jet flavour response merged \\
+15 & 0.025675 & 0.00888 & Quark gluon experimental \\
+\hline
+% 16 & 0.01679 & 0.01694 & alpha\_SysTheoryPDF\_NNPDF\_VBS \\
+% 17 & 0.01361 & 0.01975 & alpha\_SysJET\_JERMC\_EffectiveNP\_5 \\
+% 18 & 0.016713 & 0.01633 & alpha\_SysMJJREWEIGHT\_100per\_L1\_J2 \\
+% 19 & 0.013151 & 0.01789 & alpha\_SysTheoryQCD\_W \\
+% 20 & 0.013175 & 0.01786 & alpha\_SysTheoryQCD\_Z \\
+% 21 & 0.014488 & 0.01472 & alpha\_SysNormVVResolved \\
+% 22 & 0.009603 & 0.01574 & ATLAS\_norm\_WjetsResolved \\
+% 23 & 0.011639 & 0.01355 & alpha\_SysNormVVMerged \\
+% 24 & 0.012966 & 0.01183 & alpha\_SysMODEL\_W\_MGPy8\_L0 \\
+% 25 & 0.012184 & 0.01168 & alpha\_NormStop \\
+% 26 & 0.011666 & 0.01196 & alpha\_SysTheoryPDF\_NNPDF\_W \\
+% 27 & 0.010892 & 0.01112 & alpha\_SysNormT1Lto0LMerged \\
+% 28 & 0.01033 & 0.00986 & alpha\_SysMODEL\_Z\_MGPy8\_L0 \\
+% 29 & 0.009571 & 0.00956 & alpha\_SysMODEL\_ttbar\_PwHwg7\_L0 \\
+% 30 & 0.001808 & 0.01728 & alpha\_SysJET\_Flavor\_Composition \\
+% 31 & 0.00454 & 0.01432 & alpha\_SysJET\_Flavor\_Response\_J2 \\
+% 32 & 0.01289 & 0.00594 & alpha\_SysJET\_Pileup\_RhoTopology \\
+% 33 & 0.012913 & 0.00262 & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff50\_TagEffUnc\_GlobalSignal \\
+% 34 & 0.00997 & 0.00529 & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff80\_TagEffUnc\_GlobalOther \\
+% 35 & 0.007374 & 0.00639 & alpha\_SysQG\_fake \\
+% 36 & 0.005225 & 0.00831 & alpha\_SysNormZ2Lto0LResolved \\
+% 37 & 0.006863 & 0.00657 & alpha\_SysTheoryISR\_ttbar \\
+% 38 & 0.007693 & 0.00564 & ATLAS\_norm\_WjetsMerged \\
+% 39 & 0.007366 & 0.00596 & alpha\_SysFT\_EFF\_Eigen\_B\_0 \\
+% 40 & 0.006827 & 0.006015 & alpha\_SysJET\_EffectiveNP\_Modelling1 \\
+% 41 & 0.006121 & 0.00565 & alpha\_SysFATJET\_JER \\
+% 42 & 0.001331 & 0.01039 & alpha\_SysJET\_EtaIntercalibration\_Modelling \\
+% 43 & 0.003938 & 0.007602 & alpha\_SysJET\_JERMC\_EffectiveNP\_7 \\
+% 44 & 0.007654 & 0.00363 & alpha\_SysJET\_Pileup\_OffsetNPV \\
+% 45 & 0.009852 & 0.00142 & alpha\_SysTheoryFSR\_Top \\
+% 46 & 0.00897 & 0.00198 & ATLAS\_norm\_ZjetsResolved \\
+% 47 & 0.005931 & 0.00497 & alpha\_SysMJJREWEIGHT\_100per\_L0\_Fat1 \\
+% 48 & 0.005551 & 0.00518 & alpha\_SysFATJET\_CR\_JET\_LargeR\_TopologyUncertainty\_top \\
+% 49 & 0.005064 & 0.00421 & ATLAS\_norm\_ttbarMerged \\
+% 50 & 0.006409 & 0.00252 & alpha\_SysQG\_trackeff \\
+% 51 & 0.005484 & 0.00341 & alpha\_SysNormZ2Lto0LMerged \\
+% 52 & 0.001004 & 0.007831 & alpha\_SysFATJET\_BJT\_JET\_JetTagSF\_Hadronisation \\
+% 53 & 0.00462 & 0.004 & alpha\_SysTheoryISR\_stop \\
+% 54 & 0.001825 & 0.00676 & alpha\_SysPRW\_DATASF \\
+% 55 & 0.004636 & 0.00387 & alpha\_SysJET\_Pileup\_PtTerm \\
+% 56 & 0.00031 & 0.00782 & alpha\_SysJET\_JERMC\_EffectiveNP\_2 \\
+% 57 & 0.003926 & 0.00381 & alpha\_SysFATJET\_BJT\_JET\_EffectiveNP\_R10\_Modelling1 \\
+% 58 & 0.004358 & 0.00273 & alpha\_SysTheoryQCD\_VV \\
+% 59 & 0.003866 & 0.0028 & alpha\_SysMET\_JetTrk\_Scale \\
+% 60 & 0.003604 & 0.00302 & alpha\_SysTheoryPDF\_Z \\
+% 61 & 0.002453 & 0.00358 & alpha\_SysMJJREWEIGHT\_100per\_L1\_Fat1 \\
+% 62 & 0.000474 & 0.00552 & alpha\_SysJET\_JERMC\_EffectiveNP\_3 \\
+% 63 & 0.002855 & 0.00291 & alpha\_SysTheoryPDF\_NNPDF\_VV \\
+% 64 & 0.00309 & 0.00245 & alpha\_SysTheoryPDF\_NNPDF\_Z \\
+% 65 & 0.000585 & 0.00478 & alpha\_SysJET\_EtaIntercalibration\_TotalStat \\
+% 66 & 0.001749 & 0.00304 & alpha\_SysJET\_BJES\_Response \\
+% 67 & 0.003674 & 0.00109 & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff80\_SigSF\_Statistics \\
+% 68 & 0.00383 & 0.00083 & alpha\_SysJET\_JERMC\_EffectiveNP\_8 \\
+% 69 & 0.002713 & 0.0019 & alpha\_SysTheoryPDF\_W \\
+% 70 & 0.00255 & 0.00204 & alpha\_SysJET\_JERMC\_EffectiveNP\_10 \\
+% 71 & 0.003174 & 0.00134 & alpha\_SysJET\_JERMC\_EffectiveNP\_11 \\
+% 72 & 0.00021 & 0.00392 & alpha\_SysNormT1Lto0LResolved \\
+% 73 & 0.00144 & 0.00257 & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff80\_TagEffUnc\_GlobalBackground \\
+% 74 & 0.002303 & 0.00166 & alpha\_SysNormZ2Lto1LMerged \\
+% 75 & 0.002382 & 0.00148 & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff50\_SigSF\_Statistics \\
+% 76 & 0.002259 & 0.00152 & alpha\_SysNormW1Lto0LResolved \\
+% 77 & 0.002482 & 0.0011 & alpha\_SysFATJET\_BJT\_JET\_Flavor\_Response \\
+% 78 & 0.0023 & 0.00127 & alpha\_SysEL\_EFF\_ID\_TOTAL\_1NPCOR\_PLUS\_UNCOR \\
+% 79 & 0.00227 & 0.00124 & alpha\_SysNormZ2Lto1LResolved \\
+% 80 & 0.001629 & 0.00172 & alpha\_SysNormW1Lto0LMerged \\
+% 81 & 0.002103 & 0.00097 & alpha\_SysJET\_JERMC\_EffectiveNP\_9 \\
+% 82 & 0.001601 & 0.00141 & alpha\_SysTheoryPDF\_NNPDF\_stop \\
+% 83 & 0.001874 & 0.00101 & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff80\_SigSF\_Propagated\_AllOthers \\
+% 84 & 0.001596 & 0.00127 & alpha\_SysMODEL\_ttbar\_PwHwg7\_L2 \\
+% 85 & 0.001559 & 0.00129 & alpha\_SysTheoryQCD\_stop \\
+% 86 & 0.001749 & 0.00092 & alpha\_SysFATJET\_BJT\_JET\_JetTagSF\_Dijet\_Modelling \\
+% 87 & 0.001465 & 0.00119 & alpha\_SysNormVV1Lto0LMerged \\
+% 88 & 0.001408 & 0.00107 & alpha\_SysJET\_JERMC\_EffectiveNP\_6 \\
+% 89 & 0.001495 & 0.00085 & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff80\_SigSF\_BinVariation \\
+% 90 & 0.001667 & 0.00065 & alpha\_SysFATJET\_CR\_JET\_CombMass\_Modelling \\
+% 91 & 0.001698 & 0.00051 & alpha\_SysFT\_EFF\_extrapolation\_from\_charm \\
+% 92 & 0.001458 & 0.00074 & alpha\_SysNormVV1Lto0LResolved \\
+% 93 & 0.0003 & 0.00181 & ATLAS\_norm\_ZjetsMerged \\
+% 94 & 0.001376 & 0.00065 & alpha\_SysNormVV1Lto2LResolved \\
+% 95 & 0.000481 & 0.00142 & alpha\_SysJET\_JvtEfficiency \\
+% 96 & 0.001554 & 0.00019 & alpha\_SysJET\_EffectiveNP\_Mixed1 \\
+% 97 & 0.001223 & 0.00045 & alpha\_SysFATJET\_CR\_JET\_Flavor\_Response \\
+% 98 & 0.001224 & 0.00027 & alpha\_SysFATJET\_BJT\_JET\_JetTagSF\_Radiation \\
+% 99 & 0.000942 & 0.0005 & alpha\_SysFT\_EFF\_Eigen\_Light\_3 \\
+% 100 & 0.000922 & 0.00048 & alpha\_SysFT\_EFF\_Eigen\_C\_3 \\
+% 101 & 0.000917 & 0.00048 & alpha\_SysFT\_EFF\_Eigen\_B\_2 \\
+% 102 & 0.000912 & 0.00047 & alpha\_SysFT\_EFF\_Eigen\_Light\_4 \\
+% 103 & 0.000912 & 0.00047 & alpha\_SysFT\_EFF\_extrapolation \\
+% 104 & 0.000907 & 0.00047 & alpha\_SysFT\_EFF\_Eigen\_Light\_2 \\
+% 105 & 0.000941 & 0.00041 & alpha\_SysFT\_EFF\_Eigen\_C\_1 \\
+% 106 & 0.00092 & 0.00041 & alpha\_SysFT\_EFF\_Eigen\_C\_2 \\
+% 107 & 2.00E-05 & 0.001203 & alpha\_SysFT\_EFF\_Eigen\_B\_1 \\
+% 108 & 6.00E-05 & 0.00111 & alpha\_SysQG\_me \\
+% 109 & 0.000964 & 0.00017 & alpha\_SysFATJET\_CR\_JET\_CombMass\_Baseline \\
+% 110 & 0.000772 & 0.00027 & alpha\_SysFT\_EFF\_Eigen\_Light\_1 \\
+% 111 & 0.00022 & 0.00079 & alpha\_SysQG\_pdf \\
+% 112 & 0.000768 & 0.00016 & alpha\_SysFATJET\_CR\_JET\_EffectiveNP\_R10\_Modelling1 \\
+% 113 & 0.000769 & 0.00014 & alpha\_SysNormVV1Lto2LMerged \\
+% 114 & 0.00016 & 0.00073 & alpha\_SysFATJET\_BJT\_JET\_JetTagSF\_Gammajet\_Modelling \\
+% 115 & 0.00033 & 0.000538 & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff80\_TagEffUnc\_GlobalSignal \\
+% 116 & 4.00E-05 & 0.000825 & alpha\_SysFATJET\_CR\_JET\_CombMass\_Tracking2 \\
+% 117 & 0.000704 & 9.00E-05 & alpha\_SysFATJET\_CR\_JET\_EffectiveNP\_R10\_Modelling2 \\
+% 118 & 2.00E-05 & 0.00076 & alpha\_SysMET\_SoftTrk\_Scale \\
+% 119 & 0.00015 & 0.000559 & alpha\_SysFT\_EFF\_Eigen\_C\_0 \\
+% 120 & 0.000497 & 0.00017 & alpha\_SysFT\_EFF\_Eigen\_Light\_0 \\
+% 121 & 0.000387 & 3.00E-05 & alpha\_SysMJJREWEIGHT\_100per\_L2\_Fat1 \\
+% 122 & 0.00033 & 1.00E-05 & alpha\_SysFATJET\_BJT\_JET\_Flavor\_Composition \\
+% 123 & 0 & 8.00E-05 & alpha\_SysEG\_RESOLUTION\_ALL \\
+% 124 & 0 & 6.00E-05 & alpha\_SysEG\_SCALE\_ALL \\
+% 125 & 2.00E-05 & 1.00E-05 & alpha\_SysJET\_EffectiveNP\_Statistical2 \\
+% 126 & 1.00E-05 & 1.00E-05 & alpha\_SysJET\_EffectiveNP\_Mixed2 \\
+% 127 & 1.00E-05 & 1.00E-05 & alpha\_SysJET\_EffectiveNP\_Modelling3 \\
+% 128 & 1.00E-05 & 1.00E-05 & alpha\_SysMUON\_SAGITTA\_RESBIAS \\
+% 129 & 0 & 0 & alpha\_SysFATJET\_CR\_JET\_CombMass\_Tracking1 \\
+% 130 & 0 & 0 & alpha\_SysFATJET\_CR\_JET\_CombMass\_Tracking3 \\ \hline
+
+  \end{tabular}
+  \caption{[ToBeUpdated] Postfit impact values on $\mu$. Same information as figure~\ref{fig:fit:rankCombineStep0}.}
+  \label{tab:rankingPlotValues}
+\end{table}
+
+
+
+The fJVT uncertainty was missing for v1.0 internal note version; this is now included for final results. 
+The impact has been checked to be negligible as documented in Appendix \ref{app:fjvtfit}.
+
+\clearpage
+\subsubsection{Asimov fit results: left bins only range}
+
+We considered fitting on only the left bins in the SR with asimov data 
+to spot if any effect on the constraints of the NPs before moving to a data fit to those bins.
+
+Figures \ref{fig:fit_step1_conditional}-\ref{fig:fit_step1_unconditional}
+show the pulls and constraints for the NPs for a conditional and for an unconditional fit respectively.
+
+%%%
+\begin{figure}[ht]
+      \centering
+       \subfigure[]{\includegraphics[width=0.9\textwidth]{figures/StatisticalInterpretation/left/AsimovFit_conditionnal_mu1/NP_allExceptGammas.pdf}}
+       \caption{Fit cross-check, conditional fit ($\mu=1$) to asimov data.}
+       \label{fig:fit_step1_conditional}
+\end{figure}
+
+%%%
+\begin{figure}[ht]
+      \centering
+       \subfigure[]{\includegraphics[width=0.9\textwidth]{figures/StatisticalInterpretation/left/AsimovFit_conditionnal_mu1/NP_allExceptGammas.pdf}}
+       \caption{Fit cross-check, unconditional fit to asimov data.}
+       \label{fig:fit_step1_unconditional}
+\end{figure}
+
+Changes to the relevant NPs all with about 1.0 uncertainty.
+\begin{itemize}
+\item SysFATJET\_CR\_JET\_EffectiveNP\_R10\_Modelling3 out
+\item SysMUON\_ID out
+\item SysFATJET\_CR\_JET\_LargeR\_TopologyUncertainty\_V in
+\end{itemize}
+
+Typically when fitting on asimov data without the most signal sensitive bins, the constraints become higher with the exception of the JERMC ones.
+
+
+
+\clearpage
+% \subsubsection{Step.1: fit to Asimov rankings and $\mu$ plots left RNN bins}
+Figure \ref{fig:fit:corrStep1} shows the correlation matrix for 
+conditional and unconditional asimov fit.
+
+Figures \ref{fig:fit:rankSingleStep1}-\ref{fig:fit:rankCombineStep1}
+show the ranking plots 
+for the single channels fits as well as 
+for the combined fit.
+
+\begin{figure}[b]
+  \centering
+  \subfigure[Conditional Asimov $\mu=1$]{\includegraphics[width=0.8\textwidth]{figures/StatisticalInterpretation/left/AsimovFit_conditionnal_mu1/corr_HighCorrNoMCStat}}
+  \subfigure[Unconditional Asimov]{\includegraphics[width=0.8\textwidth]{figures/StatisticalInterpretation/left/AsimovFit_unconditionnal_mu1/corr_HighCorrNoMCStat}}
+  \caption{Correlations Asimov fits full SR range}
+  \label{fig:fit:corrStep1}
+\end{figure}
+
+
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=0.6\textwidth]{figures/StatisticalInterpretation/blindingStrategy/BlindingStep1/Muhat_VBS_channels_Asimov_leftRange.pdf}
+%   \caption{Signal strength parameter from single lepton and combine Asimov fit in the left region.}
+%   \label{fig:fit:sigStrenghtCombineStep1}
+% \end{figure}
+
+\begin{figure}[h]
+  \centering
+  \subfigure[Prefit 0L]{\includegraphics[width=0.3\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_prefit_0lep_left}}
+  \subfigure[Prefit 1L]{\includegraphics[width=0.3\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_prefit_1lep_left}}
+  \subfigure[Prefit 2L]{\includegraphics[width=0.3\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_prefit_2lep_left}}
+  \subfigure[Postfit 0L]{\includegraphics[width=0.3\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_postfit_0lep_left}}
+  \subfigure[Postfit 1L]{\includegraphics[width=0.3\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_postfit_1lep_left}}
+  \subfigure[Postfit 2L]{\includegraphics[width=0.3\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_postfit_2lep_left}}
+  \caption{Ranking of nuisance parameters prefit-sorted (top) and postfit-sorted (bottom) for the single lepton Asimov fit.}
+  \label{fig:fit:rankSingleStep1}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \subfigure[Prefit combined]{\includegraphics[width=0.49\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_prefit_3lep_left}}
+  \subfigure[Postfit combined]{\includegraphics[width=0.49\textwidth]{figures/StatisticalInterpretation/new_rankings/Ranking_postfit_3lep_left}}
+  \caption{Ranking of nuisance parameters prefit-sorted and postfit-sorted for the combine Asimov fit.}
+  \label{fig:fit:rankCombineStep1}
+\end{figure}
+
+
+
+\clearpage
+\subsubsection{Left Bins Data Fit Results}
+
+According to the unblinding strategy, the fit model is inspected in the left side of our SRs using data fit; 
+the goal is to spot some problematics pulls that might appear in the final data fit.
+
+Figures \ref{fig:fit_step2_conditional}-\ref{fig:fit:corrStep2}
+show the pulls and the correlations respectively of the NPs used in the fit.
+
+Similar constraints are found in the left bins only fit as well as found in the Asimov fit;
+furthermore, we have effect for some NPs pulled in some single lepton channel fit but not in the others. 
+The main NPs have been already introduced in the previous sections;
+
+%as a summary, we list here the main pulled NP observed and discuss them:
+%\begin{itemize}
+%  \item \texttt{SysTheoryQCD\_Z} and \texttt{SysTheoryQCD\_W}
+%
+%  \item \texttt{SysJET\_Flavor\_Response}
+%
+%  \item \texttt{SysMODEL\_Z\_MGPy8}
+%
+%  \item \texttt{SysQG\_exp}
+%
+%\end{itemize}
+
+%%%
+\begin{figure}[ht]
+      \centering
+      \includegraphics[width=0.9\textwidth]{figures/StatisticalInterpretation/left/GlobalFit_conditionnal_mu1/NP_allExceptGammas}
+       \caption{Pulls and constraints of the NPs after the data fit to the left bins of the SR distributions.}
+       \label{fig:fit_step2_conditional}
+\end{figure}
+
+% \subsubsection{Step.2: fit to Asimov rankings and $\mu$ plots left RNN bins}
+
+\begin{figure}[b]
+  \centering
+  \subfigure[Conditional data $\mu=1$]{\includegraphics[width=0.8\textwidth]{figures/StatisticalInterpretation/left/GlobalFit_conditionnal_mu1/corr_HighCorrNoMCStat}}
+  \caption{Correlations for the data fit to the left bins of the SR distributions.}
+  \label{fig:fit:corrStep2}
+\end{figure}
+
+
+
+\clearpage
+%\subsubsection{Conditional mu=1 fit to data left RNN only range post fit plots and tables}
+
+\textcolor{red}{This is NOT unblinding, the x-axis is truncated on the left-side only of the distributions :) 
+This shows only the bins from table~\ref{tab:RNNbins} until the \# marker. 
+%For better visualizaton, the bins were set to have the same width spammed in the variable possible range. 
+%Therefore you can ignore the x-axis range and focus only on the bin number.
+}
+
+Figures \ref{fig:labelCombinefitSR}-\ref{fig:labelCombinefitCR}
+show the post-fit distributions for SRs and CRs respectively; both \mjjtag and the final discriminant look healthy 
+and well modelled after the fit on data on the left side sensitive bins.
+
+\renewcommand{\fitplotlocation}{./figures/StatisticalInterpretation/left/postfit/}
+\plotSRs{0.31}{GlobalFit_unconditionnal_mu1log}{Post-fit plots for SRs distributions; data is blinded in the right bins that contains 75\% fo the signal.}{labelCombinefitSR}
+\plotCRs{0.31}{GlobalFit_unconditionnal_mu1log}{Post-fit plots for CRs distributions.}{labelCombinefitCR}
+
+Table \ref{tab:ComboPostfitYield_SR}-\ref{tab:ComboPostfitYield_CR}
+shows the expected yields as well as observed data for CRs and SRs (left bins only) respcetively.
+
+\input{./figures/StatisticalInterpretation/left/Yields_GlobalFit_unconditionnal_mu1.tex}
+
+
+\subsubsection{Comparison for multilepton channel}
+
+The combined unconditional fit to asimov data in the full range was shown already in figure~\ref{fig:fit_step0_unconditional}. Figure~\ref{fig:asimovUncond0123lep} shows the same but comparing with the individual channels and separated by categories for better visualization: the large-R jets b-tagging~(a) and others~(b), the small-R jets b-tagging~(c), energy resolution~(d) and others~(e), floating~(f) and prior~(g) normalizations, the $m_{JJ}$ reweighting~(h), the modeling systematics~(i), theory PDF~(j) and QCD~(k), quark-gluon~(l), MET and PRW~(m) and others~(n). In figure~\ref{fig:globalUncond0123lep}, the same but looking in conditional $\mu=1$ for left-RNN bins of the signal regions.
+
+
+\begin{figure}[htb]
+  \centering
+
+  \subfigure[Large-R jets boosted jet tagger]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_BoostedJetTagger.pdf}}
+  \subfigure[Large-R jets others]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_FatJet_notbjet.pdf}}
+
+  %\subfigure[Small-R jets b-tagging]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_Btagging.pdf}}    
+  \subfigure[Small-R jets resolution]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_JER.pdf}}
+  \subfigure[Small-R jets others]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_notJER.pdf}}
+
+  \subfigure[Floating]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_Floating.pdf}}
+  \subfigure[Normalization]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_Normalization.pdf}}
+  \subfigure[$m_{JJ}$ reweight]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_MJJreweighting.pdf}}
+
+  \subfigure[Modeling]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_Model.pdf}}
+  \subfigure[Theory PDF]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_TheoryPDF.pdf}}
+  \subfigure[Theory QCD]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_TheoryQCD.pdf}}
+
+  \subfigure[Quark-gluon]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_QuarkGluon.pdf}}
+  \subfigure[MET and PRW]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_LepMetLumiPU.pdf}}
+  \subfigure[Others]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/full/comparisons/NP_StopInFSR.pdf}}
+ 
+  \caption{Comparison of the unconditional fit to asimov data set between the combined and the individual lepton channels with full RNN range.}
+  \label{fig:asimovUncond0123lep}
+\end{figure}
+
+\begin{figure}[htb]
+  \centering
+
+  \subfigure[Large-R jets boosted jet tagger]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_BoostedJetTagger.pdf}}
+  \subfigure[Large-R jets others]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_FatJet_notbjet.pdf}}
+
+  \subfigure[Small-R jets b-tagging]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_Btagging.png}}    
+  \subfigure[Small-R jets resolution]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_JER.pdf}}
+  \subfigure[Small-R jets others]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_notJER.pdf}}
+
+  \subfigure[Floating]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_Floating.pdf}}
+  \subfigure[Normalization]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_Normalization.pdf}}
+  \subfigure[$m_{JJ}$ reweight]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_MJJreweighting.pdf}}
+
+  \subfigure[Modeling]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_Model.pdf}}
+  \subfigure[Theory PDF]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_TheoryPDF.pdf}}
+  \subfigure[Theory QCD]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_TheoryQCD.pdf}}
+
+  \subfigure[Quark-gluon]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_QuarkGluon.pdf}}
+  \subfigure[MET and PRW]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_LepMetLumiPU.pdf}}
+  \subfigure[Others]{\includegraphics[width=0.32\textwidth]{figures/StatisticalInterpretation/left/comparisons/NP_StopInFSR.pdf}}
+ 
+  \caption{Comparison of the conditional ($\mu=1$) fit to data set between the combined and the individual lepton channels with only left-RNN bins.}
+  \label{fig:globalUncond0123lep}
+\end{figure}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../ANA-STDM-2018-27-INT1"
+%%% End:

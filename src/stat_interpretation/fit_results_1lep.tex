@@ -1,0 +1,205 @@
+\clearpage
+\section{Model inspection: 1-lepton channel}
+\label{sec:fit_1lep}
+
+We show the results for the model inspection and discuss the goodness of the fit model for the \olep channel
+in this section.
+
+\subsection{Prefit plots}
+
+%%%Figure \ref{fig:fit_1lep_prefit} shows the pre-fit plots of the analysis regions entering in the \olep fit only model; 
+%%%in particular, \mjjtag distributions in \Wjets and top CRs are shown and the neural network scores distributions 
+%%%are shown in the SRs, only the left side bins are plotted using real data as well.
+
+Figure \ref{fig:fit_1lep_prefit} presents the pre-fit plots for the analysis regions included in the one-lepton fit model. 
+It features the distributions of DNN scores in the SRs, as well as the \mjjtag distributions in the \Wjets and top CRs. 
+Initially, only the bins on the left side were displayed with real data in the SRs, which have now been unblinded.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{figures/FitResults/prefit/Region_distDNN_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
+        \caption{Merged HP SR}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{figures/FitResults/prefit/Region_distDNN_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
+        \caption{Merged LP SR}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{figures/FitResults/prefit/Region_distDNN_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_Prefitlog.pdf}
+        \caption{Resolved SR}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{figures/FitResults/prefit/Region_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefitlog.pdf}
+        \caption{Merged WCR}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{figures/FitResults/prefit/Region_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_Prefitlog.pdf}
+        \caption{Resolved WCR}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{figures/FitResults/prefit/Region_disttagMjj_DCRTopHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+        \caption{Merged HP TopCR}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{figures/FitResults/prefit/Region_disttagMjj_DCRTopLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_Prefit.pdf}
+        \caption{Merged LP TopCR}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{figures/FitResults/prefit/Region_disttagMjj_DCRTopTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_Prefitlog.pdf}
+        \caption{Resolved TopCR}
+    \end{subfigure}
+    \caption{Prefit plots for the 1 lepton channel. Data has been unblinded}
+    \label{fig:fit_1lep_prefit}
+\end{figure}
+
+\clearpage
+\subsection{Prefit tables}
+
+Tables \ref{tab:1lepPrefitYield_SR}-\ref{tab:1lepPrefitYield_CR} shows the expected yields for signal and background processes 
+in all the control and signal regions for the \olep channel.
+
+%%\input{figures/1lep/yieldTables/Yields_Prefit.tex}
+
+\input{figures/Fit_Tables/prefit/Yields_Prefit.tex}
+
+\clearpage
+\subsection{Asimov Fit Results}
+
+%%%A fit to the full SRs using Asimov data is performed and it is used 
+%%%to spot constraints in the fit model. 
+%%%In particular, the following constraints have been found:
+
+A fit to the full SRs using Asimov data is performed, 
+serving the purpose of identifying constraints within the fit model.
+Figures \ref{fig:fit_1lep_fcc_asimov}-\ref{fig:fit_1lep_corr_all}-\ref{fig:fit_1lep_ranking_all}
+show the pulls, the correlation and the ranking respectively of the NPs used in the fit.
+
+In the context of pull plot,
+the black boxes represent an approximate measure of how well the fitted pull aligns with the postfit constraint for a given NP.
+A smaller pull that appears less constrained is less likely than a large pull with a tight constraint.
+This concept is elaborated in the reference \cite{morange:tel-03341303}, 
+which provides detailed insights into the statistical interpretation of these pulls and constraints in the analysis.
+
+A brief commentary on the identified relevant constraints is provided:
+
+\begin{itemize}
+       \item \texttt{SysMJJREWEIGHT\_100per\_W+jets} (L1\_Fat1 for merged and L1\_J2 for resolved)
+       are uncertainties relate to the reweighting of \mjjtag for both merged and resolved regions. 
+       These constraints were anticipated due to the application of 100\% uncertainties to the \mjjtag reweighting, 
+       allowing the control regions to effectively constrain these systematic uncertainties(see Section \ref{subsec:bkg_uncer_mjjrew}).
+
+       \item \texttt{SysMODEL\_Wjets\_MadGraph}
+       arises from the shape differences between the Sherpa and MadGraph samples. 
+       This uncertainty is significant in our analysis due to the known modeling disparities between these two generators, 
+       especially in regions of high \mjjtag and jets multiplicity. The influence of this uncertainty on the signal strength $\mu$ is notable, 
+       approximately $8\%$ for the resolved regime and somewhat lesser for the merged regime, 
+       as depicted in the ranking plot (Figure \ref{fig:fit:rankSingleStep0}).
+
+       \item \texttt{SysMODEL\_ttbar\_PwHwg7}
+       uncertainties refer to the modeling uncertainties associated with the \ttbar background, 
+       which are derived from alternative sample comparisons. 
+       The analysis depends on the constraints obtained from the dedicated TCRs to mitigate these uncertainties.
+
+       \item \texttt{SysPRW\_DATASF} and \texttt{SysJET\_Pileup\_Offset} uncertainties are related to pile-up effects. 
+       These systematic uncertainties are particularly influential on the shapes of forward jets and jet track multiplicity 
+       (quark-gluon tagging variables). This effect is detailed in Section \ref{subsec:bkg_uncer_qg}.
+
+       \item \texttt{SysTheoryQCD\_W} represents the QCD theory scale uncertainty impacting the \Wjets prediction. 
+       This uncertainty is effectively constrained by the shape of the final discriminant(DNN) in the resolved signal region, 
+       as illustrated in Figure(a) of \ref{fig:PDFUnc1Lep_QCD}.
+
+       \item \texttt{SysTheoryISR\_ttbar} and \texttt{SysTheoryFSR\_Top} are theory uncertainties on the \ttbar production
+       with additional radiation in the initial or final states, as detailed in Section \ref{subsec:isr_fsr_unc}. 
+       There is a top modelling issue in the merged control regions. Given that these nuisance parameters does not impact the signal directly, 
+       we simplify our analysis by employing a single-bin for the merged TCRs.
+
+       \item \texttt{SysFATJET\_BJT\_JET\_JetTagSF\_Hadronisation} is the hadronisation model uncertainty
+       provided by the central CP recommendations.
+
+\end{itemize}
+
+
+%%%Figure \ref{fig:fit_1lep_fcc_asimov}
+%%%shows the pulls of the NPs used in the fit.
+%%%
+%%%Figures \ref{fig:fit_1lep_fcc_asimov}-\ref{fig:fit_1lep_corr_all}-\ref{fig:fit_1lep_ranking_all}
+%%%show the pulls, the correlation and the ranking respectively of the NPs used in the fit.
+
+
+\begin{figure}[ht]
+      \centering
+        \includegraphics[width=\linewidth]{figures/Fit_fcc/AsimovFit/NP_allExceptGammas.pdf}
+        \caption{Fit cross-check, conditional fit ($\mu=1$) to asimov data for the 1 lepton channel.}
+       \label{fig:fit_1lep_fcc_asimov}
+\end{figure}
+
+\begin{figure}[ht]
+      \centering
+        \includegraphics[width=\linewidth]{figures/Fit_fcc/AsimovFit_uncon/corr_HighCorrNoMCStat.pdf}
+        \caption{Correlations for unconditional fit ($\mu=1$) to asimov data in the full range, for the 1 lepton channel.}
+       \label{fig:fit_1lep_corr_all}
+\end{figure}
+
+\begin{figure}[ht]
+      \centering
+        \includegraphics[width=0.5\textwidth]{figures/Fit_np_rank/pulls_mu_Asimov/pulls_mu_SemileptonicVBS_5.pdf}
+        \caption{Ranking plot for unconditional fit ($\mu=1$) to asimov data in the full range, for the 1 lepton channel.}
+       \label{fig:fit_1lep_ranking_all}
+\end{figure}
+
+
+
+%%%%%\clearpage
+%%%%%\subsubsection{Left Bins Data Fit Results}
+%%%%%
+%%%%%According to the unblinding strategy, the fit model is inspected in the left side of our SRs using data fit; 
+%%%%%the goal is to spot some problematics pulls that might appear in the final data fit.
+%%%%%
+%%%%%Figures \ref{fig:fit_1lep_fcc_left}-\ref{fig:fit_1lep_corr_left}
+%%%%%show the pulls and the correlations respectively of the NPs used in the fit.
+%%%%%
+%%%%%\begin{figure}[ht]
+%%%%%      \centering
+%%%%%        \includegraphics[width=\linewidth]{figures/1lep/FitResults/left/NP_allExceptGammas.pdf}
+%%%%%        \caption{Fit cross-check, unconditional fit ($\mu=1$) to data in the left bins only, for the 1 lepton channel only.}
+%%%%%       \label{fig:fit_1lep_fcc_left}
+%%%%%\end{figure}
+%%%%%
+%%%%%\begin{figure}[ht]
+%%%%%      \centering
+%%%%%        %\includegraphics[width=\linewidth]{figures/1lep/FitResults/left/corr_HighCorrNoMCStat.pdf}
+%%%%%        \includegraphics[width=\linewidth]{figures/1lep/FitResults_SMApp/corr_HighCorrNoMCStat_Asimov.pdf}
+%%%%%        \caption{Correlations for unconditional fit ($\mu=1$) to data in the left bins only, for the 1 lepton channel only.}
+%%%%%       \label{fig:fit_1lep_corr_left}
+%%%%%\end{figure}
+%%%%%
+%%%%%Similar constraints as found in the Asimov fit are found and confirmed in the left bins only fit. 
+%%%%%They have been already discussed. 
+%%%%%In addition, some pulls are found, they are:
+%%%%%
+%%%%%\begin{itemize}
+%%%%%       \item \texttt{SysTheoryQCD\_W} has been found to be constrained in the asimov fit as well; 
+%%%%%       a dedicated investigation has been done and the conclusion is reported in section \ref{sec:fit_1lep_QCDW}.
+%%%%%
+%%%%%       \item \texttt{SysTheoryISR\_ttbar} has been found to be constrained in the asimov fit as well; 
+%%%%%       a dedicated investigation has been done and the conclusion is reported in section \ref{sec:fit_1lep_TheoryISR}.
+%%%%%
+%%%%%       \item \texttt{SysJET\_Flavor\_Response} it is the Flavor Response uncertainties for small-R jets, 
+%%%%%       introduced in section \ref{subsec:bkg_uncer_qg}; 
+%%%%%       the impact on the fitted $\mu$ is smaller than a few percent (Figure \ref{fig:fit:rankSingleStep0})
+%%%%%       and 
+%%%%%       it will be discussed and handled in the combined fit, in section~\ref{sec:fit_decorrStudies}.
+%%%%%
+%%%%%       \item \texttt{SysQG\_exp} this is the experimental uncertainty related to the track multiplicity of the small-R jets;
+%%%%%       this is likely pulled due to modelling of the track multiplicity 
+%%%%%       that are used as input of the final discriminant;
+%%%%%       the impact on the fitted $\mu$ is smaller than a few percent (Figure \ref{fig:fit:rankSingleStep0})
+%%%%%       and 
+%%%%%       it will be discussed and handled in the combined fit, in section~\ref{sec:fit_decorrStudies}.
+%%%%%
+%%%%%\end{itemize}
+
+~

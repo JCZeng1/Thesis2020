@@ -1,0 +1,178 @@
+%1-lep DNN ML
+\clearpage
+\section{Fit Results with Unblinded Data}
+
+%%%Using fitting methodology aligned with the procedures outlined in the previous sections in this chapter, we have seen some promising preliminary results with the DNN.
+%%%Table \ref{tab:significance_1lepdnn} shows the expected and observed significances for the \olep channel. The observed significance exceeds the 5$\sigma$ threshold. Although uncertainties from Shower systematics are not accounted for in the DNN approach fitting, the results are robust enough to act as a corroborative crosscheck against the baseline analysis.
+%%%
+%%%The essential variables incorporated into the fit part of the study are the \mjjtag distribution and the final DNN score; a detailed enumeration of the regions and variables applied in the DNN approach's fit is presented in Table \ref{tab:fitregions_1lepdnn}.
+%%%
+%%%\begin{table}[htb!]
+%%%  \centering
+%%%  \begin{tabular}{lccc}
+%%%          \toprule\midrule
+%%%          \multirow{2}{*}{Regions} & \multicolumn{3}{c}{1lep channel fit model} \\
+%%%          \cmidrule{2-4}
+%%%                & Merged high-purity & Merged low-purity & Resolved \\
+%%%          \midrule
+%%%          SR     & DNN & DNN & DNN \\
+%%%          WCR    & \multicolumn{2}{c}{\mjjtag} & \mjjtag \\
+%%%          TopCR  & One bin & One bin & \mjjtag \\
+%%%          \midrule
+%%%          \bottomrule
+%%%  \end{tabular}
+%%%\caption{\label{tab:fitregions_1lepdnn} Summary of the regions from 1lep channel entering the likelihood of the fit models.
+%%%``One bin'' implies that a single bin without any shape information is used in the corresponding fit region.}
+%%%\end{table}
+
+Using the methodology detailed in earlier sections of this chapter, we have obtained promising preliminary unblinded results using the DNN. 
+Table \ref{tab:significance_1lepdnn} presents both expected and observed significances for the \olep channel. 
+The expected significance is derived from Asimov data, incorporating adjustments for background normalization and nuisance parameters. 
+Remarkably, the observed significance from actual data surpasses the critical 5$\sigma$ threshold, 
+and this would be the first time we achieve this level of significance in the semileptonic final states for the electroweak $VV+jj$ production within a VBS-enhanced phase space.
+We observe some deficit compared to the expected significance in the \olep channel.
+Although the DNN approach fitting does not account for some signal uncertainties from EWK-QCD interference and shower systematics, the results are robust enough to serve as a corroborative cross-check against other baseline analyses using different ML approaches.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+           & 1-lep \\
+    \hline
+    Expected pre-fit significance & 5.39 \\
+    \hline
+    Expected post-fit significance & 5.98 \\
+    \hline
+    Observed significance & 5.78 \\
+    \hline
+  \end{tabular}
+  \caption{Expected and observed significances for the \olep channel.}
+  \label{tab:significance_1lepdnn}
+\end{table}
+
+Preliminary DNN(\olep) fit yields a signal strength parameter $\mu_{VBS} = 1.16 \pm 0.25$. 
+Post-fit distributions for the 1-lep Signal Regions (SRs) with full range data are shown in Figure \ref{fig:postfitsr_1lepdnn}, while the corresponding distributions for the 1-lep Control Regions (CRs) are shown in Figure \ref{fig:postfitcr_1lepdnn}.
+These distributions demonstrate a satisfactory agreement between the data and the MC simulations.
+
+\begin{figure}[h]
+  \centering
+  \subfloat[Merged HP]{
+    \includegraphics[width=.3\textwidth]{figures/FitResults/postfit/Region_distDNN_DSRVBSHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
+  }
+  \subfloat[Merged LP]{
+    \includegraphics[width=.3\textwidth]{figures/FitResults/postfit/Region_distDNN_DSRVBSLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
+  }
+  \subfloat[Resolved]{
+    \includegraphics[width=.3\textwidth]{figures/FitResults/postfit/Region_distDNN_DSRVBSTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
+  }
+  \caption{Post-fit plots for SR distributions}
+  \label{fig:postfitsr_1lepdnn}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+
+  \subfloat[Resolved Top CR]{
+    \includegraphics[width=.3\textwidth]{figures/FitResults/postfit/Region_disttagMjj_DCRTopTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
+  }
+  \subfloat[Resolved Wjet CR]{
+    \includegraphics[width=.3\textwidth]{figures/FitResults/postfit/Region_disttagMjj_DCRVjetTight_BMin0_T0_Y6051_incTag1_J2_L1_incJet1_GlobalFit_unconditionnal_mu1log.pdf}
+  }
+  \subfloat[Merged Wjet CR]{
+    \includegraphics[width=.3\textwidth]{figures/FitResults/postfit/Region_disttagMjj_DCRVjetMerged_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1log.pdf}
+  }
+
+  \subfloat[Merged LP Top CR]{
+    \includegraphics[width=.3\textwidth]{figures/FitResults/postfit/Region_disttagMjj_DCRTopLP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1.pdf}
+  }
+  \subfloat[Merged HP Top CR]{
+    \includegraphics[width=.3\textwidth]{figures/FitResults/postfit/Region_disttagMjj_DCRTopHP_BMin0_J0_incJet1_L1_T0_incFat1_Y6051_incTag1_Fat1_GlobalFit_unconditionnal_mu1.pdf}
+  }
+
+  \caption{Post-fit plots for CR distributions}
+  \label{fig:postfitcr_1lepdnn}
+\end{figure}
+
+Tables \ref{tab:1lepPostfitYield_SR}-\ref{tab:1lepPostfitYield_CR} shows the post-fit event yields for signal and background processes
+in all the control and signal regions for the \olep channel.
+Table \ref{tab:break_1lepdnn} shows the uncertainty breakdown on $\mu_{VBS}$.
+
+%%%%%%%postfit_table
+\input{figures/Fit_Tables/postfit/Yields_GlobalFit_unconditionnal_mu1.tex}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Total                    & \(+0.263\) & \(-0.237\) & \(\pm 0.250\) \\
+DataStat                 & \(+0.107\) & \(-0.105\) & \(\pm 0.106\) \\
+FullSyst                 & \(+0.240\) & \(-0.212\) & \(\pm 0.226\) \\
+\hline
+Floating normalizations  & \(+0.044\) & \(-0.035\) & \(\pm 0.039\) \\
+All normalizations       & \(+0.095\) & \(-0.079\) & \(\pm 0.087\) \\
+All but normalizations   & \(+0.230\) & \(-0.202\) & \(\pm 0.216\) \\
+Jets MET                 & \(+0.132\) & \(-0.118\) & \(\pm 0.125\) \\
+BTag                     & \(+0.031\) & \(-0.031\) & \(\pm 0.031\) \\
+Leptons                  & \(+0.000\) & \(-0.000\) & \(\pm 0.000\) \\
+Luminosity               & \(+0.025\) & \(-0.019\) & \(\pm 0.022\) \\
+Diboson                  & \(+0.036\) & \(-0.032\) & \(\pm 0.034\) \\
+Model                    & \(+0.148\) & \(-0.128\) & \(\pm 0.138\) \\
+Signal Systematics       & \(+0.166\) & \(-0.133\) & \(\pm 0.150\) \\
+Mjj reweighting          & \(+0.023\) & \(-0.037\) & \(\pm 0.030\) \\
+Quark gluon              & \(+0.015\) & \(-0.009\) & \(\pm 0.012\) \\
+MC stat                  & \(+0.082\) & \(-0.077\) & \(\pm 0.079\) \\
+\hline
+\end{tabular}
+\caption{Uncertainty breakdown on $\mu_{VBS}$ in \olep DNN.}
+\label{tab:break_1lepdnn}
+\end{table}
+
+Figure \ref{fig:fit_1lep_corr_all_data} shows the correlation matrix for full range data fit.
+Figure \ref{fig:fit_1lep_fcc_data}-\ref{fig:fit_1lep_ranking_all_data} show the pulls of the NPs and the ranking plots for the unblinded full range data fit. 
+The leading uncertainties impacting the fit are the theoretical QCD uncertainty on the signal, 
+the modeling uncertainties of the \Wjets background,
+the reweighting uncertainties of the tagging jets, 
+and \texttt{SysJET\_JERComb}, the baseline uncertainties from the small-$R$ jets resolution.
+
+%%\begin{figure}[ht]
+%%      \centering
+%%        \includegraphics[width=\linewidth]{figures/Fit_fcc/GlobalFit/NP_allExceptGammas.pdf}
+%%        \caption{Fit cross-check, conditional fit ($\mu=1$) to asimov data for the 1 lepton channel.}
+%%       \label{fig:fit_1lep_fcc_data}
+%%\end{figure}
+
+\begin{figure}[ht]
+      \centering
+        \includegraphics[width=\linewidth]{figures/Fit_fcc/GlobalFit/corr_HighCorrNoMCStat.pdf}
+        \caption{Correlations for unconditional fit ($\mu=1$) to unblinded data in the full range.}
+       \label{fig:fit_1lep_corr_all_data}
+\end{figure}
+
+\begin{figure}[ht]
+      \centering
+        \includegraphics[width=\linewidth]{figures/Fit_fcc/GlobalFit/NP_allExceptGammas.pdf}
+        \caption{Fit cross-check, the pulls of the NPs for the unblinded fit.}
+       \label{fig:fit_1lep_fcc_data}
+\end{figure}
+
+\begin{figure}[ht]
+      \centering
+        \includegraphics[width=0.5\textwidth]{figures/Fit_np_rank/pulls_mu_Global/pulls_mu_SemileptonicVBS_5.pdf}
+        \caption{Ranking of nuisance parameters postfit-sorted for the unblinded fit.}
+       \label{fig:fit_1lep_ranking_all_data}
+\end{figure}
+
+
+%%%%%%%postfit_table
+%Tables \ref{tab:1lepPostfitYield_SR}-\ref{tab:1lepPostfitYield_CR} shows the expected yields for signal and background processes
+%in all the control and signal regions for the \olep channel.
+
+%\input{figures/Fit_Tables/postfit/Yields_GlobalFit_unconditionnal_mu1.tex}
+
+%%%\caption{Postfit event yields for the analysis SRs in the 1 lepton channel.}
+%%%\label{tab:1lepPostfitYield_SR}
+%%%
+%%%\caption{Postfit event yields for the analysis CRs in the 1 lepton channel.}
+%%%\label{tab:1lepPostfitYield_CR}
+
+

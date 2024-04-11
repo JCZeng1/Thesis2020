@@ -1,0 +1,174 @@
+\clearpage
+\subsection{NP Debugging and final fit configuration}
+\label{sec:fit_decorrStudies}
+
+\renewcommand{\fitplotlocation}{./figures/StatisticalInterpretation_SMApp/combinedfitpulls/}
+
+We observed some strong pulls ($1 < sigma < 1.5$) in the combined fit, see Figure \ref{fig:fit_step2_conditional}.
+
+They are:
+
+\begin{itemize}
+  \item \texttt{SysTheoryQCD\_W}, coming from the \olep ResolvedSR;
+
+  \item \texttt{SysTheoryQCD\_Z}, coming from the \tlep ResolvedSR;
+
+  %\item \texttt{TheoryISR\_ttbar}, coming from the \olep TCR;
+
+  \item \texttt{JET\_Flavor\_Response}, coming from the \zlep ResolvedSR;
+
+  \item \texttt{QG\_exp}, coming from \olep MergedSR LP.
+
+\end{itemize}
+
+they have been introduced in the fit debugging for each channel fit, 
+\ref{sec:fit_0lep}-\ref{sec:fit_1lep}-\ref{sec:fit_2lep}.
+
+We also understood the specific channel/region the pull is coming from, as summarized in the previous items list.
+
+As proof of our understanding we are providing some summary plots showing the effect on the problematic pulls
+when ad-hoc changing to the model are done.
+
+Figures \ref{fig:NPOld_compare_1lep1bin}-\ref{fig:NPOld_compare_2lep1bin}
+show the impact on the pulls when the bins in the left side are merged, respectively, for the \olep and \tlep channels; 
+this is nicely improving the \texttt{SysTheoryQCD\_W} and \texttt{SysTheoryQCD\_Z}.
+
+\begin{figure}[ht]
+  \centering
+	\includegraphics[angle=270,width=0.55\linewidth]{\fitplotlocation/NP_allExceptGammas_compare_1lepRes1bin.pdf}
+	\caption{Comparison of postfit NP pulls and constraint between nominal configuration (black) and configuration where 1lep resolved SR unblinded (left) bins are merged (red).}
+  \label{fig:NPOld_compare_1lep1bin}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+	\includegraphics[angle=270,width=0.55\linewidth]{\fitplotlocation/NP_allExceptGammas_compare_2lepRes1bin.pdf}
+	\caption{Comparison of postfit NP pulls and constraint between nominal configuration (black) and configuration where 2lep resolved SR unblinded (left) bins are merged (red).}
+  \label{fig:NPOld_compare_2lep1bin}
+\end{figure}
+
+\clearpage
+Figure \ref{fig:NPOld_compare_Top1bin} shows the effect on the pulls when the TCR is considered as a 1-bin region, 
+i.e. the shape information is removed from the fit inputs. The \texttt{TheoryISR\_ttbar} is then un-pulled, 
+this is explaining that the pull is coming from the shapes in the TCR.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[angle=270,width=0.55\linewidth]{\fitplotlocation/NP_allExceptGammas_compare_Top1bin.pdf}
+	\caption{Comparison of postfit NP pulls and constraint between nominal configuration (black) and configuration where CRTopHP and CRTopLP are both 1bin (red).}
+  \label{fig:NPOld_compare_Top1bin}
+\end{figure}
+
+
+\clearpage
+Figure \ref{fig:NPOld_compare_0lep1bin} shows the effect on the pulls when the bins are merged in the \zlep ResolvedSR;
+the \texttt{JET\_Flavor\_Response} pull effect is therfore coming from the shape information of the \zlep channel.
+
+\begin{figure}[ht]
+  \centering
+	\includegraphics[angle=270,width=0.55\linewidth]{\fitplotlocation/NP_allExceptGammas_compare_0lepRes1bin.pdf}
+	\caption{Comparison of postfit NP pulls and constraint between nominal configuration (black) and configuration where 0lep resolved SR unblinded (left) bins are merged (red).}
+  \label{fig:NPOld_compare_0lep1bin}
+\end{figure}
+
+\clearpage
+Furthermore, we tried different decorrelation schemes to pick the specific region/channel the pull is coming from
+and accommodate it a bit.
+
+Figure \ref{fig:NPOldDecorFRWZTop} shows the effect on the existing pulls and of the new ones 
+when the NPs for both the \texttt{JET\_Flavor\_Response} and the modelling uncertainties are decorrelated
+across the lepton channels and resolved/merged regimes.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[angle=270,width=0.55\linewidth]{\fitplotlocation/NP_allExceptGammas_compare_decorFRWZTop.pdf}
+	\caption{Comparison of postfit NP pulls and constraint between nominal configuration (black) and configuration where NPs for Flavor Response and NPs for W/Z/ttbar modelling are decorrelated between the lepton channels and between the merged and resolved regimes (red).}
+  \label{fig:NPOldDecorFRWZTop}
+\end{figure}
+
+
+\clearpage
+Figure \ref{fig:NPDecorrMJJ} show the effect on the existing pulls and of the new ones 
+when \mjjtag re-weighting systematic are decorrelated between W+jets and Z+jets samples.
+\begin{figure}[h]
+  \centering
+  \includegraphics[angle=270,width=0.55\linewidth]{\fitplotlocation/NP_allExceptGammas_decorrMJJ.pdf}
+        \caption{Comparison of postfit NP pulls and constraint between nominal configuration (black) and configuration where tag-jet dijet mass systematic are decorrelated between W+jets and Z+jets samples (red).}
+  \label{fig:NPDecorrMJJ}
+\end{figure}
+
+\clearpage
+Finally, Figure \ref{fig:NPDecorrQG} shows the effect on the existing pulls and of the new ones 
+when experimental tracking uncertainty is decorrelated 
+between lepton channels and between the merged and resolved regimes.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[angle=270,width=0.55\linewidth]{\fitplotlocation/NP_allExceptGammas_decorrQG.pdf}
+	\caption{Comparison of postfit NP pulls and constraint between nominal configuration (black) and configuration where experimental tracking uncertainty is decorrelated between lepton channels and between the merged and resolved regions (red). In the 2 lepton resolved region, this systematic is pruned away. }
+  \label{fig:NPDecorrQG}
+\end{figure}
+
+As a summary of the decorrelations studies, Figures \ref{fig:decorr_mario}
+show the effect on the decorrelated parameters on the main systematic considered.
+
+\begin{figure}[h]
+  \centering
+
+  \subfigure[MODEL\_W\_MGPy8]{\includegraphics[width=0.3\textheight,angle=-90]{figures/StatisticalInterpretation_SMApp/blindingStrategy/pullComparisons_decorrMario/decorrelation_SysMODEL_W_MGPy8/NP_SysMODEL_W_MGPy8.pdf}}
+  \subfigure[MODEL\_Z\_MGPy8]{\includegraphics[width=0.3\textheight,angle=-90]{figures/StatisticalInterpretation_SMApp/blindingStrategy/pullComparisons_decorrMario/decorrelation_SysMODEL_Z_MGPy8/NP_SysMODEL_Z_MGPy8.pdf}}
+  \subfigure[MODEL\_ttbar\_PwHwg7]{\includegraphics[width=0.3\textheight,angle=-90]{figures/StatisticalInterpretation_SMApp/blindingStrategy/pullComparisons_decorrMario/decorrelation_SysMODEL_ttbar_PwHwg7/NP_SysMODEL_ttbar_PwHwg7.pdf}}
+
+  \subfigure[TheoryQCD\_W]{\includegraphics[width=0.3\textheight,angle=-90]{figures/StatisticalInterpretation_SMApp/blindingStrategy/pullComparisons_decorrMario/decorrelation_SysTheoryQCD_W/NP_SysTheoryQCD_W.pdf}}
+  \subfigure[TheoryQCD\_Z]{\includegraphics[width=0.3\textheight,angle=-90]{figures/StatisticalInterpretation_SMApp/blindingStrategy/pullComparisons_decorrMario/decorrelation_SysTheoryQCD_Z/NP_SysTheoryQCD_Z.pdf}}
+  \subfigure[MJJREWEIGHT\_100per]{\includegraphics[width=0.3\textheight,angle=-90]{figures/StatisticalInterpretation_SMApp/blindingStrategy/pullComparisons_decorrMario/decorrelation_SysMJJREWEIGHT_100per/NP_SysMJJREWEIGHT_100per.pdf}}
+
+  \subfigure[JET\_Flavor\_Response]{\includegraphics[width=0.3\textheight,angle=-90]{figures/StatisticalInterpretation_SMApp/blindingStrategy/pullComparisons_decorrMario/decorrelation_SysJET_Flavor_Response/NP_SysJET_Flavor_Response.pdf}}
+  \subfigure[QG\_exp]{\includegraphics[width=0.3\textheight,angle=-90]{figures/StatisticalInterpretation_SMApp/blindingStrategy/pullComparisons_decorrMario/decorrelation_SysQG_exp/NP_SysQG_exp.pdf}}
+
+  %\subfigure[NormZ2Lto0LMerged]{\includegraphics[width=0.31\textheight,angle=-90]{figures/StatisticalInterpretation_SMApp/blindingStrategy/pullComparisons_decorrMario/decorrelation_SysNormZ2Lto0LMerged/NP_SysNormZ2Lto0LMerged.pdf}}
+
+\caption{Pulls of the original NPs (black) and how the decorrelated NPs across leptons channels and reconstruction regime appear. 
+'L0', 'L1' and 'L2' refer to \zlep, \olep and \tlep respectively while 'J2' and 'Fat1' refer to resolved and merged regimes respectively.}
+  \label{fig:decorr_mario}
+\end{figure}
+
+
+
+\clearpage
+%\subsubsection{New Baseline NP Configuration}
+
+According to the results shown in the previous section, the final fit configuration has been designed 
+to take into account the effect that might introduce to strong pulls.
+In particular, we adjusted:
+
+\begin{itemize}
+  \item \texttt{JET\_Flavor\_Response} is now decorrelated for resolved and merged regimes; 
+  in particular, the resolved NP is pulled.
+  \item modelling uncertainties for both \Wjets-\Zjets \ and top are decorrelated per lepton channel 
+  according to the different composition in the different lepton channels.
+\end{itemize}
+
+\clearpage
+Figure \ref{fig:NPbase_compare_AsimovData} shows the comparison between the NPs between asimov and left-side data fit
+with the final configuration; constraints are consistent between the asimov and the data fits.
+
+\begin{figure}[ht]
+  \centering
+        \includegraphics[angle=270,width=0.55\linewidth]{\fitplotlocation/NP_allExceptGammas_compareAsimovDataLeft.pdf}
+	\caption{Comparison of NP pulls between Asimov and data fits over the unblinded (left) bins using the new baseline NP configuration.}
+  \label{fig:NPbase_compare_AsimovData}
+\end{figure}
+
+We observe a healthy enough model inspection; constraints coming from Asimov fit are understood 
+and they have been found in the data fit as well; pulls coming from the data fit have been understood
+and improved where it was necessary; the remaining effects are mainly coming from shape effect in the 
+left-side Resolved SR bins (\texttt{TheoryQCD\_W}, \texttt{TheoryQCD\_Z}, \texttt{JET\_Flavor\_Response}) 
+or from low sensitive regions like Merged LP (\texttt{QG\_exp}). A detailed study in the \olep 
+channel that can explain this shape effect in the left-side bins of the resolved SR RNNs is documented
+in appendix ~\ref{app:rnn_modelling_res}.
+%These are not observed in CR-only fit (Appendix \ref{app:CROnlyFits}) and they might disappear in the final fit 
+%(full SR data fit) when the full shape will be available to be fitted.
+%^ THIS IS NO LONGER TRUE
+
+

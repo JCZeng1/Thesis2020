@@ -1,0 +1,309 @@
+%\subsection{Fit options}
+
+There are two types of fit available.
+A single fit where only the regions corresponding to a single lepton channel are used 
+(5 regions for \zlep or \tlep and 8 for \olep)
+and a combined fit where the 18 regions are provided to constraint the POI(s).
+
+%Besides the so-called ``detector'' uncertainties, systematizing the knowledge the analysis 
+%has of the detector on the matter of reconstruction of the particles used, 
+%there are also ``modelling'' uncertainties to express the knowledge the analysis has 
+%on the simulation of the signal and backgrounds samples available.
+
+The so-called ``detector'' uncertainties take into account what we can not describe
+in terms of the detector and objects reconstruction;
+in addition, there are also ``modelling'' uncertainties that account for our ignorance about features 
+that are not included and badly included in
+the simulation of the signal and backgrounds samples.
+
+For the former, performance groups provided diverse methods to vary the reconstruction of these particles, 
+resulting in about a hundred nuisance parameters.
+The variations are assigned Gaussian priors, decreasing the likelihood
+when the fitted value shifts from the nominal value.
+
+%\textcolor{red}{we should put here a mention to which NPs are norm+shape, only-norm or only-shape, ecc ecc}
+
+For the background ``modelling'' uncertainties, we take the main background samples, 
+\ttbar, \Wjets, \Zjets and diboson 
+from QCD production 
+and obtain additional nuisance parameters from differences between the default generator and an alternative one.
+In addition, the normalizations of these backgrounds are left floating during the fit.
+A 30\% Gaussian prior is set to the normalization of the single-top background.
+As for the signal, the ``modelling'' is taken from variations on the scale ($\alpha_S$), PDF, alternative PDF 
+and radiation parameters of \textsc{Pythia} simulation.
+
+\clearpage
+Tables 
+\ref{tab:NPs:float},
+\ref{tab:NPs:norm},
+\ref{tab:NPs:exp1},
+\ref{tab:NPs:exp2},
+\ref{tab:NPs:exp3},
+\ref{tab:NPs:model},
+\ref{tab:NPs:theory}
+provide summaries of all the nuisance parameters considered in the fit; 
+in particular, it is reported if the parameters is a normalisation or a floating parameter 
+or if it has been considered as shape or shape+norm effect in the fit.
+
+\begin{table}[h]
+    \centering
+\resizebox{0.99\textwidth}{!}{
+  \begin{tabular}{|c|c|c| } \hline
+    Treatment & NP name & NP name simplified \\ \hline
+      Float & ATLAS\_norm\_WjetsMerged                                           &  W norm. Merged \\
+      Float & ATLAS\_norm\_WjetsResolved                                         &  W norm. Resolved \\
+      Float & ATLAS\_norm\_ZjetsMerged                                           &  Z norm. Merged \\
+      Float & ATLAS\_norm\_ZjetsResolved                                         &  Z norm. Resolved \\
+      Float & ATLAS\_norm\_ttbarMerged                                           &  $t\bar{t}$ norm. Merged \\
+      Float & ATLAS\_norm\_ttbarResolved                                         &  $t\bar{t}$ norm. Resolved \\\hline
+      Floating & mu\_SemileptonicVBS                                               &  Signal strength $\mu$(VBS) \\
+      Floating & mu\_SemileptonicVV                                                &  Signal strength $\mu$(VV) \\\hline
+
+    \end{tabular}
+    }
+    \caption{Floating parameter (includes signal strength parameter). VV relates to a 2POI fit.}
+    \label{tab:NPs:float}
+  \end{table}
+
+
+  \begin{table}[h]
+    \centering
+\resizebox{0.99\textwidth}{!}{
+    \begin{tabular}{|c|c|c| } \hline
+      Treatment & NP name & NP name simplified \\ \hline
+      Prior (0.500) scale & alpha\_SysNormVVMerged                                            &  Normalisation VV Merged \\
+      Prior (0.300) scale & alpha\_SysNormVVResolved                                          &  Normalisation VV Resolved \\
+      Prior (0.300) scale & alpha\_NormStop                                                   &  Single-top norm. \\ \hline
+      Prior (0.304) scale & alpha\_SysNormT1Lto0LMerged                                       &  Extrap. $t\bar{t}$ 1L $\rightarrow$ 0L Merged \\
+      Prior (0.601) scale & alpha\_SysNormT1Lto0LResolved                                     &  Extrap. $t\bar{t}$ 1L $\rightarrow$ 0L Resolved \\ \hline
+      Prior (0.061) scale & alpha\_SysNormVV1Lto0LMerged                                      &  Extrap. VV 1L $\rightarrow$ 0L Merged \\
+      Prior (0.078) scale & alpha\_SysNormVV1Lto0LResolved                                    &  Extrap. VV 1L $\rightarrow$ 0L Resolved \\
+      Prior (0.152) scale & alpha\_SysNormVV1Lto2LMerged                                      &  Extrap. VV 1L $\rightarrow$ 2L Merged \\
+      Prior (0.098) scale & alpha\_SysNormVV1Lto2LResolved                                    &  Extrap. VV 1L $\rightarrow$ 2L Resolved \\ \hline
+      Prior (0.127) scale & alpha\_SysNormW1Lto0LMerged                                       &  Extrap. W 1L $\rightarrow$ 0L Merged \\
+      Prior (0.094) scale & alpha\_SysNormW1Lto0LResolved                                     &  Extrap. W 1L $\rightarrow$ 0L Resolved \\\hline
+      Prior (0.234) scale & alpha\_SysNormZ2Lto0LMerged                                       &  Extrap. Z 2L $\rightarrow$ 0L Merged \\
+      Prior (0.294) scale & alpha\_SysNormZ2Lto0LResolved                                     &  Extrap. Z 2L $\rightarrow$ 0L Resolved \\
+      Prior (0.454) scale & alpha\_SysNormZ2Lto1LMerged                                       &  Extrap. Z 2L $\rightarrow$ 1L Merged \\
+      Prior (0.410) scale & alpha\_SysNormZ2Lto1LResolved                                     &  Extrap. Z 2L $\rightarrow$ 1L Resolved \\\hline
+    \end{tabular}
+    }
+    \caption{Normalization nuisance parameters treated with a prior.}
+    \label{tab:NPs:norm}
+  \end{table}
+
+
+
+
+
+
+
+
+
+  \begin{table}[h]
+    \centering
+\resizebox{0.99\textwidth}{!}{
+  \begin{tabular}{|c|c|c| } \hline
+    Treatment & NP name & NP name simplified \\ \hline
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_Eigen\_B\_0                & FT\_B\_0     \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_Eigen\_B\_1                & FT\_B\_1     \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_Eigen\_B\_2                & FT\_B\_2     \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_Eigen\_C\_0                & FT\_C\_0     \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_Eigen\_C\_1                & FT\_C\_1     \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_Eigen\_C\_2                & FT\_C\_2     \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_Eigen\_C\_3                & FT\_C\_3     \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_Eigen\_Light\_0            & FT\_Light\_0 \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_Eigen\_Light\_1            & FT\_Light\_1 \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_Eigen\_Light\_2            & FT\_Light\_2 \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_Eigen\_Light\_3            & FT\_Light\_3 \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_Eigen\_Light\_4            & FT\_Light\_4 \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_extrapolation              & FT\_extrap   \\
+    Experim. shape smoothConfig & alpha\_SysFT\_EFF\_extrapolation\_from\_charm & FT\_c-extrap \\ \hline
+  \end{tabular}
+}
+\caption{Experimental nuisance parameters.}
+\label{tab:NPs:exp1}
+\end{table}
+
+  \begin{table}[h]
+    \centering
+\resizebox{0.99\textwidth}{!}{
+    \begin{tabular}{|c|c|c| } \hline
+      Treatment & NP name & NP name simplified \\ \hline
+      Experim. shape smoothConfig & alpha\_SysEG\_RESOLUTION\_ALL                                       &  Egamma resolution \\
+      Experim. shape smoothConfig & alpha\_SysEG\_SCALE\_ALL                                            &  Egamma scale \\
+      Experim. shape smoothConfig & alpha\_SysEL\_EFF\_ID\_TOTAL\_1NPCOR\_PLUS\_UNCOR                       &  Electron uncertainty \\
+      Experim. shape smoothConfig & alpha\_SysMET\_JetTrk\_Scale                                        &  MET jet track scale \\
+      Experim. shape smoothConfig & alpha\_SysMET\_SoftTrk\_Scale                                       &  MET soft track scale \\
+      Experim. shape smoothConfig & alpha\_SysMUON\_SAGITTA\_RESBIAS                                    &  Muon sagitta resbias \\ \hline
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_EffectiveNP\_R10\_Modelling1               &  V-tagging modelling \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_Flavor\_Composition                       &  V-tagging flavour comp. \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_Flavor\_Response                          &  V-tagging flavour resp. \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_JetTagSF\_Dijet\_Modelling                 &  V-tagging dijet model. \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_JetTagSF\_Gammajet\_Modelling              &  V-tagging $\gamma$+jet model. \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_JetTagSF\_Hadronisation                   &  V-tagging hadronisation \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_JetTagSF\_MatrixElement                   &  V-tagging matrix element \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_JetTagSF\_Radiation                       &  V-tagging radiation \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff50\_SigSF\_Statistics           &  V-tagging WtagEff50 Stats \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff50\_TagEffUnc\_GlobalSignal     &  V-tagging WtagEff50 global sign. \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff80\_SigSF\_BinVariation         &  V-tagging WtagEff80 BinVar \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff80\_SigSF\_Propagated\_AllOthers &  V-tagging WtagEff80 Propag \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff80\_SigSF\_Statistics           &  V-tagging WtagEff80 Stats \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff80\_TagEffUnc\_GlobalBackground &  V-tagging WtagEff80 global BG \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff80\_TagEffUnc\_GlobalOther      &  V-tagging WtagEff80 global other \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_BJT\_JET\_WTag\_SigEff80\_TagEffUnc\_GlobalSignal     &  V-tagging WtagEff80 global sign. \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_CR\_JET\_CombMass\_Baseline                         &  Large-R jet CombMass baseline \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_CR\_JET\_CombMass\_Modelling                        &  Large-R jet CombMass modelling \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_CR\_JET\_CombMass\_Tracking1                        &  Large-R jet CombMass tracking 1 \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_CR\_JET\_CombMass\_Tracking2                        &  Large-R jet CombMass tracking 2 \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_CR\_JET\_CombMass\_Tracking3                        &  Large-R jet CombMass tracking 3 \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_CR\_JET\_EffectiveNP\_R10\_Modelling1                &  Large-R jet Effective NP Modelling 1 \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_CR\_JET\_EffectiveNP\_R10\_Modelling2                &  Large-R jet Effective NP Modelling 2 \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_CR\_JET\_Flavor\_Response                           &  Large-R jet Flavour Response \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_CR\_JET\_LargeR\_TopologyUncertainty\_top            &  Large-R jet Topology top \\
+      Experim. shape smoothConfig & alpha\_SysFATJET\_JER                                              &  Large-R jet resolution \\ \hline
+    \end{tabular}
+    }
+    \caption{Experimental nuisance parameters (cont).}
+    \label{tab:NPs:exp2}
+  \end{table}
+
+
+  \begin{table}[h]
+    \centering
+\resizebox{0.99\textwidth}{!}{
+  \begin{tabular}{|c|c|c| } \hline
+    Treatment & NP name & NP name simplified \\ \hline
+    Experim. shape smoothConfig & alpha\_SysJET\_BJES\_Response                                          &  b-jet energy scale \\
+      Experim. shape smoothConfig & alpha\_SysJET\_EffectiveNP\_Mixed1                                   &  Jet EffNP Mixed 1  \\
+      Experim. shape smoothConfig & alpha\_SysJET\_EffectiveNP\_Mixed2                                   &  Jet EffNP Mixed 2 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_EffectiveNP\_Modelling1                               &  Jet EffNP Model 1 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_EffectiveNP\_Modelling3                               &  Jet EffNP Model 3 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_EffectiveNP\_Statistical2                             &  Jet EffNP Stat 2 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_EtaIntercalibration\_Modelling                        &  Jet $\eta$-calib modelling \\
+      Experim. shape smoothConfig & alpha\_SysJET\_EtaIntercalibration\_TotalStat                        &  Jet $\eta$-calib TotalStat \\
+      Experim. shape smoothConfig & alpha\_SysJET\_Flavor\_Composition                                   &  Jet flavour composition \\
+      Experim. shape smoothConfig & alpha\_SysJET\_Flavor\_Response\_Fat1                                &  Jet flavour response merged \\
+      Experim. shape smoothConfig & alpha\_SysJET\_Flavor\_Response\_J2                                  &  Jet flavour response resolved \\
+      Experim. shape smoothConfig & alpha\_SysJET\_JERMC\_EffectiveNP\_1                                 &  Jet JERMC EffNP 1 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_JERMC\_EffectiveNP\_2                                 &  Jet JERMC EffNP 2 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_JERMC\_EffectiveNP\_3                                 &  Jet JERMC EffNP 3 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_JERMC\_EffectiveNP\_4                                 &  Jet JERMC EffNP 4 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_JERMC\_EffectiveNP\_5                                 &  Jet JERMC EffNP 5 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_JERMC\_EffectiveNP\_6                                 &  Jet JERMC EffNP 6 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_JERMC\_EffectiveNP\_7                                 &  Jet JERMC EffNP 7 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_JERMC\_EffectiveNP\_8                                 &  Jet JERMC EffNP 8 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_JERMC\_EffectiveNP\_9                                 &  Jet JERMC EffNP 9 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_JERMC\_EffectiveNP\_10                                &  Jet JERMC EffNP 10 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_JERMC\_EffectiveNP\_11                                &  Jet JERMC EffNP 11 \\
+      Experim. shape smoothConfig & alpha\_SysJET\_JvtEfficiency                                         &  Jet JVT efficiency \\
+      Experim. shape smoothConfig & alpha\_SysJET\_fJvtEfficiency                                        &  Jet fJVT efficiency \\
+      Experim. shape smoothConfig & alpha\_SysJET\_Pileup\_OffsetMu                                      &  Jet pileup OffsetMu \\
+      Experim. shape smoothConfig & alpha\_SysJET\_Pileup\_OffsetNPV                                     &  Jet pileup OffsetNPV \\
+      Experim. shape smoothConfig & alpha\_SysJET\_Pileup\_PtTerm                                        &  Jet pileup pT term \\
+      Experim. shape smoothConfig & alpha\_SysJET\_Pileup\_RhoTopology                                   &  Jet pileup rho topology \\ \hline
+      Experim. shapeOnly smoothConfig & alpha\_SysMJJREWEIGHT\_100per\_L0\_Fat1                          &  m\_{jj} reweight L0 Merged \\
+      Experim. shapeOnly smoothConfig & alpha\_SysMJJREWEIGHT\_100per\_L0\_J2                            &  m\_{jj} reweight L0 Resolved \\
+      Experim. shapeOnly smoothConfig & alpha\_SysMJJREWEIGHT\_100per\_L1\_Fat1                          &  m\_{jj} reweight L1 Merged \\
+      Experim. shapeOnly smoothConfig & alpha\_SysMJJREWEIGHT\_100per\_L1\_J2                            &  m\_{jj} reweight L1 Resolved \\
+      Experim. shapeOnly smoothConfig & alpha\_SysMJJREWEIGHT\_100per\_L2\_Fat1                          &  m\_{jj} reweight L2 Merged \\
+      Experim. shapeOnly smoothConfig & alpha\_SysMJJREWEIGHT\_100per\_L2\_J2                            &  m\_{jj} reweight L2 Resolved \\ \hline
+      Experim. shape smoothConfig & alpha\_SysPRW\_DATASF                                                &  Pileup ReWeighting data SF \\ \hline
+      Experim. shape smoothConfig & alpha\_SysQG\_exp                                                    &  Quark gluon experimental \\
+      Experim. shape smoothConfig symmetriseOneSided & alpha\_SysQG\_fake                                &  Quark gluon fake \\
+      Experim. shape smoothConfig & alpha\_SysQG\_me                                                     &  Quark gluon matrix element \\
+      Experim. shape smoothConfig & alpha\_SysQG\_pdf                                                    &  Quark gluon PDF \\
+      Experim. shape smoothConfig symmetriseOneSided & alpha\_SysQG\_trackeff                            &  Quark gluon track efficiency \\ \hline
+    \end{tabular}
+    }
+    \caption{Experimental nuisance parameters (cont).}
+    \label{tab:NPs:exp3}
+  \end{table}
+
+
+  \begin{table}[h]
+    \centering
+\resizebox{0.99\textwidth}{!}{
+  \begin{tabular}{|c|c|c| } \hline
+        Treatment & NP name & NP name simplified \\ \hline
+      Modelling shapeOnly smoothConfig symmetriseOneSided & alpha\_SysMODEL\_VV\_PwPy                                           &  Modelling VV Powheg+Pythia \\ \hline
+      Modelling shapeOnly smoothConfig symmetriseOneSided & alpha\_SysMODEL\_W\_MGPy8\_L0                                        &  Modelling W MadGraph+Pythia8 L0 \\
+      Modelling shapeOnly smoothConfig symmetriseOneSided & alpha\_SysMODEL\_W\_MGPy8\_L1                                        &  Modelling W MadGraph+Pythia8 L1 \\ \hline
+      Modelling shapeOnly smoothConfig symmetriseOneSided & alpha\_SysMODEL\_Z\_MGPy8\_L0                                        &  Modelling Z MadGraph+Pythia8 L0 \\
+      Modelling shapeOnly smoothConfig symmetriseOneSided & alpha\_SysMODEL\_Z\_MGPy8\_L2                                        &  Modelling Z MadGraph+Pythia8 L2 \\ \hline
+      Modelling shapeOnly smoothConfig symmetriseOneSided & alpha\_SysMODEL\_ttbar\_PwHwg7\_L0                                   &  Modelling $t\bar{t}$ Powheg+Herwig7 L0 \\
+      Modelling shapeOnly smoothConfig symmetriseOneSided & alpha\_SysMODEL\_ttbar\_PwHwg7\_L1                                   &  Modelling $t\bar{t}$ Powheg+Herwig7 L1 \\
+      Modelling shapeOnly smoothConfig symmetriseOneSided & alpha\_SysMODEL\_ttbar\_PwHwg7\_L2                                   &  Modelling $t\bar{t}$ Powheg+Herwig7 L2 \\
+      Modelling shapeOnly smoothConfig noSym & alpha\_SysMODEL\_ttbar\_noShWe                                      &  Modelling $t\bar{t}$ aMCAtNlo+Pythia \\ \hline
+    \end{tabular}
+    }
+    \caption{Modelling nuisance parameters}
+    \label{tab:NPs:model}
+  \end{table}
+
+
+  \begin{table}[h]
+    \centering
+\resizebox{0.99\textwidth}{!}{
+    \begin{tabular}{|c|c|c| } \hline
+      Treatment & NP name & NP name simplified \\ \hline
+      Theory shapeOnly smoothConfig noSym & alpha\_SysTheoryFSR\_Top                                           &  Theory FSR top \\
+      Theory shapeOnly smoothConfig noSym & alpha\_SysTheoryISR\_stop                                          &  Theory ISR stop \\
+      Theory shapeOnly smoothConfig noSym & alpha\_SysTheoryISR\_ttbar                                         &  Theory ISR $t\bar{t}$ \\  \hline
+      Theory shape smoothConfig noSym & alpha\_SysTheoryPDF\_NNPDF\_VBS                                     &  Theory PDF nnpdf VBS \\
+      Theory shapeOnly smoothConfig noSym & alpha\_SysTheoryPDF\_NNPDF\_VV                                      &  Theory PDF nnpdf VV \\
+      Theory shapeOnly smoothConfig noSym & alpha\_SysTheoryPDF\_NNPDF\_W                                       &  Theory PDF nnpdf W \\
+      Theory shapeOnly smoothConfig noSym & alpha\_SysTheoryPDF\_NNPDF\_Z                                       &  Theory PDF nnpdf Z \\
+      Theory shapeOnly smoothConfig noSym & alpha\_SysTheoryPDF\_NNPDF\_stop                                    &  Theory PDF nnpdf stop \\ \hline
+      Theory shapeOnly smoothConfig symmetriseOneSided & alpha\_SysTheoryPDF\_W                                             &  Theory PDF W \\
+      Theory shapeOnly smoothConfig symmetriseOneSided & alpha\_SysTheoryPDF\_Z                                             &  Theory PDF Z \\ \hline
+      Theory shape smoothConfig noSym & alpha\_SysTheoryQCD\_VBS                                           &  Theory QCD VBS \\
+      Theory shapeOnly smoothConfig noSym & alpha\_SysTheoryQCD\_VV                                            &  Theory QCD VV \\
+      Theory shapeOnly smoothConfig noSym & alpha\_SysTheoryQCD\_W                                             &  Theory QCD W \\
+      Theory shapeOnly smoothConfig noSym & alpha\_SysTheoryQCD\_Z                                             &  Theory QCD Z \\
+      Theory shapeOnly smoothConfig noSym & alpha\_SysTheoryQCD\_stop                                          &  Theory QCD stop \\ \hline
+    \end{tabular}
+    }
+    \caption{Theory nuisance parameters}
+    \label{tab:NPs:theory}
+  \end{table}
+
+  \begin{table}[h]
+    \centering
+\resizebox{0.99\textwidth}{!}{
+    \begin{tabular}{|c|c|c| } \hline
+      NP name & decorrelated?  & decorrelation scheme\\ \hline
+      Floating norms (norm\_X) & Yes & between  merged/resolved \\ \hline
+      Theory Systs (Theory\_X) & Yes & between different samples \\ \hline
+      \mjjtag Reweighting Systs (MJJ\_X) & Yes & between lepton channels\\ 
+                                         &     & and merged/resolved \\ \hline
+      Lumi Syst (LUMI\_X) & No & \\ \hline
+      Flavor Tag Systs  (FT\_X) & No &  \\ \hline
+      Experimental Jet Systs (JET\_X) & No & \\  
+      (Except) Jet Flavor Reponse & Yes & between merged/resolved \\ \hline
+      Other Experimental Systs (MET\_X, EG\_X, EG\_X, MUON\_X) & No & \\ \hline
+
+      Large-R Jet Systs (FJ\_X) & No & \\ \hline
+      VV Modelling Systs (MODEL\_VV\_X) & No & \\
+      W Modelling Systs (MODEL\_W\_X) & Yes & between lepton channels\\
+      Z Modelling Systs (MODEL\_Z\_X) & Yes & between lepton channels\\
+      ttbar Modelling Systs (MODEL\_ttbar\_X) & Yes & between lepton channels\\ \hline
+      Extrapolations Systs (Norm\_) & Yes & between lepton channels\\ 
+                                         &     & and merged/resolved \\\hline
+      Single Top Normalization & No & (Treated as the same across all regions) \\ \hline
+      VV Normalization & Yes &  between  merged/resolved  \\ \hline
+      Tracking Systs (QG\_X) & No & \\ \hline
+    \end{tabular}
+    }
+    \caption{Decorrelation scheme for all NPs used in the analysis. Any NPs not specifically lists in this table are correlated 
+             for all analysis regions.}
+    \label{tab:NPs:corr}
+  \end{table}
+  
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../ANA-STDM-2018-27-INT1"
+%%% End:
