@@ -19,7 +19,7 @@
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
-*.pdf
+draft*.pdf
 
 ## Generated if empty string is given at "Please type another file name for output:"
 .pdf
@@ -277,6 +277,15 @@ TSWLatexianTemp*
 
 # recycle bin
 src/excluded/
+doc/
+figures/ml_analysis/
+figures/StatisticalInterpretation/
+figures/aQGC/
+figures/0lep/
+figures/2lep/
+figures/EWKQCDInt/
+figures/EWQCDint/
+
 
 # container files
 *.sif
