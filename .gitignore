@@ -278,14 +278,7 @@ TSWLatexianTemp*
 # recycle bin
 src/excluded/
 doc/
-figures/ml_analysis/
-figures/StatisticalInterpretation/
-figures/aQGC/
-figures/0lep/
-figures/2lep/
-figures/EWKQCDInt/
-figures/EWQCDint/
-
+figures/StatisticalInterpretation/NPshapesNnorms
 
 # container files
 *.sif

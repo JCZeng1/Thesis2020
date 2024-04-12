@@ -1,4 +1,0 @@
-output: plots/thesis/Condor0LepMc16a-r33
-input nominal: input/thesis/cutflow5j/Condor0LepMc16a-r33/merged.root
-input alternative samples: input/thesis/cutflow5j/Condor0LepMc16a-r33-syssamples/merged.root
-[]

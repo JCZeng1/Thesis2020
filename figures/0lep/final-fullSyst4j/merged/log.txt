@@ -1,4 +1,0 @@
-output: plots/thesis/merged
-input nominal: input/thesis/cutflow4j/merged/merged.root
-input alternative samples: input/thesis/cutflow4j/merged-syssamples/merged.root
-[]
