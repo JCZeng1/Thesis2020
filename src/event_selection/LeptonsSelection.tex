@@ -1,103 +1,65 @@
 %\subsection{Leptonically decaying boson}
-%\label{subsec:leptons_selection}
-
-%%Events are categorized into 0-, 1- and 2-lepton channels by number of Loose leptons in the final state. The common definition of Loose lepton (see Sec.~\ref{sec:ObjectDefinition}) ensures three channels to be orthogonal. 
-%%Basically we can follow the event selections used in the previous analysis based on the 36\,\ifb dataset\cite{Ryzhov:2310214}.
-%%This section focuses on the dedicated selection we have for the three leptons channels.
+\label{subsec:leptons_selection}
 
 %%% 1-lepton channel
-%\clearpage
-%\subsubsection{1-lepton channel}
-%\label{subsubsec:1lep_event_selection}
+\label{subsubsec:1lep_event_selection}
 %This section summarizes the SR definitions in 1-lepton channel.
-
 %\textbf{$W \to \ell\nu$}
-%%The 0-lepton channel requires events containing a $\nu\nu$ pair from a $Z$ boson decay and boosted $W/Z \to q\bar{q}$ candidate defined in Section~\ref{subsubsec:merged_jets_selection}.
-%%The $Z \rightarrow \nu\nu$ identification requires no Loose lepton and high missing energy in the final state.
 
-The event selections for this analysis are largely based on the methodology used in a previous study with the 36,\ifb dataset \cite{Ryzhov:2310214}. In the 1-lepton channel, events are required to contain a $\ell\nu$ pair indicative of a $W$ boson decay, along with a $W/Z \to q\bar{q}$ candidate. The candidate for $W \to \ell\nu$ decay is identified by the presence of exactly one Tight lepton and the absence of any Loose leptons in the final state.
+The event selections for this analysis are largely based on the methodology used in a previous study with the 36\,\ifb dataset~\cite{Ryzhov:2310214}.
+In the \olep channel, events are required to contain a $\ell\nu$ pair indicative of a $W$ boson decay, along with a $W/Z \to q\bar{q}$ candidate. The candidate for the $W \to \ell\nu$ decay is identified by the presence of exactly one Tight lepton and the absence of any Loose leptons in the final state.
 
-The following anti-QCD cuts are applied to reject the QCD multijet and non-collision background.
+The following anti-QCD cuts are applied to reject the QCD multijet and non-collision background:
 \begin{itemize}
 \item $\met > 80 \,\GeV$
-\item $\ptl > 28 \,\GeV$ %and \textcolor{red}{I think this is related to lepSF binning} 
-%\item $m_{J} > 50 \, \GeV$ (merged only)
+\item $\ptl > 28 \,\GeV$ 
 \end{itemize}
 
-Merged and resolved regime selections are detailed in Section \ref{subsec:sr_selection}.
-Figure \ref{fig:1LepPreselCuts} presents distributions for MC samples and observed data at the early stages of the analysis selection.
+%Merged and resolved regime selections are detailed in Section \ref{subsec:sr_selection}.
+Figure \ref{fig:1LepPreselCuts} shows the distributions of missing transverse energy (\met), lepton transverse momentum (\ptl), and large-$R$ jet mass ($m_{J}$) in the 1-lepton channel at different stages of the analysis. The ``preselection merged'' and ``preselection resolved'' stages refer to the application of initial selection criteria in the merged and resolved regimes, respectively. These stages exclude the use of boson tagger cuts for the large-$R$ jet and mass window cuts for signal jets, which are detailed further in Section \ref{subsec:sr_selection}.
 
-The observed data that are not well-represented by the simulated events primarily stem from multijet and non-collision backgrounds. These backgrounds mainly arise due to the mis-measurement of a jet's energy. While these backgrounds are relatively minor, it is important to note that Monte Carlo (MC) simulations do not accurately estimate their shape or rate. The multijet background, often referred to as the QCD background, commonly occurs when jets are misidentified as leptons or when jets produce leptons later in their decay process. Specifically, electron-related backgrounds are mostly due to jets generating extensive showers in the ECAL, which then meet the criteria for electron selection. In the case of muons, the background is typically a result of hadron decays within a jet.
-The QCD multijets background are highly suppressed by these selections, and we can also see the $W$-peak in the $t\bar{t}$ process.
-%%Examples of distributions for MC samples as well as observed data are shown in Figure \ref{fig:1LepPreselCuts}; in particular, we can nicely see the W-peak in the $t\bar{t}$ process.
+In the distributions before any event selection, the observed data that are not adequately represented by the simulated events primarily originate from multijet and non-collision backgrounds. These discrepancies mainly arise due to the mis-measurement of jet energy. Although these backgrounds are relatively minor, it is crucial to acknowledge that MC simulations do not accurately estimate their shape or rate. The multijet background, often referred to as the QCD background, typically occurs when jets are misidentified as leptons or when leptons are produced later in the decay process of jets.
+Electron-related backgrounds are predominantly caused by jets generating extensive showers in the Electromagnetic Calorimeter (ECAL), which subsequently meet the criteria for electron trigger. For muons, the background typically arises from hadron decays within jets.
+Therefore, events from either QCD multijet or non-collision backgrounds typically contain ``soft'' (low \( p_{T} \)) leptons, which are effectively suppressed by the reasonable requirements on \met and \ptl.
+After the anti-QCD cuts, we observe good agreement between the data and MC simulation in both merged and resolved regimes. In the $m_{J}$ distribution, the $W$-peak in the $t\bar{t}$ process is also clearly visible.
 
 
 \begin{figure}[ht]
 \centering
-        \begin{subfigure}{0.3\textwidth}
-            \includegraphics[width=\linewidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_ALL_MET_Lin.png}
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{figures/event_selection/ALL_MET.pdf}
             \caption{$E_{T,miss}$ before any event selection.}
         \end{subfigure}
-        \begin{subfigure}{0.3\textwidth}
-            \includegraphics[width=\linewidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Merged_MET_Lin.png}
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{figures/event_selection/Presel_Merged_MET.pdf}
             \caption{$E_{T,miss}$ after merged common preselection.}
         \end{subfigure}
-        \begin{subfigure}{0.3\textwidth}
-            \includegraphics[width=\linewidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Resolved_MET_Lin.png}
-            \caption{$E_{T,miss}$ distribution after resolved common preselection.}
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{figures/event_selection/Presel_Resolved_MET.pdf}
+            \caption{$E_{T,miss}$ after resolved common preselection.}
         \end{subfigure} \\
 
-        \begin{subfigure}{0.3\textwidth}
-            \includegraphics[width=\linewidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_ALL_PtL_Lin.png}
-            \caption{$p_{T,l}$ before any event selection.}
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{figures/event_selection/ALL_PtL.pdf}
+	    \caption{$p_{T,l}$ before any event selection.\\ \hbox{\vspace{1.5mm}}}
         \end{subfigure}
-        \begin{subfigure}{0.3\textwidth}
-            \includegraphics[width=\linewidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Merged_PtL_Lin.png}
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{figures/event_selection/Presel_Merged_PtL.pdf}
             \caption{$p_{T,l}$ after merged common preselection.}
         \end{subfigure}
-        \begin{subfigure}{0.3\textwidth}
-            \includegraphics[width=\linewidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Resolved_PtL_Lin.png}
-            \caption{$p_{T,l}$ distribution after common resolved preselection.}
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{figures/event_selection/Presel_Resolved_PtL.pdf}
+            \caption{$p_{T,l}$ after common resolved preselection.}
         \end{subfigure} \\
 
-        \begin{subfigure}{0.3\textwidth}
-            \includegraphics[width=\linewidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_ALL_MFatJet_Lin.png}
-            \caption{$M_{J}$ before any event selection.}
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{figures/event_selection/ALL_MFatJet.pdf}
+	    \caption{$M_{J}$ before any event selection.\\ \hbox{\vspace{1.5mm}}}
         \end{subfigure}
-        \begin{subfigure}{0.3\textwidth}
-            \includegraphics[width=\linewidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Merged_MFatJet_Lin.png}
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{figures/event_selection/Presel_Merged_MFatJet.pdf}
             \caption{$M_{J}$ after merged common preselection.}
         \end{subfigure}
-
-        \caption{Distributions for $E_{T,miss}$, $E_{T,miss}$, and $m_{J}$ in the 1 lepton channel at different stages of the analysis selection; preselection merged and preslection resolved labels refers to the set of cuts applied in the merged and resolved regime rather than the boson tagger cuts (merged) and the signal jets mass window cut.}
-        \label{fig:1LepPreselCuts}
+        \caption{Distributions of \met, \ptl, and $m_{J}$ in the 1-lepton channel at various analysis stages.}
+	\label{fig:1LepPreselCuts}
 \end{figure}
-
-
-%%%\begin{figure}[ht]
-%%%\centering
-%%%	\subfigure[$E_{T,miss}$ before any event selection.]{\includegraphics[width=0.3\textwidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_ALL_MET_Lin.png}} 
-%%%	\subfigure[$E_{T,miss}$ after merged common preselection.]{\includegraphics[width=0.3\textwidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Merged_MET_Lin.png}} 
-%%%	\subfigure[$E_{T,miss}$ distribution after resolved common preselection.]{\includegraphics[width=0.3\textwidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Resolved_MET_Lin.png}} \\
-%%%
-%%%	\subfigure[$p_{T,l}$ before any event selection.]{\includegraphics[width=0.3\textwidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_ALL_PtL_Lin.png}} 
-%%%	\subfigure[$p_{T,l}$ after merged common preselection.]{\includegraphics[width=0.3\textwidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Merged_PtL_Lin.png}} 
-%%%	\subfigure[$p_{T,l}$ distribution after common resolved preselection.]{\includegraphics[width=0.3\textwidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Resolved_PtL_Lin.png}} \\
-%%%
-%%%	\subfigure[$M_{J}$ before any event selection.]{\includegraphics[width=0.3\textwidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_ALL_MFatJet_Lin.png}} 
-%%%	\subfigure[$M_{J}$ after merged common preselection.]{\includegraphics[width=0.3\textwidth]{figures/1lep/CRPlots/C_0ptag0pjet_0ptv_Presel_Merged_MFatJet_Lin.png}} 
-%%%
-%%%	\caption{Distributions for $E_{T,miss}$, $E_{T,miss}$, and $m_{J}$ in the 1 lepton channel at different stages of the analysis selection; preselection merged and preslection resolved labels refers to the set of cuts applied in the merged and resolved regime rather than the boson tagger cuts (merged) and the signal jets mass window cut.}
-%%%	\label{fig:1LepPreselCuts}
-%%%\end{figure}
-
-
-%After the $W \to \ell\nu$ selection above and $W/Z \to jj$ selection described in Section~\ref{subsubsec:resolved_jets_selection},
-%the following selection cuts are required to take the event topology of which two high-\pt\ bosons are back--to--back in the $x$--$y$ plane:
-%\begin{itemize}
-%\item $\Delta \phi(\ell, \met)< XX$;
-%\item $\Delta \phi(j1,j2) < XX$;
-%\item $\Delta \phi(\ell,j1(2)) > XX$;
-%\item $\Delta \phi(j1(2), \met) > XX$;
-%\end{itemize}
-%where $\Delta \phi(i, j)$ is the distance in the  coordinate between objects $i$ and $j$.

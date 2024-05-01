@@ -1,32 +1,33 @@
 \clearpage
 \section{Introduction}
+\label{sec:mll_def}
 
-The statistical analysis uses a binned likelihood approach, formulated as a product of Poisson probability terms to evaluate the data. The likelihood function is represented by:
-
-\begin{equation}
-\mathrm{Pois}\,(n|\mu S+B)\left[ \prod_{b\in \text{bins}}^{n} \frac{\mu \nu^{\mathrm{sig}}_{b}+\nu^{\mathrm{bkg}}_{b}}{\mu S+B} \right],
+To determine the signal strength parameter $\mu$ ($\mu_{VBS}$), a binned maximum likelihood fit is used in the statistical analysis. The likelihood function is formulated as follows:
+\begin{equation} \label{eq:Lh1}
+	\mathcal{L}(N, \tilde{\theta} | \mu, \theta) = \mathrm{Pois}\,(\mu | \mu s + b) \cdot p(\tilde{\theta} | \theta)
 \end{equation}
+Here, $\mathrm{Pois}\,(\mu | \mu s + b)$ represents the product of Poisson probability terms across all histogram bins:
+\begin{equation} \label{eq:Lh2}
+	\mathrm{Pois}\,(\mu | \mu s + b) = \prod_{i=1}^{N_{\text{bins}}} \frac{(\mu s_{i}(\theta) + b_{i}(\theta))^{N_{i}} e^{- (\mu s_{i}(\theta) + b_{i}(\theta))}}{N_{i}!}
+\end{equation}
+In this formulation, $\mu s_{i}$ and $b_{i}$ denote the expected numbers of signal and background events in bin $i$, respectively, while $N_{i}$ represents the number of observed events in that bin. The second part of Equation \ref{eq:Lh1}, $p(\tilde{\theta} | \theta)$, typically referred to as the prior, incorporates our knowledge about the systematic effects considered in the analysis. This binned likelihood approach allows for a robust estimation of $\mu$ while accounting for various statistical and systematic uncertainties.
 
-In this equation, $\mu$ is the signal strength parameter that scales the expected signal yield $\nu^{\mathrm{sig}}_b$ in each histogram bin $b$. 
-The term $\nu^{\mathrm{bkg}}_b$ indicates the expected background contribution in the same bin.
+%%%
+%The statistical analysis uses a binned maximum likelihood approach, formulated as a product of Poisson probability terms to evaluate the data. The likelihood function is represented by:
+%
+%\begin{equation}
+%\mathrm{Pois}\,(n|\mu S+B)\left[ \prod_{b\in \text{bins}}^{n} \frac{\mu \nu^{\mathrm{sig}}_{b}+\nu^{\mathrm{bkg}}_{b}}{\mu S+B} \right],
+%\end{equation}
+%
+%In this equation, $\mu$ is the signal strength parameter that scales the expected signal yield $\nu^{\mathrm{sig}}_b$ in each histogram bin $b$. 
+%The term $\nu^{\mathrm{bkg}}_b$ indicates the expected background contribution in the same bin.
 
-The signal and background predictions' sensitivity to systematic uncertainties is captured through nuisance parameters (NPs) $\theta$. 
-These NPs are governed by either Gaussian or log-normal distributions, with log-normal priors preferred for normalization uncertainties to ensure the likelihood remains positive. 
-The expected counts of signal and background events in each bin are modeled as functions of $\theta$, 
-and are structured so that event rates across different categories follow a log-normal distribution when $\theta$ is normally distributed.
+The sensitivity of the signal and background predictions to systematic uncertainties is quantified through nuisance parameters (NPs), denoted as $\theta$. 
+These NPs are typically modeled using either Gaussian or log-normal distributions, with log-normal priors being preferred for normalization uncertainties to ensure that the likelihood remains positive. The expected counts of signal and background events in each bin are modeled as functions of $\theta$. This modeling is structured so that event rates across different categories exhibit a log-normal behavior when $\theta$ is governed by normal distributions.
 
-Priors are used to constrain the NPs towards their nominal values within their assigned uncertainties. This implementation is achieved through penalty terms or auxiliary measurements that are added to the likelihood function. These additions ensure that the likelihood increases whenever an NP deviates from its nominal value. 
-Consequently, the likelihood function, denoted as $\mathcal{L} (\mu,\theta)$, depends on both $\mu$ and $\theta$.
-This setup helps to incorporate our understanding and uncertainties about the system into the analysis, ensuring that the estimation of $\mu$ is consistent with prior knowledge encapsulated in $\theta$.
+Priors are used to constrain the NPs towards their nominal values within their assigned uncertainties. This is achieved by incorporating penalty terms or auxiliary measurements into the likelihood function. These additions cause the likelihood to increase whenever an NP deviates significantly from its nominal value. Consequently, the likelihood function $\mathcal{L} (\mu,\theta)$ depends on both the signal strength parameter $\mu$ and the NPs $\theta$. This setup facilitates the integration of our understanding and uncertainties about the system into the analysis, ensuring that the estimation of $\mu$ is consistent with the prior knowledge encapsulated in $\theta$.
 
-The nominal fit result in terms of $\mu$ and its uncertainty, $\sigma_{\mu}$, are determined by maximizing the likelihood function across all parameters. 
-This process yields the maximized log-likelihood value (MLL). 
+The nominal fit result, in terms of the signal strength parameter $\mu$ and its uncertainty $\sigma_{\mu}$, is determined by maximizing the likelihood function across all parameters. This process yields the maximized log-likelihood value (MLL).
 
-%%%%
 
-%%%The nominal fit result in terms of $\mu$ and $\sigma_{\mu}$ is obtained by maximizing the likelihood function with respect to all parameters.
-%%%This is referred to as the maximized log-likelihood value, MLL.
-%%%The test statistic $q_\mu$ is then constructed according to the profile likelihood: $q_\mu = 2 \ln (\mathcal{L} (\mu, \hat{\hat{\theta_\mu}})/\mathcal{L} (\hat{\mu}, \hat{\theta}))$, where $\hat{\mu}$ and $\hat{\theta}$ are the parameters that maximize the likelihood (with the constraint $0 \leq \hat{\mu} \leq \mu$), and $\hat{\hat{\theta}}_\mu$ are the nuisance parameter values that maximize the likelihood for a given $\mu$.
-%%%This test statistic is used to measure the compatibility of the background-only model with the observed data and for exclusion intervals derived with the $CL_s$ method~\cite{Cowan:2010js}.
-%%%The limit set on $\mu$ is then translated into a limit on the signal cross section times branching ratio, using the theoretical cross section and branching ratio for the given signal model.
 

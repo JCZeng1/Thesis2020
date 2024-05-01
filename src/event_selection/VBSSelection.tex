@@ -2,76 +2,20 @@
 %%\subsection{VBS Selection}
 \label{subsec:vbs_selection}
 
-In the VBS selection, all events are required to have a pair of small-$R$ jets, designated as Tag Jets, which are the candidates for VBS jets.
+In the VBS selection, all events are required to have a pair of small-$R$ jets, designated as Tag Jets, which serve as candidates for VBS jets.
+The hadronically-decaying $W/Z$ candidate is reconstructed using either one large-$R$ jet~($J$) or two small-$R$ jets~($j$), as detailed in Sections~\ref{subsubsec:merged_jets_selection} and~\ref{subsubsec:resolved_jets_selection}. 
+In the merged case, each event must include one large-$R$ jet and two small-$R$ jets, while in the resolved case, the requirement is for at least four small-$R$ jets. 
+Therefore, the resolved case involves a more complex selection strategy. Tag Jets are selected first, which are essential for defining the VBS jet candidates. Next, among the remaining jets, those emanating from the $W/Z$ decay are identified as signal jets. This approach prioritizes establishing the forward topology (VBS jets) before identifying the decay products of the target process.
 
-The hadronically-decaying $W/Z$ candidate is reconstructed using either two small-$R$ jets~($j$) or one large-$R$ jet~($J$), as detailed in Sections \ref{subsubsec:merged_jets_selection} to \ref{subsubsec:resolved_jets_selection}. Accordingly, in the resolved analysis, each event must have at least four small-$R$ jets, while in the merged analysis, the requirement is one large-$R$ jet and two small-$R$ jets.
+The Tag Jets algorithm employed in this analysis adheres to standard ATLAS practices. As discussed in Section~\ref{subsubsec:resolved_jets_selection}, key requirements for Tag Jets include passing the fJVT selection, specifically using the Loose fJVT working point (WP). This Loose WP is selected for its simplicity and because it is the recommended default WP. Additionally, the corresponding scale factors (SFs) are readily available in our analysis framework.
 
-For the resolved case, the strategy involves initially selecting Tag Jets, followed by the identification of signal jets emanating from the $W/Z$ decay among the remaining jets. This approach is driven by the preference to first focus on the production topology (VBS jets) and subsequently identify the decay products of the target process.
+Tag Jets candidates are required to be in opposite hemispheres, satisfying $\eta_{\mathrm{tag}\, j_1} \cdot \eta_{\mathrm{tag}\, j_2} < 0$. They should also have the highest dijet invariant mass among all pairs of small-$R$ jets in the event that meet the fJVT requirements, as previously described. This criterion ensures the selection of the most physically significant jet pairs for analysis.
 
-The Tag Jets algorithm employed in this analysis follows standard ATLAS practices. Key requirements for Tag Jets include passing the forward jet-vertex-tagger (fJVT) selection, specifically using the Loose fJVT working point (WP). This Loose WP is chosen for its simplicity and because it is the recommended default WP. Additionally, the corresponding scale factors (SFs) are readily available in our analysis framework.
-
-Tag Jets candidates are required to be in opposite hemispheres, $\eta_{\mathrm{tag}\ j_1} \cdot \eta_{\mathrm{tag}\ j_2} < 0$. Furthermore, they should possess the highest dijet invariant mass among all pairs of small-$R$ jets in the event that have already met the forward jet-vertex-tagger (fJVT) requirements, as previously described. This criterion ensures the selection of the most physically significant jet pairs for analysis.
-
-Once the Tag Jet pair is selected, the following criteria are applied to both jets to enhance the signal to background ratio:
+Once the Tag Jet pair is selected, the following criteria are applied to both jets to enhance the signal-to-background ratio:
 \begin{itemize}
     \item Each Tag Jet must have a transverse momentum (\pt) greater than \SI{30}{\GeV}.
     \item The invariant mass of the two Tag Jet system should exceed \SI{400}{\GeV}.
 \end{itemize}
 
-This approach is based on the optimization studies conducted in the previous round of the analysis, which utilized the 36 \,\ifb dataset \cite{Ryzhov:2310214}, to inform our choice of both \pT and invariant mass cuts.
-
-%%%%%%%%
-
-%%%In the VBS selection, all events are required to contain a pair of small-R jets as the candidate VBS jets, we refer to them as Tag Jets. 
-%%%
-%%%The hadronically-decaying $W/Z$ candidate is reconstructed as either two small-$R$ jets~($j$)
-%%%or one large-$R$ jet~($J$), as explained in the following sections \ref{subsubsec:merged_jets_selection}-\ref{subsubsec:resolved_jets_selection}; therefore, each event should contain at least four small-$R$ jets in the resolved analysis or one large-$R$ jet and
-%%%two small-$R$ jets in the merged analysis. 
-%%%
-%%%The strategy to select first tag jets and then signal jets which came from $W/Z$ from the remaining jets is chosen; 
-%%%this is motivated from the preference to focus on the production topology first (VBS jets) 
-%%%and then move to identify the objects related to the decay part of the target process. 
-%%%%Furthermore, this choice is consistent what the strategy performed in the VV semi-leptonic resonant search \cite{Bachas:2646593}.
-%%%
-%%%The tagging jets algorithm is quite usual to what is done in analyses in ATLAS.
-%%%
-%%%Tagging jets are required, 
-%%%firstly, 
-%%%%to be non-$b$-tagged; this would help in order to suppress the contribution of diagrams with a $Wtb$ vertex
-%%%%(especially the electroweak $t\bar{t}$ production) in the electroweak $VVjj$ production. 
-%%%%Furthermore, 
-%%%%fJVT selection has been applied to the small-R jets; 
-%%%to pass the fJVT selection, the Loose fJVT WP is used.
-%%%%the jets are required to pass the Loose fJVT WP as additional criteria to be selected as tagging jets. 
-%%%The Loose WP has been chosen for simplicity, indeed, it is the default WP recommended 
-%%%and the related SF are by default available in our analysis framework; 
-%%%furthermore, no significant difference with respect to the Tight WP has been observed, 
-%%%more details are given in dedicated studies reported in appendix \ref{app:fjvt}.
-%%%Furthermore, b-veto has been investigated to be applied on all the jets of the collection
-%%%before pairing the candidates, since, no significant impacts has been found,
-%%%as documented in the Appendix \ref{app:tagjet_bveto}, no b-jet requirement is applied on the taggging jets.
-%%%
-%%%The tagging jets candidates must be in the opposite hemispheres, 
-%%%$\eta_{\mathrm{tag}\ j_1} \cdot \eta_{\mathrm{tag}\ j_2} < 0$,
-%%%and to have the highest dijet invariant mass among all the possible pairs of small-R jets in the event, 
-%%%that have passed already 
-%%%%b-tagging veto and 
-%%%the fJVT requirement, as mentioned above.
-%%% 
-%%%%%After the tagging jet pair are selected, it is required that both tagging jets should have \pT$>$30~\si{\GeV} and that the invariant mass of the two tagging jets system is greater than 400~\si{\GeV}; 
-%%%After the tagging jet pair is selected, both tagging jets are required to have \pt \SI{>30}{\GeV}, and the invariant mass of the two tagging jets system should be greater than $400~\si{\GeV}$.
-%we rely on the optimisation studies done in the previous round of the analysis on the choice of both \pT and invariant mass cuts. 
-%%%As an example, the \mjjtag distribution for both data and MC samples is shown before the cut in the \zlep channel SRs Figure \ref{fig:0lepMjj}; 
-%%%the \mjjtag re-weighting is already applied and it will be described in section \ref{subsec:mjj_reweight}.
-%%%
-%%%\begin{figure}[ht]
-%%%    \centering
-%%%    \subfigure[merged HighPurity]{\includegraphics[width=0.3\textwidth]{figures/0lep/cutflow/nominal/merged/plots/soverb_individual_SRVBS_HP_MTagMerJets400_MTagMerJets_cutflow.pdf}}
-%%%    \subfigure[merged LowPurity]{\includegraphics[width=0.3\textwidth]{figures/0lep/cutflow/nominal/merged/plots/soverb_individual_SRVBS_LP_MTagMerJets400_MTagMerJets_cutflow.pdf}}
-%%%    \subfigure[resolved]{\includegraphics[width=0.3\textwidth]{figures/0lep/cutflow/nominal/merged/plots/soverb_individual_SRVBS_Res_MTagResJets400_MTagResJets_cutflow.pdf}}
-%%%    \caption{0-lepton $m(jj)^\text{tag}$ selection. The distributions are shown for the three SR selections; the specific definition of each of them (HighPurity, LowPurity, Resolved) will be given in the following Section \ref{subsec:sr_selection}. Entering are events passing the respective selection up to the point of the $m(jj)^\text{tag}$ cut which is shown by the vertical line.} 
-%%%    \label{fig:0lepMjj}
-%%%\end{figure}
-
-
+This approach is based on optimization studies conducted in the previous round of the analysis, which utilized the 36 \,\ifb dataset~\cite{Ryzhov:2310214}, to inform our choice of both \pT and invariant mass cuts.
 

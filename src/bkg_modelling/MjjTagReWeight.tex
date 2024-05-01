@@ -1,45 +1,30 @@
 %%\subsection{Re-weighting for the tagging jets}
 \label{subsec:mjj_reweight}
-
-
-The invariant mass of the two selected Tag Jets is known to be mismodeled in the Sherpa 2.2.1 V+jets samples, a critical variable due to the forward topology of our final state. Consequently, we applied a linear reweighting procedure to the \Wjets
-%and \Zjets 
-MC samples, aligning with data in the CRs.
-
 \label{subsec:mjj_reweight_1lep}
 
-%%%The modelling of the \Wjets background for the 1-lepton channel,
-%%%is studied in this subsection.
-%%%In Figure \ref{fig:mjjReweight1LepMjjDistBefore} the $\Mtag$ distributions for the merged and resolved regions are plotted.
-%%%Similarly to the 0- and 2-lepton channels,
-%%%a clear mis-modelling between the main background source and data is also observed in the 1-lepton channel.
-%%%In order to account for this mis-modelling, a reweighting for the \Wjets MC is derived.
+This section examines the modeling of the \Wjets background for the 1-lepton channel, focusing on the mismodeled invariant mass of the two selected Tag Jets (\mjjtag) in the Sherpa 2.2.1 \Vjets samples. The forward topology of our final state makes \mjjtag a critical variable. To address the observed mismodeling, we applied a linear reweighting procedure to the \Wjets MC samples, ensuring alignment with data in the CRs. 
+Figure~\ref{fig:mjjReweight1LepMjjDistBefore} illustrates the \mjjtag distributions for both merged and resolved regions, highlighting the noticeable discrepancies between the primary background source and the observed data.
 
-This section examines the \Wjets background modeling for the 1-lepton channel. 
-Figure \ref{fig:mjjReweight1LepMjjDistBefore} shows the $\Mtag$ distributions for both merged and resolved regions, highlighting noticeable discrepancies between the primary background source and observed data. 
-%To address this mis-modeling, a reweighting of the \Wjets MC samples is implemented.
-
-To correct the mis-modeling, which we assume varies linearly with \mjjtag, we apply this reweighting formula to the \Wjets events:
-
+To correct the mismodeling, which we assume varies linearly with \mjjtag, we apply the following reweighting formula to the \Wjets events:
 \begin{equation}
-  w(m_{jj}^{tag}) =  p_0 + p_1 * m_{jj}^{tag} ,
+  w(m_{jj}^{tag}) =  p_0 + p_1 \cdot m_{jj}^{tag} ,
 \end{equation}
 %
 where $p_0$ and $p_1$
-are coefficients calculated independently for both merged and resolved regions, and $w(m_{jj}^{tag})$ will be the re-weighted applied. 
-After determining these values from control regions (see Table \ref{tab:mjjReweight1LepRegions}), we apply the corrections to the respective signal regions.
-For both merged and resolved scenarios, we obtain $p_0$ and $p_1$ by fitting the Sherpa \Wjets model-to-data ratio, after subtracting non-\Wjets backgrounds. 
+are coefficients calculated independently for both merged and resolved regions.
+The function $w(m_{jj}^{tag})$ represents the weight adjustment applied to each event, modifying the original event weight based on the \mjjtag value.
+After determining these coefficients from CRs (see Table~\ref{tab:mjjReweight1LepRegions}), we apply the corrections to the respective SRs. 
+For both merged and resolved scenarios, $p_0$ and $p_1$ are obtained by fitting the Sherpa \Wjets model-to-data ratio, after subtracting non-\Wjets backgrounds.
 
-%For the merged case, we perform a single fit on \mjjtag across the entire $m_{J}$ range, enhancing the statistical reliability of the results.
-For the merged case, a single fit is applied to the entire \mjjtag distribution without subdividing the sample based on the $m_{J}$ range. This approach simplifies the analysis while maintaining statistical robustness, as illustrated in Figure \ref{fig:mjjReweight1LepMer}.
+In the merged case, a single fit is applied to the entire \mjjtag distribution without subdividing the sample based on the $m_{J}$ range. This approach not only simplifies the analysis but also maintains statistical robustness, as illustrated in Figure~\ref{fig:mjjReweight1LepMer}.
 
-In the resolved case, the fit to \mjjtag is done within specific $m_{jj}^{sig}$ bins ([50,60,70,100,120,150,200,300] GeV) to assess variations in reweighting factors. This approach involves segmenting both MC and data samples by $m_{jj}^{sig}$, as illustrated in Figure \ref{fig:mjjReweight1LepResPtBins}. After determining the values of $p_0$ and $p_1$ across various $m_{jj}^{sig}$ bins, these are then fitted to obtain the definitive reweighting factors for the signal region's $m_{jj}^{sig}$, as illustrated in Figure \ref{fig:mjjReweight1LepResFit}. This is followed by an interpolation from the control to the signal region.
+In the resolved case, the fit to \mjjtag is performed within specific $m_{jj}^{sig}$ bins ([50, 60, 70, 100, 120, 150, 200, 300] GeV), excluding the [70, 100] GeV bin as it corresponds to the resolved signal region and we aim to fit using only control region data.
+This approach segments both MC and data samples according to $m_{jj}^{sig}$, as illustrated in Figure~\ref{fig:mjjReweight1LepResPtBins}. Subsequently, the parameters $p_0$ and $p_1$ are determined across these bins. These parameters are then fitted to define the definitive reweighting factors for the signal region's $m_{jj}^{sig}$, as shown in Figure~\ref{fig:mjjReweight1LepResFit}. An interpolation from the control to the signal region follows this step.
 
-The studies encompassed all data periods and corresponding MC campaigns (mc16a, mc16d, and mc16e). To verify consistency across different data periods and pileup conditions, these analyses were repeated for each MC campaign, with outcomes presented in Figure \ref{fig:mjjReweight1LepResTotal}.
-A slight dependence on the MC period was observed, but the improvement from adjusting the \mjjtag reweighting for each period was minimal. Thus, we used the combined period results for the final analysis.
+The study encompasses all data periods and corresponding MC campaigns (mc16a, mc16d, and mc16e). To verify consistency across various data periods and pileup conditions, these analyses were independently repeated for each MC campaign. The outcomes are presented in Figure~\ref{fig:mjjReweight1LepResTotal}. Although a slight dependence on the MC period was observed, the benefits of adjusting the \mjjtag reweighting for each period proved to be minimal. Thus, the combined period results were utilized for the final analysis.
 
-Table ~\ref{tab:1lepReweighting} shows the final parameters derived for the \olep channel.
-The \mjjtag distributions for the three SRs before and after reweighting are depicted in Figures \ref{fig:mjjReweight1LepMjjDistBefore} and \ref{fig:mjjReweight1LepMjjDistAfter}, respectively.
+Table~\ref{tab:1lepReweighting} shows the final parameters derived for the \olep channel.
+The \mjjtag distributions for the three SRs before and after reweighting are depicted in Figures~\ref{fig:mjjReweight1LepMjjDistBefore} and \ref{fig:mjjReweight1LepMjjDistAfter}, respectively.
 
 \begin{table}[ht]
     \centering
@@ -60,10 +45,10 @@ The \mjjtag distributions for the three SRs before and after reweighting are dep
 %%Table ~\ref{tab:1lepReweighting} shows the final parameters derived for the \olep channel.
 
 \begin{table}[ht]
-     \centering
-     \caption{1-lepton $m(jj)^\text{tag}$ reweighting factors.}
-     \label{tab:1lepReweighting}
-         \begin{tabular}{ |c|c|c| }
+\centering
+\caption{1-lepton $m(jj)^\text{tag}$ reweighting factors.}
+\label{tab:1lepReweighting}
+\begin{tabular}{ |c|c|c| }
 \hline
 Parameter & Merged CRVjet & Resolved CRVjet  \\
 \hline
@@ -71,7 +56,7 @@ $p_{0}$ (slope) [$\GeV^{-1}$] & $(-51.4 \pm 2.9)10^{-5}$ &  $(-14.4 \pm 6.1)10^{
  \hline
 $p_{1}$ (constant)  & $1.47 \pm 0.03$ & $1.13 \pm 0.02$ \\
 \hline
-         \end{tabular}
+\end{tabular}
 \end{table}
 
 \clearpage
@@ -97,7 +82,7 @@ $p_{1}$ (constant)  & $1.47 \pm 0.03$ & $1.13 \pm 0.02$ \\
         \caption{Resolved SR RAW}
         \label{fig:MC16ADE_Resolved_SR_Before}
     \end{subfigure}
-    \caption{\(\mjjtag\) distributions without any corrections in the signal regions.}
+    \caption{\mjjtag distributions without any corrections in the signal regions.}
     \label{fig:mjjReweight1LepMjjDistBefore}
 \end{figure}
 
@@ -123,7 +108,7 @@ $p_{1}$ (constant)  & $1.47 \pm 0.03$ & $1.13 \pm 0.02$ \\
         \caption{Resolved SR}
         \label{fig:MC16ADE_Resolved_SR}
     \end{subfigure}
-    \caption{\(\mjjtag\) distributions after applying mjj-reweighting in the signal regions.}
+    \caption{\mjjtag distributions after applying reweighting in the signal regions.}
     \label{fig:mjjReweight1LepMjjDistAfter}
 \end{figure}
 
@@ -140,7 +125,7 @@ $p_{1}$ (constant)  & $1.47 \pm 0.03$ & $1.13 \pm 0.02$ \\
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/mjjreweight1lep/merged_WjetsAllMC16T.png}
-    \caption{Fit of \(\mjjtag\) slope across the full \(M_J\) range in the merged region.}
+    \caption{Fit of \mjjtag slope across the full $m_{J}$ range in the merged region.}
     \label{fig:mjjReweight1LepMer}
 \end{figure}
 
@@ -166,7 +151,6 @@ $p_{1}$ (constant)  & $1.47 \pm 0.03$ & $1.13 \pm 0.02$ \\
         \caption{100GeV to 150GeV bin}
         \label{fig:resolved_Wjets100to150}
     \end{subfigure}
-    % Note: If you want the next subfigures to be on the next line, add a \par or simply remove the \hfill commands above
     
     \begin{subfigure}[b]{0.3\textwidth}
         \centering
@@ -181,7 +165,7 @@ $p_{1}$ (constant)  & $1.47 \pm 0.03$ & $1.13 \pm 0.02$ \\
         \caption{200GeV to 300GeV bin}
         \label{fig:resolved_Wjets200to300}
     \end{subfigure}
-    \caption{Fit of \(\mjjtag\) slope across various \(m_{jj}^{sig}\) slices in W+jet resolved control regions.}
+    \caption{Fit of \mjjtag slope across various $m_{jj}^{sig}$ slices in \Wjets resolved control region.}
     \label{fig:mjjReweight1LepResPtBins}
 \end{figure}
 
@@ -200,7 +184,9 @@ $p_{1}$ (constant)  & $1.47 \pm 0.03$ & $1.13 \pm 0.02$ \\
         \caption{Fit results for ``Slope'', $p_1$.}
         \label{fig:fitSRes}
     \end{subfigure}
-    \caption{Slopes and constants as a function of \(m_{jj}^{sig}\), with the red band indicating the 68\% confidence level of the fit. The fitted linear function is shown at the top and the fitted result at the signal \(m_{jj}^{sig}\) bin is shown at the bottom.}
+    \caption{Slopes and constants as a function of $m_{jj}^{sig}$, with the red band indicating the 68\% confidence level of the fit. 
+%The fitted linear function is shown at the top and the fitted result at the signal \(m_{jj}^{sig}\) bin is shown at the bottom.
+}
     \label{fig:mjjReweight1LepResFit}
 \end{figure}
 
@@ -223,72 +209,4 @@ $p_{1}$ (constant)  & $1.47 \pm 0.03$ & $1.13 \pm 0.02$ \\
     \label{fig:mjjReweight1LepResTotal}
 \end{figure}
 
-
-%%\begin{figure}[ht]
-%%    \centering
-%%    \subfigure[]{\includegraphics[width=0.7\textwidth]{figures/mjjreweight1lep/merged_WjetsAllMC16T.png}}
-%%    \caption{Fit of \mjjtag slope in merged region, for the entire $M_J$ range. }
-%%    \label{fig:mjjReweight1LepMer}
-%%\end{figure}
-
-
-%%%%%\begin{figure}[ht]
-%%%%%    \centering
-%%%%%    \subfigure[50GeV to 60GeV bin]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/resolved_Wjets50_to_60_GeVMC16T.png}}
-%%%%%    \subfigure[60GeV to 70GeV bin]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/resolved_Wjets60_to_70_GeVMC16T.png}}
-%%%%%    \subfigure[100GeV to 150GeV bin]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/resolved_Wjets100_to_150_GeVMC16T.png}}
-%%%%%    \subfigure[150GeV to 200GeV bin]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/resolved_Wjets150_to_200_GeVMC16T.png}}
-%%%%%    \subfigure[200GeV to 300GeV bin]{\includegraphics[width=0.3\textwidth]{figures/mjjreweight1lep/resolved_Wjets200_to_300_GeVMC16T.png}}
-%%%%%    \caption{Fit of \mjjtag slope in W+jet resolved control regions, for different $m_{jj}^{sig}$ slices. }
-%%%%%    \label{fig:mjjReweight1LepResPtBins}
-%%%%%\end{figure}
-
-
-%%%\begin{figure}[ht]
-%%%    \centering
-%%%    \subfigure[Fit results for "Constant".]{\includegraphics[width=0.45\textwidth]{figures/mjjreweight1lep/fitCResMC16T.pdf}}
-%%%    \subfigure[Fit results for "Slope".]{\includegraphics[width=0.45\textwidth]{figures/mjjreweight1lep/fitSResMC16T.pdf}}
-%%%    \caption{Slopes and constants as a function of $m_{jj}^{sig}$. The red band presents the 68\% confidence level of the fit. The fitted linear function is shown at the top and the fitted result at the signal $m_{jj}^{sig}$ bin is shown at the bottom. }
-%%%    \label{fig:mjjReweight1LepResFit}
-%%%\end{figure}
-%%%
-%%%
-%%%\begin{figure}[ht]
-%%%    \centering
-%%%    \subfigure[Fitted results for "Constant".]{\includegraphics[width=0.45\textwidth]{figures/mjjreweight1lep/TotalConstant.png}}
-%%%    \subfigure[Fitted results for "Slope".]{\includegraphics[width=0.45\textwidth]{figures/mjjreweight1lep/TotalSlope.png}}
-%%%    \caption{Fitted results for slopes and constants for each data period.}
-%%%    \label{fig:mjjReweight1LepResTotal}
-%%%\end{figure}
-
-%%%Table ~\ref{tab:1lepReweighting} shows the final parameters derived for the \olep channel.
-%%%
-%%%\begin{table}[ht]
-%%%     \centering
-%%%     \caption{1-lepton $m(jj)^\text{tag}$ reweighting factors.}
-%%%     \label{tab:1lepReweighting}
-%%%         \begin{tabular}{ |c|c|c| }
-%%%\hline
-%%%Parameter & Merged CRVjet & Resolved CRVjet  \\
-%%%\hline
-%%%$p_{0}$ (slope) [$\GeV^{-1}$] & $(-51.4 \pm 2.9)10^{-5}$ &  $(-14.4 \pm 6.1)10^{-5}$ \\
-%%% \hline
-%%%$p_{1}$ (constant)  & $1.47 \pm 0.03$ & $1.13 \pm 0.02$ \\
-%%%\hline
-%%%         \end{tabular}
-%%%\end{table}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%Assuming that the mis-modelling depends linearly on \mjjtag, we use the following equation
-%%%to re-weight \Wjets events in an attempt to correct for this mis-modelling:
-%%%
-%%%\begin{equation}
-%%%  w(m_{jj}^{tag}) =  p_0 + p_1 * m_{jj}^{tag} ,
-%%%\end{equation}
-%%%%
-%%%where $p_0$ and $p_1$
-%%%are parameters to be derived separately for merged and resolved regions. Once the slope and constants in the correction function are derived separately for merged and resolved cases in the control regions as defined in Table \ref{tab:mjjReweight1LepRegions}, it is then assumed that the corrections apply to the corresponding signal region. 
-%%%In both the resolved and merged cases, these two constants are derived by fitting the ratio of Sherpa \Wjets modelling and data with non \Wjets background subtracted. In the resolved case, to account for possible dependence of the slope and constant on $m_{jj}^{sig}$, the reweighting study is performed in $m_{jj}^{sig}$ bins of [50,60,70,100,120,150,200,300] GeV, and an interpolation from the control region to the signal region is performed. In the merged case, a fit to the entire $m_{J}$ range is performed to get better statistical significance on the result. The fit results are shown in Figure \ref{fig:mjjReweight1LepResPtBins}, \ref{fig:mjjReweight1LepMer}. Once the constants and slopes have been derived for different $m_{jj}^{sig}$ bins, they are fitted to get the final result in the signal $m_{jj}^{sig}$ bin, as shown in Figure \ref{fig:mjjReweight1LepResFit}. \\
-
-%%%All the above studies were done with all of the data periods and corresponding MC campaigns (mc16a, mc16d, and mc16e) combined. To check that there are no significant differences between different data periods and pileup conditions, the studies were repeated for each mc campaign and the result is shown in Figure \ref{fig:mjjReweight1LepResTotal}.
 

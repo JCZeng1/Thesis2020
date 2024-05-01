@@ -1,24 +1,18 @@
 %%% EventSelection %%%
 
-%%This section describes the event selection, which has been optimized in order to maximize the expected significance of the signal over background.
-%%
-%%A set of preselection cuts are applied first, including basic quality cuts (event cleaning) and  trigger requirements.
-%%Some preselection cuts applied in the \texttt{CxAODMaker} are also summarized.
-
 This chapter outlines the event selection process, optimized to enhance the expected significance of the signal relative to the background.
-A series of preselection criteria are employed, including basic quality cuts (event cleaning) and trigger requirements. Additionally, the preselection cuts applied in the \texttt{CxAODMaker} are outlined.
+A series of preselection criteria are employed, including basic quality cuts (event cleaning) and trigger requirements. The preselection cuts applied in the \texttt{CxAODMaker} are included.
 
-In the primary phase of event selection, the focus is on identifying the $W/Z$ boson decaying leptonically. For the 1-lepton channel, the candidate boson is chosen targeting $W\to \ell\nu$.
-Next, the focus shifts to the hadronic components of the final state. This step aims to enhance the identification of VBS-associated objects and to select the (second) boson that decays hadronically. For selecting VBS-jet candidates, a standard tagging jets procedure is implemented. The hadronically decaying $V$ candidate is identified, either as a large-$R$ jet in the merged regime or as a pair of small-$R$ jets in the resolved regime. 
+In the first phase of event selection, the focus is on identifying the $V$ boson that decays leptonically. For the \olep channel, the candidate boson is selected with the target decay mode $W \to \ell \nu$.
+Next, the focus shifts to the hadronic components of the final state. This step aims to enhance the identification of objects (jets) associated with VBS and to select the other $V$ boson that decays hadronically.
+For the selection of VBS-jet candidates, a standard jet-tagging procedure is implemented. The hadronically decaying $V$ candidate is identified either as a large-$R$ jet in the merged regime or as a pair of small-$R$ jets in the resolved regime.
 
-After the two bosons are indentified, topological cuts are applied to further reduce the background. In the merged regime, the boson tagger defines the SRs and a reversed cut specifies CRs for the \Vjets background. In the resolved regime, a signal di-jets system is constructed, and its invariant mass is utilized to deine a mass window for SRs or sidebands for \Vjets CRs. Additionally, for the \olep channel, dedicated TopCRs are established by including events with additional b-jets.
+After the two bosons are identified, topological cuts are applied to further reduce the background. In the merged regime, the boson tagger defines the signal regions (SRs), and a reversed cut specifies the control regions (CRs) for the \Vjets background. 
+In the resolved regime, a signal dijet system is constructed, and its invariant mass is utilized to define a mass window for SRs or sidebands for \Vjets CRs.
+Additionally, dedicated top control regions (TopCRs) are established by including events with additional $b$-jets.
 
-%The next section concludes with a summary of all the selections, offering a comprehensive overview to the reader. Following this, the chapter will delve into detailed explanations of each selection.
-
-The selections applied are summarized here in tables
-\ref{tab:1lep_merged}-\ref{tab:1lep_resolved}
-.
-%Following this, the current chapter will delve into detailed explanations of each selection.
+The selections applied are summarized in Tables
+\ref{tab:1lep_merged}-\ref{tab:1lep_resolved}.
 Subsequent sections of this chapter will provide detailed discussions of each selection criterion, following the sequence in which they were applied.
 
 %%% 1-lepton channel
@@ -102,7 +96,6 @@ VBS enhancing & $m_{jjj}$ & \multicolumn{3}{c|}{ $>220\,\si{\GeV}$} \\
 \end{table}
 
 
-%%% move here after Oldrich comment
 %%\input{src/event_selection/SummarySelections}
 %%%
 %%\input{src/event_selection/EventCleaning}

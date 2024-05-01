@@ -1,32 +1,14 @@
 %\subsection{Trigger requirements}
-%\label{subsec:trigger_requirements}
-%%The data were collected by the lowest unprescaled single-lepton or \met\ triggers summarized in Table~\ref{tab:triggers} according to the number of leptons in each channel.
-%%
-%%We rely on the trigger setup other analyses with semi-leptonic final states use given the very similar final states;
-%%
-%%in particular, we rely on studies made 
-%%in the VV semi-leptonic search \cite{Bachas:2646593}
-%%and in the SM $V\left(H\to bb\right)$ analysis \cite{HIGG-2018-04, ATL-COM-PHYS-2018-517}. 
+\label{subsec:trigger_requirements}
 
-%and optimisation performed 
-%in the previous round of the analysis and especially on the recent VV resonant search. 
-%Indeed, more studies were done with latest period data \cite{Bachas:2646593}.
+The trigger requirements are summarized in Table~\ref{tab:triggers} and include the lowest unprescaled single-lepton or \met triggers. 
+This trigger setup is employed in studies conducted for the VV semi-leptonic search~\cite{Bachas:2646593} and in the SM $VH\left(\to bb\right)$ analysis~\cite{HIGG-2018-04}. Analyses from these studies feature semi-leptonic final states that closely resemble those in this analysis.
 
-%Since muon term is not considered in the \met calculation in the trigger algorithm, the \met trigger is fully efficient to events containing very high-\pt muon. Therefore, the \met\ trigger is used not only in 0-lepton ($\nu\nu qq$) but also in $\mu\nu qq$ channel if $W$-boson \pt reconstructed by muon and \met, \ptmunu, is greater than 150\,\si{\GeV}, to compensate a poor efficiency (about 70\,\% at the plateau) of the single-muon trigger due to the detector coverage.
-%In $\mu\mu qq$ channel, on the other hand, the single-muon trigger shows the high efficiency of greater than 90\,\% because there are two muon candidates in the event ($\epsilon = 1 - \left( 1 - 0.7 \right)^2 \sim 0.9$). 
-
-%In all sub-channels, we found trigger efficiencies to signal events are greater than 90\,\% in the target mass range of greater than 500\,\si{\GeV}.
-%At the lowest target mass region ($m=300\,\si{\GeV}$), the trigger efficiencies are about 70\,\% in $\mu\nu qq$, 85\,\% in $e\nu qq$, and greater than 90\,\% in $\ell\ell qq$ channel, respectively.
-
-%Due to the \met trigger efficiency reaches to the plateau at $\met=250\,\si{\GeV}$, 0-lepton channel does not cover the region of $m<500\,\si{\GeV}$.
-
-The trigger requirements are summarized in Table~\ref{tab:triggers} and comprise the lowest unprescaled single-lepton or \met\ triggers. The trigger setup is used by studies conducted for the VV semi-leptonic search  \cite{Bachas:2646593}
-and in the SM $V\left(H\to bb\right)$ analysis \cite{HIGG-2018-04, ATL-COM-PHYS-2018-517}. Analyses from these studies feature semi-leptonic final states, closely resembling those in this analysis.
-
-Differences between data and Monte Carlo (MC) simulations in lepton trigger efficiency are addressed by applying scale factors. These factors are implemented through the \texttt{AsgElectronEfficiencyCorrectionTool} and \texttt{MuonEfficiencyScaleFactors} packages, ensuring accurate adjustments to the simulated events.
-
-%Possible data/MC differences on the lepton trigger efficiency are taken into account by applying scale factors implemented in \texttt{AsgElectronEfficiencyCorrectionTool} and \texttt{MuonEfficiencyScaleFactors} packages to the simulated events.
-
+Differences between data and MC simulations in lepton trigger efficiency are addressed by applying scale factors. These factors are implemented using the following packages, which ensure accurate adjustments to the simulated events:
+\begin{itemize}
+    \item \texttt{AsgElectronEfficiencyCorrectionTool}
+    \item \texttt{MuonEfficiencyScaleFactors}
+\end{itemize}
 
 %\begin{landscape}
 \begin{table}[h]
@@ -36,8 +18,6 @@ Differences between data and Monte Carlo (MC) simulations in lepton trigger effi
 \resizebox{\textwidth}{!}{
 \begin{tabular}{|l|c|c|c|}
 \hline
-%%%\multirow{2}{*}{Data-taking period} & \multirow{2}{*}{$e\nu qq$ and $eeqq$ channels} & $\mu\nu qq$ ($\pt(\mu\nu)<150\,\si{\GeV}$) & $\mu\nu qq$ ($\pt(\mu\nu) > 150\,\si{\GeV}$)  \\
-%%%&& and $\mu\mu qq$ channels& and $\nu\nu qq$ channels\\
 \multirow{2}{*}{Data-taking period} & \multirow{2}{*}{$e\nu qq$ and $eeqq$ channels} & $\mu\nu qq$ (\pt{$\mu\nu$}$<150\,\si{\GeV}$) & $\mu\nu qq$ (\pt{$\mu\nu$}$ > 150\,\si{\GeV}$)  \\
 && and $\mu\mu qq$ channels& and $\nu\nu qq$ channels\\
 \hline
@@ -64,10 +44,3 @@ Differences between data and Monte Carlo (MC) simulations in lepton trigger effi
 \end{table}
 %\end{landscape}
 
-
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=0.7\hsize]{figures/Event_selection/Eff_xe110_pufit_xe70_L1XE50.png}
-%\caption{Efficiency of HLT\_xe110\_pufit\_xe70\_L1XE50 to data18 (blue) and $W\to\munu$ MC (red) as a function of \ptmunu. Loose selection cuts to select $W$+jets events are applied.}
-%\label{fig:met_trig_eff}
-%\end{figure}

@@ -1,50 +1,27 @@
-In particle accelerator experiments, detecting quarks is challenging due to quark confinement.
-Since the strong nuclear force prevents their isolation, quarks undergo hadronization when they are separated.
-As the energy in the strong field between separating quarks increases, a new quark-antiquark pair will eventually be created from the vacuum.
-These newly formed quarks then combine with the original quarks to form more hadrons.
-If the original quarks have high enough momentum, this process will repeat and lead to a shower of hadrons observed in the detector. Using clustering algorithms, these hadronic showers can be reconstructed as a cone-shaped energy pattern, known as a jet.
+
+As previously discussed in Section~\ref{subsec:qcd}, the detection of quarks is indirect due to quark confinement.
+The hadronization processes manifest in the detector as a shower of hadrons. Using clustering algorithms, these hadronic showers can be reconstructed as a cone-shaped energy pattern, known as a jet.
+
 
 \subsection{Small-R jet selection}
 \label{subsec:jet_selection}
 
-When a heavy particle decays, it can produce two quarks that rapidly move away from each other and form two distinct jets of particles, observable in detectors. If the original particle is moving slowly, it results in two compact, easily distinguishable jets.
-These compact jets are referred to as Small-R jets, characterized by their small radius.
+When a heavy particle decays, it can produce two quarks that rapidly move away from each other, leading to the formation of two distinct jets of particles in the detector. If the decaying particle is moving slowly, the resulting jets tend to be more compact and easily distinguishable. These compact jets, characterized by a smaller radius parameter (R) in their clustering algorithm, are referred to as Small-R jets.
 
-Small-R jets are used for reconctructing the less boosted $W/Z \to qq$ candidates, delineating \(qq\) pairs from \(V\) boson decays as ``Signal'' jets and forward jets in vector-boson scattering (``VBS'' jets). Sections \ref{subsec:vbs_selection} and \ref{subsubsec:merged_jets_selection}-\ref{subsubsec:resolved_jets_selection} provide in-depth discussions on Signal and VBS jets. We use the ATLAS baseline jet reconstruction algorithm, the \texttt{AntiKt4EMPFlowJets}, which is anti-$k_t$ clustering algorithm.
-Standard jet calibrations are implemented, including the use of Jet Vertex Tagging (JVT) with a Medium Working Point (WP) to reduce pile-up interactions. 
-To further suppress pile-up jets, especially in the forward-like topology relevant to our analysis, the forward-JetVertexTagger (fJVT) is applied, enhancing the focus on jets from the targeted VBS-scattering processes.
+Small-R jets are used for reconstructing the less boosted $W/Z \to qq$ candidates, identifying \(qq\) pairs from \(V\) boson decays as ``Signal'' jets and forward jets in vector-boson scattering as ``VBS'' jets. Sections \ref{subsec:vbs_selection} and \ref{subsubsec:merged_jets_selection}-\ref{subsubsec:resolved_jets_selection} provide in-depth discussions on Signal and VBS jets. We use the ATLAS baseline jet reconstruction algorithm, the \texttt{AntiKt4EMPFlowJets}, which is anti-$k_t$ clustering algorithm~\cite{Cacciari_2008}.
+Standard jet calibrations are implemented, including the use of Jet Vertex Tagging (JVT) with a Medium Working Point (WP) to reduce pile-up interactions~\cite{ATLAS-CONF-2014-018}.
+Pile-up interactions refer to the multiple, simultaneous collisions of other proton pairs occurring alongside the primary collision event.
+To further suppress pile-up jets, especially in the forward-like topology relevant to our analysis, the forward-JetVertexTagger (fJVT)~\cite{ATL-PHYS-PUB-2019-026} is applied, enhancing the focus on jets from the targeted VBS processes.
 Small-R jet selection criteria is summarized in Table~\ref{tab:small_R_jet_summary}.
-%%%%%
-%%Small-R jets are used to reconstruct $W/Z \to qq$ candidates that are less boosted so that the $qq$ pair
-%%from the $V$ boson decay are well separated (``Signal'' jets), and to select the forward jets coming from vector-boson scattering (``VBS''
-%%jets); both Signal and VBS jets definitions will be discussed in details in sections \ref{subsec:vbs_selection} and \ref{subsubsec:merged_jets_selection}-\ref{subsubsec:resolved_jets_selection} respectively.
-%%The ATLAS baseline reconstruction algorithm is used (\texttt{AntiKt4EMPFlowJets}).
-%%
-%%Usual calibrations are applied to the jets. 
-%%The Jet Vertex Tagging (JVT) with Medium WP is applied to the jets to suppress pile-up interactions.
-%%Furthermore, BadBatMan flag cleaning is turned on in the analysis framework to remove the BatMan effect.
-%%
-%%In the context of the pile-up jets suppression, 
-%%forward-JetVertexTagger (fJVT) has been introduced in this round of the analysis 
-%%to mitigate the jet candidates contributions coming from pile-up interaction 
-%%rather than the hard processes we are targeting. 
-%%This is motivated mainly by the forward-like topology we are interested in. 
-
-%In particular, Loose WP is used, as described in section \ref{subsec:vbs_selection}, 
-%and recommendation are followed from the internal twiki 
-%\mbox{\texttt{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PileupJetRecommendations}{fJVT}}}.
-
-
-%Small-R jet selection criteria is summarized in Table~\ref{tab:small_R_jet_summary}.
 
 \begin{table}[ht]
-\caption{Summary of small-R jet selection and calibration}
+\caption{Summary of Selection Criteria and Calibration Methods for Small-R Jets}
 \label{tab:small_R_jet_summary}
-\resizebox{\textwidth}{!}{
+\resizebox{0.95\textwidth}{!}{
 \begin{tabular}{|c|c|c|}
 \hline
 %\large
-\multicolumn{3}{|c|}{Jet reconstruction parameters} \\
+\multicolumn{3}{|c|}{Jet Reconstruction Parameters} \\
 %\normalsize
 \hline
 Parameter & \multicolumn{2}{c|}{Value} \\ 
@@ -53,14 +30,14 @@ algorithm & \multicolumn{2}{c|}{anti-k$_\text{T}$}  \\
 R-parameter & \multicolumn{2}{c|}{0.4} \\
 input constituent & \multicolumn{2}{c|}{EMPFlow} \\
 Analysis Release Number &\multicolumn{2}{c|}{ 21.2.164 } \\
-CalibArea tag & \multicolumn{2}{c|}{00-04-82} \\
-Calibration configuration & \multicolumn{2}{c|}{JES\_MC16Recommendation\_Consolidated\_PFlow\_Apr2019\_Rel21.config} \\
+%CalibArea tag & \multicolumn{2}{c|}{00-04-82} \\
+%Calibration configuration & \multicolumn{2}{c|}{JES\_MC16Recommendation\_Consolidated\_PFlow\_Apr2019\_Rel21.config} \\
 Calibration sequence (Data) & \multicolumn{2}{c|}{JetArea\_Residual\_EtaJES\_GSC\_Insitu} \\
 Calibration sequence (MC) & \multicolumn{2}{c|}{JetArea\_Residual\_EtaJES\_GSC\_Smear} \\
 %Calibration sequence (AFII) & JetArea\_Residual\_EtaJES\_GSC \\
 \hline
 %\large
-\multicolumn{3}{|c|}{Selection requirements} \\
+\multicolumn{3}{|c|}{Selection Requirements} \\
 %\normalsize
 \hline
 %& \textbf{``Signal'' jet} & \textbf{``VBS'' jet} \\
@@ -77,12 +54,12 @@ BatMan cleaning & \multicolumn{2}{c|}{Yes} \\
 \hline
 JVT & \multicolumn{2}{c|}{$>0.5$ for 60 GeV$<\pt<$120~GeV and $\left|\eta\right|<2.4$ } \\
 WP  & \multicolumn{2}{c|}{Medium} \\
-Config  & \multicolumn{2}{c|}{Moriond2018/JvtSFFile\_EMPFlow.root} \\
+%Config  & \multicolumn{2}{c|}{Moriond2018/JvtSFFile\_EMPFlow.root} \\
 \hline
 fJVT & \multicolumn{2}{c|}{$>0.5$ (and $|timing|<10 \ ns$)} \\
      & \multicolumn{2}{c|}{for $\pt<$120~GeV and $2.5 < \left|\eta\right|<4.5$}  \\
 WP   & \multicolumn{2}{c|}{Loose} \\
-Config  & \multicolumn{2}{c|}{Moriond2018/fJvtSFFile.root} \\
+%Config  & \multicolumn{2}{c|}{Moriond2018/fJvtSFFile.root} \\
 \hline
 $b$-tagging (See Sec.~\ref{subsec:flavortagging}) & \multicolumn{2}{c|}{Tagged, or not tagged} \\
 \hline
@@ -97,9 +74,9 @@ $b$-tagging (See Sec.~\ref{subsec:flavortagging}) & \multicolumn{2}{c|}{Tagged, 
 \clearpage
 \subsection{Large-R jet selection}
 \label{subsec:large-Rjet}
-For high-\pt $W/Z \to qq$ candidates, the angle between the two jets narrows, leading to the merging of jets. Clustering algorithms then reconstruct them into a single, larger-radius jet, known as a large-R jet, which encompasses the two merged sub-jets.
+For high-\pt $W/Z \to qq$ candidates, the angle between the two jets narrows, leading to the merging of jets, as shown in Figure~\ref{fig:jet_merging}. Clustering algorithms then reconstruct them into a single, larger-radius jet, known as a large-R jet, which contains the two merged sub-jets.
 Following the trimming procedure\cite{Krohn:2009th} to reduce pile-up and soft radiation effects, the ``jet mass'', $m_J$, 
-is reconstructed by summing the four-vectors of jet constituents, treated as massless. The large-R jets then undergo baseline kinematic cuts as prescribed by the CP group:
+is reconstructed by summing the four-vectors of jet constituents. The large-R jets then undergo baseline kinematic cuts:
 
         \begin{itemize}
                 \item $\pt^{J} > 200 \, \GeV$
@@ -113,102 +90,36 @@ D^{(\beta=1)}_2 = E_{CF3} \left( \frac{E_{CF1}}{E_{CF2}} \right)^3 \\
 \end{equation}
 where the energy correlation functions ($E_{CF}$) are defined as:
 \begin{equation}
-\begin{split}
-E_{CF1} = \sum_{i} p_{T,i}
-\\
-E_{CF2} = \sum_{ij} p_{T,i}p_{T,j} \Delta R_{ij}
-\\
-E_{CF3} = \sum_{ijk} p_{T,i}p_{T,j}p_{T,k} \Delta R_{ij} \Delta R_{jk} \Delta R_{ki}
-\end{split}
+\begin{aligned}
+E_{CF1} &= \sum_{i} p_{T,i} \\
+E_{CF2} &= \sum_{ij} p_{T,i}p_{T,j} \Delta R_{ij} \\
+E_{CF3} &= \sum_{ijk} p_{T,i}p_{T,j}p_{T,k} \Delta R_{ij} \Delta R_{jk} \Delta R_{ki}
+\end{aligned}
 \end{equation}
 
 The track multiplicity, $n_{\text{Tracks}}$, of the ungroomed large-R jet is also used to enhance background rejection. It is particularly sensitive to QCD jets from single-quark and gluon decays. 
 %The utilization of these variables in defining the merged category is detailed in Section~\ref{subsubsec:merged_jets_selection}.
 The $W/Z$ boson tagger, based on three variables—$m_J$, $D_{2}$, $n_{\text{Tracks}}$—is used to identify boson jets from large-R jet candidates. The application of this tagger and the three variables in defining the merged category is elaborated in Section~\ref{subsubsec:merged_jets_selection}.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.65\textwidth]{figures/object_definition/jet_merging.png}
+    \caption{Illustration of jets merging}
+    \label{fig:jet_merging}
+\end{figure}
+
 %%%
-%%%Large-R jet (\texttt{AntiKt10LCTopoTrimmedPtFrac5SmallR20})
-%%%is used to reconstruct high-\pt $W/Z \to qq$ candidates.
-%%%After the trimming procedure\cite{Krohn:2009th} to suppress the pileup and soft radiations, the ``jet mass'', $m_J$, is reconstructed by the four-vector sum of the jet constituents, assuming they are massless particles.
-%%%The reconstructed $m_J$ peaks around the $m_{W/Z}$ for $W/Z \to q\bar{q}$ signals and distributes broadly for single-quark- and gluon-induced jets (see Section~\ref{subsubsec:merged_jets_selection}).
-%%%
-%%%Baseline kinematics cuts are applyied on the large-R jets collection as CP group prescriptions:
-%%%
-%%%        \begin{itemize}
-%%%                \item $\pt^{J} > 200 \, \GeV$
-%%%                \item $|\eta|^{J} < 2$
-%%%                \item $m^{J} > 50 \, \GeV$
-%%%        \end{itemize}
-%%%
-%%%In addition to the window cut on the jet mass distribution, we use the jet substructure variable, $D_{2}$, reconstructed by the energy correlation functions based on energies and pair-wise angles of the sub-constituents\cite{Larkoski:2014gra,Larkoski:2015kga}. The variable $D_{2}$ is defined as
-%%%\begin{equation}
-%%%D^{(\beta=1)}_2 = E_{CF3} \left( \frac{E_{CF1}}{E_{CF2}} \right)^3 \\
-%%%\end{equation}
-%%%where the energy correlation functions ($E_{CF}$) are defined as:
-%%%\begin{equation}
-%%%\begin{split}
-%%%E_{CF1} = \sum_{i} p_{T,i}
-%%%\\
-%%%E_{CF2} = \sum_{ij} p_{T,i}p_{T,j} \Delta R_{ij}
-%%%\\
-%%%E_{CF3} = \sum_{ijk} p_{T,i}p_{T,j}p_{T,k} \Delta R_{ij} \Delta R_{jk} \Delta R_{ki}
-%%%\end{split}
-%%%\end{equation}
-%%%
-%%%The $D_{2}$ variable is sensitive to the 2-prong sub-structure we expect from the W/Z bosons decay; 
-%%%furthermore, we use the track multiplicity of the large-R jet to improve the background rejection, 
-%%%indeed, this variable is more sensitive to the single-quark or -gluon decay of QCD jets; 
-%%%in particular, tracks with standard reconstruction criteria and \pt $> 500 \ MeV$ associated to the un-groomed large-R jet
-%%%are used in the calculation.
-
-
-%%\textbf{Optimization of $W/Z$-tagging}
-%%
-%%We use the central boson tagger recommendation to identify our large-R jet candidates as W/Z boson jets and 
-%%to reject the other SM background processes (mainly, V+jets and $t\bar{t}$ after the analysis pre-selection). 
-%%In particular, we use the 3-variables based tagger, that relies on the sub-structure variables, $D_2$ and $nTracks$, 
-%%as well as the jet mass; two central fixed efficiency WPs are provided (50\% and 80\%). 
-%%Dedicated optimization studies available from the JetEtMiss group are available here:
-%%\mbox{\texttt{\href{https://indico.cern.ch/event/806078/contributions/3354584/attachments/1812138/2960029/JSS_14mar2019.pdf}{OptimisationStudies}}}.
-
-%More info are available on the central reccomendation page 
-%\mbox{\texttt{\href{
-%https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/BoostedJetTaggingRecommendationFullRun2
-%}
-%{BoostedJetTaggingRecommendationFullRun2}
-%}}
-%as well as the dedictaed optimisation studies can be found here 
-%\mbox{\texttt{\href{
-%https://indico.cern.ch/event/806078/contributions/3354584/attachments/1812138/2960029/JSS_14mar2019.pdf
-%}
-%{OptimisationStudies}
-%}}.
-
-
-%%%Boson tagging efficiency scale factors~(SF) are applied to simulated events. 
-%%%The boson tagging efficiency SF and the uncertainty
-%%%are estimated using dedicated data samples according to JetTagging recommendations.
-%%%%the central JetTagging recommendations
-%%%%\mbox{\texttt{\href{
-%%%%https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JetUncertaintiesRel21ConsolidatedLargeRTaggerSF
-%%%%}
-%%%%{JetUncertaintiesRel21ConsolidatedLargeRTaggerSF}
-%%%%}}.
-%%%In particular, central boson tagger SF are not available only for the exclusive (80\%-50\%) region, 
-%%%but an additional derivation has been done in the phase space of the analysis as recommended by the JetTagging group; 
-%%%details are provided in appendix \ref{app:LP_SF}.
-
 Summary of selections and calibrations of the large-R jet is shown in Table~\ref{tab:largeR_jet_summary}.
 
 
 \begin{table}[ht]
-\caption{Summary of large-R jet selections and calibrations}
+\caption{Summary of Selection Criteria and Calibration Methods for Large-R Jet}
 \label{tab:largeR_jet_summary}
-\resizebox{\textwidth}{!}{
+\resizebox{0.95\textwidth}{!}{
 \begin{tabular}{|c|c|}
 \hline
 %\large
-\multicolumn{2}{|c|}{Jet reconstruction parameters} \\
+\multicolumn{2}{|c|}{Jet Reconstruction Parameters} \\
 \hline
 %\normalsize
 Parameter & Value \\ 
@@ -222,13 +133,13 @@ $R_{trim}$ & 0.2 \\
 Analysis Release Number & 21.2.164 \\
 %Calibration tag & JetCalibTools-00-04-76 \\
 %CalibArea tag & 00-04-81 \\
-Calibration configuration (Data) & JES\_MC16recommendation\_FatJet\_Trimmed\_JMS\_comb\_March2021.config \\
-Calibration configuration (MC) & JES\_MC16recommendation\_FatJet\_Trimmed\_JMS\_comb\_17Oct2018.config \\
+%Calibration configuration (Data) & JES\_MC16recommendation\_FatJet\_Trimmed\_JMS\_comb\_March2021.config \\
+%Calibration configuration (MC) & JES\_MC16recommendation\_FatJet\_Trimmed\_JMS\_comb\_17Oct2018.config \\
 Calibration sequence (Data) & EtaJES\_JMS\_Insitu\_InsituCombinedMass \\
 Calibration sequence (MC) & EtaJES\_JMS \\
 \hline
 %\large
-\multicolumn{2}{|c|}{Selection requirements} \\
+\multicolumn{2}{|c|}{Selection Requirements} \\
 %\normalsize
 \hline
 Observable & Requirement \\
@@ -241,40 +152,10 @@ mass & $>$ 50~GeV \\
 Object  & Working point \\\hline
 $W$/$Z$ & 3-var tagger working point \\
 %$Z\rightarrow bb$ & single/double b-tag with/without loose/tight mass \\\hline
-        & \texttt{SmoothedContainedVTagger\_AntiKt10LCTopoTrimmed\_FixedSignalEfficiencyXX\_MC16\_20201216.dat} \\
+%        & \texttt{SmoothedContainedVTagger\_AntiKt10LCTopoTrimmed\_FixedSignalEfficiencyXX\_MC16\_20201216.dat} \\
         & with V = {W, Z} and XX = {50, 80} \\
 \hline
 \end{tabular}}
 \end{table}
 
 
-%%Move to its own tex file
-
-%%%\subsection{MET reconstruction}
-%%%Missing transverse energy, \MET , is the total energy of all the undetected particles in an event. In this analysis, with just one neutrino in the final state, it’s assumed that the \MET directly corresponds to this single neutrino’s energy. The \MET reconstruction is done based on the signals of detected particles in the final state.
-%%%\begin{equation}
-%%%\label{eq:METformula}
-%%%E_{x(y)}^{\text{miss}} = E_{x(y)}^{\text{miss}, e} + E_{x(y)}^{\text{miss}, \gamma} + E_{x(y)}^{\text{miss}, \tau} + E_{x(y)}^{\text{miss, jets}} + E_{x(y)}^{\text{miss}, \mu} + E_{x(y)}^{\text{miss, soft}}
-%%%\end{equation}
-%%%
-%%%After the calibrations for pileup, two types of contributions are taken into account in the reconstruction.
-%%%        \begin{itemize}
-%%%                \item hard-event signals: fully reconstructed and calibrated particles ($e, \gamma, \tau, \mu$) and small-R jets
-%%%                \item soft-event signals: soft tracks in the inner detector not parts of any reconstructed physical object 
-%%%        \end{itemize}
-%%%When taking the negative vectorial sum of all contributing physics objects, only the calorimeter signals are used to avoid double counting~\cite{PERF-2016-07}.
-
-%%%Missing transverse energy, $E_{\text{T}}^{\text{miss}}$, is reconstructed by taking the negative vectorial sum of all the reconstructed and calibrated 
-%%%electrons, muons, and small-R jets, after the calibrations have accounted for pileup:
-%%%\begin{equation}
-%%%\label{eq:METformula}
-%%%E_{x(y)}^{\text{miss}} = E_{x(y)}^{\text{miss}, e} + E_{x(y)}^{\text{miss}, \gamma} + E_{x(y)}^{\text{miss}, \tau} + E_{x(y)}^{\text{miss, jets}} + E_{x(y)}^{\text{miss}, \mu} + E_{x(y)}^{\text{miss, soft}}
-%%%\end{equation}
-%%%
-%%%For all of these physics objects used to reconstruct $E_{\text{T}}^{\text{miss}}$, only the calorimeter signals are used. 
-%%%Large-R jets are not included in this definition to avoid double counting with small-R jets, and a ``soft term'' is used to account 
-%%%for soft radiation terms that leave tracks in the inner detector but are not used in any reconstruction of physics objects~\cite{PERF-2016-07}.
-%%%
-%%%In this note, the term $p_{T}^{\text{miss}}$ is also used. For the purpose of this note, $p_{T}^{\text{miss}}$ means the vectorial sum of 
-%%%transverse momenta reconstructed from particle tracks, and is used interchageably with the term $p_{track}$. This $p_{T}^{\text{miss}}$ term
-%%%is used together with $E_{\text{T}}^{\text{miss}}$ to set MET requirements in the event selection. 

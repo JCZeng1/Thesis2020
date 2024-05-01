@@ -1,15 +1,12 @@
 %\subsection{Muon selection}
 \label{subsec:muon_selection}
-Muons are chosen similarly to electrons, with the key distinction being the use of the muon spectrometer instead of the calorimeter. They must meet comparable momentum and isolation criteria, plus a consistency check aligning tracks from the inner detector to the muon spectrometer. Muons failing basic quality standards during data collection are excluded.
+Muons are chosen similarly to electrons, with the key distinction being the use of the muon spectrometer instead of the calorimeter. They must meet comparable momentum and isolation criteria, plus a consistency check aligning tracks from the inner detector to the muon spectrometer~\cite{Aad2023}. Muons failing basic quality standards during data collection are excluded.
 The criteria for muon identification and isolation are optimized to reduce the presence of non-prompt muons.
 This analysis uses two muon definitions, Tight and Loose, summarized in Table~\ref{tab:muon_selection}.
-%Two types of muon definitions are used in this analysis.
 \begin{itemize}
 \item ``Tight'' muon: used to select $W\to \mu\nu$ candidate.
 \item ``Loose'' muon: used to veto events with additional leptons.
 \end{itemize}
-%In 1-lepton channel, the muon identification and isolation working points are optimized to minimize the contributions of the non-prompt muon.
-%The definitions of the Tight and Loose muons are summarized in Table~\ref{tab:muon_selection}.
 
 \begin{table}[ht]
 \caption{Summary of Muon Selections}
@@ -22,7 +19,7 @@ This analysis uses two muon definitions, Tight and Loose, summarized in Table~\r
 \hline
   Pseudorapidity range & \multicolumn{2}{c|}{$|\eta|<2.5$} \\
 \hline
-  Momentum Calibration & \multicolumn{2}{c|}{Sagitta Correction Used} \\
+Momentum Calibration & \multicolumn{2}{c|}{Sagitta Correction~\cite{Aad2023} Used} \\
 \hline
   Transverse momentum & $\pt > 7~\GeV$ & $\pt > 28~\GeV$ \\
 \hline
@@ -32,8 +29,7 @@ This analysis uses two muon definitions, Tight and Loose, summarized in Table~\r
 \hline
   Selection Working Point & Loose & Medium\\
 \hline
-                          %& LooseTrackOnly & \\
-  Isolation Working Point & FCLoose at $\pt<100\,\GeV$                   & FixedCutTightTrackOnly \\
+  Isolation Working Point & FixedCutLoose at $\pt<100\,\GeV$                   & FixedCutTightTrackOnly \\
                           & and no isolation requirement at $>100\,\GeV$ & \\
 \hline
 \end{tabular}
@@ -41,8 +37,3 @@ This analysis uses two muon definitions, Tight and Loose, summarized in Table~\r
 \end{center}
 \end{table}
 
-%Notes: 
-%The selection criteria are implemented in the MuonSelectorTools with MuonMomentumCorrections, isolation in IsolationSelection and $d_0$ and $z_0$ cuts in xAODTracking packages.   
-%The muon recommendations can be found here: \mbox{\texttt{\href{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/MCPAnalysisConsolidationMC16}{MCPAnalysisConsolidationMC16}}}.
-
-%\newpage
