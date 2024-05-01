@@ -1,13 +1,10 @@
 %1-lep DNN ML
-
 %Motivations and Architecture
 \section{Motivations and Architecture}
 \label{sec:motivations_and_architecture}
 
-Within the analysis framework, I have adopted a machine learning strategy, termed the DNN approach, to improve sensitivity to the VBS signal. This method utilizes Keras-based neural network models, featuring multiple dense layers. 
-The DNN implementation available in Keras \cite{chollet2015keras} has been used, and the Tensorflow package \cite{tensorflow2015-whitepaper} is used as backend.
-Figure \ref{fig:DNNArchitecturePic} provides a visual representation of the DNN architecture.
-The ReLU (rectified linear unit) function is used for hidden layer activation, with L2 regularization to reduce overfitting risk. The output layer uses a sigmoid activation, generating DNN scores across a continuous range. Details are in Table \ref{tab:1lepDNN layers}.
+Within the analysis framework, I have adopted a machine learning strategy, termed the Deep Neural Network (DNN) approach, to improve sensitivity to the VBS signal. This method utilizes neural network models implemented using Keras~\cite{chollet2015keras}, with TensorFlow serving as the backend~\cite{tensorflow2015-whitepaper}. Figure~\ref{fig:DNNArchitecturePic} illustrates the architecture of the DNN, which features multiple dense layers. The configuration of these layers, including the number of nodes and the specific setup, is detailed in Table~\ref{tab:1lepDNN layers}.
+The hidden layers of the DNN employ the ReLU (rectified linear unit) function for activation. Alongside, L2 regularization is incorporated to minimize the risk of overfitting by penalizing the magnitude of the coefficients, thus maintaining model simplicity and robustness. The output layer utilizes a sigmoid activation function, ideal for binary classification tasks as it maps predictions to a probability scale, generating DNN scores that span a continuous range from zero to one.
 
 \begin{figure}[ht]
        \centering
@@ -33,26 +30,21 @@ The ReLU (rectified linear unit) function is used for hidden layer activation, w
     \label{tab:1lepDNN layers}
 \end{table}
 
-%%%The importance of input features for the trained neural networks is quantified using the concept of SHAP (SHapley Additive exPlanations), 
-%%%as introduced in the referenced NeurIPS paper \cite{LundbergLee2017}.
-%%%%url = {https://proceedings.neurips.cc/paper/2017/file/8a20a8621978632d76c43dfd28b67767-Paper.pdf}
-%%%SHAP aims to clarify the predictive output of the model for individual events by assessing the contribution of each input feature to the resulting decision (DNN score). For a complex model such as a neural network, an interpretable approximation can offer a simplified, more comprehensible explanation. This surrogate model mirrors the performance of the original model while being more accessible for interpretation.
-%%%For the purpose of these calculations, we utilize one half of the MC samples from each signal region.
-
 \section{Input Variables and Feature Engineering}
 \label{input_variables}
 
-We measure the impact of input features on our DNNs using SHAP (SHapley Additive exPlanations), as detailed by Lundberg and Lee in their NeurIPS paper \cite{LundbergLee2017}. SHAP helps understand how each feature influences the model's predictions (DNN scores) for individual events. It provides an interpretable approximation of complex neural networks, making the model's decisions easier to grasp. This approach creates a simplified model that still reflects the original's performance, but is more straightforward to interpret.
+We assess the impact of input features on our DNNs using SHAP (SHapley Additive exPlanations), as introduced by Lundberg and Lee~\cite{LundbergLee2017}. SHAP quantifies the contribution of each feature to the deviation of a particular prediction from the average outcome across the dataset. This method provides a game theory-based interpretable approximation of complex neural networks, facilitating a deeper understanding of how individual features influence the model's predictions (DNN scores) for specific events. Employing SHAP values helps create a simplified yet faithful model that mirrors the original network's performance, making the decision-making process transparent and easier to interpret.
 
-To optimize the DNN models, we use a backward feature elimination method guided by SHAP value rankings. This involves removing the least important input features step by step. After each round of elimination, the DNN models are retrained, and SHAP values are recalculated to update the feature rankings. In the end, we retain 15 input features for the merged category and 17 for the resolved category.
-The final selection of input features for both categories is listed in Table~\ref{tab:1lepNN}, while their SHAP value rankings are shown in Figure~\ref{fig:1lepDNN_shap_rank}.
-%%Figures \ref{fig:mer_inputs-part1} to \ref{fig:mer_inputs-part2} display the input feature distributions in the SRs. The differing shapes between signal and background in these figures demonstrate the effectiveness of the feature selection process.
+To optimize the DNN models, we use a backward feature elimination method, guided by SHAP value rankings, which is a recognized technique in feature selection. This approach involves systematically removing the least important input features, as determined by SHAP values, and then retraining the DNN models after each round to assess the impact of these eliminations on model performance. SHAP values are recalculated after each training session to ensure that the feature rankings are continuously updated. In the end, we retain 15 input features for the merged category and 17 for the resolved category, demonstrating tailored optimizations for each.
+The final selection of input features for both categories is documented in Table~\ref{tab:1lepNN}, and their corresponding SHAP value rankings are illustrated in Figure~\ref{fig:1lepDNN_shap_rank}.
+
 The term ``full system'' refers to variables associated with the entire set of signal jet(s), lepton(s), and tagging jets.
 The boson centrality, $\xi(V)$, is defined as :  
 \begin{equation} \label{eq:centr} \xi(V)  = min(\Delta\eta_{-},\Delta\eta_{+}) \end{equation} where $$\Delta\eta_{-} = min(\eta_{\Vlep},\eta_{\Vhad}) - min(\etajo,\etajt)$$ and  $$\Delta\eta_{+} = max(\etajo,\etajt) - max(\eta_{\Vlep},\eta_{\Vhad}) $$
-Figures~\ref{fig:mer_inputs-part1}, \ref{fig:mer_inputs-part2}, \ref{fig:res_inputs-part1}, and \ref{fig:res_inputs-part2} display the input feature distributions in the SRs. The differing shapes between signal and background in these figures demonstrate the effectiveness of the feature selection process.
+Figures~\ref{fig:mer_inputs-part1}, \ref{fig:mer_inputs-part2}, \ref{fig:res_inputs-part1}, and \ref{fig:res_inputs-part2} display the distributions of input features within the SRs. The noticeable differences in distribution shapes between the signal and background MC samples, as shown in these figures, highlight the effectiveness of our feature selection process.
 
-Figure~\ref{fig:ROCChecks} shows a comparison between the performance of the initial and final DNN models in both the merged and resolved categories, indicating they are similarly effective. To understand this comparison, we define signal efficiency and background rejection as follows:
+Figure~\ref{fig:ROCChecks} presents a comparison of the performance metrics for the initial and final DNN models in both the merged and resolved categories, demonstrating that both models achieve comparable levels of effectiveness. To better understand this comparison, 
+we define signal efficiency and background rejection as follows:
 
 \begin{equation}
 \text{Signal Efficiency} = \frac{\text{Number of Signal events with DNN} > X}{\text{Total Number of Signal events}}
@@ -62,8 +54,6 @@ Figure~\ref{fig:ROCChecks} shows a comparison between the performance of the ini
 \text{Background Rejection} = \frac{\text{Number of Background events with DNN} < X}{\text{Total Number of Background events}}.
 \end{equation}
 
-%These definitions help in evaluating the DNN's ability to correctly identify signal events and reject background events.
-
 \begin{figure}[ht]
       \centering
        \subfloat[\emph{ROC Curve}]{\includegraphics[width=0.4\textwidth]{figures/ml_dnn/ROCImpactMerged.png}}
@@ -71,8 +61,6 @@ Figure~\ref{fig:ROCChecks} shows a comparison between the performance of the ini
        \caption{ROC curves for the DNN models in the merged (a) and resolved (b) categories. Here, ``area'' refers to the AUC (Area Under the ROC Curve). The AUC values are computed to offer quantitative measures of performance.}
        \label{fig:ROCChecks}
 \end{figure}
-
-%%While further refinement of this input feature roster is conceivable through continued iteration, the marginal gains may be limited, given that uncertainties have not been factored into the selection process.
 
 \begin{table}[ht]
     \centering
@@ -202,55 +190,30 @@ Figure~\ref{fig:ROCChecks} shows a comparison between the performance of the ini
 \end{figure}
 
 
-
-%%%\clearpage
-%%%\section{Trainings and Validations}
-%%%\label{trainings_and_validations}
-%%%
-%%%Figure~\ref{fig:ROCChecks} presents a comparison of the performance between the initial and final DNN models within both the merged and resolved categories, with the results indicating similar levels of effectiveness.
-%%%Within this context, signal efficiency and background rejection (rates) are defined as follows:
-%%%
-%%%\begin{equation}
-%%%  Signal \ Efficiency = \frac{\# \ of \ Signal \ events \ with \ DNN > X}{\# \ of \ Signal \ events}
-%%%\end{equation}
-%%%\begin{equation}
-%%%  Background \ Rejection = \frac{\# \ of \ Background \ events \ with \ DNN < X}{\# \ of \ Background \ events}.
-%%%\end{equation}
-%%%
-%%%
-%%%\begin{figure}[ht]
-%%%      \centering
-%%%       \subfloat[\emph{ROC Curve}]{\includegraphics[width=0.4\textwidth]{figures/ml_dnn/ROCImpactMerged.png}}
-%%%       \subfloat[\emph{ROC Curve}]{\includegraphics[width=0.4\textwidth]{figures/ml_dnn/ROCImpactRes.png}}
-%%%       \caption{ROC curves for the DNN models in the merged (a) and resolved (b) categories. Here, "area" refers to the AUC (Area Under the ROC Curve). The AUC values are computed to offer quantitative measures of performance.}
-%%%       \label{fig:ROCChecks}
-%%%\end{figure}
-
 \clearpage
 \section{Trainings and Validations}
 \label{trainings_and_validations}
 
-%Distinct models are trained for the merged and resolved regimes. In the merged regime, a unified model is trained using samples from both the high purity and low purity signal regions. A dedicated model is utilized for the resolved signal region. For each regime, the MC sample is bifurcated by event number: half is allocated for DNN training, and the remainder for validation. Signal EW $VV+jj$ events are categorized as "1" and background events as "0".
+We train separate DNN models for the merged and resolved categories. In the merged category, a single model is trained using events from both high and low purity SRs, whereas the resolved category uses its own dedicated model. For each category, the MC sample is divided into two parts: one for training and the other for validation. Within this framework, signal EW $VV+jj$ events are labeled as ``1'' and background events as ``0''.
 
-%Binary cross-entropy is selected as the loss function, as illustrated in Figure \ref{fig:LossAndAccuracy}. Trials with both the Adam and SGD (stochastic gradient descent) optimizers on the DNN models suggest that SGD is preferable due to its role in refining the distribution of DNN scores.
-
-We train separate models for the merged and resolved categories. In the merged category, a single model is trained with events from both high and low purity signal regions, while the resolved category uses its own dedicated model. For each category, we split the MC sample into two: one part for training the DNN and the other for validation. Signal EW $VV+jj$ events are labeled as ``1'' and background events as ``0''.
-
-The loss function used is binary cross-entropy, as shown in Figure \ref{fig:LossAndAccuracy}. Experiments with Adaptive Moment Estimation (Adam) and Stochastic Gradient Descent (SGD) optimizers reveal that SGD is preferred for its effectiveness in adjusting the distribution of DNN scores.
+The loss function employed is binary cross-entropy, which is well-suited for models that output binary labels, as demonstrated in Figure~\ref{fig:LossAndAccuracy}. Experiments with Adaptive Moment Estimation (Adam) and Stochastic Gradient Descent (SGD) optimizers reveal a preference for SGD due to its effectiveness in fine-tuning the distribution of DNN scores, likely attributed to its more consistent convergence behavior in our specific application.
 
 %%%k-fold
-In this analysis, we employ the k-fold cross-validation method to fully leverage our MC samples, ensuring an unbiased evaluation of performance. 
-We utilize a 5-fold cross-validation strategy. This approach divides the dataset into 5 equally sized parts(or folds), then the DNN is trained and validated 5 times. 
-During each of the five iterations, four folds are used for training the model, while the remaining fold serves as the validation set. 
-This cyclical process ensures that every MC event in the SRs is used for both training and validation across the iterations.
-Figure \ref{fig:kfoldValidations} provides a clear indication of the DNN approach's reliability across different subsets of the dataset.
+%In this analysis, we employ the k-fold cross-validation method to fully leverage our MC samples, ensuring an unbiased evaluation of performance. 
+%We utilize a 5-fold cross-validation strategy. This approach divides the dataset into 5 equally sized parts(or folds), then the DNN is trained and validated 5 times. 
+%During each of the five iterations, four folds are used for training the model, while the remaining fold serves as the validation set. 
+%This cyclical process ensures that every MC event in the SRs is used for both training and validation across the iterations.
+%Figure \ref{fig:kfoldValidations} provides a clear indication of the DNN approach's reliability across different subsets of the dataset.
 
-For practicality and reliability, I employs a 2-fold cross-validation method for the DNN approach. The complete MC sample is evenly divided into training and testing datasets. The consistent performance between these datasets, highlighted in Figure \ref{fig:ROCValidations}, indicates no training set bias. 
+In this analysis, we employ the k-fold cross-validation method to fully leverage our MC samples, ensuring an unbiased evaluation of model performance. We utilize a 5-fold cross-validation strategy, which divides the dataset into five equally sized parts (or folds). The DNN is trained and validated five times, using a cyclical process. During each iteration, four folds are used for training the model, while the remaining fold serves as the validation set. This approach ensures that every MC event in the Signal Regions (SRs) is used for both training and validation across the iterations, thereby enhancing the robustness and generalizability of our model. Figure~\ref{fig:kfoldValidations} provides a clear indication of the reliability of the DNN approach across different subsets of the dataset.
 
+For practicality and reliability, I implement a 2-fold cross-validation method for the DNN approach. The complete MC sample is evenly divided into two parts: one for training and the other for validation. 
+The consistent performance across these datasets, highlighted in Figure~\ref{fig:ROCValidations}, indicates an absence of training set bias. This consistency ensures the model's robustness and unbiased evaluation.
 
-Figure~\ref{fig:1lepDNN_performance} demonstrates the effective separation between signal and background in the DNN distribution for both merged and resolved regimes. Figure~\ref{fig:1lepDNNoutputs} presents the DNN score distributions across all three signal regions, featuring partially blinded data bins.
-%Additionally, Figure \ref{fig:1lepDNNoutputs} displays the DNN scores across all three signal regions.
+Figure~\ref{fig:1lepDNN_performance} demonstrates the effective separation between signal and background in the DNN distributions for both merged and resolved regimes. Figure~\ref{fig:1lepDNNoutputs} presents the distributions of DNN scores across all three signal regions, with some data bins partially blinded.
 
+%For practicality and reliability, I employs a 2-fold cross-validation method for the DNN approach. The complete MC sample is evenly divided into training and testing datasets. The consistent performance between these datasets, highlighted in Figure \ref{fig:ROCValidations}, indicates no training set bias. 
+%Figure~\ref{fig:1lepDNN_performance} demonstrates the effective separation between signal and background in the DNN distribution for both merged and resolved regimes. Figure~\ref{fig:1lepDNNoutputs} presents the DNN score distributions across all three signal regions, featuring partially blinded data bins.
 
 \begin{figure}[ht]
       \centering
@@ -295,6 +258,4 @@ Figure~\ref{fig:1lepDNN_performance} demonstrates the effective separation betwe
  \end{center}
 \end{figure}
 
-%%%\clearpage
-%%%\subsection{Fit results in unblinded SR}
 

@@ -1,18 +1,7 @@
 %\subsection{Overlap Removal}
-%%%The reconstruction of the same energy deposits as multiple objects is resolved 
-%%%using the standard overlap removal tools, AssociationUtils, 
-%%%documented \href{https://gitlab.cern.ch/atlas/athena/blob/21.2/PhysicsAnalysis/AnalysisCommon/AssociationUtils/README.rst}{here} 
-%%%and summarized in Table~\ref{tab:OR}.
 
-We utilize the standard overlap removal tools, AssociationUtils, to manage the overlaps between analysis-level objects (electrons, muons, jets, etc.). This approach ensures that the same energy deposits are not used in the reconstruction of multiple analysis-level objects. The specific overlap tools employed in this analysis are summarized in Table~\ref{tab:OR}.
+We utilize the standard overlap removal tools, AssociationUtils~\cite{Farrell2023AssociationUtils}, to manage the overlaps between analysis-level objects (electrons, muons, jets, etc.). This approach ensures that the same energy deposits are not used in the reconstruction of multiple analysis-level objects. The specific overlap removal tools employed in this analysis are summarized in Table~\ref{tab:OR}.
 The overlap between small-R and large-R jets will be addressed in the later stages of the selection process by adopting a ``Merged over Resolved'' regime categorization, as detailed in Sections \ref{subsec:sr_selection} and \ref{subsubsec:merged_jets_selection}.
-
-%%%In particular, we do not use any specific removal for small-R and large-R jets 
-%%%at this stage of the objects selection. Indeed, we deal with overlap between
-%%%small-R and large-R for the identification of the $\Vqq$ decay products introducing 
-%%%a Merged over Resolved regime categorisation, described in Section \ref{subsec:sr_selection}.
-%%%In particular, in the Merged regime, the large-R signal jet candidate is firthermore required to be at $DR>1.4$ 
-%%%with respect to tagging jets as described in section \ref{subsubsec:merged_jets_selection}.
 
 \begin{table}[ht]
 \caption{The sequential application of overlap removal conditions. $\Delta R$ is calculated using rapidity by default.}
@@ -24,21 +13,13 @@ The overlap between small-R and large-R jets will be addressed in the later stag
 \hline
  Reject & Against & Criteria \\\hline
  electron & electron & shared track, $p_{T,1} < p_{T,2}$ \\
-% tau      & electron & $\Delta R <$ 0.2 \\
-% tau      & muon     & $\Delta R <$ 0.2 \\
  muon     & electron & is calo-muon and shared ID track \\
  electron & muon     & shared ID track \\
-% photon   & electron & $\Delta R <$ 0.4 \\
-% photon   & muon     & $\Delta R <$ 0.4 \\
  jet      & electron & $\Delta R <$ 0.2 \\ %Not a bjet and $\Delta R <$ 0.2] 
  electron & jet      & $\Delta R <$ 0.4 \\
  jet      & muon     & NumTrack $<$ 3 and (ghost-associated or $\Delta R <$ 0.2) \\
-%  && / Not a bjet and NumTrack $<$ 3 and (ghost-associated or $\Delta R <$ 0.2)] \\
- muon     & jet      & $\Delta R <$ min(0.4, 0.04 + 10GeV/MuPt) \\ %$\Delta R <$ 0.4
-% jet      & tau      & $\Delta R <$ 0.2 \\
-% photon   & jet      & $\Delta R <$ 0.4 \\
+ muon     & jet      & $\Delta R <$ min(0.4, 0.04 + $10\,\text{GeV}/p_{T,\mu}$) \\ %$\Delta R <$ 0.4
  large-R-jet  & electron & $\Delta R <$ 1.0 \\
-% jet      & fat-jet  & $\Delta R <$ 1.0  \\
 \hline
 \end{tabular}
 %}

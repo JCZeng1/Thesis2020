@@ -1,16 +1,19 @@
 %\subsection{Event pre-selection}
 \label{subsec:event_preselection}
-%%Table~\ref{tab:presel_CxAOD} shows the selection cuts applied in the CxAOD framework to reduce the data size. At this stage, all CP recommendations are already applied.
 
-Table~\ref{tab:presel_CxAOD} details the selection cuts implemented within the CxAOD framework, specifically designed to optimize data management by significantly reducing the data size. All CP recommendations, provided by the Combined Performance (CP) groups for analysis use, are already applied at this stage.
+Table~\ref{tab:presel_CxAOD} details the selection cuts implemented within the CxAOD framework, which is specifically designed to optimize data management by significantly reducing the data size. 
+All CP recommendations, provided by the Combined Performance (CP) groups for analysis use, are already applied at this stage.
+Detailed definitions and criteria for the following are provided in their respective sections:
+\begin{itemize}
+    \item Definitions of Tight and Loose leptons — Sections~\ref{subsec:electron_selection} to \ref{subsec:muon_selection}.
+    \item $N_j$, the number of small-R jets — Section~\ref{subsec:jet_selection}.
+    \item $N_J^{\textrm{LCTopo}}$, the number of large-R jets — Section~\ref{subsec:large-Rjet}, with \pt$>200\,\si{\GeV}$ and $\left| \eta \right| < 2.5$.
+\end{itemize}
+
 
 \begin{table}[h]
-  \caption{List of the pre-selections applied in the CxAOD framework to reduce the data size. 
-Definitions of Tight and Loose leptons are found in Sections~\ref{subsec:electron_selection}--\ref{subsec:muon_selection}.
-$N_j$ is the number of small-R jets defined in Section~\ref{subsec:jet_selection}.
-%%%$N_J^{\textrm{LCTopo}}$ is the number of large-R jets with $\pt>200\,\si{\GeV}$ and $\left| \eta \right| < 2.5$.
-$N_J^{\textrm{LCTopo}}$ is the number of large-R jets with \pt$>200\,\si{\GeV}$ and $\left| \eta \right| < 2.5$.
-} \label{tab:presel_CxAOD}
+  \caption{List of the pre-selections applied in the CxAOD framework to reduce the data size.}
+\label{tab:presel_CxAOD}
 \begin{center}
 \resizebox{0.7\textwidth}{!}{
 \begin{tabular}{|l|c|}
@@ -19,7 +22,7 @@ $N_J^{\textrm{LCTopo}}$ is the number of large-R jets with \pt$>200\,\si{\GeV}$ 
 \hline\hline
 Trigger & listed in Table~\ref{tab:triggers} \\
 \hline
-Event Cleaning & listed in Section~\ref{subsec:event_cleaning} \\
+Event Cleaning & official GRL (GoodRunsLists) \\
 \hline
 Number of jets & $N_j \geq 2$ or $N_J^{\textrm{LCTopo}} \geq 1$ \\
 \hline\hline\hline
@@ -31,18 +34,6 @@ Number of additional Loose leptons   & $=0$ \\
 \hline
 \ptlv                     & $>75\,\si{\GeV}$ \\
 \hline\hline 
-%%\multicolumn{2}{|c|}{ 2-lepton channel } \\
-%%\hline\hline
-%%Number of Loose leptons   & $=2$ \\
-%%\hline
-%%The leading lepton \pt    & $> 25\,\si{\GeV}$ \\
-%%\hline\hline
-%%\multicolumn{2}{|c|}{ 0-lepton channel } \\
-%%\hline\hline
-%%Number of Loose leptons   & $= 0$ \\
-%%\hline
-%%\met                      & $> 140\,\si{\GeV}$ \\
-%%\hline\hline
 \end{tabular}
 }
 \end{center}

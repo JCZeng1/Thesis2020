@@ -2,15 +2,21 @@
 \section{Fit inputs and options}
 \label{subsec:fit_options}
 
-For the statistical interpretation, we utilize outputs from the CxAODReader framework, providing histograms of relevant distributions within designated regions to the WSMaker 
-\mbox{\texttt{\href{https://gitlab.cern.ch/atlas-physics/sm/ew/vbs-semileptonic-run2/WSMaker\_VBSVV}{WSMaker\_VBSVV}}}
-statistical framework for this analysis.
+%For the statistical interpretation, we utilize outputs from the CxAODReader framework, providing histograms of relevant distributions within designated regions to the WSMaker statistical framework for this analysis. 
+%\mbox{\texttt{\href{https://gitlab.cern.ch/atlas-physics/sm/ew/vbs-semileptonic-run2/WSMaker\_VBSVV}{WSMaker\_VBSVV}}}
+%statistical framework for this analysis.
 
-In the fit part of the analysis, the relevant variables are the \mjjtag and the final DNN score distributions.
-Table \ref{tab:fitregions_1lep} summarizes the regions and variables used in the fit of the analysis.
-These regions are simultaneously fitted using a binned profile likelihood to extract the parameter of interest (POI), which for the SM measurement is the signal strength of the EW VBS production.
+For the statistical interpretation, we utilize outputs from the CxAODReader framework, which provides histograms of relevant distributions within designated regions. These histograms are then supplied to the WSMaker statistical framework for this analysis.
 
-The control regions employ bins of \mjjtag with boundaries at \{400, 600, 800, 1000, 1200, 1600, 6000\}~GeV, where the final bin contains all overflow. For the DNN, binning is based on the transformation \(D\), as detailed in reference~\cite{Buscher:2232472}, with a parametrization $Z(signal, background) = (10,5)$.
+In the fitting stage of the analysis, the relevant variables include the \mjjtag and the final DNN score distributions. Table~\ref{tab:fitregions_1lep} summarizes the regions and variables used in the fit of the analysis. These regions are simultaneously fitted using a binned profile likelihood method to extract the parameter of interest (POI), which, for the Standard Model measurement, is the signal strength of the EW VBS production.
+
+The control regions employ bins of \mjjtag with boundaries defined at \{400, 600, 800, 1000, 1200, 1600, 6000\}~GeV, where the final bin contains all overflow. For the DNN, binning is based on the transformation $D$, as detailed in reference~\cite{Buscher:2232472}, with a parameterization specified as $Z(\text{signal}, \text{background}) = (10,5)$.
+
+%In the fit part of the analysis, the relevant variables are the \mjjtag and the final DNN score distributions.
+%Table \ref{tab:fitregions_1lep} summarizes the regions and variables used in the fit of the analysis.
+%These regions are simultaneously fitted using a binned profile likelihood to extract the parameter of interest (POI), which for the SM measurement is the signal strength of the EW VBS production.
+
+%The control regions employ bins of \mjjtag with boundaries at \{400, 600, 800, 1000, 1200, 1600, 6000\}~GeV, where the final bin contains all overflow. For the DNN, binning is based on the transformation \(D\), as detailed in reference~\cite{Buscher:2232472}, with a parametrization $Z(signal, background) = (10,5)$.
 
 
 %%%%%%%%%%%%%%%
@@ -40,7 +46,7 @@ The control regions employ bins of \mjjtag with boundaries at \{400, 600, 800, 1
   \centering
   \begin{tabular}{lccc}
           \toprule\midrule
-          \multirow{2}{*}{Regions} & \multicolumn{3}{c}{1lep channel fit model} \\
+          \multirow{2}{*}{Regions} & \multicolumn{3}{c}{1-lepton channel fit model} \\
           \cmidrule{2-4}
                 & Merged high-purity & Merged low-purity & Resolved \\
           \midrule
@@ -50,22 +56,30 @@ The control regions employ bins of \mjjtag with boundaries at \{400, 600, 800, 1
           \midrule
           \bottomrule
   \end{tabular}
-\caption{\label{tab:fitregions_1lep} Summary of the regions from 1lep channel entering the likelihood of the fit models. 
+\caption{\label{tab:fitregions_1lep} Summary of the regions from \olep channel entering the likelihood of the fit models. 
 ``One bin'' implies that a single bin without any shape information is used in the corresponding fit region.}
 \end{table}
 
-There are two types of nuisance parameters (NPs): those arising from experimental uncertainties and those from MC modeling uncertainties.
+There are two types of NPs: those arising from experimental uncertainties and those associated with MC modeling uncertainties. A detailed discussion of these uncertainties is provided in Chapter~\ref{ch:SystsUncer}. 
 
-For the experimental uncertainties, performance groups have developed various methods to alter particle reconstruction, introducing around a hundred NPs. 
-These parameters are subject to Gaussian priors, which reduce the likelihood whenever the fitted values deviate from their nominal values.
+For the experimental uncertainties, various methods to vary particle reconstruction have been developed by the ATLAS collaboration, which introduce approximately a hundred NPs. These parameters are governed by Gaussian priors, which serve to decrease the likelihood whenever the fitted values deviate from their nominal values.
 
-For background MC modeling uncertainties, we consider the main background samples like \ttbar, \Wjets, \Zjets, and QCD-produced diboson. We obtain additional NPs by comparing the default generator to an alternative. As shown in Table \ref{tab:NPs:float}, background normalizations are left floating in the fit. The single-top background normalization is constrained with a 30\% Gaussian prior.
-For the signal, modeling uncertainties stem from variations in the scale ($\alpha_S$),
-PDF, alternative PDF sets, and radiation parameters within the \textsc{Pythia} simulation, as mentioned in section \ref{subsec:sig_uncer}.
+For background MC modeling uncertainties, we consider the main background samples such as \ttbar, \Wjets, \Zjets, and QCD-produced diboson. Additional NPs are obtained by comparing the default generator with an alternative. As shown in Table~\ref{tab:NPs:float}, background normalizations are left floating, except for the single-top background normalization, which is constrained with a 30\% Gaussian prior.
+
+For the signal, MC modeling uncertainties arise from variations in the scale ($\alpha_S$),
+PDF, alternative PDF sets, and radiation parameters within the \textsc{Pythia} simulation, as mentioned in Section~\ref{subsec:sig_uncer}.
+
+%There are two types of nuisance parameters (NPs): those arising from experimental uncertainties and those from MC modeling uncertainties.
+%For the experimental uncertainties, performance groups have developed various methods to alter particle reconstruction, introducing around a hundred NPs. 
+%These parameters are subject to Gaussian priors, which reduce the likelihood whenever the fitted values deviate from their nominal values.
+%
+%For background MC modeling uncertainties, we consider the main background samples like \ttbar, \Wjets, \Zjets, and QCD-produced diboson. We obtain additional NPs by comparing the default generator to an alternative. As shown in Table \ref{tab:NPs:float}, background normalizations are left floating in the fit. The single-top background normalization is constrained with a 30\% Gaussian prior.
+%For the signal, modeling uncertainties stem from variations in the scale ($\alpha_S$),
+%PDF, alternative PDF sets, and radiation parameters within the \textsc{Pythia} simulation, as mentioned in section \ref{subsec:sig_uncer}.
 
 \begin{table}[h]
     \centering
-\resizebox{0.99\textwidth}{!}{
+\resizebox{0.90\textwidth}{!}{
   \begin{tabular}{|c|c|c| } \hline
     Treatment & NP name & NP name simplified \\ \hline
       Float & ATLAS\_norm\_WjetsMerged                                           &  W norm. Merged \\

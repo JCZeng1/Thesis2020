@@ -2,29 +2,20 @@
 %\subsubsection{Signal and background cut-flows}
 \label{subsec:cutflows}
 
-Cutflow Tables are presented for different signal regions.
+%Cutflow Tables are presented for different signal and control regions in Figure~\ref{fig:1lepCutFlow}.
+Cutflow tables for various signal and control regions are presented in Figure~\ref{fig:1lepCutFlow}.
 
-%\zlep: Figure~\ref{tab:0lepCutFlow}.
-\olep: Figure~\ref{fig:1lepCutFlow}.
-%\tlep: 
-%Tables~\ref{tab:2lep_HPSR},
-%\ref{tab:2lep_LPSR},
-%\ref{tab:2lep_ResolvedSR},
-%\ref{tab:2lep_MergedCR}, and
-%\ref{tab:2lep_ResolvedCR}.
-
-Tables
-\ref{tab:PrefitYield_TCRHP_Per}-
-\ref{tab:PrefitYield_TCRLP_Per}-
-\ref{tab:PrefitYield_TCRRes_Per} (TCR)-
-\ref{tab:PrefitYield_WCRMer_Per}-
-\ref{tab:PrefitYield_WCRRes_Per}-
-\ref{tab:PrefitYield_1lepHPSR_Per}-
-\ref{tab:PrefitYield_1lepLPSR_Per}-
-\ref{tab:PrefitYield_1lepResSR_Per}-
-show the final yields, in percentages, of the different CRs and SRs; 
-the uncertainties account for statistical and systematic sources.
-
+%Tables
+%\ref{tab:PrefitYield_TCRHP_Per}-
+%\ref{tab:PrefitYield_TCRLP_Per}-
+%\ref{tab:PrefitYield_TCRRes_Per} (TCR)-
+%\ref{tab:PrefitYield_WCRMer_Per}-
+%\ref{tab:PrefitYield_WCRRes_Per}-
+%\ref{tab:PrefitYield_1lepHPSR_Per}-
+%\ref{tab:PrefitYield_1lepLPSR_Per}-
+%\ref{tab:PrefitYield_1lepResSR_Per}-
+%show the final yields, in percentages, of the different CRs and SRs; 
+%the uncertainties account for statistical and systematic sources.
 
 %%% 1-lepton channel
 \begin{figure}[htbp]
@@ -101,215 +92,170 @@ the uncertainties account for statistical and systematic sources.
     \caption{WjetsCR Resolved}
     \label{subtab:cutsseqcrvjetsres}
   \end{subtable}
-
-  \caption{Cutflows for 1-lepton event selection, where events can qualify for multiple regions without priority—except in the analysis phase, where merged regions take precedence over resolved ones. 'Preselection' refers to events with a single lepton having $p_T > 28$ GeV and meeting trigger criteria.}
+  \caption{Cutflows for \olep event selection. \textit{Preselection} denotes events where a single lepton has $p_T > 28$ GeV and satisfies the trigger criteria.}
   \label{fig:1lepCutFlow}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     1 Lep Channel Cutflows
-%%%\begin{figure}[ht]
-%%%    \centering
-%%%    \begin{subfigure}{\textwidth}
-%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSR50.tex}}
-%%%        \caption{SR High Purity Merged}
-%%%    \end{subfigure}
-%%%    \begin{subfigure}{\textwidth}
-%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSR80.tex}}
-%%%        \caption{SR Low Purity Merged}
-%%%    \end{subfigure}
-%%%    \begin{subfigure}{\textwidth}
-%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqSRRes.tex}}
-%%%        \caption{SR Resolved}
-%%%    \end{subfigure}
-%%%    \begin{subfigure}{\textwidth}
-%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTop50.tex}}
-%%%        \caption{TopCR High Purity Merged}
-%%%    \end{subfigure}
-%%%    \begin{subfigure}{\textwidth}
-%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTop80.tex}}
-%%%        \caption{TopCR Low Purity Merged}
-%%%    \end{subfigure}
-%%%    \begin{subfigure}{\textwidth}
-%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRTopRes.tex}}
-%%%        \caption{TopCR Resolved}
-%%%    \end{subfigure}
-%%%    \begin{subfigure}{\textwidth}
-%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRVjetsMer.tex}}
-%%%        \caption{WjetsCR Merged}
-%%%    \end{subfigure}
-%%%    \begin{subfigure}{\textwidth}
-%%%        \resizebox{\textwidth}{!}{\input{figures/1lep/cutflow/Cutflow1Lep_CutsSeqCRVjetsRes.tex}}
-%%%        \caption{WjetsCR Resolved}
-%%%    \end{subfigure}
-%%%    \caption{1-lepton event selection cutflows. Event selection has no region priority, meaning that an event that passes the event selection for two regions counts for both regions in the cutflow (in the analysis merged regions have priority over resolved ones). "Preselection" cuts here mean having 1 lepton with $p_T >$ 28 GeV and passing trigger selections.}
-%%%    \label{fig:1lepCutFlow}
-%%%\end{figure}
-
-%%%%%%%%%%%%%%%%%%
-
-
-%% 0 lepton channel cutflow 
-\clearpage
-
-\begin{table}
-\caption{Prefit event yields for the analysis regions in Top HP CR.}
-\label{tab:PrefitYield_TCRHP_Per}
-\begin{center}
-%\scalebox{0.7}{
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c| }{CRTopHP L1} \\ \hline
-W & 328.01 $\pm$ 39.32 & 2.3\% \\
-Z & 16.13 $\pm$ 7.65 & 0.1\% \\
-Diboson & 43.58 $\pm$ 22.43 & 0.3\% \\
-stop & 1342.33 $\pm$ 455.72 & 9.6\%\\
-ttbar & 12266.88 $\pm$ 2349.71 & 87.6\%\\
-\hline
-Bkg & 13996.93 $\pm$ 2606.64 & \\
-\hline
-data & 12195 & \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\begin{table}
-\caption{Prefit event yields for the analysis regions in Top LP CR.}
-\label{tab:PrefitYield_TCRLP_Per}
-\begin{center}
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c|}{CRTopLP L1}\\ \hline
-W & 869.04 $\pm$ 62.10 & 4.6\% \\
-Z & 42.60 $\pm$ 19.82 & 0.2\& \\
-Diboson & 67.82 $\pm$ 34.74 & 0.4\% \\
-stop & 1426.00 $\pm$ 465.35 & 7.5\% \\
-ttbar & 16507.86 $\pm$ 1909.41 & 87.3\% \\
-\hline
-Bkg & 18913.32 $\pm$ 2163.33 & \\
-\hline
-data & 17195 & \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\begin{table}
-\caption{Prefit event yields for the analysis regions in Top Resolved CR.}
-\label{tab:PrefitYield_TCRRes_Per}
-\begin{center}
-\begin{tabular}{|l|c| c|}
-\hline
-\multicolumn{3}{|c|}{CRTopTight L1}\\ \hline
-W & 2092.06 $\pm$ 101.23 & 13.3\% \\
-Z & 95.91 $\pm$ 40.48 & 0.6 \% \\
-Diboson & 87.60 $\pm$ 26.54 & 0.6\%  \\
-stop & 2132.56 $\pm$ 645.87 & 13.5\% \\
-ttbar & 11362.89 $\pm$ 188.00 & 72.1\%\\
-\hline
-Bkg & 15771.02 $\pm$ 716.44 & \\
-\hline
-data & 16131 & \\ \hline
-\end{tabular}
-%}
-\end{center}
-\end{table}
-
-\begin{table}
-\caption{Prefit event yields for the analysis regions in \Wjets Merged CR.}
-\label{tab:PrefitYield_WCRMer_Per}
-\begin{center}
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c|}{CRVjetMerged L1}\\ \hline
-W & 39090.07 $\pm$ 4152.24 & 52.3\% \\
-Z & 1326.81 $\pm$ 626.03 & 1.8\% \\
-Diboson & 1702.72 $\pm$ 864.17 & 2.3\%\\
-stop & 2523.47 $\pm$ 786.23 & 3.4\% \\
-ttbar & 30085.04 $\pm$ 2335.69 & 40.3\% \\
-\hline
-Bkg & 74728.12 $\pm$ 6479.07 & \\
-\hline
-data & 64166 & \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
-
-
-\begin{table}
-\caption{Prefit event yields for the analysis regions in Resolved \Wjets CR.}
-\label{tab:PrefitYield_WCRRes_Per}
-\begin{center}
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c|}{CRVjetTight\_L1}\\ \hline
-W & 519953.39 $\pm$ 74295.71 & 64.2\%\\
-Z & 20255.40 $\pm$ 9829.62 & 2.5 \% \\
-Diboson & 15746.59 $\pm$ 4922.41 & 2.0 \% \\
-stop & 33439.43 $\pm$ 10624.44 & 4.1\% \\
-ttbar & 220957.76 $\pm$ 16705.74 & 27.3\% \\
-\hline
-Bkg & 810352.57 $\pm$ 100562.11 & \\
-\hline
-data & 788869 & \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\begin{table}
-\caption{Prefit event yields for the analysis regions in \olep Merged HP SR.}
-\label{tab:PrefitYield_1lepHPSR_Per}
-\begin{center}
-\begin{tabular}{|l|c|c|}
-\hline
-  \multicolumn{3}{|c|}{SRVBSHP L1}\\ \hline
-W & 4238.22 $\pm$ 508.99 & 31.6\% \\
-Z & 155.19 $\pm$ 74.18 & 1.2\%\\
-Diboson & 584.89 $\pm$ 305.67& 4.4\%\\
-stop & 720.09 $\pm$ 248.22 & 5.4\%\\
-ttbar & 7724.82 $\pm$ 1511.61 & 57.5\%\\
-\hline
-Bkg & 13423.20 $\pm$ 1934.58 & \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-
-
-\begin{table}
-\begin{center}
-\caption{Prefit event yields for the analysis regions in \olep Merged LP SR.}
-\label{tab:PrefitYield_1lepLPSR_Per}
-\begin{tabular}{|l|c| c|}
-\hline
-\multicolumn{3}{|c|}{SRVBSLP L1}\\ \hline
-W & 12198.77 $\pm$ 1033.19 & 48.5\% \\
-Z & 431.67 $\pm$ 203.21 & 1.7\% \\
-Diboson & 788.97 $\pm$ 409.48 & 3.1\% \\
-stop & 974.63 $\pm$ 313.39 & 3.9\% \\
-ttbar & 10758.08 $\pm$ 1210.77 & 42.8\% \\
-\hline
-Bkg & 25152.11 $\pm$ 2267.96 & \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\begin{table}
-\caption{Prefit event yields for the analysis regions in \olep Resolved SR.}
-\label{tab:PrefitYield_1lepResSR_Per}
-\begin{center}
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{3}{|c|}{SRVBSTight\_L1}\\ \hline
-W & 60551.72 $\pm$ 5456.62 & 82.4\% \\
-Z & 2090.52 $\pm$ 927.02 & 2.8\% \\
-Diboson & 1781.12 $\pm$ 544.47 & 2.4\% \\
-stop & 1750.76 $\pm$ 537.88 & 2.4\% \\
-ttbar & 7330.60 $\pm$ 234.43 & 10.0\% \\
-\hline
-Bkg & 73504.70 $\pm$ 6131.43 & \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
+%%%\clearpage
+%%%
+%%%\begin{table}
+%%%\caption{Prefit event yields for the analysis regions in Top HP CR.}
+%%%\label{tab:PrefitYield_TCRHP_Per}
+%%%\begin{center}
+%%%%\scalebox{0.7}{
+%%%\begin{tabular}{|l|c|c|}
+%%%\hline
+%%%\multicolumn{3}{|c| }{CRTopHP L1} \\ \hline
+%%%W & 328.01 $\pm$ 39.32 & 2.3\% \\
+%%%Z & 16.13 $\pm$ 7.65 & 0.1\% \\
+%%%Diboson & 43.58 $\pm$ 22.43 & 0.3\% \\
+%%%stop & 1342.33 $\pm$ 455.72 & 9.6\%\\
+%%%ttbar & 12266.88 $\pm$ 2349.71 & 87.6\%\\
+%%%\hline
+%%%Bkg & 13996.93 $\pm$ 2606.64 & \\
+%%%\hline
+%%%data & 12195 & \\ \hline
+%%%\end{tabular}
+%%%\end{center}
+%%%\end{table}
+%%%
+%%%\begin{table}
+%%%\caption{Prefit event yields for the analysis regions in Top LP CR.}
+%%%\label{tab:PrefitYield_TCRLP_Per}
+%%%\begin{center}
+%%%\begin{tabular}{|l|c|c|}
+%%%\hline
+%%%\multicolumn{3}{|c|}{CRTopLP L1}\\ \hline
+%%%W & 869.04 $\pm$ 62.10 & 4.6\% \\
+%%%Z & 42.60 $\pm$ 19.82 & 0.2\& \\
+%%%Diboson & 67.82 $\pm$ 34.74 & 0.4\% \\
+%%%stop & 1426.00 $\pm$ 465.35 & 7.5\% \\
+%%%ttbar & 16507.86 $\pm$ 1909.41 & 87.3\% \\
+%%%\hline
+%%%Bkg & 18913.32 $\pm$ 2163.33 & \\
+%%%\hline
+%%%data & 17195 & \\ \hline
+%%%\end{tabular}
+%%%\end{center}
+%%%\end{table}
+%%%
+%%%\begin{table}
+%%%\caption{Prefit event yields for the analysis regions in Top Resolved CR.}
+%%%\label{tab:PrefitYield_TCRRes_Per}
+%%%\begin{center}
+%%%\begin{tabular}{|l|c| c|}
+%%%\hline
+%%%\multicolumn{3}{|c|}{CRTopTight L1}\\ \hline
+%%%W & 2092.06 $\pm$ 101.23 & 13.3\% \\
+%%%Z & 95.91 $\pm$ 40.48 & 0.6 \% \\
+%%%Diboson & 87.60 $\pm$ 26.54 & 0.6\%  \\
+%%%stop & 2132.56 $\pm$ 645.87 & 13.5\% \\
+%%%ttbar & 11362.89 $\pm$ 188.00 & 72.1\%\\
+%%%\hline
+%%%Bkg & 15771.02 $\pm$ 716.44 & \\
+%%%\hline
+%%%data & 16131 & \\ \hline
+%%%\end{tabular}
+%%%%}
+%%%\end{center}
+%%%\end{table}
+%%%
+%%%\begin{table}
+%%%\caption{Prefit event yields for the analysis regions in \Wjets Merged CR.}
+%%%\label{tab:PrefitYield_WCRMer_Per}
+%%%\begin{center}
+%%%\begin{tabular}{|l|c|c|}
+%%%\hline
+%%%\multicolumn{3}{|c|}{CRVjetMerged L1}\\ \hline
+%%%W & 39090.07 $\pm$ 4152.24 & 52.3\% \\
+%%%Z & 1326.81 $\pm$ 626.03 & 1.8\% \\
+%%%Diboson & 1702.72 $\pm$ 864.17 & 2.3\%\\
+%%%stop & 2523.47 $\pm$ 786.23 & 3.4\% \\
+%%%ttbar & 30085.04 $\pm$ 2335.69 & 40.3\% \\
+%%%\hline
+%%%Bkg & 74728.12 $\pm$ 6479.07 & \\
+%%%\hline
+%%%data & 64166 & \\ \hline
+%%%\end{tabular}
+%%%\end{center}
+%%%\end{table}
+%%%
+%%%
+%%%\begin{table}
+%%%\caption{Prefit event yields for the analysis regions in Resolved \Wjets CR.}
+%%%\label{tab:PrefitYield_WCRRes_Per}
+%%%\begin{center}
+%%%\begin{tabular}{|l|c|c|}
+%%%\hline
+%%%\multicolumn{3}{|c|}{CRVjetTight\_L1}\\ \hline
+%%%W & 519953.39 $\pm$ 74295.71 & 64.2\%\\
+%%%Z & 20255.40 $\pm$ 9829.62 & 2.5 \% \\
+%%%Diboson & 15746.59 $\pm$ 4922.41 & 2.0 \% \\
+%%%stop & 33439.43 $\pm$ 10624.44 & 4.1\% \\
+%%%ttbar & 220957.76 $\pm$ 16705.74 & 27.3\% \\
+%%%\hline
+%%%Bkg & 810352.57 $\pm$ 100562.11 & \\
+%%%\hline
+%%%data & 788869 & \\ \hline
+%%%\end{tabular}
+%%%\end{center}
+%%%\end{table}
+%%%
+%%%\begin{table}
+%%%\caption{Prefit event yields for the analysis regions in \olep Merged HP SR.}
+%%%\label{tab:PrefitYield_1lepHPSR_Per}
+%%%\begin{center}
+%%%\begin{tabular}{|l|c|c|}
+%%%\hline
+%%%  \multicolumn{3}{|c|}{SRVBSHP L1}\\ \hline
+%%%W & 4238.22 $\pm$ 508.99 & 31.6\% \\
+%%%Z & 155.19 $\pm$ 74.18 & 1.2\%\\
+%%%Diboson & 584.89 $\pm$ 305.67& 4.4\%\\
+%%%stop & 720.09 $\pm$ 248.22 & 5.4\%\\
+%%%ttbar & 7724.82 $\pm$ 1511.61 & 57.5\%\\
+%%%\hline
+%%%Bkg & 13423.20 $\pm$ 1934.58 & \\
+%%%\hline
+%%%\end{tabular}
+%%%\end{center}
+%%%\end{table}
+%%%
+%%%
+%%%\begin{table}
+%%%\begin{center}
+%%%\caption{Prefit event yields for the analysis regions in \olep Merged LP SR.}
+%%%\label{tab:PrefitYield_1lepLPSR_Per}
+%%%\begin{tabular}{|l|c| c|}
+%%%\hline
+%%%\multicolumn{3}{|c|}{SRVBSLP L1}\\ \hline
+%%%W & 12198.77 $\pm$ 1033.19 & 48.5\% \\
+%%%Z & 431.67 $\pm$ 203.21 & 1.7\% \\
+%%%Diboson & 788.97 $\pm$ 409.48 & 3.1\% \\
+%%%stop & 974.63 $\pm$ 313.39 & 3.9\% \\
+%%%ttbar & 10758.08 $\pm$ 1210.77 & 42.8\% \\
+%%%\hline
+%%%Bkg & 25152.11 $\pm$ 2267.96 & \\ \hline
+%%%\end{tabular}
+%%%\end{center}
+%%%\end{table}
+%%%
+%%%\begin{table}
+%%%\caption{Prefit event yields for the analysis regions in \olep Resolved SR.}
+%%%\label{tab:PrefitYield_1lepResSR_Per}
+%%%\begin{center}
+%%%\begin{tabular}{|l|c|c|}
+%%%\hline
+%%%\multicolumn{3}{|c|}{SRVBSTight\_L1}\\ \hline
+%%%W & 60551.72 $\pm$ 5456.62 & 82.4\% \\
+%%%Z & 2090.52 $\pm$ 927.02 & 2.8\% \\
+%%%Diboson & 1781.12 $\pm$ 544.47 & 2.4\% \\
+%%%stop & 1750.76 $\pm$ 537.88 & 2.4\% \\
+%%%ttbar & 7330.60 $\pm$ 234.43 & 10.0\% \\
+%%%\hline
+%%%Bkg & 73504.70 $\pm$ 6131.43 & \\
+%%%\hline
+%%%\end{tabular}
+%%%\end{center}
+%%%\end{table}
 
 

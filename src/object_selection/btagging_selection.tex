@@ -2,23 +2,12 @@
 \label{subsec:flavortagging}
 
 Due to the short lifetime of the $t$ quark, it decays before hadronization, with a $99.8\%$ chance of decaying into a $b$ quark. 
-Consequently, a $b$-tagging method is used to reject events originating from \ttbar 
+As a result, a $b$-tagging method is used to reject events originating from \ttbar 
 and single top events. 
-In this analysis, small-R jets are tagged using the new DL1r $b$-tagging score available in ATLAS \cite{FTAG-2018-01}.
-Subsequently, the b-tagged jets define the TopCR within the \olep phase space, as specified in Section \ref{subsec:cr_selection}.
-%
-%The small-R jets are used for $b$-tagging. This pass of the analysis moved to use
-%the new DL1r b-tagging score available in ATLAS \cite{FTAG-2018-01}.
-%
-Summary of the $b$-tagging requirements in the resolved category is shown in Table~\ref{tab:b_tag_resolved}.
-%The efficiency working point used in the previous analysis is used for this pass.
-
-%In particular, we use $b$-tagging for two aims:
-
-%\begin{itemize}
-%  \item during the tagging selection of the VBS jets candidates, as described in section \ref{subsec:vbs_selection};
-%  \item to define the TopCR in \olep phase space, according to the definition in \ref{subsec:cr_selection}
-%\end{itemize}
+In this analysis, small-R jets are tagged using the new DL1r $b$-tagging score available in ATLAS~\cite{FTAG-2018-01}.
+The DL1r $b$-tagging is based on a deep-learning neural network using distinctive features of b-hadrons~\cite{Aad2023flavour}.
+As specified in Section~\ref{subsec:cr_selection}, the b-tagged jets are used to define the TopCR within the \olep phase space.
+A summary of the $b$-tagging requirements in the resolved category is shown in Table~\ref{tab:b_tag_resolved}.
 
 \begin{table}[ht]
 \begin{center}
@@ -29,11 +18,9 @@ Jet collection          & AntiKt4PFlowJets \\\hline
 Jet selection           & ``Signal jet'' and ``VBS jet'' selection in Table~\ref{tab:small_R_jet_summary}    \\
                  \hline
 Algorithm               & DL1r        \\\hline
-Operating point         & Fixed         \\
-                     & Eff = 70\%
-   \\\hline
-CDI                & 2020-21-13TeV-MC16-CDI-2020-03-11\_v3 \\
-\hline
+Operating Point      & Fixed, Efficiency = 70\% \\\hline
+%CDI                & 2020-21-13TeV-MC16-CDI-2020-03-11\_v3 \\
+%\hline
 \end{tabular}
 \end{center}
 \end{table}%

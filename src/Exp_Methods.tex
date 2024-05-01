@@ -49,6 +49,7 @@ Appendix \ref{app:samplelist} summarizes the MC samples for SM background and EW
 
 
 \subsubsection{Background processes}
+\label{sec:bg_mc_sample}
 The $V$ ($W/Z$) + jets events are simulated with Sherpa 2.2.1~\cite{Gleisberg:2008ta} and normalzied to the NNLO cross sections. 
 Up to 2 partons at NLO and 4 partons at LO are considered using Comix~\cite{Gleisberg:2008fv} and OpenLoops~\cite{Cascioli:2011va} for matrix element calculations, integrated with the Sherpa parton shower~\cite{Schumann:2007mg} using the ME+PS@NLO prescription~\cite{Hoeche:2012yf}. 
 These simulations use the NNPDF3.0NNLO PDF set alongside specific tuning~\cite{Ball_2015}. 
@@ -80,14 +81,14 @@ QCD diboson production from $gg$ initial states is excluded from the final resul
 \subsubsection{Signal SM EW VV+jj processes}
 \label{sec:mc_sample_ewvvjj}
 
-The EWK $VV+jj$ production is simulated with MadGraph5\_aMC@NLO v2.3.3~\cite{Alwall:2014hca} and \PYTHIA8~\cite{Sjostrand:2007gs} for fragmentation, using the \textsc{NNPDF30NLO} PDF set~\cite{Ball:2012cx}. 
+The EW $VV+jj$ production is simulated with MadGraph5\_aMC@NLO v2.3.3~\cite{Alwall:2014hca} and \PYTHIA8~\cite{Sjostrand:2007gs} for fragmentation, using the \textsc{NNPDF30NLO} PDF set~\cite{Ball:2012cx}. 
 The samples feature two on-shell $V$ bosons: one decaying leptonically ($Z \to \ell\ell$ where $\ell = e, \mu$; $Z \to \nu\nu$; $W \to \ell \nu$ with $\ell= e, \mu, \tau$), and the other hadronically. 
 Both $W^{+}$ and $W^{-}$ decays are included, and for $WWjj$, all charge combinations ($W^{+}W^{+}$, $W^{+}W^{-}$, and $W^{-}W^{-}$) are considered. 
-Table~\ref{tab:VBS_sig_samples} details the EWK $VV+jj$ samples used in this analysis.
+Table~\ref{tab:VBS_sig_samples} details the EW $VV+jj$ samples used in this analysis.
 In these samples, we account for all purely-electroweak tree-level diagrams of order $\mathcal{O}(\alpha_{EW}^6)$ that contribute to the final states. This includes both VBS diagrams and non-VBS electroweak diagrams. Detailed examples of these diagrams have been previously discussed and are showcased in Figures~\ref{fig:feynmanVBS} and \ref{fig:feynmanEWKnonVBS}, as found in Section~\ref{section:Vector_Boson_Scattering}.
 
 
-For EWK $WW+jj$ production, the non-VBS electroweak $t\bar{t}$ diagrams, as depicted in Fig.~\ref{fig:feynmanEWKnonVBS}(e) and (f), could significantly contribute. This potential issue is effectively mitigated through the use of a $b$-veto. Despite this mitigation, the contribution from the non-VBS $tZb$ process, illustrated in Fig.~\ref{fig:feynmantZb}, remains considerable. To address this, a cut was implemented near the reconstructed top mass, effectively reducing its impact, as detailed in Table~\ref{tab:1lep_resolved}.
+For EW $WW+jj$ production, the non-VBS electroweak $t\bar{t}$ diagrams, as depicted in Fig.~\ref{fig:feynmanEWKnonVBS}(e) and (f), could significantly contribute. This potential issue is effectively mitigated through the use of a $b$-veto. Despite this mitigation, the contribution from the non-VBS $tZb$ process, illustrated in Fig.~\ref{fig:feynmantZb}, remains considerable. To address this, a cut was implemented near the reconstructed top mass, effectively reducing its impact, as detailed in Table~\ref{tab:1lep_resolved}.
 
 Diagrams that feature both electroweak and QCD vertices, with an order of $\mathcal{O}(\alpha_{EW}^{4} \alpha_s^{2})$, are not included in these signal samples and are not part of the signal definition.
 Examples of such diagrams are depicted in Fig.~\ref{fig:feynmanQCD}. These processes, unaffected by aQGCs, are considered part of the background, including $t\bar{t}$, single-top, and diboson events.

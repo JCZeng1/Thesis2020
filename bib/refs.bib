@@ -1360,6 +1360,60 @@ keywords = {ATLAS, CERN, LHC, Trigger, Jet},
 %%% Object selection %%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 
+@article{Aad2023,
+  author       = "{ATLAS Collaboration}",
+  title        = "Studies of the muon momentum calibration and performance of the ATLAS detector with pp collisions at $\sqrt{s}=13$ TeV",
+  journal      = "The European Physical Journal C",
+  volume       = 83,
+  number       = 8,
+  pages        = 686,
+  year         = 2023,
+  date         = "2023/08/01",
+  abstract     = "This paper presents the muon momentum calibration and performance studies for the ATLAS detector based on the pp collisions data sample produced at $\sqrt{s}=13$ TeV at the LHC during Run 2 and corresponding to an integrated luminosity of 139 ${\textrm{fb}}^{-1}$. An innovative approach is used to correct for potential charge-dependent momentum biases related to the knowledge of the detector geometry, using the $Z\rightarrow \mu^{+}\mu^{-}$ resonance. The muon momentum scale and resolution are measured using samples of $J/\psi \rightarrow \mu^{+}\mu^{-}$ and $Z\rightarrow \mu^{+}\mu^{-}$ events. A calibration procedure is defined and applied to simulated data to match the performance measured in real data. The calibration is validated using an independent sample of $\Upsilon \rightarrow \mu^{+}\mu^{-}$ events. At the Z $(J/\psi)$ peak, the momentum scale is measured with an uncertainty at the 0.05% (0.1%) level, and the resolution is measured with an uncertainty at the 1.5% (2%) level. The charge-dependent bias is removed with a dedicated in situ correction for momenta up to 450 GeV with a precision better than 0.03 ${\textrm{TeV}}^{-1}$.",
+  doi          = "10.1140/epjc/s10052-023-11584-x",
+  url          = "https://doi.org/10.1140/epjc/s10052-023-11584-x"
+}
+
+@article{Cacciari_2008,
+doi = {10.1088/1126-6708/2008/04/063},
+url = {https://dx.doi.org/10.1088/1126-6708/2008/04/063},
+year = {2008},
+month = {apr},
+publisher = {},
+volume = {2008},
+number = {04},
+pages = {063},
+author = {Matteo Cacciari and  Gavin P. Salam and  Gregory Soyez},
+title = {The anti-kt jet clustering algorithm},
+journal = {Journal of High Energy Physics},
+abstract = {The kt and Cambridge/Aachen inclusive jet finding algorithms for hadron-hadron collisions can be seen as belonging to a broader class of sequential recombination jet algorithms, parametrised by the power of the energy scale in the distance measure. We examine some properties of a new member of this class, for which the power is negative. This ``anti-kt'' algorithm essentially behaves like an idealised cone algorithm, in that jets with only soft fragmentation are conical, active and passive areas are equal, the area anomalous dimensions are zero, the non-global logarithms are those of a rigid boundary and the Milan factor is universal.  None of these properties hold for existing sequential recombination algorithms, nor for cone algorithms with split-merge steps, such as SISCone. They are however the identifying characteristics of the collinear unsafe plain ``iterative cone'' algorithm, for which the anti-kt algorithm provides a natural, fast, infrared and collinear safe replacement.}
+}
+
+@techreport{ATLAS-CONF-2014-018,
+      title         = "{Tagging and suppression of pileup jets with the ATLAS
+                       detector}",
+      institution   = "CERN",
+      reportNumber  = "ATLAS-CONF-2014-018",
+      address       = "Geneva",
+      year          = "2014",
+      url           = "https://cds.cern.ch/record/1700870",
+      note          = "All figures including auxiliary figures are available at
+                       https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2014-018",
+}
+
+@techreport{ATL-PHYS-PUB-2019-026,
+      collaboration = "ATLAS",
+      title         = "{Forward jet vertex tagging using the particle flow
+                       algorithm}",
+      institution   = "CERN",
+      reportNumber  = "ATL-PHYS-PUB-2019-026",
+      address       = "Geneva",
+      year          = "2019",
+      url           = "https://cds.cern.ch/record/2683100",
+      note          = "All figures including auxiliary figures are available at
+                       https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2019-026",
+}
+
 @article{Krohn:2009th,
       author         = "Krohn, David and Thaler, Jesse and Wang, Lian-Tao",
       title          = "{Jet Trimming}",
@@ -1406,7 +1460,28 @@ keywords = {ATLAS, CERN, LHC, Trigger, Jet},
       url="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaIdentificationRun2#Object_quality_cut"
 }
 
+@article{Aad2023flavour,
+  author       = "{ATLAS Collaboration}",
+  title        = "ATLAS flavour-tagging algorithms for the LHC Run 2 pp collision dataset",
+  journal      = "The European Physical Journal C",
+  volume       = 83,
+  number       = 7,
+  pages        = 681,
+  year         = 2023,
+  date         = "2023/07/31",
+  abstract     = "The flavour-tagging algorithms developed by the ATLAS Collaboration and used to analyse its dataset of $\sqrt{s} = 13$ TeV pp collisions from Run 2 of the Large Hadron Collider are presented. These new tagging algorithms are based on recurrent and deep neural networks, and their performance is evaluated in simulated collision events. These developments yield considerable improvements over previous jet-flavour identification strategies. At the 77\% b-jet identification efficiency operating point, light-jet (charm-jet) rejection factors of 170 (5) are achieved in a sample of simulated Standard Model $t\bar{t}$ events; similarly, at a c-jet identification efficiency of 30\%, a light-jet (b-jet) rejection factor of 70 (9) is obtained.",
+  doi          = "10.1140/epjc/s10052-023-11699-1",
+  url          = "https://doi.org/10.1140/epjc/s10052-023-11699-1"
+}
 
+@misc{Farrell2023AssociationUtils,
+  author = {Steve Farrell},
+  title = {AssociationUtils - Overlap Removal Tools},
+  year = {2023},
+  note = {GitLab repository, Version 21.2},
+  url = {https://gitlab.cern.ch/atlas/athena/-/tree/21.2/PhysicsAnalysis/AnalysisCommon/AssociationUtils},
+  urldate = {2023-04-15}
+}
 
 %%%%SHAP
 @inproceedings{LundbergLee2017,
@@ -1700,3 +1775,18 @@ author={
   doi = {10.1103/PhysRevD.101.113003},
   url = {https://link.aps.org/doi/10.1103/PhysRevD.101.113003}
 }
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% fit  %%%
+%%%%%%%%%%%%%%%%%%%%%
+@thesis{Buscher:2232472,
+      author        = "Buscher, Daniel",
+      title         = "{Search for Higgs bosons with b-jets in the final state in
+                       proton-proton collisions with the ATLAS experiment}",
+      school        = "Freiburg U.",
+      year          = "2016",
+      url           = "https://cds.cern.ch/record/2232472",
+      note          = "Presented 26 Oct 2016",
+}
+
+
