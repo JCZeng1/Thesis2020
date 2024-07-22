@@ -160,16 +160,19 @@ The uncertainties on the integrated luminosity for the datasets are as follows:
     \item 2018 dataset: 2.0\%
     \item Combined Run-2 dataset (2015-2018): 1.7\%
 \end{itemize}
-Reference:~\cite{AtlasLumiRun2}.
+%Reference:~\cite{AtlasLumiRun2}.
 
 
 \subsubsection*{Pileup reweighting}
-The uncertainty associated with the pileup reweighting is accounted for as \texttt{PRW\_DATASF}~\cite{ExtendedPileupReweighting}. 
+The uncertainty associated with the pileup reweighting is accounted for as \texttt{PRW\_DATASF}.
+%~\cite{ExtendedPileupReweighting}. 
 A variation in the pileup reweighting of MC simulations is included to address the uncertainty in the ratio of the predicted to the measured inelastic cross-section within the fiducial volume defined by $M_X > 13\,\GeV$, where $M_X$ is the mass of the non-diffractive hadronic system~\cite{STDM-2015-05}.
 
 
 \subsubsection*{Trigger}
-Systematic uncertainties on the efficiency of the electron or muon triggers are evaluated using the tag-and-probe method, applied to both the signal and background MC samples. Efficiencies are obtained using the \texttt{ElectronEfficiencyCorrection}~\cite{AsgElectronEfficiencyCorrectionTool} and \texttt{MuonEfficiencyCorrections}~\cite{TrigMuonEfficiency} tools. The uncertainty in the \met trigger is derived from the scale factor estimation, incorporating statistical contributions and efficiency discrepancies between MC samples, specifically \ttbar and \Wjets backgrounds~\cite{ATLAS-CONF-2016-091, Masubuchi:2151844}. Upon evaluation, trigger uncertainties were found to be less than 1\% and were subsequently excluded from the final fit results due to their minimal impact.
+Systematic uncertainties on the efficiency of the electron or muon triggers are evaluated using the tag-and-probe method, applied to both the signal and background MC samples. Efficiencies are obtained using the \texttt{ElectronEfficiencyCorrection} and \texttt{MuonEfficiencyCorrections} tools.
+%~\cite{AsgElectronEfficiencyCorrectionTool} and \texttt{MuonEfficiencyCorrections}~\cite{TrigMuonEfficiency} tools. 
+The uncertainty in the \met trigger is derived from the scale factor estimation, incorporating statistical contributions and efficiency discrepancies between MC samples, specifically \ttbar and \Wjets backgrounds~\cite{Masubuchi:2151844}. Upon evaluation, trigger uncertainties were found to be less than 1\% and were subsequently excluded from the final fit results due to their minimal impact.
 
 \subsubsection*{Muons and electrons}
 The following systematic uncertainties are applied to electrons and muons for simulation-based estimations:
@@ -191,7 +194,8 @@ The following systematic uncertainties are applied to electrons and muons for si
 \subsubsection*{Missing transverse energy}
 
 The missing transverse energy (\met) is calculated using physics objects, as outlined in Section~\ref{sec:MET_reconstruction}. 
-Systematic uncertainties in the reconstructed components, such as the jet energy scale, directly affect the \met and represent its primary sources of uncertainty. Additionally, the uncertainty known as the ``Soft Term,'' which arises from tracks in the inner detector not associated with any reconstructed objects, is also considered. The resolution and scale of the Soft Term are varied within their respective uncertainties to assess their impact on the overall \met uncertainty, utilizing the \texttt{METUtilities} tool~\cite{METUtilSystematics}.
+Systematic uncertainties in the reconstructed components, such as the jet energy scale, directly affect the \met and represent its primary sources of uncertainty. Additionally, the uncertainty known as the ``Soft Term,'' which arises from tracks in the inner detector not associated with any reconstructed objects, is also considered. The resolution and scale of the Soft Term are varied within their respective uncertainties to assess their impact on the overall \met uncertainty, utilizing the \texttt{METUtilities} tool.
+%~\cite{METUtilSystematics}.
 
 \subsubsection*{Small-$R$ Jet Energy Scale and Resolution Uncertainty}
 The jet energy scale (JES) and resolution (JER) for small-$R$ jets are determined by comparing the response in MC samples to data across various bins in kinematic phase space.
